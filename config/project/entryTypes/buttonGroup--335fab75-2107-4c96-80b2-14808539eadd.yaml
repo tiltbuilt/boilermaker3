@@ -1,0 +1,137 @@
+color: cyan
+fieldLayouts:
+  a9a00d05-cf25-4f32-8b1b-0e9c58c815d7:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: bd671f96-ebc4-4d94-9c8b-8e6bf0c869b3
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: c025e168-6f53-4831-9433-670f03c62851 # Buttons
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 1643d131-cc4a-4714-aa47-826d686ae2a9
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 68fd06f1-a1fd-4fb7-bfed-e152be405eb5
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 47acc143-9347-4976-bd50-02778ffeabf1 # Button Styles
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c6316449-7c17-4668-bb71-0417356e473c
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: adca13f3-4ae5-49c5-83c4-cab3dd9f5ece # Button Size
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 28f41044-5c64-48e4-8e25-c8d0b4baf3c6
+            userCondition: null
+            warning: null
+            width: 100
+        name: Styling
+        uid: 38542161-8df9-4d7b-9a08-d8eef4bdb197
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 6b484609-7d28-4f55-990e-f5212885d922 # Custom ID
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 73831af4-e11c-4695-b35f-398d66211441
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: a78e7e89-26cf-4a0e-a36d-b48ca76d7ba5 # Custom Classes
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: edd925fd-f567-4186-b082-49159c0b6564
+            userCondition: null
+            warning: null
+            width: 100
+        name: 'Advanced Settings'
+        uid: c8910b12-ffa1-4157-8ef5-655699c84d04
+        userCondition: null
+handle: buttonGroup
+hasTitleField: true
+icon: rectangle
+name: 'Button Group'
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: ''
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

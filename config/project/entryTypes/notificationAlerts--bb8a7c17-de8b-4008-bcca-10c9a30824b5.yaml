@@ -1,0 +1,50 @@
+color: red
+fieldLayouts:
+  77642883-89cb-4b4c-8f4d-89d2e0b1f880:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: c932dc7b-a160-4fd0-a843-2f086943dd72
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: d74e3717-a50d-4380-8bf0-625bedb5fd0e
+        userCondition: null
+handle: notificationAlerts
+hasTitleField: true
+icon: triangle-exclamation
+name: 'Notification Alerts'
+showSlugField: false
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: ''
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

@@ -1,0 +1,50 @@
+color: null
+fieldLayouts:
+  5a82b258-3711-4465-b805-4fd33232f152:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 30a1642d-4b51-4e39-bd08-020b0bbae3f2
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: e515b703-dc42-48ae-b64d-0eeacac27367
+        userCondition: null
+handle: pages
+hasTitleField: true
+icon: browser
+name: Pages
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: ''
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

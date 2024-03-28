@@ -1,14 +1,135 @@
-dateModified: 1711493502
+dateModified: 1711665322
 email:
   fromEmail: brian@tiltthis.com
   fromName: 'Boilermaker 3'
   transportType: craft\mail\transportadapters\Sendmail
+fs:
+  docs:
+    hasUrls: true
+    name: Docs
+    settings:
+      path: $DOC_ASSETS_PATH
+    type: craft\fs\Local
+    url: $DOC_ASSETS_URL
+  embeds:
+    hasUrls: true
+    name: Embeds
+    settings:
+      path: $EMBED_ASSETS_PATH
+    type: craft\fs\Local
+    url: $EMBED_ASSETS_URL
+  images:
+    hasUrls: true
+    name: Images
+    settings:
+      path: $IMAGE_ASSETS_PATH
+    type: craft\fs\Local
+    url: $IMAGE_ASSETS_URL
 meta:
   __names__:
+    2dc9eeb7-914f-40a8-a177-d21efc54153e: 'Link Settings' # Link Settings
+    6a43a3aa-97db-498c-b938-2d84a3519729: Pages # Pages
+    6b484609-7d28-4f55-990e-f5212885d922: 'Custom ID' # Custom ID
+    7c366b82-7c53-4dd2-a425-1c416a3e1464: Embeds # Embeds
+    9ceecee1-0248-4ae3-a12a-c90171e5f42f: Content # Content
     09d61ba7-f8dd-4e73-bc8f-d580cffbcc1e: 'Boilermaker 3' # Boilermaker 3
+    47acc143-9347-4976-bd50-02778ffeabf1: 'Button Styles' # Button Styles
+    65c293ae-ed92-4c10-b2d3-1251a63c1402: Modal # Modal
+    69b9aab4-6d39-462c-b88a-8d4971791897: Simple # Simple
+    335fab75-2107-4c96-80b2-14808539eadd: 'Button Group' # Button Group
+    558fedab-c14e-4f41-a438-ba8c394113a5: 'Notification Bar Alerts' # Notification Bar Alerts
+    589d7e58-f378-455e-b073-055e9221964b: Pages # Pages
+    a78e7e89-26cf-4a0e-a36d-b48ca76d7ba5: 'Custom Classes' # Custom Classes
+    a422c7ba-46f8-441b-90d0-f6abad727413: New # New
+    acec3806-c4ac-4430-a8d9-24915eacc052: Modals # Modals
+    adca13f3-4ae5-49c5-83c4-cab3dd9f5ece: 'Button Size' # Button Size
+    b644bda8-1050-46f5-9453-0b3d19812289: Documents # Documents
+    b696e4a1-c7cf-4e07-a0be-b9f4f18a2f53: Home # Home
+    bb8a7c17-de8b-4008-bcca-10c9a30824b5: 'Notification Alerts' # Notification Alerts
+    c025e168-6f53-4831-9433-670f03c62851: Buttons # Buttons
     e6aadd12-c632-4735-b22d-b5a758ab5003: 'Boilermaker 3' # Boilermaker 3
+    f1b466ce-fb41-471a-90d4-5d0fd23f346d: 'Image Asset' # Image Asset
+    f162c9c9-8174-4ba1-a691-5b2e30f57c37: Root # Root
+    fa819c1c-abac-42ac-b1e5-3de37862ccf3: Images # Images
+plugins:
+  blitz:
+    edition: standard
+    enabled: true
+    licenseKey: 73LBUYCONIVXYRPN2X8H1T3P
+    schemaVersion: 5.0.0.4
+  ckeditor:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.0.0.0
+  embeddedassets:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  feed-me:
+    edition: standard
+    enabled: true
+    schemaVersion: 5.1.0.0
+  formie:
+    edition: standard
+    enabled: true
+    licenseKey: ILVR9UKTOZXCUXJHV4EXLPO2
+    schemaVersion: 3.4.1
+  hyper:
+    edition: standard
+    enabled: true
+    licenseKey: VXB88FJEZGUC74KKXL84U3VP
+    schemaVersion: 1.0.0
+  icon-picker:
+    edition: standard
+    enabled: true
+    licenseKey: VD3VWGXDBO9AXH1TW54FHKP5
+    schemaVersion: 1.2.3
+  imager-x:
+    edition: pro
+    enabled: true
+    licenseKey: LHKRYAFYC2VCPJDFU9YPOEVG
+    schemaVersion: 4.0.0
+  minify:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  navigation:
+    edition: standard
+    enabled: true
+    licenseKey: 5V0RT59ZP1JCH3EMCX6R1WO6
+    schemaVersion: 2.1.0
+  postmark:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.0.1
+  retour:
+    edition: standard
+    enabled: true
+    licenseKey: Q4LIRG983QL6LGEMLROAFWAM
+    schemaVersion: 3.0.12
+  seomatic:
+    edition: standard
+    enabled: true
+    licenseKey: BM5AE9UW4EA5UOEPXXD7L8YI
+    schemaVersion: 3.0.12
+  shortcodes:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  social-share:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  tablemaker:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.0.0
+  typogrify:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
 system:
-  edition: solo
+  edition: pro
   live: true
   name: 'Boilermaker 3'
   schemaVersion: 5.0.0.20
