@@ -1,0 +1,50 @@
+color: cyan
+fieldLayouts:
+  ba07b883-e18f-40ca-91f4-256b0c93bf6a:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 2f001096-f579-4b3b-a768-e4937c46b053
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: b8294f03-74f9-4555-8f79-babcc782cefe
+        userCondition: null
+handle: cta
+hasTitleField: true
+icon: bullhorn
+name: CTA
+showSlugField: false
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: ''
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

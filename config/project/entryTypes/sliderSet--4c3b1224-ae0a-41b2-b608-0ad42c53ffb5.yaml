@@ -1,0 +1,50 @@
+color: green
+fieldLayouts:
+  aa0c56fc-31e5-40f7-a90d-57074a3dd470:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: da83b732-3ba7-495f-b524-66ba63f91649
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: f4a40c97-6fc7-424a-85a9-b230be5bf6f0
+        userCondition: null
+handle: sliderSet
+hasTitleField: true
+icon: rectangle-history
+name: 'Slider Set'
+showSlugField: false
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: ''
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

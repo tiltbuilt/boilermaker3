@@ -1,0 +1,50 @@
+color: cyan
+fieldLayouts:
+  262b0049-b5f8-4ffd-8dcc-4347b71a3e63:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: d289c527-3796-4c67-8e6e-0901f48e6c75
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 82a9237b-4304-4f34-8718-d8e92243f686
+        userCondition: null
+handle: quote
+hasTitleField: true
+icon: quote-right
+name: Quote
+showSlugField: false
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: ''
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

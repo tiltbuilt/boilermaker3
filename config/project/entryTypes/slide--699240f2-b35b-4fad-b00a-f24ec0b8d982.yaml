@@ -1,0 +1,50 @@
+color: lime
+fieldLayouts:
+  b30c8d55-fa5e-4ab5-aa70-56049d798dc9:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: dccc82e3-f36f-44d2-96ea-8f8d11714b1f
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: e6a5ca0a-ca9b-4d27-b6f9-c330151d7750
+        userCondition: null
+handle: slide
+hasTitleField: true
+icon: rectangle
+name: Slide
+showSlugField: false
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: ''
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

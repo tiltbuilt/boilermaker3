@@ -1,0 +1,50 @@
+color: lime
+fieldLayouts:
+  602761bd-0558-4ccc-9ed4-25035ccc88d3:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 7dd38a2f-a68f-4f4f-af10-d2874e8aad21
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: a18837ef-f239-47ad-b80a-5ec134c43f02
+        userCondition: null
+handle: contentWrapper
+hasTitleField: true
+icon: candy
+name: 'Content Wrapper'
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: ''
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

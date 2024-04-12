@@ -1,0 +1,50 @@
+color: green
+fieldLayouts:
+  127037a8-fd77-403e-9e0e-99113480c117:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 6f0a96b9-4b5b-4ae9-9429-f12ae0d44b3b
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: cae4f76c-446a-4c0d-9350-aeeb8761d539
+        userCondition: null
+handle: tabSet
+hasTitleField: true
+icon: folder-plus
+name: 'Tab Set'
+showSlugField: false
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: ''
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

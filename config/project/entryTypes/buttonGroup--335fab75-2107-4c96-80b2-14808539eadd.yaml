@@ -128,10 +128,10 @@ handle: buttonGroup
 hasTitleField: true
 icon: rectangle
 name: 'Button Group'
-showSlugField: true
+showSlugField: false
 showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
-titleFormat: null
+titleFormat: ''
 titleTranslationKeyFormat: null
 titleTranslationMethod: site

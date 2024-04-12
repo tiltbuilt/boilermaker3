@@ -1,0 +1,50 @@
+color: green
+fieldLayouts:
+  4c4ddfa7-2465-4c23-9d7e-35445d849237:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 14b108f6-dc62-426a-8159-41ba171bb8cb
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 40a7763d-183c-46da-b909-039a124912e3
+        userCondition: null
+handle: accordionSet
+hasTitleField: true
+icon: shutters
+name: 'Accordion Set'
+showSlugField: false
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: ''
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

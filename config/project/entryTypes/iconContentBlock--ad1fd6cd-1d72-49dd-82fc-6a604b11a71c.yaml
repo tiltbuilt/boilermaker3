@@ -1,0 +1,50 @@
+color: cyan
+fieldLayouts:
+  b9e0f8aa-c8d6-418d-ae54-fc36f3fb39f4:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 3dfc2c3e-890c-4054-b874-ce8612b4f289
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: d3ab5979-9abe-44a4-b2ff-211e724ba117
+        userCondition: null
+handle: iconContentBlock
+hasTitleField: true
+icon: fire
+name: 'Icon Content Block'
+showSlugField: false
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: ''
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
