@@ -1,0 +1,12 @@
+columnSuffix: null
+handle: sliderControlToggle
+instructions: null
+name: 'Slider Control Toggle'
+searchable: false
+settings:
+  default: false
+  offLabel: 'Off'
+  onLabel: 'On'
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Lightswitch

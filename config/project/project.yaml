@@ -1,4 +1,4 @@
-dateModified: 1712960929
+dateModified: 1713158290
 email:
   fromEmail: brian@tiltthis.com
   fromName: 'Boilermaker 3'
@@ -33,26 +33,36 @@ meta:
   __names__:
     1ef67107-0265-4563-8344-695b0a016e56: Form # Form
     2dc9eeb7-914f-40a8-a177-d21efc54153e: 'Link Settings' # Link Settings
+    3f041b04-6fce-4165-ab3a-d234dabaa7bd: 'Embed Code' # Embed Code
     4a803a3b-ac9b-4ecc-b439-0815fb18e053: 'Tab Set' # Tab Set
     4c3b1224-ae0a-41b2-b608-0ad42c53ffb5: 'Slider Set' # Slider Set
+    4dbe62f4-8253-43b4-9cda-058e34d922c8: Color # Color
+    5d95a350-fb34-496c-8c66-da3952eb4373: 'Text Alignment' # Text Alignment
     05fecf3b-4603-46ea-9e54-4612defd70e9: 'Layout Row' # Layout Row
     6a43a3aa-97db-498c-b938-2d84a3519729: Pages # Pages
     6b484609-7d28-4f55-990e-f5212885d922: 'Custom ID' # Custom ID
     7c366b82-7c53-4dd2-a425-1c416a3e1464: Embeds # Embeds
+    7de60b4a-8180-452d-a5db-5b4e20b11e84: 'Hidden?' # Hidden?
     9ceecee1-0248-4ae3-a12a-c90171e5f42f: Content # Content
     09d61ba7-f8dd-4e73-bc8f-d580cffbcc1e: 'Boilermaker 3' # Boilermaker 3
     47acc143-9347-4976-bd50-02778ffeabf1: 'Button Styles' # Button Styles
+    51c1b748-da08-41e2-8bd4-b301b9fb6321: 'Column Vertical Alignment' # Column Vertical Alignment
     65c293ae-ed92-4c10-b2d3-1251a63c1402: Modal # Modal
     69b9aab4-6d39-462c-b88a-8d4971791897: Simple # Simple
     82c290d4-2826-4d74-bcc2-8f94ddc4b0b0: 'Accordion Set' # Accordion Set
     82cdb5ee-7722-4897-8e26-fb817c98e85e: Embed # Embed
+    91d05e51-ee38-4e73-af4c-ebed7e7572d3: Spacing # Spacing
     335fab75-2107-4c96-80b2-14808539eadd: 'Button Group' # Button Group
+    390e043f-134b-4c7a-871d-9833ece71218: 'Slider Control Toggle' # Slider Control Toggle
     400ed272-3701-4004-b0e0-a74db3d25030: Accordion # Accordion
     486d3e65-7880-4e2e-803e-daecc6657a1d: 'Content Wrapper' # Content Wrapper
     558fedab-c14e-4f41-a438-ba8c394113a5: 'Notification Bar Alerts' # Notification Bar Alerts
     589d7e58-f378-455e-b073-055e9221964b: Pages # Pages
     699240f2-b35b-4fad-b00a-f24ec0b8d982: Slide # Slide
+    4720320b-f7d0-49ec-a327-0db0e3a2dd7c: 'Slider Size' # Slider Size
+    53829185-3375-470c-80cf-a50b1733a8c4: 'Slide Effect' # Slide Effect
     a78e7e89-26cf-4a0e-a36d-b48ca76d7ba5: 'Custom Classes' # Custom Classes
+    acdcfd1c-89a2-4090-989d-17db6ad24060: Icon # Icon
     acec3806-c4ac-4430-a8d9-24915eacc052: Modals # Modals
     ad1fd6cd-1d72-49dd-82fc-6a604b11a71c: 'Icon Content Block' # Icon Content Block
     ad2e8ad9-d9ae-4fee-a8f8-de0e8680707c: Quote # Quote
@@ -62,11 +72,14 @@ meta:
     b6075a2a-820f-44f0-857b-358c60cb2bcb: 'Layout Column' # Layout Column
     bb8a7c17-de8b-4008-bcca-10c9a30824b5: 'Notification Alerts' # Notification Alerts
     bcc81e37-c9a5-4aaa-a456-847dd36ebf95: CTA # CTA
+    c012ee7e-6cb9-4139-803a-2e2dea537718: 'Column Size' # Column Size
     c025e168-6f53-4831-9433-670f03c62851: Buttons # Buttons
     c43e9602-b393-4012-b9c3-c4b391c74cd6: Video # Video
+    d1c26bcb-25db-404d-ba73-7e4e3c7fc0a1: 'Slide Transition Delay' # Slide Transition Delay
     d85e2e7b-6380-4c46-8ebd-36ad0a2eee46: 'Tab Panel' # Tab Panel
     e2f8e7ee-d666-4bd1-bfe9-ece40a043b3e: Repeater # Repeater
     e6aadd12-c632-4735-b22d-b5a758ab5003: 'Boilermaker 3' # Boilermaker 3
+    e2924a45-982c-4a78-8a31-72f8b97462d5: 'Column Order' # Column Order
     f1b466ce-fb41-471a-90d4-5d0fd23f346d: 'Image Asset' # Image Asset
     f162c9c9-8174-4ba1-a691-5b2e30f57c37: Root # Root
     fa819c1c-abac-42ac-b1e5-3de37862ccf3: Images # Images
@@ -80,6 +93,10 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 3.0.0.0
+  colour-swatches:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.4.3
   embeddedassets:
     edition: standard
     enabled: true
@@ -92,7 +109,7 @@ plugins:
     edition: standard
     enabled: true
     licenseKey: ILVR9UKTOZXCUXJHV4EXLPO2
-    schemaVersion: 3.4.2
+    schemaVersion: 3.4.3
   hyper:
     edition: standard
     enabled: true
