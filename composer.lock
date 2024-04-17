@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b3b5299c25c48a9df83ff568646e2e75",
+    "content-hash": "4fb9f47a8c0c9a24ed0be06600b2b919",
     "packages": [
         {
             "name": "amphp/amp",
@@ -3215,7 +3215,7 @@
         },
         {
             "name": "illuminate/collections",
-            "version": "v10.48.7",
+            "version": "v10.48.8",
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/illuminate/collections/zipball/f9589f1063a449111dcaa1d68285b507d9483a95",
@@ -3260,7 +3260,7 @@
         },
         {
             "name": "illuminate/conditionable",
-            "version": "v10.48.7",
+            "version": "v10.48.8",
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/illuminate/conditionable/zipball/d0958e4741fc9d6f516a552060fd1b829a85e009",
@@ -3296,7 +3296,7 @@
         },
         {
             "name": "illuminate/contracts",
-            "version": "v10.48.7",
+            "version": "v10.48.8",
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/illuminate/contracts/zipball/8d7152c4a1f5d9cf7da3e8b71f23e4556f6138ac",
@@ -3334,7 +3334,7 @@
         },
         {
             "name": "illuminate/macroable",
-            "version": "v10.48.7",
+            "version": "v10.48.8",
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/illuminate/macroable/zipball/dff667a46ac37b634dcf68909d9d41e94dc97c27",
@@ -5054,16 +5054,17 @@
         },
         {
             "name": "nystudio107/craft-minify",
-            "version": "5.0.0-beta.2",
+            "version": "5.0.0",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-minify/zipball/a4510c50fd1d2f1beb298215afd55602128ce6d8",
-                "reference": "a4510c50fd1d2f1beb298215afd55602128ce6d8",
+                "url": "https://api.github.com/repos/nystudio107/craft-minify/zipball/447cf3df4c76a1f1d9ed7bdab30f220ddf06f39b",
+                "reference": "447cf3df4c76a1f1d9ed7bdab30f220ddf06f39b",
                 "shasum": ""
             },
             "require": {
-                "craftcms/cms": "^5.0.0-beta.1",
-                "mrclay/minify": "^3.0.10"
+                "craftcms/cms": "^5.0.0",
+                "mrclay/minify": "^3.0.10",
+                "php": "^8.2"
             },
             "type": "craft-plugin",
             "extra": {
@@ -5098,19 +5099,19 @@
                 "issues": "https://nystudio107.com/plugins/minify/support",
                 "source": "https://github.com/nystudio107/craft-minify"
             },
-            "time": "2024-02-11T00:17:30+00:00"
+            "time": "2024-04-15T19:28:06+00:00"
         },
         {
             "name": "nystudio107/craft-plugin-vite",
-            "version": "5.0.0-beta.3",
+            "version": "5.0.0",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-plugin-vite/zipball/b3f3026ffb6316a8c28efc8f00ace0ce15347aed",
-                "reference": "b3f3026ffb6316a8c28efc8f00ace0ce15347aed",
+                "url": "https://api.github.com/repos/nystudio107/craft-plugin-vite/zipball/a20f6609de886bfe1590584f64c0b7618bfb71c7",
+                "reference": "a20f6609de886bfe1590584f64c0b7618bfb71c7",
                 "shasum": ""
             },
             "require": {
-                "craftcms/cms": "^5.0.0-beta.1"
+                "craftcms/cms": "^5.0.0"
             },
             "type": "library",
             "autoload": {
@@ -5137,22 +5138,22 @@
                 "docs": "https://github.com/nystudio107/craft-plugin-vite/blob/v5/README.md",
                 "issues": "https://github.com/nystudio107/craft-plugin-vite/issues"
             },
-            "time": "2024-03-02T05:07:43+00:00"
+            "time": "2024-04-15T19:22:47+00:00"
         },
         {
             "name": "nystudio107/craft-retour",
-            "version": "5.0.0-beta.5",
+            "version": "5.0.0",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-retour/zipball/177a3a8c717e9c83068bb6c020d9fea61e9de5f1",
-                "reference": "177a3a8c717e9c83068bb6c020d9fea61e9de5f1",
+                "url": "https://api.github.com/repos/nystudio107/craft-retour/zipball/76f8874a7efb64f36e107f639a765d5a1bb3004c",
+                "reference": "76f8874a7efb64f36e107f639a765d5a1bb3004c",
                 "shasum": ""
             },
             "require": {
-                "craftcms/cms": "^5.0.0-beta.1",
+                "craftcms/cms": "^5.0.0",
                 "jean85/pretty-package-versions": "^1.5 || ^2.0",
                 "league/csv": "^8.2 || ^9.0",
-                "nystudio107/craft-plugin-vite": "^5.0.0-beta.1",
+                "nystudio107/craft-plugin-vite": "^5.0.0",
                 "php": "^8.2"
             },
             "type": "craft-plugin",
@@ -5189,7 +5190,7 @@
                 "issues": "https://nystudio107.com/plugins/retour/support",
                 "source": "https://github.com/nystudio107/craft-retour"
             },
-            "time": "2024-03-25T13:54:59+00:00"
+            "time": "2024-04-15T19:56:52+00:00"
         },
         {
             "name": "nystudio107/craft-seomatic",
@@ -5253,11 +5254,11 @@
         },
         {
             "name": "nystudio107/craft-typogrify",
-            "version": "5.0.0-beta.2",
+            "version": "5.0.0",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-typogrify/zipball/c938b2d0a9f94232761fcf6745c4d3f7976faa02",
-                "reference": "c938b2d0a9f94232761fcf6745c4d3f7976faa02",
+                "url": "https://api.github.com/repos/nystudio107/craft-typogrify/zipball/2ee1efab6f45006455db0af182ae0d3235622fa9",
+                "reference": "2ee1efab6f45006455db0af182ae0d3235622fa9",
                 "shasum": ""
             },
             "require": {
@@ -5299,7 +5300,7 @@
                 "issues": "https://nystudio107.com/plugins/typogrify/support",
                 "source": "https://github.com/nystudio107/craft-typogrify"
             },
-            "time": "2024-03-27T19:09:04+00:00"
+            "time": "2024-04-16T18:51:31+00:00"
         },
         {
             "name": "oscarotero/html-parser",
@@ -10316,7 +10317,7 @@
         },
         {
             "name": "web-auth/metadata-service",
-            "version": "4.8.5",
+            "version": "4.8.6",
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/web-auth/webauthn-metadata-service/zipball/fb7c1f107639285fab90f870aab38360252c82f5",
@@ -10381,7 +10382,7 @@
         },
         {
             "name": "web-auth/webauthn-lib",
-            "version": "4.8.5",
+            "version": "4.8.6",
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/web-auth/webauthn-lib/zipball/925873eb504a1db8a77dc2b4d2b578334736fa16",
@@ -10401,7 +10402,7 @@
                 "spomky-labs/cbor-php": "^3.0",
                 "symfony/uid": "^6.1|^7.0",
                 "web-auth/cose-lib": "^4.2.3",
-                "web-auth/metadata-service": "4.8.5"
+                "web-auth/metadata-service": "4.8.6"
             },
             "suggest": {
                 "phpdocumentor/reflection-docblock": "As of 4.5.x, the phpdocumentor/reflection-docblock component will become mandatory for converting objects such as the Metadata Statement",
