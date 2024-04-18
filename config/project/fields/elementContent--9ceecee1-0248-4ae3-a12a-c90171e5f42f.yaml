@@ -6,7 +6,7 @@ searchable: true
 settings:
   availableTransforms: ''
   availableVolumes: '*'
-  ckeConfig: null
+  ckeConfig: c43e08b0-14a5-4aee-adb4-4e78e9c3d9fe # Main Content
   createButtonLabel: 'New Content Element'
   defaultTransform: null
   enableSourceEditingForNonAdmins: false

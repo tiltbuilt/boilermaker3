@@ -15,7 +15,7 @@ settings:
           - btn-standard
         -
           - default
-          - ''
+          - '1'
     -
       __assoc__:
         -

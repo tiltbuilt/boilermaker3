@@ -1,4 +1,4 @@
-dateModified: 1713390243
+dateModified: 1713476327
 email:
   fromEmail: brian@tiltthis.com
   fromName: 'Boilermaker 3'
@@ -58,8 +58,10 @@ meta:
     486d3e65-7880-4e2e-803e-daecc6657a1d: 'Content Wrapper' # Content Wrapper
     558fedab-c14e-4f41-a438-ba8c394113a5: 'Notification Bar Alerts' # Notification Bar Alerts
     589d7e58-f378-455e-b073-055e9221964b: Pages # Pages
+    15890ba2-38e4-4bce-9ccc-45ed62101d3e: Section # Section
     699240f2-b35b-4fad-b00a-f24ec0b8d982: Slide # Slide
     4720320b-f7d0-49ec-a327-0db0e3a2dd7c: 'Slider Size' # Slider Size
+    6283122d-7dc0-4b8d-8895-140bc4e66973: 'Page Builder' # Page Builder
     53829185-3375-470c-80cf-a50b1733a8c4: 'Slide Effect' # Slide Effect
     a78e7e89-26cf-4a0e-a36d-b48ca76d7ba5: 'Custom Classes' # Custom Classes
     acdcfd1c-89a2-4090-989d-17db6ad24060: Icon # Icon
@@ -74,6 +76,7 @@ meta:
     bcc81e37-c9a5-4aaa-a456-847dd36ebf95: CTA # CTA
     c012ee7e-6cb9-4139-803a-2e2dea537718: 'Column Size' # Column Size
     c025e168-6f53-4831-9433-670f03c62851: Buttons # Buttons
+    c43e08b0-14a5-4aee-adb4-4e78e9c3d9fe: 'Main Content' # Main Content
     c43e9602-b393-4012-b9c3-c4b391c74cd6: Video # Video
     d1c26bcb-25db-404d-ba73-7e4e3c7fc0a1: 'Slide Transition Delay' # Slide Transition Delay
     d85e2e7b-6380-4c46-8ebd-36ad0a2eee46: 'Tab Panel' # Tab Panel

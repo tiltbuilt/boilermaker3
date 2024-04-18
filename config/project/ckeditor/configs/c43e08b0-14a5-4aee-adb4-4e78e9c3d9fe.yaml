@@ -1,0 +1,50 @@
+headingLevels:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+name: 'Main Content'
+options:
+  alignment:
+    options:
+      - left
+      - right
+  style:
+    definitions:
+      -
+        classes:
+          - red-heading
+        element: h2
+        name: 'Red heading'
+      -
+        classes:
+          - vibrant-code
+        element: pre
+        name: 'Vibrant code'
+      -
+        classes:
+          - marker
+        element: span
+        name: Marker
+toolbar:
+  - heading
+  - style
+  - '|'
+  - bold
+  - italic
+  - link
+  - subscript
+  - superscript
+  - '|'
+  - alignment
+  - '|'
+  - bulletedList
+  - numberedList
+  - outdent
+  - indent
+  - '|'
+  - createEntry
+  - '|'
+  - sourceEditing
