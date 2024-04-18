@@ -1,7 +1,7 @@
 columnSuffix: null
-handle: hidden
+handle: yesNo
 instructions: null
-name: 'Hidden?'
+name: 'Yes No'
 searchable: false
 settings:
   default: false

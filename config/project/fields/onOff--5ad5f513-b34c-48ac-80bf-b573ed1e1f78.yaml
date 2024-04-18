@@ -1,7 +1,7 @@
 columnSuffix: null
-handle: sliderControlToggle
+handle: onOff
 instructions: null
-name: 'Slider Control Toggle'
+name: 'On Off'
 searchable: false
 settings:
   default: false

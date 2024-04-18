@@ -1,4 +1,4 @@
-dateModified: 1713476327
+dateModified: 1713478618
 email:
   fromEmail: brian@tiltthis.com
   fromName: 'Boilermaker 3'
@@ -37,12 +37,12 @@ meta:
     4a803a3b-ac9b-4ecc-b439-0815fb18e053: 'Tab Set' # Tab Set
     4c3b1224-ae0a-41b2-b608-0ad42c53ffb5: 'Slider Set' # Slider Set
     4dbe62f4-8253-43b4-9cda-058e34d922c8: Color # Color
+    5ad5f513-b34c-48ac-80bf-b573ed1e1f78: 'On Off' # On Off
     5d95a350-fb34-496c-8c66-da3952eb4373: 'Text Alignment' # Text Alignment
     05fecf3b-4603-46ea-9e54-4612defd70e9: 'Layout Row' # Layout Row
     6a43a3aa-97db-498c-b938-2d84a3519729: Pages # Pages
     6b484609-7d28-4f55-990e-f5212885d922: 'Custom ID' # Custom ID
     7c366b82-7c53-4dd2-a425-1c416a3e1464: Embeds # Embeds
-    7de60b4a-8180-452d-a5db-5b4e20b11e84: 'Hidden?' # Hidden?
     9ceecee1-0248-4ae3-a12a-c90171e5f42f: Content # Content
     09d61ba7-f8dd-4e73-bc8f-d580cffbcc1e: 'Boilermaker 3' # Boilermaker 3
     47acc143-9347-4976-bd50-02778ffeabf1: 'Button Styles' # Button Styles
@@ -53,7 +53,6 @@ meta:
     82cdb5ee-7722-4897-8e26-fb817c98e85e: Embed # Embed
     91d05e51-ee38-4e73-af4c-ebed7e7572d3: Spacing # Spacing
     335fab75-2107-4c96-80b2-14808539eadd: 'Button Group' # Button Group
-    390e043f-134b-4c7a-871d-9833ece71218: 'Slider Control Toggle' # Slider Control Toggle
     400ed272-3701-4004-b0e0-a74db3d25030: Accordion # Accordion
     486d3e65-7880-4e2e-803e-daecc6657a1d: 'Content Wrapper' # Content Wrapper
     558fedab-c14e-4f41-a438-ba8c394113a5: 'Notification Bar Alerts' # Notification Bar Alerts
@@ -63,6 +62,7 @@ meta:
     4720320b-f7d0-49ec-a327-0db0e3a2dd7c: 'Slider Size' # Slider Size
     6283122d-7dc0-4b8d-8895-140bc4e66973: 'Page Builder' # Page Builder
     53829185-3375-470c-80cf-a50b1733a8c4: 'Slide Effect' # Slide Effect
+    a2da31ae-7341-4dd1-b245-5ee55d44cbc2: 'Yes No' # Yes No
     a78e7e89-26cf-4a0e-a36d-b48ca76d7ba5: 'Custom Classes' # Custom Classes
     acdcfd1c-89a2-4090-989d-17db6ad24060: Icon # Icon
     acec3806-c4ac-4430-a8d9-24915eacc052: Modals # Modals
