@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "54113853d9b529e5505952a5a5cc5300",
+    "content-hash": "a051c02eaf0986b6e48f3e8db022cc1c",
     "packages": [
         {
             "name": "amphp/amp",
@@ -1318,11 +1318,11 @@
         },
         {
             "name": "craftcms/ckeditor",
-            "version": "4.0.3",
+            "version": "4.0.4",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/ckeditor/zipball/3634a067a3f72c54dce3ead6ef5047d375b9c8dd",
-                "reference": "3634a067a3f72c54dce3ead6ef5047d375b9c8dd",
+                "url": "https://api.github.com/repos/craftcms/ckeditor/zipball/292041545298e467f47166c58661d305c498d90d",
+                "reference": "292041545298e467f47166c58661d305c498d90d",
                 "shasum": ""
             },
             "require": {
@@ -1366,7 +1366,7 @@
                 "docs": "https://github.com/craftcms/ckeditor/blob/master/README.md",
                 "rss": "https://github.com/craftcms/ckeditor/commits/master.atom"
             },
-            "time": "2024-03-28T19:55:45+00:00"
+            "time": "2024-04-25T18:37:15+00:00"
         },
         {
             "name": "craftcms/cms",
@@ -6575,11 +6575,11 @@
         },
         {
             "name": "putyourlightson/craft-blitz",
-            "version": "5.1.4",
+            "version": "5.1.5",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/putyourlightson/craft-blitz/zipball/2ddf9913859fd06fc65283fb98df2235eca47488",
-                "reference": "2ddf9913859fd06fc65283fb98df2235eca47488",
+                "url": "https://api.github.com/repos/putyourlightson/craft-blitz/zipball/4aacc32479ac57a6948399505c967acd6ce54011",
+                "reference": "4aacc32479ac57a6948399505c967acd6ce54011",
                 "shasum": ""
             },
             "require": {
@@ -6623,15 +6623,15 @@
                 "source": "https://github.com/putyourlightson/craft-blitz",
                 "issues": "https://github.com/putyourlightson/craft-blitz/issues"
             },
-            "time": "2024-04-23T02:25:41+00:00"
+            "time": "2024-04-26T14:34:22+00:00"
         },
         {
             "name": "putyourlightson/craft-sprig-core",
-            "version": "3.0.1",
+            "version": "3.0.2",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/putyourlightson/craft-sprig-core/zipball/f158843d45a4c424a6260bdefcd559e938152e63",
-                "reference": "f158843d45a4c424a6260bdefcd559e938152e63",
+                "url": "https://api.github.com/repos/putyourlightson/craft-sprig-core/zipball/6fe35b10254fa07e75721d00172e50ee23186256",
+                "reference": "6fe35b10254fa07e75721d00172e50ee23186256",
                 "shasum": ""
             },
             "require": {
@@ -6653,7 +6653,7 @@
                 "source": "https://github.com/putyourlightson/craft-sprig-core",
                 "issues": "https://github.com/putyourlightson/craft-sprig-core/issues"
             },
-            "time": "2024-04-21T13:57:35+00:00"
+            "time": "2024-04-26T13:43:59+00:00"
         },
         {
             "name": "ralouphie/getallheaders",

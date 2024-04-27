@@ -1,0 +1,20 @@
+columnSuffix: null
+handle: backgroundImagery
+instructions: null
+name: 'Background Imagery'
+searchable: false
+settings:
+  createButtonLabel: null
+  entryTypes:
+    - 153c0401-ab92-4149-82ba-2c86f317bc7b # Background
+  includeTableView: false
+  maxEntries: null
+  minEntries: null
+  pageSize: 50
+  propagationKeyFormat: null
+  propagationMethod: all
+  showCardsInGrid: false
+  viewMode: cards
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

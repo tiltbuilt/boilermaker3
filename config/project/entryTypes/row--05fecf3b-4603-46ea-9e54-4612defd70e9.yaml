@@ -34,17 +34,124 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
+          -
+            elementCondition: null
+            fieldUid: 55cb62d2-f02a-4bd8-849c-695f3a2e92b1 # Columns
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 3c52ba6d-4305-4a99-8d89-bc19279b3ee5
+            userCondition: null
+            warning: null
+            width: 100
         name: Content
         uid: 1877f372-f86f-43c7-ad2d-db751703dabb
+        userCondition: null
+      -
+        elementCondition: null
+        name: Layout
+        uid: 79be239c-e80c-40a3-a9ae-eaf49e3818c5
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 91d05e51-ee38-4e73-af4c-ebed7e7572d3 # Spacing
+            handle: mt
+            includeInCards: false
+            instructions: null
+            label: 'Top Margin'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 2dbfc4f8-6fb5-4d12-9be8-925d9a5a3684
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 91d05e51-ee38-4e73-af4c-ebed7e7572d3 # Spacing
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 60e95707-c6b5-4599-9806-3f81d61c702a
+            userCondition: null
+            warning: null
+            width: 100
+        name: Spacing
+        uid: 95de2795-3094-4e9f-9357-1870926291a8
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 6b484609-7d28-4f55-990e-f5212885d922 # Custom ID
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 62159e44-a5fa-4819-bb11-f8b7b0627ecf
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: a78e7e89-26cf-4a0e-a36d-b48ca76d7ba5 # Custom Classes
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 3db8a81e-cd22-46aa-9c93-8d68c9e05917
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: ee64f702-a8f1-46ee-8dea-79f8ad82e25b # Custom Attributes
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b277f4b6-162f-4aae-a747-2120874d85a7
+            userCondition: null
+            warning: null
+            width: 100
+        name: Advanced
+        uid: 693b3497-d50a-4d12-aed1-515143292a8c
         userCondition: null
 handle: row
 hasTitleField: true
 icon: table-layout
 name: 'Layout Row'
-showSlugField: true
+showSlugField: false
 showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
-titleFormat: null
+titleFormat: ''
 titleTranslationKeyFormat: null
 titleTranslationMethod: site

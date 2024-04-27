@@ -70,6 +70,21 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
+          -
+            elementCondition: null
+            fieldUid: 6fc9e05e-93e3-4b45-8288-201151e8b6e4 # Background Imagery
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 6f3b378c-6c1c-449a-8bbf-e045c779a32e
+            userCondition: null
+            warning: null
+            width: 100
         name: Styling
         uid: 78535d9a-ffd5-4ccd-9046-c8d5b832d63c
         userCondition: null
@@ -168,6 +183,52 @@ fieldLayouts:
         userCondition: null
       -
         elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: a2da31ae-7341-4dd1-b245-5ee55d44cbc2 # Yes No
+            handle: animateReveal
+            includeInCards: false
+            instructions: null
+            label: 'Animate Reveal?'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: af40d6cb-ebad-4153-ace0-80ccb305c031
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: a2da31ae-7341-4dd1-b245-5ee55d44cbc2 # Yes No
+            handle: animateChildren
+            includeInCards: false
+            instructions: null
+            label: 'Animate Child Blocks?'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5c10d250-4f45-4e85-8253-5aeb84ac0de9
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: a2da31ae-7341-4dd1-b245-5ee55d44cbc2 # Yes No
+            handle: staggerAnimations
+            includeInCards: false
+            instructions: null
+            label: 'Stagger Child Animations?'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 3a443258-a147-405c-b17e-11d6d8bea5d3
+            userCondition: null
+            warning: null
+            width: 100
         name: Animation
         uid: b7b07ed8-f5cc-4c71-9cb8-7cb6382b7774
         userCondition: null
@@ -201,6 +262,21 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: b890854b-d3c1-4b56-a483-93c6405c6d64
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: ee64f702-a8f1-46ee-8dea-79f8ad82e25b # Custom Attributes
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d8a204f6-7dc3-42fa-aa11-d4d86bb6cbf4
             userCondition: null
             warning: null
             width: 100

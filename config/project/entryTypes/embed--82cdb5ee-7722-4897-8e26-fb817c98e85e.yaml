@@ -34,6 +34,21 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
+          -
+            elementCondition: null
+            fieldUid: 3f041b04-6fce-4165-ab3a-d234dabaa7bd # Embed Code
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ff29a20e-2b16-4048-9c7d-b1a29deefdf0
+            userCondition: null
+            warning: null
+            width: 100
         name: Content
         uid: d7e8a5ce-07f7-44e1-b206-fb615f593017
         userCondition: null
@@ -45,6 +60,6 @@ showSlugField: false
 showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
-titleFormat: null
+titleFormat: ''
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
