@@ -1,4 +1,4 @@
-dateModified: 1714430219
+dateModified: 1714603284
 elementSources:
   craft\elements\Entry:
     -
@@ -124,6 +124,7 @@ meta:
     e2f8e7ee-d666-4bd1-bfe9-ece40a043b3e: Repeater # Repeater
     e6aadd12-c632-4735-b22d-b5a758ab5003: 'Boilermaker 3' # Boilermaker 3
     e2924a45-982c-4a78-8a31-72f8b97462d5: 'Column Order' # Column Order
+    e15525d6-6952-4e06-992e-6cf63f053365: Tabs # Tabs
     ee64f702-a8f1-46ee-8dea-79f8ad82e25b: 'Custom Attributes' # Custom Attributes
     f1b466ce-fb41-471a-90d4-5d0fd23f346d: 'Image Asset' # Image Asset
     f4d725e6-48b8-4083-a921-ecc0925a0bff: 'Background Size' # Background Size
