@@ -34,8 +34,170 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
+          -
+            elementCondition: null
+            fieldUid: 40a37d8a-41c1-47af-bc27-28d08f99a909 # Slides
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: bea5098d-f6e5-4987-99ea-87a754a36229
+            userCondition: null
+            warning: null
+            width: 100
         name: Content
         uid: f4a40c97-6fc7-424a-85a9-b230be5bf6f0
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 4720320b-f7d0-49ec-a327-0db0e3a2dd7c # Slider Size
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 1f670234-6b14-41f2-a691-4e7ee9b189bd
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 5ad5f513-b34c-48ac-80bf-b573ed1e1f78 # On Off
+            handle: buttons
+            includeInCards: false
+            instructions: null
+            label: 'Slider Control Buttons?'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b6f1f2da-6ee9-4135-9c21-fef154dd8e0c
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: 5ad5f513-b34c-48ac-80bf-b573ed1e1f78 # On Off
+            handle: dots
+            includeInCards: false
+            instructions: null
+            label: 'Control Dots?'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f7453ad8-cbf8-4d90-b201-cec4739f38ce
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: d1c26bcb-25db-404d-ba73-7e4e3c7fc0a1 # Slide Transition Delay
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 1efd91ae-d148-4130-b4ef-d67548d1f903
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: 53829185-3375-470c-80cf-a50b1733a8c4 # Slide Effect
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5993ed95-9983-43be-a3b2-ef7798ab43d9
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: a2da31ae-7341-4dd1-b245-5ee55d44cbc2 # Yes No
+            handle: autoplay
+            includeInCards: false
+            instructions: null
+            label: 'Autoplay?'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 6bafac26-bac6-46f2-9cb6-705443971464
+            userCondition: null
+            warning: null
+            width: 100
+        name: 'Control Settings'
+        uid: 1191b7e0-3d1d-4af0-ad44-2b3e68012618
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 6b484609-7d28-4f55-990e-f5212885d922 # Custom ID
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e8b773c0-6213-46c5-9c9b-13a0415b8e1e
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: a78e7e89-26cf-4a0e-a36d-b48ca76d7ba5 # Custom Classes
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5687f895-c83a-42ef-9e0f-f25b3118d253
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: ee64f702-a8f1-46ee-8dea-79f8ad82e25b # Custom Attributes
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 763973ee-3273-4300-b8c1-4f8d9792cdfd
+            userCondition: null
+            warning: null
+            width: 100
+        name: Advanced
+        uid: 1eeda2c0-8bb4-4edf-9f93-7c2a80a96ad3
         userCondition: null
 handle: sliderSet
 hasTitleField: true
@@ -45,6 +207,6 @@ showSlugField: false
 showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
-titleFormat: null
+titleFormat: ''
 titleTranslationKeyFormat: null
 titleTranslationMethod: site

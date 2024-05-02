@@ -1,7 +1,7 @@
 columnSuffix: null
-handle: deviceSize
+handle: dateFormat
 instructions: null
-name: 'Device Size'
+name: 'Date Format'
 searchable: false
 settings:
   options:
@@ -9,10 +9,10 @@ settings:
       __assoc__:
         -
           - label
-          - 'Default (Phone Vertical and Above)'
+          - 'Full Text Month (January 1, 2022)'
         -
           - value
-          - all
+          - 'F d, Y'
         -
           - default
           - '1'
@@ -20,10 +20,10 @@ settings:
       __assoc__:
         -
           - label
-          - 'Phone Horizontal and Above'
+          - 'Short Text Month (Jan. 1, 2022)'
         -
           - value
-          - phoneh
+          - 'M. d, Y'
         -
           - default
           - ''
@@ -31,10 +31,10 @@ settings:
       __assoc__:
         -
           - label
-          - 'Tablet and Above'
+          - 'Numeric Slashes No Leading Zeroes (1/1/2022)'
         -
           - value
-          - tablet
+          - n/j/Y
         -
           - default
           - ''
@@ -42,10 +42,10 @@ settings:
       __assoc__:
         -
           - label
-          - 'Laptop and Above'
+          - 'Numeric Slashes Leading Zeroes (01/01/2022)'
         -
           - value
-          - laptop
+          - m/d/Y
         -
           - default
           - ''
@@ -53,10 +53,10 @@ settings:
       __assoc__:
         -
           - label
-          - 'Desktop and Above'
+          - 'Numeric Dashes No Leading Zeroes (1-1-2022)'
         -
           - value
-          - desktop
+          - n-j-Y
         -
           - default
           - ''
@@ -64,10 +64,32 @@ settings:
       __assoc__:
         -
           - label
-          - Hi-Res
+          - 'Numeric Dashes Leading Zeroes (01-01-2022)'
         -
           - value
-          - highres
+          - m-d-Y
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Numeric Dots No Leading Zeroes (1-1-2022)'
+        -
+          - value
+          - n.y.Y
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Numeric Dots Leading Zeroes (01.01.2022)'
+        -
+          - value
+          - m.d.Y
         -
           - default
           - ''

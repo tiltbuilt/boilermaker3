@@ -87,69 +87,6 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
-            heading: Buttons
-            type: craft\fieldlayoutelements\Heading
-            uid: dcd315c5-72f4-4248-a4c7-aa5ee7477379
-            userCondition: null
-          -
-            elementCondition: null
-            fieldUid: 47acc143-9347-4976-bd50-02778ffeabf1 # Button Styles
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: null
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: c0f282b3-35af-44cc-883a-97489b669be1
-            userCondition: null
-            warning: null
-            width: 50
-          -
-            elementCondition: null
-            fieldUid: adca13f3-4ae5-49c5-83c4-cab3dd9f5ece # Button Size
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: null
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 7733ed5e-514d-4939-956b-e071e088548f
-            userCondition: null
-            warning: null
-            width: 50
-          -
-            elementCondition: null
-            heading: Background
-            type: craft\fieldlayoutelements\Heading
-            uid: f26968ba-bbe5-42c7-ad39-e15477111650
-            userCondition: null
-          -
-            elementCondition: null
-            fieldUid: 6fc9e05e-93e3-4b45-8288-201151e8b6e4 # Background Imagery
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: null
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 1bd8bf89-08bb-44b2-9894-cd6fc7be7446
-            userCondition: null
-            warning: null
-            width: 100
-        name: Styling
-        uid: 7c1bf7b5-a959-47da-a561-4b939258f5e3
-        userCondition: null
-      -
-        elementCondition: null
-        elements:
-          -
-            elementCondition: null
             fieldUid: 91d05e51-ee38-4e73-af4c-ebed7e7572d3 # Spacing
             handle: mt
             includeInCards: false
@@ -180,57 +117,6 @@ fieldLayouts:
             width: 50
         name: Spacing
         uid: 80f749c2-ccd7-4795-a266-eb0855a13679
-        userCondition: null
-      -
-        elementCondition: null
-        elements:
-          -
-            elementCondition: null
-            fieldUid: 6b484609-7d28-4f55-990e-f5212885d922 # Custom ID
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: null
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: e2294597-7565-47a6-a46d-f0eb2d78f3d7
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            elementCondition: null
-            fieldUid: a78e7e89-26cf-4a0e-a36d-b48ca76d7ba5 # Custom Classes
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: null
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: d4950ce8-0df1-4fe3-9101-e0994e8e69ef
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            elementCondition: null
-            fieldUid: ee64f702-a8f1-46ee-8dea-79f8ad82e25b # Custom Attributes
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: null
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 2bdc71d3-2a65-4f4d-8688-9f40137cfc11
-            userCondition: null
-            warning: null
-            width: 100
-        name: Advanced
-        uid: af5996f1-606f-41ff-a57c-aea6f631cadf
         userCondition: null
 handle: cta
 hasTitleField: true

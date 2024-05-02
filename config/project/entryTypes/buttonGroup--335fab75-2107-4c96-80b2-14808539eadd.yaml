@@ -57,42 +57,6 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
-            fieldUid: 47acc143-9347-4976-bd50-02778ffeabf1 # Button Styles
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: null
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: c6316449-7c17-4668-bb71-0417356e473c
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            elementCondition: null
-            fieldUid: adca13f3-4ae5-49c5-83c4-cab3dd9f5ece # Button Size
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: null
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 28f41044-5c64-48e4-8e25-c8d0b4baf3c6
-            userCondition: null
-            warning: null
-            width: 100
-        name: Styling
-        uid: 38542161-8df9-4d7b-9a08-d8eef4bdb197
-        userCondition: null
-      -
-        elementCondition: null
-        elements:
-          -
-            elementCondition: null
             fieldUid: 6b484609-7d28-4f55-990e-f5212885d922 # Custom ID
             handle: null
             includeInCards: false

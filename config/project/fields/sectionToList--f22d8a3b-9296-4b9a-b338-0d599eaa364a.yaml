@@ -1,0 +1,15 @@
+columnSuffix: null
+handle: sectionToList
+instructions: null
+name: 'Section to List'
+searchable: false
+settings:
+  excludedSections:
+    - '4'
+    - '3'
+  multiple: true
+  partOfHandle: ''
+  selectAll: true
+translationKeyFormat: null
+translationMethod: none
+type: wmd\sectionandproducttype\fields\SectionField

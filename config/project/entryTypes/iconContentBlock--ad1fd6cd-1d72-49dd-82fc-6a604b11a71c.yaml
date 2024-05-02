@@ -52,6 +52,57 @@ fieldLayouts:
         name: Content
         uid: d3ab5979-9abe-44a4-b2ff-211e724ba117
         userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 6b484609-7d28-4f55-990e-f5212885d922 # Custom ID
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 8d86d6c7-444b-4de5-908f-c983bc66b312
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: a78e7e89-26cf-4a0e-a36d-b48ca76d7ba5 # Custom Classes
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a838bf2d-c67d-4a52-a145-47555a9b3985
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: ee64f702-a8f1-46ee-8dea-79f8ad82e25b # Custom Attributes
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d3457a02-2cc6-4245-90f3-7b9d65a10683
+            userCondition: null
+            warning: null
+            width: 100
+        name: Advanced
+        uid: f47f707a-e3ab-4758-a425-069b2e0d1eb5
+        userCondition: null
 handle: iconContentBlock
 hasTitleField: true
 icon: fire

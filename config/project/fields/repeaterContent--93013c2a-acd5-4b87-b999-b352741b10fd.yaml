@@ -1,7 +1,7 @@
 columnSuffix: null
-handle: deviceSize
+handle: repeaterContent
 instructions: null
-name: 'Device Size'
+name: 'Repeater Content'
 searchable: false
 settings:
   options:
@@ -9,21 +9,10 @@ settings:
       __assoc__:
         -
           - label
-          - 'Default (Phone Vertical and Above)'
+          - 'Content Links'
         -
           - value
-          - all
-        -
-          - default
-          - '1'
-    -
-      __assoc__:
-        -
-          - label
-          - 'Phone Horizontal and Above'
-        -
-          - value
-          - phoneh
+          - contentLinks
         -
           - default
           - ''
@@ -31,10 +20,10 @@ settings:
       __assoc__:
         -
           - label
-          - 'Tablet and Above'
+          - 'Content Cards'
         -
           - value
-          - tablet
+          - contentCards
         -
           - default
           - ''
@@ -42,10 +31,10 @@ settings:
       __assoc__:
         -
           - label
-          - 'Laptop and Above'
+          - 'Full Section List'
         -
           - value
-          - laptop
+          - allInSection
         -
           - default
           - ''
@@ -53,10 +42,10 @@ settings:
       __assoc__:
         -
           - label
-          - 'Desktop and Above'
+          - 'Select Entry List'
         -
           - value
-          - desktop
+          - selectEntry
         -
           - default
           - ''
@@ -64,10 +53,10 @@ settings:
       __assoc__:
         -
           - label
-          - Hi-Res
+          - 'Nav List'
         -
           - value
-          - highres
+          - navList
         -
           - default
           - ''

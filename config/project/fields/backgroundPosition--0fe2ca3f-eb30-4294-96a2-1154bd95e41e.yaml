@@ -9,21 +9,10 @@ settings:
       __assoc__:
         -
           - label
-          - Center
+          - 'Top Left'
         -
           - value
-          - center
-        -
-          - default
-          - '1'
-    -
-      __assoc__:
-        -
-          - label
-          - Top
-        -
-          - value
-          - top
+          - bg-left-top
         -
           - default
           - ''
@@ -31,10 +20,21 @@ settings:
       __assoc__:
         -
           - label
-          - Bottom
+          - Top
         -
           - value
-          - bottom
+          - bg-top
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Top Right'
+        -
+          - value
+          - bg-right-top
         -
           - default
           - ''
@@ -45,7 +45,7 @@ settings:
           - Left
         -
           - value
-          - left
+          - bg-left
         -
           - default
           - ''
@@ -53,24 +53,13 @@ settings:
       __assoc__:
         -
           - label
-          - 'Left Top'
+          - Center
         -
           - value
-          - left-top
+          - bg-center
         -
           - default
-          - ''
-    -
-      __assoc__:
-        -
-          - label
-          - 'Left Bottom'
-        -
-          - value
-          - left-bottom
-        -
-          - default
-          - ''
+          - '1'
     -
       __assoc__:
         -
@@ -78,7 +67,7 @@ settings:
           - Right
         -
           - value
-          - right
+          - bg-right
         -
           - default
           - ''
@@ -86,10 +75,10 @@ settings:
       __assoc__:
         -
           - label
-          - 'Right Top'
+          - 'Bottom Left'
         -
           - value
-          - right-top
+          - bg-left-bottom
         -
           - default
           - ''
@@ -97,10 +86,21 @@ settings:
       __assoc__:
         -
           - label
-          - 'Right Bottom'
+          - Bottom
         -
           - value
-          - right-bottom
+          - bg-bottom
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Bottom Right'
+        -
+          - value
+          - bg-right-bottom
         -
           - default
           - ''

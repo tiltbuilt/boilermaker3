@@ -57,22 +57,7 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
-            fieldUid: 4dbe62f4-8253-43b4-9cda-058e34d922c8 # Color
-            handle: bgColor
-            includeInCards: false
-            instructions: null
-            label: 'Background Color'
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: e674d99b-0a2f-4d15-a09e-89d40d529643
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            elementCondition: null
-            fieldUid: 6fc9e05e-93e3-4b45-8288-201151e8b6e4 # Background Imagery
+            fieldUid: 3388d3b4-cb9f-47ee-8874-09e50df3c0bb # Section Styling Adjustments
             handle: null
             includeInCards: false
             instructions: null
@@ -81,105 +66,12 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 6f3b378c-6c1c-449a-8bbf-e045c779a32e
+            uid: 0a359598-d7da-4ae6-a06e-77227d986be4
             userCondition: null
             warning: null
             width: 100
         name: Styling
-        uid: 78535d9a-ffd5-4ccd-9046-c8d5b832d63c
-        userCondition: null
-      -
-        elementCondition: null
-        elements:
-          -
-            elementCondition: null
-            heading: Padding
-            type: craft\fieldlayoutelements\Heading
-            uid: 828ce31d-579e-43f0-8acc-56c8f4f56493
-            userCondition: null
-          -
-            elementCondition: null
-            fieldUid: 91d05e51-ee38-4e73-af4c-ebed7e7572d3 # Spacing
-            handle: pt
-            includeInCards: false
-            instructions: null
-            label: 'Top Padding'
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: af2131a5-5939-46f8-b9e2-a9e66665a211
-            userCondition: null
-            warning: null
-            width: 25
-          -
-            elementCondition: null
-            fieldUid: 91d05e51-ee38-4e73-af4c-ebed7e7572d3 # Spacing
-            handle: pb
-            includeInCards: false
-            instructions: null
-            label: 'Bottom Padding'
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 4c2f4362-47d9-4de3-8a58-e1669bf9d682
-            userCondition: null
-            warning: null
-            width: 25
-          -
-            elementCondition: null
-            fieldUid: 91d05e51-ee38-4e73-af4c-ebed7e7572d3 # Spacing
-            handle: px
-            includeInCards: false
-            instructions: null
-            label: 'Gutter Padding'
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 9b31831e-fb05-4a3a-9eb1-2c2642835ca7
-            userCondition: null
-            warning: null
-            width: 25
-          -
-            elementCondition: null
-            heading: Margins
-            type: craft\fieldlayoutelements\Heading
-            uid: cb564556-3661-4f6a-b163-2ef3d0297ac2
-            userCondition: null
-          -
-            elementCondition: null
-            fieldUid: 91d05e51-ee38-4e73-af4c-ebed7e7572d3 # Spacing
-            handle: mt
-            includeInCards: false
-            instructions: null
-            label: 'Top Margin'
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: cc3f5af7-da6a-4172-b93d-316b546dbd7f
-            userCondition: null
-            warning: null
-            width: 50
-          -
-            elementCondition: null
-            fieldUid: 91d05e51-ee38-4e73-af4c-ebed7e7572d3 # Spacing
-            handle: mb
-            includeInCards: false
-            instructions: null
-            label: 'Bottom Margin'
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 93a93898-c5de-41a7-aeda-0362ac459c6c
-            userCondition: null
-            warning: null
-            width: 50
-        name: Spacing
-        uid: 4e3e4a56-7e42-46fb-b865-4d499668fa1e
+        uid: 77da9b51-8b4c-493b-88fb-ce41b30264d6
         userCondition: null
       -
         elementCondition: null

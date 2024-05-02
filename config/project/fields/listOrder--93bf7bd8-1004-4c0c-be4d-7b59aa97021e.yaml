@@ -1,7 +1,7 @@
 columnSuffix: null
-handle: deviceSize
+handle: listOrder
 instructions: null
-name: 'Device Size'
+name: 'List Order'
 searchable: false
 settings:
   options:
@@ -9,10 +9,10 @@ settings:
       __assoc__:
         -
           - label
-          - 'Default (Phone Vertical and Above)'
+          - 'Newest to Oldest'
         -
           - value
-          - all
+          - dd
         -
           - default
           - '1'
@@ -20,10 +20,10 @@ settings:
       __assoc__:
         -
           - label
-          - 'Phone Horizontal and Above'
+          - 'Oldest to Newest'
         -
           - value
-          - phoneh
+          - da
         -
           - default
           - ''
@@ -31,10 +31,10 @@ settings:
       __assoc__:
         -
           - label
-          - 'Tablet and Above'
+          - Random
         -
           - value
-          - tablet
+          - r
         -
           - default
           - ''
@@ -42,10 +42,10 @@ settings:
       __assoc__:
         -
           - label
-          - 'Laptop and Above'
+          - A-Z
         -
           - value
-          - laptop
+          - az
         -
           - default
           - ''
@@ -53,10 +53,10 @@ settings:
       __assoc__:
         -
           - label
-          - 'Desktop and Above'
+          - Z-A
         -
           - value
-          - desktop
+          - za
         -
           - default
           - ''
@@ -64,10 +64,10 @@ settings:
       __assoc__:
         -
           - label
-          - Hi-Res
+          - 'Admin Defined (for entries that can be rearranged in the control panel)'
         -
           - value
-          - highres
+          - cp
         -
           - default
           - ''

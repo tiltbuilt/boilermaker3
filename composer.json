@@ -14,6 +14,7 @@
     "putyourlightson/craft-blitz": "5.2.0",
     "spacecatninja/imager-x": "5.0.0",
     "spicyweb/craft-embedded-assets": "5.1.0",
+    "verbb/buttonbox": "5.0.0-beta.1",
     "verbb/formie": "3.0.0-beta.9",
     "verbb/hyper": "2.0.0-beta.8",
     "verbb/icon-picker": "3.0.0-beta.3",
@@ -21,7 +22,8 @@
     "verbb/shortcodes": "4.0.0-beta.1",
     "verbb/social-share": "2.0.0-beta.1",
     "verbb/tablemaker": "5.0.0-beta.2",
-    "vlucas/phpdotenv": "^5.4.0"
+    "vlucas/phpdotenv": "^5.4.0",
+    "wmd/section-and-product-type": "2.0.8"
   },
   "require-dev": {
     "craftcms/generator": "^2.0.0",

@@ -1,7 +1,7 @@
 columnSuffix: null
-handle: deviceSize
+handle: textCase
 instructions: null
-name: 'Device Size'
+name: 'Text Case'
 searchable: false
 settings:
   options:
@@ -9,10 +9,10 @@ settings:
       __assoc__:
         -
           - label
-          - 'Default (Phone Vertical and Above)'
+          - 'Default (No Change)'
         -
           - value
-          - all
+          - ''
         -
           - default
           - '1'
@@ -20,10 +20,10 @@ settings:
       __assoc__:
         -
           - label
-          - 'Phone Horizontal and Above'
+          - 'Normal Case'
         -
           - value
-          - phoneh
+          - normal-case
         -
           - default
           - ''
@@ -31,10 +31,10 @@ settings:
       __assoc__:
         -
           - label
-          - 'Tablet and Above'
+          - Capitalize
         -
           - value
-          - tablet
+          - capitalize
         -
           - default
           - ''
@@ -42,10 +42,10 @@ settings:
       __assoc__:
         -
           - label
-          - 'Laptop and Above'
+          - 'UPPER CASE'
         -
           - value
-          - laptop
+          - uppercase
         -
           - default
           - ''
@@ -53,21 +53,10 @@ settings:
       __assoc__:
         -
           - label
-          - 'Desktop and Above'
+          - 'lower case'
         -
           - value
-          - desktop
-        -
-          - default
-          - ''
-    -
-      __assoc__:
-        -
-          - label
-          - Hi-Res
-        -
-          - value
-          - highres
+          - lowercase
         -
           - default
           - ''

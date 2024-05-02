@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "65227bffc467896982c2a16cd829104d",
+    "content-hash": "bcf52a4d759bc79cb758881f5117d093",
     "packages": [
         {
             "name": "amphp/amp",
@@ -9580,6 +9580,63 @@
             "time": "2024-04-12T00:31:22+00:00"
         },
         {
+            "name": "verbb/buttonbox",
+            "version": "5.0.0-beta.1",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/verbb/buttonbox/zipball/b4594031201786c201fa4df108177445ac531c65",
+                "reference": "b4594031201786c201fa4df108177445ac531c65",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^5.0.0-beta.1",
+                "php": "^8.2",
+                "verbb/base": "^3.0.0-beta.1"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Button Box",
+                "handle": "buttonbox",
+                "documentationUrl": "https://github.com/verbb/buttonbox",
+                "changelogUrl": "https://raw.githubusercontent.com/verbb/buttonbox/craft-5/CHANGELOG.md",
+                "class": "verbb\\buttonbox\\ButtonBox"
+            },
+            "autoload": {
+                "psr-4": {
+                    "verbb\\buttonbox\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Verbb",
+                    "homepage": "https://verbb.io"
+                },
+                {
+                    "name": "Supercool",
+                    "homepage": "http://supercooldesign.co.uk"
+                }
+            ],
+            "description": "A collection of utility field types.",
+            "keywords": [
+                "buttonbox",
+                "cms",
+                "craft",
+                "craft-plugin",
+                "craftcms"
+            ],
+            "support": {
+                "email": "support@verbb.io",
+                "issues": "https://github.com/verbb/buttonbox/issues?state=open",
+                "source": "https://github.com/verbb/buttonbox",
+                "docs": "https://github.com/verbb/buttonbox",
+                "rss": "https://github.com/verbb/buttonbox/commits/v2.atom"
+            },
+            "time": "2024-03-04T09:29:33+00:00"
+        },
+        {
             "name": "verbb/formie",
             "version": "3.0.0-beta.9",
             "dist": {
@@ -10683,6 +10740,57 @@
                 "graphql"
             ],
             "time": "2023-07-05T14:23:37+00:00"
+        },
+        {
+            "name": "wmd/section-and-product-type",
+            "version": "2.0.8",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/wmdhosting/craft3-section-and-product-type-field/zipball/a5c4b6de16370d86f941dab2df274570150f1515",
+                "reference": "a5c4b6de16370d86f941dab2df274570150f1515",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^5.0.0-alpha.1",
+                "php": "^8.0.2"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Section + Product Type",
+                "handle": "section-and-product-type",
+                "developer": "WMD Hosting",
+                "developerUrl": "https://wmd.hosting/",
+                "documentationUrl": "https://github.com/https://github.com/section-and-product-type/blob/master/README.md",
+                "changelogUrl": "https://raw.githubusercontent.com/https://github.com/section-and-product-type/master/CHANGELOG.md",
+                "class": "wmd\\sectionandproducttype\\SectionAndProductType"
+            },
+            "autoload": {
+                "psr-4": {
+                    "wmd\\sectionandproducttype\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "WMD Hosting",
+                    "homepage": "https://wmd.hosting/"
+                }
+            ],
+            "description": "If you buidling some Page content builder this can very usefull field type",
+            "keywords": [
+                "cms",
+                "craft",
+                "craft-plugin",
+                "craftcms",
+                "section and product type"
+            ],
+            "support": {
+                "docs": "https://github.com/https://github.com/section-and-product-type/blob/master/README.md",
+                "issues": "https://github.com/https://github.com/section-and-product-type/issues"
+            },
+            "time": "2024-03-26T16:46:31+00:00"
         },
         {
             "name": "yiisoft/yii2",

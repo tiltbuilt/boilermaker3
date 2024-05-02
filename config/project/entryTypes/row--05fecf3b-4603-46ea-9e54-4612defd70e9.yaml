@@ -54,47 +54,6 @@ fieldLayouts:
         userCondition: null
       -
         elementCondition: null
-        name: Layout
-        uid: 79be239c-e80c-40a3-a9ae-eaf49e3818c5
-        userCondition: null
-      -
-        elementCondition: null
-        elements:
-          -
-            elementCondition: null
-            fieldUid: 91d05e51-ee38-4e73-af4c-ebed7e7572d3 # Spacing
-            handle: mt
-            includeInCards: false
-            instructions: null
-            label: 'Top Margin'
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 2dbfc4f8-6fb5-4d12-9be8-925d9a5a3684
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            elementCondition: null
-            fieldUid: 91d05e51-ee38-4e73-af4c-ebed7e7572d3 # Spacing
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: null
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 60e95707-c6b5-4599-9806-3f81d61c702a
-            userCondition: null
-            warning: null
-            width: 100
-        name: Spacing
-        uid: 95de2795-3094-4e9f-9357-1870926291a8
-        userCondition: null
-      -
-        elementCondition: null
         elements:
           -
             elementCondition: null
