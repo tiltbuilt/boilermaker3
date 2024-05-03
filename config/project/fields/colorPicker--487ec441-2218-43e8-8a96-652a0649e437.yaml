@@ -1,0 +1,39 @@
+columnSuffix: null
+handle: colorPicker
+instructions: null
+name: 'Color Picker'
+searchable: false
+settings:
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - White
+        -
+          - value
+          - white
+        -
+          - cssColour
+          - FFF
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Black
+        -
+          - value
+          - black
+        -
+          - cssColour
+          - '000'
+        -
+          - default
+          - ''
+  placeholderText: 'Select an option'
+translationKeyFormat: null
+translationMethod: none
+type: verbb\buttonbox\fields\Colours

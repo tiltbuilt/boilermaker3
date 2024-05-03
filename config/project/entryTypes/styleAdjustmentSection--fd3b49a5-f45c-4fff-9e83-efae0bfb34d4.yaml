@@ -294,11 +294,6 @@ fieldLayouts:
         userCondition: null
       -
         elementCondition: null
-        name: Color
-        uid: be97d614-50ab-42f9-9965-8a6513e03059
-        userCondition: null
-      -
-        elementCondition: null
         elements:
           -
             elementCondition: null
@@ -410,6 +405,6 @@ showSlugField: false
 showStatusField: false
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
-titleFormat: 'Section{object.owner.canonicalId}-styles-{ object.deviceSize }'
+titleFormat: '{object.owner.title}-styles-{ object.deviceSize }'
 titleTranslationKeyFormat: null
 titleTranslationMethod: site

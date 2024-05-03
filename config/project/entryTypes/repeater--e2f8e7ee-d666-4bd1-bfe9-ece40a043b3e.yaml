@@ -219,6 +219,33 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
+          -
+            elementCondition:
+              class: craft\elements\conditions\entries\EntryCondition
+              conditionRules:
+                -
+                  class: craft\fields\conditions\OptionsFieldConditionRule
+                  fieldUid: 93013c2a-acd5-4b87-b999-b352741b10fd # Repeater Content
+                  layoutElementUid: cd0ef4dc-4cbd-49bf-b9a4-90ef1dd3a468
+                  operator: in
+                  uid: 9e05e60f-537a-44d4-bb6d-f37e73947569
+                  values:
+                    - navList
+              elementType: craft\elements\Entry
+              fieldContext: global
+            fieldUid: bea4db36-ae23-4382-ad57-5031c47c5ab6 # Nav List to Display
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 81c3e05c-ddc1-4615-9e88-08bcec29a0f8
+            userCondition: null
+            warning: null
+            width: 100
         name: Content
         uid: 25099bc4-7e20-41e5-98e8-ea03b9e386c2
         userCondition: null
@@ -322,7 +349,34 @@ fieldLayouts:
             uid: 5fec31aa-be4d-4ced-8135-7dd48191332f
             userCondition: null
             warning: null
-            width: 100
+            width: 50
+          -
+            elementCondition:
+              class: craft\elements\conditions\entries\EntryCondition
+              conditionRules:
+                -
+                  class: craft\fields\conditions\OptionsFieldConditionRule
+                  fieldUid: 13b06d24-aa17-46e3-89b9-c895a68df851 # Repeater Display Type
+                  layoutElementUid: 637190cd-073e-46d0-b3c6-7e32259ccefc
+                  operator: in
+                  uid: f579118e-45e1-461f-a651-e0dab524399a
+                  values:
+                    - buttonList
+              elementType: craft\elements\Entry
+              fieldContext: global
+            fieldUid: adca13f3-4ae5-49c5-83c4-cab3dd9f5ece # Button Size
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ab5f5207-4915-47c1-bdfc-44d55e45eac9
+            userCondition: null
+            warning: null
+            width: 50
           -
             elementCondition:
               class: craft\elements\conditions\entries\EntryCondition

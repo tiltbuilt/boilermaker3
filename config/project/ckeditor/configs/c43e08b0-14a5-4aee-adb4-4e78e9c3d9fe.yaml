@@ -7,10 +7,12 @@ headingLevels:
   - 6
 name: 'Main Content'
 options:
-  alignment:
+  fontSize:
     options:
-      - left
-      - right
+      - tiny
+      - small
+      - big
+      - huge
   style:
     definitions:
       -
@@ -29,22 +31,22 @@ options:
         element: span
         name: Marker
 toolbar:
+  - createEntry
   - heading
   - style
+  - fontSize
+  - fontColor
+  - fontFamily
+  - mediaEmbed
+  - insertImage
   - '|'
   - bold
   - italic
   - link
-  - subscript
-  - superscript
-  - '|'
-  - alignment
   - '|'
   - bulletedList
   - numberedList
   - outdent
   - indent
-  - '|'
-  - createEntry
   - '|'
   - sourceEditing
