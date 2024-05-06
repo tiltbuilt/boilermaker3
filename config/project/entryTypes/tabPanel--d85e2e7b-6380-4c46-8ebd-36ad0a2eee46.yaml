@@ -72,6 +72,57 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
+            fieldUid: 5514a63a-0a23-42f9-9333-5576b0e95462 # Color Mode
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c9e83f3e-5664-4a1d-9ade-3f08bcea523c
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 487ec441-2218-43e8-8a96-652a0649e437 # Color Picker
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c43a4be1-b768-45c5-bc43-cb3ee9c192e2
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: f13a58c0-cc0e-41c6-b75b-f014f8de92a6 # Tab Panel Style Adjustments
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b7f5fe4b-bbfa-4af8-9dd8-210c48947557
+            userCondition: null
+            warning: null
+            width: 100
+        name: Styling
+        uid: b5f7ead3-a619-4481-abf6-b5d32c6ed652
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
             fieldUid: 6b484609-7d28-4f55-990e-f5212885d922 # Custom ID
             handle: null
             includeInCards: false

@@ -72,6 +72,27 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
+            fieldUid: 2ac55b2e-329b-4793-af25-3d158c1a4682 # Accordion Style Adjustments
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 8aabbc14-7fe5-4526-b6dc-15de9e244f92
+            userCondition: null
+            warning: null
+            width: 100
+        name: Styling
+        uid: 09f067e7-d40d-4c01-b8ed-77f11089735a
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
             fieldUid: 6b484609-7d28-4f55-990e-f5212885d922 # Custom ID
             handle: null
             includeInCards: false

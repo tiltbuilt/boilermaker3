@@ -294,6 +294,60 @@ fieldLayouts:
                   fieldUid: 13b06d24-aa17-46e3-89b9-c895a68df851 # Repeater Display Type
                   layoutElementUid: 637190cd-073e-46d0-b3c6-7e32259ccefc
                   operator: in
+                  uid: 54d02b86-2d09-4b1d-a98a-eba45911e49c
+                  values:
+                    - textList
+              elementType: craft\elements\Entry
+              fieldContext: global
+            fieldUid: 3bcfa1bb-bcae-4957-b813-c81aa2061bfd # Text List Style
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 4c5e58eb-9a36-4a28-97db-18c250b19aff
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition:
+              class: craft\elements\conditions\entries\EntryCondition
+              conditionRules:
+                -
+                  class: craft\fields\conditions\OptionsFieldConditionRule
+                  fieldUid: 13b06d24-aa17-46e3-89b9-c895a68df851 # Repeater Display Type
+                  layoutElementUid: 637190cd-073e-46d0-b3c6-7e32259ccefc
+                  operator: in
+                  uid: d22bf64e-f1af-47ac-9816-2857eebe05d8
+                  values:
+                    - textList
+              elementType: craft\elements\Entry
+              fieldContext: global
+            fieldUid: 54321551-57ae-4812-8a1d-c491760d59ad # Multi-Column Settings
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 4b0b64b4-007f-4715-9b08-0963f075df2b
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition:
+              class: craft\elements\conditions\entries\EntryCondition
+              conditionRules:
+                -
+                  class: craft\fields\conditions\OptionsFieldConditionRule
+                  fieldUid: 13b06d24-aa17-46e3-89b9-c895a68df851 # Repeater Display Type
+                  layoutElementUid: 637190cd-073e-46d0-b3c6-7e32259ccefc
+                  operator: in
                   uid: 40e0408e-5d91-4bfe-b057-59f6ca3c6a76
                   values:
                     - cardList
@@ -305,6 +359,36 @@ fieldLayouts:
             type: craft\fieldlayoutelements\Heading
             uid: a25893e6-c131-4f46-a388-3bf3876493b5
             userCondition: null
+          -
+            elementCondition:
+              class: craft\elements\conditions\entries\EntryCondition
+              conditionRules:
+                -
+                  class: craft\fields\conditions\OptionsFieldConditionRule
+                  fieldUid: 13b06d24-aa17-46e3-89b9-c895a68df851 # Repeater Display Type
+                  layoutElementUid: 637190cd-073e-46d0-b3c6-7e32259ccefc
+                  operator: in
+                  uid: aebfbc54-11d9-4fe4-a29f-4fb507ad015c
+                  values:
+                    - cardList
+                    - cardListSmallImage
+                    - cardListLargeImage
+                    - multiCardSlider
+              elementType: craft\elements\Entry
+              fieldContext: global
+            fieldUid: a7d4ee4f-543c-4209-b4fd-5df98550137d # Cards Per Row
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 27985cff-cac3-4213-9b5c-83fc91fc7d96
+            userCondition: null
+            warning: null
+            width: 100
           -
             elementCondition:
               class: craft\elements\conditions\entries\EntryCondition
@@ -564,11 +648,133 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
+          -
+            elementCondition: null
+            heading: Pagination
+            type: craft\fieldlayoutelements\Heading
+            uid: e3f87921-f86b-4cb1-8f41-d3aab059d379
+            userCondition: null
+          -
+            elementCondition:
+              class: craft\elements\conditions\entries\EntryCondition
+              conditionRules:
+                -
+                  class: craft\fields\conditions\OptionsFieldConditionRule
+                  fieldUid: 93013c2a-acd5-4b87-b999-b352741b10fd # Repeater Content
+                  layoutElementUid: cd0ef4dc-4cbd-49bf-b9a4-90ef1dd3a468
+                  operator: ni
+                  uid: 3c8dc86e-3218-4d06-b38a-e885b5e21512
+                  values:
+                    - contentLinks
+                    - contentCards
+                    - navList
+                -
+                  class: craft\fields\conditions\OptionsFieldConditionRule
+                  fieldUid: 13b06d24-aa17-46e3-89b9-c895a68df851 # Repeater Display Type
+                  layoutElementUid: 637190cd-073e-46d0-b3c6-7e32259ccefc
+                  operator: in
+                  uid: f7bb39a0-00e5-43f8-bece-348dea15e76f
+                  values:
+                    - cardList
+                    - cardListSmallImage
+                    - cardListLargeImage
+                    - textList
+              elementType: craft\elements\Entry
+              fieldContext: global
+            fieldUid: 56d80f6e-2a67-464f-af70-0d46d267a0e2 # Items Per Page
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ea965d57-c019-4688-bd6d-ea2fa5a525f7
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition:
+              class: craft\elements\conditions\entries\EntryCondition
+              conditionRules:
+                -
+                  class: craft\fields\conditions\NumberFieldConditionRule
+                  fieldUid: 56d80f6e-2a67-464f-af70-0d46d267a0e2 # Items Per Page
+                  layoutElementUid: ea965d57-c019-4688-bd6d-ea2fa5a525f7
+                  maxValue: ''
+                  operator: '!='
+                  uid: ac463ac6-a188-47f4-a50f-8fa55918f475
+                  value: '0'
+              elementType: craft\elements\Entry
+              fieldContext: global
+            fieldUid: a2da31ae-7341-4dd1-b245-5ee55d44cbc2 # Yes No
+            handle: showPagination
+            includeInCards: false
+            instructions: null
+            label: 'Show Pagination?'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c211b860-b351-42e2-8b19-a72ad31961d1
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition:
+              class: craft\elements\conditions\entries\EntryCondition
+              conditionRules:
+                -
+                  class: craft\fields\conditions\NumberFieldConditionRule
+                  fieldUid: 56d80f6e-2a67-464f-af70-0d46d267a0e2 # Items Per Page
+                  layoutElementUid: ea965d57-c019-4688-bd6d-ea2fa5a525f7
+                  maxValue: ''
+                  operator: '!='
+                  uid: 96f5d8b8-9ae3-46cc-a5ce-3c42c29a06ed
+                  value: '0'
+                -
+                  class: craft\fields\conditions\LightswitchFieldConditionRule
+                  fieldUid: a2da31ae-7341-4dd1-b245-5ee55d44cbc2 # Yes No
+                  layoutElementUid: c211b860-b351-42e2-8b19-a72ad31961d1
+                  uid: 77a4fe41-064b-477b-8c71-f14c90a8264e
+                  value: false
+              elementType: craft\elements\Entry
+              fieldContext: global
+            fieldUid: c3d75796-b930-48a0-b387-b5469be4094b # Full Listing Button
+            handle: null
+            includeInCards: false
+            instructions: 'Use this field to set up a "View Full Listings" button when you show a limited subset of items in a list and don''t want to show pagination.  If you don''t want a button and no pagination, don''t create a button.'
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a888f770-dbb3-498b-887b-91e3eb848e26
+            userCondition: null
+            warning: null
+            width: 100
         name: Display
         uid: c7a13bba-d286-468d-bf37-d9c9e746fef5
         userCondition: null
       -
         elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: fdc69893-7848-4bd4-8f1d-3df385771a84 # Repeater Style Adjustments
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 77d09342-6d53-48e8-87e1-0fdc07821733
+            userCondition: null
+            warning: null
+            width: 100
         name: Styling
         uid: 390c0e05-2999-4e34-86a7-fb492d05846e
         userCondition: null

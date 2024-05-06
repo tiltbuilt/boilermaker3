@@ -72,6 +72,57 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
+            fieldUid: 5514a63a-0a23-42f9-9333-5576b0e95462 # Color Mode
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a1cfaa8b-df74-4370-b426-a82cc9d5eff1
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 487ec441-2218-43e8-8a96-652a0649e437 # Color Picker
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 8dc185fb-3f6b-4cf1-9bad-465b35e6336c
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 67336236-2b0e-4d01-bb98-029a923a6932 # Tab Set Style Adjustments
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 104cf2fd-5865-484e-810d-b4c59d6a22ad
+            userCondition: null
+            warning: null
+            width: 100
+        name: Styling
+        uid: 619c2012-3046-4173-995b-4ffdf604866e
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
             fieldUid: 6b484609-7d28-4f55-990e-f5212885d922 # Custom ID
             handle: null
             includeInCards: false
@@ -126,6 +177,6 @@ showSlugField: false
 showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
-titleFormat: ''
+titleFormat: '{object.owner.title}-styles-{ object.deviceSize }'
 titleTranslationKeyFormat: null
 titleTranslationMethod: site

@@ -1,4 +1,4 @@
-dateModified: 1714763545
+dateModified: 1715034566
 elementSources:
   craft\elements\Entry:
     -
@@ -64,8 +64,10 @@ meta:
     0f72b724-e0a8-4044-a3aa-12255ade6ea1: 'Basic Text with Search' # Basic Text with Search
     0fe2ca3f-eb30-4294-96a2-1154bd95e41e: 'Background Position' # Background Position
     1ef67107-0265-4563-8344-695b0a016e56: Form # Form
+    2ac55b2e-329b-4793-af25-3d158c1a4682: 'Accordion Style Adjustments' # Accordion Style Adjustments
     2dc9eeb7-914f-40a8-a177-d21efc54153e: 'Link Settings' # Link Settings
     3aa14a6e-dabc-42ae-8954-e10f19c53441: Accordions # Accordions
+    3bcfa1bb-bcae-4957-b813-c81aa2061bfd: 'Text List Style' # Text List Style
     3f041b04-6fce-4165-ab3a-d234dabaa7bd: 'Embed Code' # Embed Code
     3fa40ffc-bcf8-4f2f-9462-19c808265175: 'Multiline Text With Search' # Multiline Text With Search
     4a803a3b-ac9b-4ecc-b439-0815fb18e053: 'Tab Set' # Tab Set
@@ -78,6 +80,7 @@ meta:
     6b484609-7d28-4f55-990e-f5212885d922: 'Custom ID' # Custom ID
     7c366b82-7c53-4dd2-a425-1c416a3e1464: Embeds # Embeds
     7f182d27-ea6e-4a71-a3f8-5c9d0f147eed: 'Device Size' # Device Size
+    7ff3d23a-91a6-4110-a3b0-b131dd2c3ee3: 'Style Adjustments - Accordion' # Style Adjustments - Accordion
     9ceecee1-0248-4ae3-a12a-c90171e5f42f: Content # Content
     09d61ba7-f8dd-4e73-bc8f-d580cffbcc1e: 'Boilermaker 3' # Boilermaker 3
     13b06d24-aa17-46e3-89b9-c895a68df851: 'Repeater Display Type' # Repeater Display Type
@@ -86,20 +89,23 @@ meta:
     47acc143-9347-4976-bd50-02778ffeabf1: 'Button Styles' # Button Styles
     51c1b748-da08-41e2-8bd4-b301b9fb6321: 'Column Vertical Alignment' # Column Vertical Alignment
     55cb62d2-f02a-4bd8-849c-695f3a2e92b1: Columns # Columns
+    56d80f6e-2a67-464f-af70-0d46d267a0e2: 'Items Per Page' # Items Per Page
+    57d8551d-6bb8-45ac-a118-25f3bf7c5b6a: 'Style Adjustments - Repeaters' # Style Adjustments - Repeaters
     57eb287d-cdc2-4fba-8588-5dc66ff28c86: 'Line Height' # Line Height
     65c293ae-ed92-4c10-b2d3-1251a63c1402: Modal # Modal
     69b9aab4-6d39-462c-b88a-8d4971791897: Simple # Simple
+    71ab40f6-9c7f-41cc-9887-255aa3c9603a: 'Style Adjustment - Tab Panel' # Style Adjustment - Tab Panel
     79d28a86-5f89-45cb-99a4-a97fa0992c73: 'Video Asset' # Video Asset
     82c290d4-2826-4d74-bcc2-8f94ddc4b0b0: 'Accordion Set' # Accordion Set
     82cdb5ee-7722-4897-8e26-fb817c98e85e: Embed # Embed
     91d05e51-ee38-4e73-af4c-ebed7e7572d3: Spacing # Spacing
     93bf7bd8-1004-4c0c-be4d-7b59aa97021e: 'List Order' # List Order
-    153c0401-ab92-4149-82ba-2c86f317bc7b: Background # Background
     335fab75-2107-4c96-80b2-14808539eadd: 'Button Group' # Button Group
     400ed272-3701-4004-b0e0-a74db3d25030: Accordion # Accordion
     486d3e65-7880-4e2e-803e-daecc6657a1d: 'Content Wrapper' # Content Wrapper
     487ec441-2218-43e8-8a96-652a0649e437: 'Color Picker' # Color Picker
     558fedab-c14e-4f41-a438-ba8c394113a5: 'Notification Bar Alerts' # Notification Bar Alerts
+    569d975f-7001-40dd-b088-6f9614f17e06: 'Content Wrapper Style Adjustments' # Content Wrapper Style Adjustments
     589d7e58-f378-455e-b073-055e9221964b: Pages # Pages
     3388d3b4-cb9f-47ee-8874-09e50df3c0bb: 'Section Styling Adjustments' # Section Styling Adjustments
     3710a5c7-fa54-4a2c-a07b-4f7a31f5bd25: 'Background Repeat' # Background Repeat
@@ -110,9 +116,15 @@ meta:
     699240f2-b35b-4fad-b00a-f24ec0b8d982: Slide # Slide
     4720320b-f7d0-49ec-a327-0db0e3a2dd7c: 'Slider Size' # Slider Size
     6283122d-7dc0-4b8d-8895-140bc4e66973: 'Page Builder' # Page Builder
+    31960640-d715-4966-93ba-b66e61df5207: 'Style Adjustments - Accordion Set' # Style Adjustments - Accordion Set
     53829185-3375-470c-80cf-a50b1733a8c4: 'Slide Effect' # Slide Effect
+    54321551-57ae-4812-8a1d-c491760d59ad: 'Multi-Column Settings' # Multi-Column Settings
+    67336236-2b0e-4d01-bb98-029a923a6932: 'Tab Set Style Adjustments' # Tab Set Style Adjustments
     86544431-ce27-4263-b49f-b814ff50fcfb: 'Date Format' # Date Format
+    96056087-af4e-42ba-a559-9152ba279d35: 'Accordion Set Style Adjustments' # Accordion Set Style Adjustments
     a2da31ae-7341-4dd1-b245-5ee55d44cbc2: 'Yes No' # Yes No
+    a6e56255-d417-4ac8-9a3f-256c30684cd0: Image # Image
+    a7d4ee4f-543c-4209-b4fd-5df98550137d: 'Cards Per Row' # Cards Per Row
     a78e7e89-26cf-4a0e-a36d-b48ca76d7ba5: 'Custom Classes' # Custom Classes
     acdcfd1c-89a2-4090-989d-17db6ad24060: Icon # Icon
     acec3806-c4ac-4430-a8d9-24915eacc052: Modals # Modals
@@ -120,6 +132,7 @@ meta:
     ad2e8ad9-d9ae-4fee-a8f8-de0e8680707c: Quote # Quote
     adca13f3-4ae5-49c5-83c4-cab3dd9f5ece: 'Button Size' # Button Size
     b1dd9550-b7de-4c8d-ac15-30a80aef59ff: 'Text Case' # Text Case
+    b1e1aad8-a87c-4914-9445-bbbbb92076ee: Heading # Heading
     b81cc92d-9e5b-440d-8461-cdf9ab64807e: Opacity # Opacity
     b644bda8-1050-46f5-9453-0b3d19812289: Documents # Documents
     b696e4a1-c7cf-4e07-a0be-b9f4f18a2f53: Home # Home
@@ -131,11 +144,13 @@ meta:
     bea4db36-ae23-4382-ad57-5031c47c5ab6: 'Nav List to Display' # Nav List to Display
     c012ee7e-6cb9-4139-803a-2e2dea537718: 'Column Size' # Column Size
     c025e168-6f53-4831-9433-670f03c62851: Buttons # Buttons
+    c3d75796-b930-48a0-b387-b5469be4094b: 'Full Listing Button' # Full Listing Button
     c43e08b0-14a5-4aee-adb4-4e78e9c3d9fe: 'Main Content' # Main Content
     c43e9602-b393-4012-b9c3-c4b391c74cd6: Video # Video
     d1c26bcb-25db-404d-ba73-7e4e3c7fc0a1: 'Slide Transition Delay' # Slide Transition Delay
     d7a280bb-af78-455c-9bd1-1fc2f7e4018d: OpenClosed # OpenClosed
     d85e2e7b-6380-4c46-8ebd-36ad0a2eee46: 'Tab Panel' # Tab Panel
+    de6881eb-f48b-4119-889c-95d3bf6692e5: 'Style Adjustment - Tab Set' # Style Adjustment - Tab Set
     e2f8e7ee-d666-4bd1-bfe9-ece40a043b3e: Repeater # Repeater
     e6aadd12-c632-4735-b22d-b5a758ab5003: 'Boilermaker 3' # Boilermaker 3
     e2924a45-982c-4a78-8a31-72f8b97462d5: 'Column Order' # Column Order
@@ -143,10 +158,13 @@ meta:
     ee64f702-a8f1-46ee-8dea-79f8ad82e25b: 'Custom Attributes' # Custom Attributes
     f1b466ce-fb41-471a-90d4-5d0fd23f346d: 'Image Asset' # Image Asset
     f4d725e6-48b8-4083-a921-ecc0925a0bff: 'Background Size' # Background Size
+    f13a58c0-cc0e-41c6-b75b-f014f8de92a6: 'Tab Panel Style Adjustments' # Tab Panel Style Adjustments
     f22d8a3b-9296-4b9a-b338-0d599eaa364a: 'Section to List' # Section to List
+    f103b592-617a-4840-8a3b-ce98a171eb09: 'Style Adjustments - Content Wrapper' # Style Adjustments - Content Wrapper
     f162c9c9-8174-4ba1-a691-5b2e30f57c37: Root # Root
     fa819c1c-abac-42ac-b1e5-3de37862ccf3: Images # Images
     fd3b49a5-f45c-4fff-9e83-efae0bfb34d4: 'Style Adjustment - Section' # Style Adjustment - Section
+    fdc69893-7848-4bd4-8f1d-3df385771a84: 'Repeater Style Adjustments' # Repeater Style Adjustments
 plugins:
   blitz:
     edition: standard
@@ -173,6 +191,10 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 5.1.0.0
+  field-manager:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
   formie:
     edition: standard
     enabled: true
@@ -193,6 +215,10 @@ plugins:
     enabled: true
     licenseKey: LHKRYAFYC2VCPJDFU9YPOEVG
     schemaVersion: 4.0.0
+  imager-x-power-pack:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
   minify:
     edition: standard
     enabled: true

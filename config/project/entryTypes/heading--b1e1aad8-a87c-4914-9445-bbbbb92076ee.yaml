@@ -1,0 +1,50 @@
+color: cyan
+fieldLayouts:
+  f3589bbe-232b-4610-91e0-458e9a97c5ef:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 0dc960e4-f068-4e83-b8af-cd6593e1e406
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: a70d97af-159d-463f-ac71-a8066ef1f2c6
+        userCondition: null
+handle: heading
+hasTitleField: true
+icon: helicopter-symbol
+name: Heading
+showSlugField: false
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: ''
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

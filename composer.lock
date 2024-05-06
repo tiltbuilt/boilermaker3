@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bcf52a4d759bc79cb758881f5117d093",
+    "content-hash": "4115d6bd4d6d519b2451cbfc103dd46b",
     "packages": [
         {
             "name": "amphp/amp",
@@ -776,11 +776,11 @@
         },
         {
             "name": "aws/aws-crt-php",
-            "version": "v1.2.4",
+            "version": "v1.2.5",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/awslabs/aws-crt-php/zipball/eb0c6e4e142224a10b08f49ebf87f32611d162b2",
-                "reference": "eb0c6e4e142224a10b08f49ebf87f32611d162b2",
+                "url": "https://api.github.com/repos/awslabs/aws-crt-php/zipball/0ea1f04ec5aa9f049f97e012d1ed63b76834a31b",
+                "reference": "0ea1f04ec5aa9f049f97e012d1ed63b76834a31b",
                 "shasum": ""
             },
             "require": {
@@ -812,20 +812,15 @@
                 "crt",
                 "sdk"
             ],
-            "time": "2023-11-08T00:42:13+00:00"
+            "time": "2024-04-19T21:30:56+00:00"
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.304.7",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "b01905670e952b5c5cdc4902973120f62a14a7f4"
-            },
+            "version": "3.305.9",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/b01905670e952b5c5cdc4902973120f62a14a7f4",
-                "reference": "b01905670e952b5c5cdc4902973120f62a14a7f4",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/a611af9a40a5d93f2f04427b322dbb6044e90327",
+                "reference": "a611af9a40a5d93f2f04427b322dbb6044e90327",
                 "shasum": ""
             },
             "require": {
@@ -839,25 +834,6 @@
                 "mtdowling/jmespath.php": "^2.6",
                 "php": ">=7.2.5",
                 "psr/http-message": "^1.0 || ^2.0"
-            },
-            "require-dev": {
-                "andrewsville/php-token-reflection": "^1.4",
-                "aws/aws-php-sns-message-validator": "~1.0",
-                "behat/behat": "~3.0",
-                "composer/composer": "^1.10.22",
-                "dms/phpunit-arraysubset-asserts": "^0.4.0",
-                "doctrine/cache": "~1.4",
-                "ext-dom": "*",
-                "ext-openssl": "*",
-                "ext-pcntl": "*",
-                "ext-sockets": "*",
-                "nette/neon": "^2.3",
-                "paragonie/random_compat": ">= 2",
-                "phpunit/phpunit": "^5.6.3 || ^8.5 || ^9.5",
-                "psr/cache": "^1.0",
-                "psr/simple-cache": "^1.0",
-                "sebastian/comparator": "^1.2.3 || ^4.0",
-                "yoast/phpunit-polyfills": "^1.0"
             },
             "suggest": {
                 "aws/aws-php-sns-message-validator": "To validate incoming SNS notifications",
@@ -880,7 +856,6 @@
                     "Aws\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "Apache-2.0"
             ],
@@ -902,12 +877,7 @@
                 "s3",
                 "sdk"
             ],
-            "support": {
-                "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
-                "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.304.7"
-            },
-            "time": "2024-04-18T18:12:29+00:00"
+            "time": "2024-05-03T18:09:03+00:00"
         },
         {
             "name": "bacon/bacon-qr-code",
@@ -1370,11 +1340,11 @@
         },
         {
             "name": "craftcms/cms",
-            "version": "5.1.0",
+            "version": "5.1.1",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/963ff6d04306af26cb4b0cd1dbf22fc493ecd7ba",
-                "reference": "963ff6d04306af26cb4b0cd1dbf22fc493ecd7ba",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/740d265868b1bbffceafb4bc21d4a21fa58c5576",
+                "reference": "740d265868b1bbffceafb4bc21d4a21fa58c5576",
                 "shasum": ""
             },
             "require": {
@@ -1471,15 +1441,15 @@
                 "docs": "https://craftcms.com/docs/5.x/",
                 "rss": "https://github.com/craftcms/cms/releases.atom"
             },
-            "time": "2024-04-30T17:34:48+00:00"
+            "time": "2024-05-02T22:25:52+00:00"
         },
         {
             "name": "craftcms/feed-me",
-            "version": "6.0.0",
+            "version": "6.0.1",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/feed-me/zipball/0451b2db17cc7c2f4c560f77b28d2e95047d65a9",
-                "reference": "0451b2db17cc7c2f4c560f77b28d2e95047d65a9",
+                "url": "https://api.github.com/repos/craftcms/feed-me/zipball/f574fcd161e75a5802ce0c122e7d3b026532b7ec",
+                "reference": "f574fcd161e75a5802ce0c122e7d3b026532b7ec",
                 "shasum": ""
             },
             "require": {
@@ -1529,7 +1499,7 @@
                 "docs": "https://docs.craftcms.com/feed-me/v4/",
                 "rss": "https://github.com/craftcms/feed-me/commits/master.atom"
             },
-            "time": "2024-03-19T20:40:36+00:00"
+            "time": "2024-05-01T23:30:30+00:00"
         },
         {
             "name": "craftcms/html-field",
@@ -2603,19 +2573,19 @@
         },
         {
             "name": "google/auth",
-            "version": "v1.37.1",
+            "version": "v1.39.0",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/googleapis/google-auth-library-php/zipball/1a7de77b72e6ac60dccf0e6478c4c1005bb0ff46",
-                "reference": "1a7de77b72e6ac60dccf0e6478c4c1005bb0ff46",
+                "url": "https://api.github.com/repos/googleapis/google-auth-library-php/zipball/23e8e696d87f8d7dfefbd347ca1c99ce17ecb368",
+                "reference": "23e8e696d87f8d7dfefbd347ca1c99ce17ecb368",
                 "shasum": ""
             },
             "require": {
                 "firebase/php-jwt": "^6.0",
-                "guzzlehttp/guzzle": "^6.5.8||^7.4.5",
+                "guzzlehttp/guzzle": "^7.4.5",
                 "guzzlehttp/psr7": "^2.4.5",
-                "php": "^7.4||^8.0",
-                "psr/cache": "^1.0||^2.0||^3.0",
+                "php": "^8.0",
+                "psr/cache": "^2.0||^3.0",
                 "psr/http-message": "^1.1||^2.0"
             },
             "suggest": {
@@ -2637,25 +2607,25 @@
                 "google",
                 "oauth2"
             ],
-            "time": "2024-04-03T18:41:12+00:00"
+            "time": "2024-05-02T16:03:51+00:00"
         },
         {
             "name": "google/cloud-core",
-            "version": "v1.56.0",
+            "version": "v1.58.1",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/googleapis/google-cloud-php-core/zipball/35ca0fd74685c635a4c027c871de9d716c504933",
-                "reference": "35ca0fd74685c635a4c027c871de9d716c504933",
+                "url": "https://api.github.com/repos/googleapis/google-cloud-php-core/zipball/db3e0ab25103e0ca953f6e1e0ca5a39e363b8988",
+                "reference": "db3e0ab25103e0ca953f6e1e0ca5a39e363b8988",
                 "shasum": ""
             },
             "require": {
                 "google/auth": "^1.34",
-                "google/gax": "^1.27.0",
+                "google/gax": "^1.30",
                 "guzzlehttp/guzzle": "^6.5.8|^7.4.4",
                 "guzzlehttp/promises": "^1.4||^2.0",
                 "guzzlehttp/psr7": "^2.6",
                 "monolog/monolog": "^2.9|^3.0",
-                "php": ">=7.4",
+                "php": "^8.0",
                 "psr/http-message": "^1.0|^2.0",
                 "rize/uri-template": "~0.3"
             },
@@ -2684,21 +2654,21 @@
                 "Apache-2.0"
             ],
             "description": "Google Cloud PHP shared dependency, providing functionality useful to all components.",
-            "time": "2024-02-23T23:49:35+00:00"
+            "time": "2024-05-03T18:32:44+00:00"
         },
         {
             "name": "google/cloud-storage",
-            "version": "v1.30.3",
+            "version": "v1.41.4",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/googleapis/google-cloud-php-storage/zipball/43f885c04a22473440e29538dfa2f57d1f2bf83f",
-                "reference": "43f885c04a22473440e29538dfa2f57d1f2bf83f",
+                "url": "https://api.github.com/repos/googleapis/google-cloud-php-storage/zipball/304b3ef6a1bd827774faa1deea315b5844826af2",
+                "reference": "304b3ef6a1bd827774faa1deea315b5844826af2",
                 "shasum": ""
             },
             "require": {
-                "google/cloud-core": "^1.43",
-                "google/crc32": "^0.2.0",
-                "php": ">=7.4"
+                "google/cloud-core": "^1.55",
+                "php": "^8.0",
+                "ramsey/uuid": "^4.2.3"
             },
             "suggest": {
                 "google/cloud-pubsub": "May be used to register a topic to receive bucket notifications.",
@@ -2722,7 +2692,7 @@
                 "Apache-2.0"
             ],
             "description": "Cloud Storage Client for PHP",
-            "time": "2023-04-21T22:21:40+00:00"
+            "time": "2024-05-03T18:32:44+00:00"
         },
         {
             "name": "google/common-protos",
@@ -2764,55 +2734,25 @@
             "time": "2024-04-03T19:11:54+00:00"
         },
         {
-            "name": "google/crc32",
-            "version": "v0.2.0",
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/google/php-crc32/zipball/948f7945d803dcc1a375152c72f63144c2dadf23",
-                "reference": "948f7945d803dcc1a375152c72f63144c2dadf23",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=7.4"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Google\\CRC32\\": "src"
-                }
-            },
-            "license": [
-                "Apache-2.0"
-            ],
-            "authors": [
-                {
-                    "name": "Andrew Brampton",
-                    "email": "bramp@google.com"
-                }
-            ],
-            "description": "Various CRC32 implementations",
-            "homepage": "https://github.com/google/php-crc32",
-            "time": "2023-04-16T22:44:57+00:00"
-        },
-        {
             "name": "google/gax",
-            "version": "v1.29.1",
+            "version": "v1.32.0",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/googleapis/gax-php/zipball/54a863e63ee318308637adb283f6157ccc3aabbb",
-                "reference": "54a863e63ee318308637adb283f6157ccc3aabbb",
+                "url": "https://api.github.com/repos/googleapis/gax-php/zipball/9b06449585573f76540cb55d8d0d041e232057ce",
+                "reference": "9b06449585573f76540cb55d8d0d041e232057ce",
                 "shasum": ""
             },
             "require": {
                 "google/auth": "^1.34.0",
                 "google/common-protos": "^4.4",
-                "google/grpc-gcp": "^0.2||^0.3",
+                "google/grpc-gcp": "^0.4",
                 "google/longrunning": "~0.2",
-                "google/protobuf": "^3.22",
+                "google/protobuf": "^v3.25.3||^4.26.1",
                 "grpc/grpc": "^1.13",
-                "guzzlehttp/promises": "^1.4||^2.0",
+                "guzzlehttp/promises": "^2.0",
                 "guzzlehttp/psr7": "^2.0",
-                "php": ">=7.4"
+                "php": "^8.0",
+                "ramsey/uuid": "^4.0"
             },
             "conflict": {
                 "ext-protobuf": "<3.7.0"
@@ -2832,22 +2772,22 @@
             "keywords": [
                 "google"
             ],
-            "time": "2024-02-26T19:15:41+00:00"
+            "time": "2024-04-25T15:45:37+00:00"
         },
         {
             "name": "google/grpc-gcp",
-            "version": "v0.3.0",
+            "version": "v0.4.0",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GoogleCloudPlatform/grpc-gcp-php/zipball/4d8b455a45a89f57e1552cadc41a43bc34c40456",
-                "reference": "4d8b455a45a89f57e1552cadc41a43bc34c40456",
+                "url": "https://api.github.com/repos/GoogleCloudPlatform/grpc-gcp-php/zipball/2a80dbf690922aa52bb6bb79b9a32a9637a5c2d9",
+                "reference": "2a80dbf690922aa52bb6bb79b9a32a9637a5c2d9",
                 "shasum": ""
             },
             "require": {
                 "google/auth": "^1.3",
-                "google/protobuf": "^v3.3.0",
+                "google/protobuf": "^v3.25.3||^4.26.1",
                 "grpc/grpc": "^v1.13.0",
-                "php": "^7.4||^8.0",
+                "php": "^8.0",
                 "psr/cache": "^1.0.1||^2.0.0||^3.0.0"
             },
             "type": "library",
@@ -2863,15 +2803,15 @@
                 "Apache-2.0"
             ],
             "description": "gRPC GCP library for channel management",
-            "time": "2023-04-24T14:37:29+00:00"
+            "time": "2024-04-03T16:37:55+00:00"
         },
         {
             "name": "google/longrunning",
-            "version": "0.4.0",
+            "version": "0.4.2",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/googleapis/php-longrunning/zipball/6841b03479d5a397a64036a99c33d8ee06bc8b42",
-                "reference": "6841b03479d5a397a64036a99c33d8ee06bc8b42",
+                "url": "https://api.github.com/repos/googleapis/php-longrunning/zipball/dd38c97ee348ad73bfb581aa276a536161f4b181",
+                "reference": "dd38c97ee348ad73bfb581aa276a536161f4b181",
                 "shasum": ""
             },
             "type": "library",
@@ -2894,15 +2834,15 @@
                 "Apache-2.0"
             ],
             "description": "Google LongRunning Client for PHP",
-            "time": "2024-04-12T23:38:19+00:00"
+            "time": "2024-05-03T18:32:44+00:00"
         },
         {
             "name": "google/protobuf",
-            "version": "v3.25.3",
+            "version": "v4.26.1",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/protocolbuffers/protobuf-php/zipball/983a87f4f8798a90ca3a25b0f300b8fda38df643",
-                "reference": "983a87f4f8798a90ca3a25b0f300b8fda38df643",
+                "url": "https://api.github.com/repos/protocolbuffers/protobuf-php/zipball/5c46b0eb09e7ad3e6efef3c5a85e2a34108c52ae",
+                "reference": "5c46b0eb09e7ad3e6efef3c5a85e2a34108c52ae",
                 "shasum": ""
             },
             "require": {
@@ -2926,7 +2866,7 @@
             "keywords": [
                 "proto"
             ],
-            "time": "2024-02-15T21:11:49+00:00"
+            "time": "2024-03-27T19:56:50+00:00"
         },
         {
             "name": "graham-campbell/result-type",
@@ -4989,11 +4929,11 @@
         },
         {
             "name": "nesbot/carbon",
-            "version": "3.2.4",
+            "version": "3.3.1",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/82c28278c1c8f7b82dcdab25692237f052ffc8d8",
-                "reference": "82c28278c1c8f7b82dcdab25692237f052ffc8d8",
+                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/8ff64b92c1b1ec84fcde9f8bb9ff2ca34cb8a77a",
+                "reference": "8ff64b92c1b1ec84fcde9f8bb9ff2ca34cb8a77a",
                 "shasum": ""
             },
             "require": {
@@ -5054,7 +4994,7 @@
                 "datetime",
                 "time"
             ],
-            "time": "2024-04-05T09:58:10+00:00"
+            "time": "2024-05-01T06:54:22+00:00"
         },
         {
             "name": "nystudio107/craft-code-editor",
@@ -5931,15 +5871,31 @@
         },
         {
             "name": "phpstan/phpdoc-parser",
-            "version": "1.28.0",
+            "version": "1.29.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phpstan/phpdoc-parser.git",
+                "reference": "536889f2b340489d328f5ffb7b02bb6b183ddedc"
+            },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/cd06d6b1a1b3c75b0b83f97577869fd85a3cd4fb",
-                "reference": "cd06d6b1a1b3c75b0b83f97577869fd85a3cd4fb",
+                "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/536889f2b340489d328f5ffb7b02bb6b183ddedc",
+                "reference": "536889f2b340489d328f5ffb7b02bb6b183ddedc",
                 "shasum": ""
             },
             "require": {
                 "php": "^7.2 || ^8.0"
+            },
+            "require-dev": {
+                "doctrine/annotations": "^2.0",
+                "nikic/php-parser": "^4.15",
+                "php-parallel-lint/php-parallel-lint": "^1.2",
+                "phpstan/extension-installer": "^1.0",
+                "phpstan/phpstan": "^1.5",
+                "phpstan/phpstan-phpunit": "^1.1",
+                "phpstan/phpstan-strict-rules": "^1.0",
+                "phpunit/phpunit": "^9.5",
+                "symfony/process": "^5.2"
             },
             "type": "library",
             "autoload": {
@@ -5949,11 +5905,16 @@
                     ]
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
             "description": "PHPDoc parser with support for nullable, intersection and generic types",
-            "time": "2024-04-03T18:51:33+00:00"
+            "support": {
+                "issues": "https://github.com/phpstan/phpdoc-parser/issues",
+                "source": "https://github.com/phpstan/phpdoc-parser/tree/1.29.0"
+            },
+            "time": "2024-05-06T12:04:23+00:00"
         },
         {
             "name": "pimple/pimple",
@@ -6677,6 +6638,103 @@
             "time": "2019-03-08T08:55:37+00:00"
         },
         {
+            "name": "ramsey/collection",
+            "version": "2.0.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ramsey/collection/zipball/a4b48764bfbb8f3a6a4d1aeb1a35bb5e9ecac4a5",
+                "reference": "a4b48764bfbb8f3a6a4d1aeb1a35bb5e9ecac4a5",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^8.1"
+            },
+            "type": "library",
+            "extra": {
+                "captainhook": {
+                    "force-install": true
+                },
+                "ramsey/conventional-commits": {
+                    "configFile": "conventional-commits.json"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Ramsey\\Collection\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ben Ramsey",
+                    "email": "ben@benramsey.com",
+                    "homepage": "https://benramsey.com"
+                }
+            ],
+            "description": "A PHP library for representing and manipulating collections.",
+            "keywords": [
+                "array",
+                "collection",
+                "hash",
+                "map",
+                "queue",
+                "set"
+            ],
+            "time": "2022-12-31T21:50:55+00:00"
+        },
+        {
+            "name": "ramsey/uuid",
+            "version": "4.7.6",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ramsey/uuid/zipball/91039bc1faa45ba123c4328958e620d382ec7088",
+                "reference": "91039bc1faa45ba123c4328958e620d382ec7088",
+                "shasum": ""
+            },
+            "require": {
+                "brick/math": "^0.8.8 || ^0.9 || ^0.10 || ^0.11 || ^0.12",
+                "ext-json": "*",
+                "php": "^8.0",
+                "ramsey/collection": "^1.2 || ^2.0"
+            },
+            "replace": {
+                "rhumsaa/uuid": "self.version"
+            },
+            "suggest": {
+                "ext-bcmath": "Enables faster math with arbitrary-precision integers using BCMath.",
+                "ext-gmp": "Enables faster math with arbitrary-precision integers using GMP.",
+                "ext-uuid": "Enables the use of PeclUuidTimeGenerator and PeclUuidRandomGenerator.",
+                "paragonie/random-lib": "Provides RandomLib for use with the RandomLibAdapter",
+                "ramsey/uuid-doctrine": "Allows the use of Ramsey\\Uuid\\Uuid as Doctrine field type."
+            },
+            "type": "library",
+            "extra": {
+                "captainhook": {
+                    "force-install": true
+                }
+            },
+            "autoload": {
+                "files": [
+                    "src/functions.php"
+                ],
+                "psr-4": {
+                    "Ramsey\\Uuid\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "A PHP library for generating and working with universally unique identifiers (UUIDs).",
+            "keywords": [
+                "guid",
+                "identifier",
+                "uuid"
+            ],
+            "time": "2024-04-27T21:32:50+00:00"
+        },
+        {
             "name": "revolt/event-loop",
             "version": "v1.0.6",
             "dist": {
@@ -7004,6 +7062,65 @@
                 "issues": "https://github.com/spacecatninja/craft-imager-x/issues"
             },
             "time": "2024-04-10T12:36:07+00:00"
+        },
+        {
+            "name": "spacecatninja/imager-x-power-pack",
+            "version": "1.0.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spacecatninja/craft-imager-x-power-pack/zipball/f1d4852f176ef10b27eb49711981cfc7dd2e35ef",
+                "reference": "f1d4852f176ef10b27eb49711981cfc7dd2e35ef",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^4.5.0|^5.0.0",
+                "ext-imagick": "*",
+                "php": "^8.0.2",
+                "spacecatninja/imager-x": "^4.3.0|^5.0.0"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Imager X Power Pack",
+                "handle": "imager-x-power-pack",
+                "schemaVersion": "1.0.0",
+                "hasCpSettings": false,
+                "hasCpSection": false,
+                "changelogUrl": "https://raw.githubusercontent.com/spacecatninja/craft-imager-x-power-pack/master/CHANGELOG.md",
+                "components": [],
+                "class": "spacecatninja\\imagerxpowerpack\\PowerPack"
+            },
+            "autoload": {
+                "psr-4": {
+                    "spacecatninja\\imagerxpowerpack\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "SPACECATNINJA",
+                    "homepage": "https://www.spacecat.ninja"
+                }
+            ],
+            "description": "Unlocks a stash of hidden weapons in your quest to optimize images, while simultaniously saving time and cognitive load.",
+            "keywords": [
+                "cms",
+                "craft",
+                "craft-plugin",
+                "craftcms",
+                "imager",
+                "lazyload",
+                "picture",
+                "responsive-images",
+                "sizes",
+                "srcset"
+            ],
+            "support": {
+                "docs": "https://github.com/spacecatninja/craft-imager-x-power-pack/blob/master/README.md",
+                "issues": "https://github.com/spacecatninja/craft-imager-x-power-pack/issues"
+            },
+            "time": "2024-05-03T18:29:51+00:00"
         },
         {
             "name": "spicyweb/craft-embedded-assets",
@@ -7469,11 +7586,11 @@
         },
         {
             "name": "symfony/clock",
-            "version": "v7.0.5",
+            "version": "v7.0.7",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/clock/zipball/8b9d08887353d627d5f6c3bf3373b398b49051c2",
-                "reference": "8b9d08887353d627d5f6c3bf3373b398b49051c2",
+                "url": "https://api.github.com/repos/symfony/clock/zipball/2008671acb4a30b01c453de193cf9c80549ebda6",
+                "reference": "2008671acb4a30b01c453de193cf9c80549ebda6",
                 "shasum": ""
             },
             "require": {
@@ -7516,15 +7633,15 @@
                 "psr20",
                 "time"
             ],
-            "time": "2024-03-02T12:46:12+00:00"
+            "time": "2024-04-18T09:29:19+00:00"
         },
         {
             "name": "symfony/deprecation-contracts",
-            "version": "v3.4.0",
+            "version": "v3.5.0",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/deprecation-contracts/zipball/7c3aff79d10325257a001fcf92d991f24fc967cf",
-                "reference": "7c3aff79d10325257a001fcf92d991f24fc967cf",
+                "url": "https://api.github.com/repos/symfony/deprecation-contracts/zipball/0e0d29ce1f20deffb4ab1b016a7257c4f1e789a1",
+                "reference": "0e0d29ce1f20deffb4ab1b016a7257c4f1e789a1",
                 "shasum": ""
             },
             "require": {
@@ -7533,7 +7650,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "3.4-dev"
+                    "dev-main": "3.5-dev"
                 },
                 "thanks": {
                     "name": "symfony/contracts",
@@ -7560,7 +7677,7 @@
             ],
             "description": "A generic function and convention to trigger deprecation notices",
             "homepage": "https://symfony.com",
-            "time": "2023-05-23T14:45:45+00:00"
+            "time": "2024-04-18T09:32:20+00:00"
         },
         {
             "name": "symfony/event-dispatcher",
@@ -7611,11 +7728,11 @@
         },
         {
             "name": "symfony/event-dispatcher-contracts",
-            "version": "v3.4.2",
+            "version": "v3.5.0",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/event-dispatcher-contracts/zipball/4e64b49bf370ade88e567de29465762e316e4224",
-                "reference": "4e64b49bf370ade88e567de29465762e316e4224",
+                "url": "https://api.github.com/repos/symfony/event-dispatcher-contracts/zipball/8f93aec25d41b72493c6ddff14e916177c9efc50",
+                "reference": "8f93aec25d41b72493c6ddff14e916177c9efc50",
                 "shasum": ""
             },
             "require": {
@@ -7625,7 +7742,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "3.4-dev"
+                    "dev-main": "3.5-dev"
                 },
                 "thanks": {
                     "name": "symfony/contracts",
@@ -7660,7 +7777,7 @@
                 "interoperability",
                 "standards"
             ],
-            "time": "2024-01-23T14:51:35+00:00"
+            "time": "2024-04-18T09:32:20+00:00"
         },
         {
             "name": "symfony/expression-language",
@@ -7887,11 +8004,11 @@
         },
         {
             "name": "symfony/http-client-contracts",
-            "version": "v3.4.2",
+            "version": "v3.5.0",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/http-client-contracts/zipball/b6b5c876b3a4ed74460e2c5ac53bbce2f12e2a7e",
-                "reference": "b6b5c876b3a4ed74460e2c5ac53bbce2f12e2a7e",
+                "url": "https://api.github.com/repos/symfony/http-client-contracts/zipball/20414d96f391677bf80078aa55baece78b82647d",
+                "reference": "20414d96f391677bf80078aa55baece78b82647d",
                 "shasum": ""
             },
             "require": {
@@ -7900,7 +8017,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "3.4-dev"
+                    "dev-main": "3.5-dev"
                 },
                 "thanks": {
                     "name": "symfony/contracts",
@@ -7938,7 +8055,7 @@
                 "interoperability",
                 "standards"
             ],
-            "time": "2024-04-01T18:51:09+00:00"
+            "time": "2024-04-18T09:32:20+00:00"
         },
         {
             "name": "symfony/mailer",
@@ -8840,16 +8957,17 @@
         },
         {
             "name": "symfony/service-contracts",
-            "version": "v3.4.2",
+            "version": "v3.5.0",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/service-contracts/zipball/11bbf19a0fb7b36345861e85c5768844c552906e",
-                "reference": "11bbf19a0fb7b36345861e85c5768844c552906e",
+                "url": "https://api.github.com/repos/symfony/service-contracts/zipball/bd1d9e59a81d8fa4acdcea3f617c581f7475a80f",
+                "reference": "bd1d9e59a81d8fa4acdcea3f617c581f7475a80f",
                 "shasum": ""
             },
             "require": {
                 "php": ">=8.1",
-                "psr/container": "^1.1|^2.0"
+                "psr/container": "^1.1|^2.0",
+                "symfony/deprecation-contracts": "^2.5|^3"
             },
             "conflict": {
                 "ext-psr": "<1.1|>=2"
@@ -8857,7 +8975,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "3.4-dev"
+                    "dev-main": "3.5-dev"
                 },
                 "thanks": {
                     "name": "symfony/contracts",
@@ -8895,7 +9013,7 @@
                 "interoperability",
                 "standards"
             ],
-            "time": "2023-12-19T21:51:00+00:00"
+            "time": "2024-04-18T09:32:20+00:00"
         },
         {
             "name": "symfony/string",
@@ -8955,11 +9073,11 @@
         },
         {
             "name": "symfony/translation",
-            "version": "v6.4.4",
+            "version": "v6.4.7",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/translation/zipball/bce6a5a78e94566641b2594d17e48b0da3184a8e",
-                "reference": "bce6a5a78e94566641b2594d17e48b0da3184a8e",
+                "url": "https://api.github.com/repos/symfony/translation/zipball/7495687c58bfd88b7883823747b0656d90679123",
+                "reference": "7495687c58bfd88b7883823747b0656d90679123",
                 "shasum": ""
             },
             "require": {
@@ -9008,15 +9126,15 @@
             ],
             "description": "Provides tools to internationalize your application",
             "homepage": "https://symfony.com",
-            "time": "2024-02-20T13:16:58+00:00"
+            "time": "2024-04-18T09:22:46+00:00"
         },
         {
             "name": "symfony/translation-contracts",
-            "version": "v3.4.2",
+            "version": "v3.5.0",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/translation-contracts/zipball/43810bdb2ddb5400e5c5e778e27b210a0ca83b6b",
-                "reference": "43810bdb2ddb5400e5c5e778e27b210a0ca83b6b",
+                "url": "https://api.github.com/repos/symfony/translation-contracts/zipball/b9d2189887bb6b2e0367a9fc7136c5239ab9b05a",
+                "reference": "b9d2189887bb6b2e0367a9fc7136c5239ab9b05a",
                 "shasum": ""
             },
             "require": {
@@ -9025,7 +9143,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "3.4-dev"
+                    "dev-main": "3.5-dev"
                 },
                 "thanks": {
                     "name": "symfony/contracts",
@@ -9063,7 +9181,7 @@
                 "interoperability",
                 "standards"
             ],
-            "time": "2024-01-23T14:51:35+00:00"
+            "time": "2024-04-18T09:32:20+00:00"
         },
         {
             "name": "symfony/uid",
@@ -9635,6 +9753,58 @@
                 "rss": "https://github.com/verbb/buttonbox/commits/v2.atom"
             },
             "time": "2024-03-04T09:29:33+00:00"
+        },
+        {
+            "name": "verbb/field-manager",
+            "version": "4.0.0-beta.1",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/verbb/field-manager/zipball/e38a062405713380ec9a8b265be32528a36ae791",
+                "reference": "e38a062405713380ec9a8b265be32528a36ae791",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^5.0.0-beta.1",
+                "php": "^8.2",
+                "verbb/base": "^3.0.0-beta.1"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Field Manager",
+                "handle": "field-manager",
+                "changelogUrl": "https://raw.githubusercontent.com/verbb/field-manager/craft-5/CHANGELOG.md",
+                "class": "verbb\\fieldmanager\\FieldManager"
+            },
+            "autoload": {
+                "psr-4": {
+                    "verbb\\fieldmanager\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Verbb",
+                    "homepage": "https://verbb.io"
+                }
+            ],
+            "description": "Manage your fields and field groups with ease.",
+            "keywords": [
+                "cms",
+                "craft",
+                "craft-plugin",
+                "craftcms",
+                "field manager"
+            ],
+            "support": {
+                "email": "support@verbb.io",
+                "issues": "https://github.com/verbb/field-manager/issues?state=open",
+                "source": "https://github.com/verbb/field-manager",
+                "docs": "https://github.com/verbb/field-manager",
+                "rss": "https://github.com/verbb/field-manager/commits/v2.atom"
+            },
+            "time": "2024-03-04T09:29:54+00:00"
         },
         {
             "name": "verbb/formie",
