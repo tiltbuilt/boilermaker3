@@ -109,10 +109,10 @@ fieldLayouts:
         name: Spacing
         uid: 26605f07-97d0-4f31-ab86-86903982fb28
         userCondition: null
-handle: styleAdjustmentsRepeaters
+handle: styleAdjustmentRepeaters
 hasTitleField: false
 icon: palette
-name: 'Style Adjustments - Repeaters'
+name: 'Style Adjustment - Repeaters'
 showSlugField: false
 showStatusField: true
 slugTranslationKeyFormat: null

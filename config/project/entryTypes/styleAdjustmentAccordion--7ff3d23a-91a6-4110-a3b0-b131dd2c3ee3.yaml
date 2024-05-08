@@ -271,10 +271,10 @@ fieldLayouts:
         name: Display
         uid: 7dbea26a-f56a-427d-8764-bc7ee6f879a2
         userCondition: null
-handle: styleAdjustmentsAccordion
+handle: styleAdjustmentAccordion
 hasTitleField: false
 icon: palette
-name: 'Style Adjustments - Accordion'
+name: 'Style Adjustment - Accordion'
 showSlugField: false
 showStatusField: true
 slugTranslationKeyFormat: null

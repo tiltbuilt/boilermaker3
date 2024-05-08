@@ -6,7 +6,7 @@ searchable: false
 settings:
   createButtonLabel: null
   entryTypes:
-    - f103b592-617a-4840-8a3b-ce98a171eb09 # Style Adjustments - Content Wrapper
+    - f103b592-617a-4840-8a3b-ce98a171eb09 # Style Adjustment - Content Wrapper
   includeTableView: false
   maxEntries: 6
   minEntries: null

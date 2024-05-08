@@ -1,0 +1,129 @@
+fieldLayouts:
+  757767d5-3640-42f7-b0ab-4fb837f1f026:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 3f041b04-6fce-4165-ab3a-d234dabaa7bd # Embed Code
+            handle: headerEmbeds
+            includeInCards: false
+            instructions: null
+            label: 'Header Embeds'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e3dcf60e-8a11-4d67-95da-ee6a49426fbd
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 3f041b04-6fce-4165-ab3a-d234dabaa7bd # Embed Code
+            handle: bodyTagEmbeds
+            includeInCards: false
+            instructions: null
+            label: 'Body Tag Embeds'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 7f3d69cf-c20b-4671-84fb-262298486c23
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 3f041b04-6fce-4165-ab3a-d234dabaa7bd # Embed Code
+            handle: footerEmbeds
+            includeInCards: false
+            instructions: null
+            label: 'Footer Embeds'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 7a1cd92b-44f3-4b2a-8b00-df61bbc91742
+            userCondition: null
+            warning: null
+            width: 100
+        name: Embeds
+        uid: 36cce6f6-ba2c-4d0c-8970-1e81ac3b464e
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: acdcfd1c-89a2-4090-989d-17db6ad24060 # Icon
+            handle: sliderPreviousIcon
+            includeInCards: false
+            instructions: null
+            label: 'Slider Previous Icon'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 0d566f7f-db76-4f98-8ecd-5dd24e741763
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: acdcfd1c-89a2-4090-989d-17db6ad24060 # Icon
+            handle: sliderNextIcon
+            includeInCards: false
+            instructions: null
+            label: 'Slider Next Icon'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 0ec13bcd-4c38-4f7c-894a-46ab4cd12661
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: acdcfd1c-89a2-4090-989d-17db6ad24060 # Icon
+            handle: accordionIcon
+            includeInCards: false
+            instructions: null
+            label: 'Accordion Icon'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d5b9fb4f-fcdd-4f67-b5d5-3c8ea87401e6
+            userCondition: null
+            warning: null
+            width: 100
+        name: 'Control Icons'
+        uid: cb65b3d2-71a7-419b-afd2-a965b2a7f4f0
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: f1b466ce-fb41-471a-90d4-5d0fd23f346d # Image Asset
+            handle: thumbnailPlaceholder
+            includeInCards: false
+            instructions: null
+            label: 'Thumbnail Placeholder'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 331bd661-cfce-45a3-9382-5d2ef8b1033f
+            userCondition: null
+            warning: null
+            width: 100
+        name: 'Thumbnail Placeholder'
+        uid: 47943d2f-b3df-4a27-bffd-fe75141c8cfc
+        userCondition: null
+handle: gSettings
+name: Globals
+sortOrder: 2

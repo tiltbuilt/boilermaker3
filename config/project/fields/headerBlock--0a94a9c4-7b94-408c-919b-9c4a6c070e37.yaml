@@ -1,20 +1,20 @@
 columnSuffix: null
-handle: accordionStyleAdjustments
+handle: headerBlock
 instructions: null
-name: 'Accordion Style Adjustments'
+name: 'Header Block'
 searchable: false
 settings:
-  createButtonLabel: null
+  createButtonLabel: 'Create Header'
   entryTypes:
-    - 7ff3d23a-91a6-4110-a3b0-b131dd2c3ee3 # Style Adjustment - Accordion
+    - b1e1aad8-a87c-4914-9445-bbbbb92076ee # Heading
   includeTableView: false
-  maxEntries: 6
-  minEntries: null
-  pageSize: 50
+  maxEntries: 1
+  minEntries: 1
+  pageSize: null
   propagationKeyFormat: null
   propagationMethod: all
   showCardsInGrid: false
-  viewMode: cards
+  viewMode: blocks
 translationKeyFormat: null
 translationMethod: site
 type: craft\fields\Matrix

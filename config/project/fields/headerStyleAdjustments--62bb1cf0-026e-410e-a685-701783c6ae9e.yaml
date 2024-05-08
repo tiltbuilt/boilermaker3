@@ -1,12 +1,12 @@
 columnSuffix: null
-handle: accordionStyleAdjustments
+handle: headerStyleAdjustments
 instructions: null
-name: 'Accordion Style Adjustments'
+name: 'Header Style Adjustments'
 searchable: false
 settings:
   createButtonLabel: null
   entryTypes:
-    - 7ff3d23a-91a6-4110-a3b0-b131dd2c3ee3 # Style Adjustment - Accordion
+    - 5ced14c8-e41a-4186-99ba-01c331a7e430 # Style Adjustment - Header
   includeTableView: false
   maxEntries: 6
   minEntries: null

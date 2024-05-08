@@ -1,14 +1,14 @@
 columnSuffix: null
-handle: accordionStyleAdjustments
+handle: socialMediaLinks
 instructions: null
-name: 'Accordion Style Adjustments'
+name: 'Social Media Links'
 searchable: false
 settings:
   createButtonLabel: null
   entryTypes:
-    - 7ff3d23a-91a6-4110-a3b0-b131dd2c3ee3 # Style Adjustment - Accordion
+    - 79fb09c5-0e2c-49d7-bfe6-a9b38820b56a # Social Link
   includeTableView: false
-  maxEntries: 6
+  maxEntries: null
   minEntries: null
   pageSize: 50
   propagationKeyFormat: null

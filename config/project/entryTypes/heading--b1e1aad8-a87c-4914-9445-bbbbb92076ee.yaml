@@ -34,8 +34,140 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
+          -
+            elementCondition: null
+            fieldUid: bae3f95d-8506-49cb-891a-048c975b11d4 # Heading Level
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 999bdee3-ba97-4ca8-9fa4-f50e7a6bde8d
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 0f72b724-e0a8-4044-a3aa-12255ade6ea1 # Basic Text with Search
+            handle: subheadText
+            includeInCards: false
+            instructions: null
+            label: 'Subhead Text'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f1d6104a-7887-4f72-96a0-5e15a7d7852f
+            userCondition: null
+            warning: null
+            width: 75
+          -
+            elementCondition: null
+            fieldUid: 77532772-badf-4ce5-a93b-6752273d81bb # Subhead Position
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 287f346b-8868-40e8-a7e0-408fa444e7c0
+            userCondition: null
+            warning: null
+            width: 25
         name: Content
         uid: a70d97af-159d-463f-ac71-a8066ef1f2c6
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 487ec441-2218-43e8-8a96-652a0649e437 # Color Picker
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 8bc08470-059f-42d0-8bda-5f0d65784b4d
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 62bb1cf0-026e-410e-a685-701783c6ae9e # Header Style Adjustments
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f4d34e91-c076-4554-97c2-0e92eaedacca
+            userCondition: null
+            warning: null
+            width: 100
+        name: Styling
+        uid: 7bbb70b5-68f5-43d1-b90f-a4e04dd31342
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 6b484609-7d28-4f55-990e-f5212885d922 # Custom ID
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 8a32e6b7-91d7-40f3-8f96-1a6b5f985b1f
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: a78e7e89-26cf-4a0e-a36d-b48ca76d7ba5 # Custom Classes
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e53597c5-5b2c-4993-91ec-2e0350454682
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: ee64f702-a8f1-46ee-8dea-79f8ad82e25b # Custom Attributes
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: bf3824f1-d669-439a-b5d0-047c342cb20f
+            userCondition: null
+            warning: null
+            width: 100
+        name: Advanced
+        uid: b4a609f4-ddc5-4065-83d4-7b8b3f98bd77
         userCondition: null
 handle: heading
 hasTitleField: true

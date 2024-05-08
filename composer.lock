@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4115d6bd4d6d519b2451cbfc103dd46b",
+    "content-hash": "2d52ed85de8321a43cb71a11c0f261ad",
     "packages": [
         {
             "name": "amphp/amp",
@@ -816,11 +816,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.305.9",
+            "version": "3.306.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/aws/aws-sdk-php.git",
+                "reference": "99e13a3647edffba9110948acc85052e3169e46a"
+            },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/a611af9a40a5d93f2f04427b322dbb6044e90327",
-                "reference": "a611af9a40a5d93f2f04427b322dbb6044e90327",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/99e13a3647edffba9110948acc85052e3169e46a",
+                "reference": "99e13a3647edffba9110948acc85052e3169e46a",
                 "shasum": ""
             },
             "require": {
@@ -834,6 +839,25 @@
                 "mtdowling/jmespath.php": "^2.6",
                 "php": ">=7.2.5",
                 "psr/http-message": "^1.0 || ^2.0"
+            },
+            "require-dev": {
+                "andrewsville/php-token-reflection": "^1.4",
+                "aws/aws-php-sns-message-validator": "~1.0",
+                "behat/behat": "~3.0",
+                "composer/composer": "^1.10.22",
+                "dms/phpunit-arraysubset-asserts": "^0.4.0",
+                "doctrine/cache": "~1.4",
+                "ext-dom": "*",
+                "ext-openssl": "*",
+                "ext-pcntl": "*",
+                "ext-sockets": "*",
+                "nette/neon": "^2.3",
+                "paragonie/random_compat": ">= 2",
+                "phpunit/phpunit": "^5.6.3 || ^8.5 || ^9.5",
+                "psr/cache": "^1.0",
+                "psr/simple-cache": "^1.0",
+                "sebastian/comparator": "^1.2.3 || ^4.0",
+                "yoast/phpunit-polyfills": "^1.0"
             },
             "suggest": {
                 "aws/aws-php-sns-message-validator": "To validate incoming SNS notifications",
@@ -856,6 +880,7 @@
                     "Aws\\": "src/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "Apache-2.0"
             ],
@@ -877,7 +902,12 @@
                 "s3",
                 "sdk"
             ],
-            "time": "2024-05-03T18:09:03+00:00"
+            "support": {
+                "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
+                "issues": "https://github.com/aws/aws-sdk-php/issues",
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.306.1"
+            },
+            "time": "2024-05-07T18:11:42+00:00"
         },
         {
             "name": "bacon/bacon-qr-code",
@@ -1340,11 +1370,11 @@
         },
         {
             "name": "craftcms/cms",
-            "version": "5.1.1",
+            "version": "5.1.2",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/740d265868b1bbffceafb4bc21d4a21fa58c5576",
-                "reference": "740d265868b1bbffceafb4bc21d4a21fa58c5576",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/76de732e423edc1c13382ecdbc90673492f5647d",
+                "reference": "76de732e423edc1c13382ecdbc90673492f5647d",
                 "shasum": ""
             },
             "require": {
@@ -1441,7 +1471,7 @@
                 "docs": "https://craftcms.com/docs/5.x/",
                 "rss": "https://github.com/craftcms/cms/releases.atom"
             },
-            "time": "2024-05-02T22:25:52+00:00"
+            "time": "2024-05-07T18:41:50+00:00"
         },
         {
             "name": "craftcms/feed-me",
@@ -2091,11 +2121,6 @@
         {
             "name": "dompdf/dompdf",
             "version": "v2.0.8",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/dompdf/dompdf.git",
-                "reference": "c20247574601700e1f7c8dab39310fca1964dc52"
-            },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/dompdf/dompdf/zipball/c20247574601700e1f7c8dab39310fca1964dc52",
@@ -2109,13 +2134,6 @@
                 "phenx/php-font-lib": ">=0.5.4 <1.0.0",
                 "phenx/php-svg-lib": ">=0.5.2 <1.0.0",
                 "php": "^7.1 || ^8.0"
-            },
-            "require-dev": {
-                "ext-json": "*",
-                "ext-zip": "*",
-                "mockery/mockery": "^1.3",
-                "phpunit/phpunit": "^7.5 || ^8 || ^9",
-                "squizlabs/php_codesniffer": "^3.5"
             },
             "suggest": {
                 "ext-gd": "Needed to process images",
@@ -2132,7 +2150,6 @@
                     "lib/"
                 ]
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "LGPL-2.1"
             ],
@@ -2144,10 +2161,6 @@
             ],
             "description": "DOMPDF is a CSS 2.1 compliant HTML to PDF converter",
             "homepage": "https://github.com/dompdf/dompdf",
-            "support": {
-                "issues": "https://github.com/dompdf/dompdf/issues",
-                "source": "https://github.com/dompdf/dompdf/tree/v2.0.8"
-            },
             "time": "2024-04-29T13:06:17+00:00"
         },
         {
@@ -2455,11 +2468,11 @@
         },
         {
             "name": "giggsey/libphonenumber-for-php",
-            "version": "8.13.35",
+            "version": "8.13.36",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/giggsey/libphonenumber-for-php/zipball/cd52d7b27572ee45d31ca0d61b394638ed9a6bae",
-                "reference": "cd52d7b27572ee45d31ca0d61b394638ed9a6bae",
+                "url": "https://api.github.com/repos/giggsey/libphonenumber-for-php/zipball/9ca4179e4332d21578cb29f0c0406f0a2b8803e3",
+                "reference": "9ca4179e4332d21578cb29f0c0406f0a2b8803e3",
                 "shasum": ""
             },
             "require": {
@@ -2507,7 +2520,7 @@
                 "phonenumber",
                 "validation"
             ],
-            "time": "2024-04-19T12:41:30+00:00"
+            "time": "2024-05-03T06:27:03+00:00"
         },
         {
             "name": "giggsey/locale",
@@ -4502,11 +4515,16 @@
         },
         {
             "name": "mollie/mollie-api-php",
-            "version": "v2.67.0",
+            "version": "v2.67.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mollie/mollie-api-php.git",
+                "reference": "ed5b2ba1dc8f30a4674f10ca78ad547c2df91008"
+            },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mollie/mollie-api-php/zipball/cf15c53127aaaac9b39d3c9772bf3f4c8ee16bd2",
-                "reference": "cf15c53127aaaac9b39d3c9772bf3f4c8ee16bd2",
+                "url": "https://api.github.com/repos/mollie/mollie-api-php/zipball/ed5b2ba1dc8f30a4674f10ca78ad547c2df91008",
+                "reference": "ed5b2ba1dc8f30a4674f10ca78ad547c2df91008",
                 "shasum": ""
             },
             "require": {
@@ -4515,6 +4533,13 @@
                 "ext-json": "*",
                 "ext-openssl": "*",
                 "php": "^7.2|^8.0"
+            },
+            "require-dev": {
+                "eloquent/liberator": "^2.0||^3.0",
+                "friendsofphp/php-cs-fixer": "^3.0",
+                "guzzlehttp/guzzle": "^6.3 || ^7.0",
+                "phpstan/phpstan": "^1.4",
+                "phpunit/phpunit": "^8.5 || ^9.5"
             },
             "suggest": {
                 "mollie/oauth2-mollie-php": "Use OAuth to authenticate with the Mollie API. This is needed for some endpoints. Visit https://docs.mollie.com/ for more information."
@@ -4525,6 +4550,7 @@
                     "Mollie\\Api\\": "src/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "BSD-2-Clause"
             ],
@@ -4573,7 +4599,11 @@
                 "sofortbanking",
                 "subscriptions"
             ],
-            "time": "2024-04-12T07:06:01+00:00"
+            "support": {
+                "issues": "https://github.com/mollie/mollie-api-php/issues",
+                "source": "https://github.com/mollie/mollie-api-php/tree/v2.67.1"
+            },
+            "time": "2024-05-07T07:59:20+00:00"
         },
         {
             "name": "moneyphp/money",
@@ -5872,11 +5902,6 @@
         {
             "name": "phpstan/phpdoc-parser",
             "version": "1.29.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/phpstan/phpdoc-parser.git",
-                "reference": "536889f2b340489d328f5ffb7b02bb6b183ddedc"
-            },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/536889f2b340489d328f5ffb7b02bb6b183ddedc",
@@ -5886,17 +5911,6 @@
             "require": {
                 "php": "^7.2 || ^8.0"
             },
-            "require-dev": {
-                "doctrine/annotations": "^2.0",
-                "nikic/php-parser": "^4.15",
-                "php-parallel-lint/php-parallel-lint": "^1.2",
-                "phpstan/extension-installer": "^1.0",
-                "phpstan/phpstan": "^1.5",
-                "phpstan/phpstan-phpunit": "^1.1",
-                "phpstan/phpstan-strict-rules": "^1.0",
-                "phpunit/phpunit": "^9.5",
-                "symfony/process": "^5.2"
-            },
             "type": "library",
             "autoload": {
                 "psr-4": {
@@ -5905,15 +5919,10 @@
                     ]
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
             "description": "PHPDoc parser with support for nullable, intersection and generic types",
-            "support": {
-                "issues": "https://github.com/phpstan/phpdoc-parser/issues",
-                "source": "https://github.com/phpstan/phpdoc-parser/tree/1.29.0"
-            },
             "time": "2024-05-06T12:04:23+00:00"
         },
         {
@@ -6527,11 +6536,11 @@
         },
         {
             "name": "putyourlightson/craft-blitz",
-            "version": "5.2.0",
+            "version": "5.3.0",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/putyourlightson/craft-blitz/zipball/b5a79526ce4ca855ce576383e13ccd3ced1b8b94",
-                "reference": "b5a79526ce4ca855ce576383e13ccd3ced1b8b94",
+                "url": "https://api.github.com/repos/putyourlightson/craft-blitz/zipball/2e5900e5605ff9cde8d4209e9495577632ead9a9",
+                "reference": "2e5900e5605ff9cde8d4209e9495577632ead9a9",
                 "shasum": ""
             },
             "require": {
@@ -6575,7 +6584,7 @@
                 "source": "https://github.com/putyourlightson/craft-blitz",
                 "issues": "https://github.com/putyourlightson/craft-blitz/issues"
             },
-            "time": "2024-04-27T23:18:28+00:00"
+            "time": "2024-05-07T13:50:36+00:00"
         },
         {
             "name": "putyourlightson/craft-sprig-core",
@@ -7438,11 +7447,6 @@
         {
             "name": "symfony/cache",
             "version": "v6.4.7",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/cache.git",
-                "reference": "b9e9b93c9817ec6c789c7943f5e54b57a041c16a"
-            },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/cache/zipball/b9e9b93c9817ec6c789c7943f5e54b57a041c16a",
@@ -7468,18 +7472,6 @@
                 "psr/simple-cache-implementation": "1.0|2.0|3.0",
                 "symfony/cache-implementation": "1.1|2.0|3.0"
             },
-            "require-dev": {
-                "cache/integration-tests": "dev-master",
-                "doctrine/dbal": "^2.13.1|^3|^4",
-                "predis/predis": "^1.1|^2.0",
-                "psr/simple-cache": "^1.0|^2.0|^3.0",
-                "symfony/config": "^5.4|^6.0|^7.0",
-                "symfony/dependency-injection": "^5.4|^6.0|^7.0",
-                "symfony/filesystem": "^5.4|^6.0|^7.0",
-                "symfony/http-kernel": "^5.4|^6.0|^7.0",
-                "symfony/messenger": "^5.4|^6.0|^7.0",
-                "symfony/var-dumper": "^5.4|^6.0|^7.0"
-            },
             "type": "library",
             "autoload": {
                 "psr-4": {
@@ -7492,7 +7484,6 @@
                     "/Tests/"
                 ]
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -7512,32 +7503,15 @@
                 "caching",
                 "psr6"
             ],
-            "support": {
-                "source": "https://github.com/symfony/cache/tree/v6.4.7"
-            },
-            "funding": [
-                {
-                    "url": "https://symfony.com/sponsor",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/fabpot",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                    "type": "tidelift"
-                }
-            ],
             "time": "2024-04-18T09:22:46+00:00"
         },
         {
             "name": "symfony/cache-contracts",
-            "version": "v3.4.2",
+            "version": "v3.5.0",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/cache-contracts/zipball/2c9db6509a1b21dad229606897639d3284f54b2a",
-                "reference": "2c9db6509a1b21dad229606897639d3284f54b2a",
+                "url": "https://api.github.com/repos/symfony/cache-contracts/zipball/df6a1a44c890faded49a5fca33c2d5c5fd3c2197",
+                "reference": "df6a1a44c890faded49a5fca33c2d5c5fd3c2197",
                 "shasum": ""
             },
             "require": {
@@ -7547,7 +7521,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "3.4-dev"
+                    "dev-main": "3.5-dev"
                 },
                 "thanks": {
                     "name": "symfony/contracts",
@@ -7582,7 +7556,7 @@
                 "interoperability",
                 "standards"
             ],
-            "time": "2024-01-23T14:51:35+00:00"
+            "time": "2024-04-18T09:32:20+00:00"
         },
         {
             "name": "symfony/clock",
@@ -7782,11 +7756,6 @@
         {
             "name": "symfony/expression-language",
             "version": "v5.4.39",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/expression-language.git",
-                "reference": "3a24a58e4eebae5dc977bc7a27f633f9c5338416"
-            },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/expression-language/zipball/3a24a58e4eebae5dc977bc7a27f633f9c5338416",
@@ -7807,7 +7776,6 @@
                     "/Tests/"
                 ]
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -7823,23 +7791,6 @@
             ],
             "description": "Provides an engine that can compile and evaluate expressions",
             "homepage": "https://symfony.com",
-            "support": {
-                "source": "https://github.com/symfony/expression-language/tree/v5.4.39"
-            },
-            "funding": [
-                {
-                    "url": "https://symfony.com/sponsor",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/fabpot",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                    "type": "tidelift"
-                }
-            ],
             "time": "2024-04-18T08:26:06+00:00"
         },
         {
@@ -7886,11 +7837,6 @@
         {
             "name": "symfony/finder",
             "version": "v7.0.7",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/finder.git",
-                "reference": "4d58f0f4fe95a30d7b538d71197135483560b97c"
-            },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/finder/zipball/4d58f0f4fe95a30d7b538d71197135483560b97c",
@@ -7899,9 +7845,6 @@
             },
             "require": {
                 "php": ">=8.2"
-            },
-            "require-dev": {
-                "symfony/filesystem": "^6.4|^7.0"
             },
             "type": "library",
             "autoload": {
@@ -7912,7 +7855,6 @@
                     "/Tests/"
                 ]
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -7928,23 +7870,6 @@
             ],
             "description": "Finds files and directories via an intuitive fluent interface",
             "homepage": "https://symfony.com",
-            "support": {
-                "source": "https://github.com/symfony/finder/tree/v7.0.7"
-            },
-            "funding": [
-                {
-                    "url": "https://symfony.com/sponsor",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/fabpot",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                    "type": "tidelift"
-                }
-            ],
             "time": "2024-04-28T11:44:19+00:00"
         },
         {
@@ -8722,11 +8647,11 @@
         },
         {
             "name": "symfony/postmark-mailer",
-            "version": "v7.0.4",
+            "version": "v7.0.7",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/postmark-mailer/zipball/04129b7e4e4e6b1eac7e0ea5513e302fa77a5e45",
-                "reference": "04129b7e4e4e6b1eac7e0ea5513e302fa77a5e45",
+                "url": "https://api.github.com/repos/symfony/postmark-mailer/zipball/c99bb20bf7434ff506f2b22bc7d3c6e7b5ffa5f8",
+                "reference": "c99bb20bf7434ff506f2b22bc7d3c6e7b5ffa5f8",
                 "shasum": ""
             },
             "require": {
@@ -8761,7 +8686,7 @@
             ],
             "description": "Symfony Postmark Mailer Bridge",
             "homepage": "https://symfony.com",
-            "time": "2024-02-12T11:15:03+00:00"
+            "time": "2024-04-18T09:29:19+00:00"
         },
         {
             "name": "symfony/process",
@@ -9292,11 +9217,6 @@
         {
             "name": "symfony/var-exporter",
             "version": "v7.0.7",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/var-exporter.git",
-                "reference": "cdecc0022e40e90340ba1a59a3d5ccf069777078"
-            },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/var-exporter/zipball/cdecc0022e40e90340ba1a59a3d5ccf069777078",
@@ -9305,11 +9225,6 @@
             },
             "require": {
                 "php": ">=8.2"
-            },
-            "require-dev": {
-                "symfony/property-access": "^6.4|^7.0",
-                "symfony/serializer": "^6.4|^7.0",
-                "symfony/var-dumper": "^6.4|^7.0"
             },
             "type": "library",
             "autoload": {
@@ -9320,7 +9235,6 @@
                     "/Tests/"
                 ]
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -9345,23 +9259,6 @@
                 "lazy-loading",
                 "proxy",
                 "serialize"
-            ],
-            "support": {
-                "source": "https://github.com/symfony/var-exporter/tree/v7.0.7"
-            },
-            "funding": [
-                {
-                    "url": "https://symfony.com/sponsor",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/fabpot",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                    "type": "tidelift"
-                }
             ],
             "time": "2024-04-18T09:29:19+00:00"
         },
@@ -9808,11 +9705,11 @@
         },
         {
             "name": "verbb/formie",
-            "version": "3.0.0-beta.9",
+            "version": "3.0.0-beta.10",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/verbb/formie/zipball/0f7ad1536734382120500b9612bb92ac368932fd",
-                "reference": "0f7ad1536734382120500b9612bb92ac368932fd",
+                "url": "https://api.github.com/repos/verbb/formie/zipball/57a807ebc46d5ae1e2239d5fc618ada346e93f48",
+                "reference": "57a807ebc46d5ae1e2239d5fc618ada346e93f48",
                 "shasum": ""
             },
             "require": {
@@ -9869,7 +9766,7 @@
                 "docs": "https://github.com/verbb/formie",
                 "rss": "https://github.com/verbb/formie/commits/v2.atom"
             },
-            "time": "2024-04-27T04:32:38+00:00"
+            "time": "2024-05-07T15:05:25+00:00"
         },
         {
             "name": "verbb/hyper",
@@ -11572,11 +11469,11 @@
         },
         {
             "name": "symfony/console",
-            "version": "v6.4.6",
+            "version": "v6.4.7",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/a2708a5da5c87d1d0d52937bdeac625df659e11f",
-                "reference": "a2708a5da5c87d1d0d52937bdeac625df659e11f",
+                "url": "https://api.github.com/repos/symfony/console/zipball/a170e64ae10d00ba89e2acbb590dc2e54da8ad8f",
+                "reference": "a170e64ae10d00ba89e2acbb590dc2e54da8ad8f",
                 "shasum": ""
             },
             "require": {
@@ -11626,7 +11523,7 @@
                 "console",
                 "terminal"
             ],
-            "time": "2024-03-29T19:07:53+00:00"
+            "time": "2024-04-18T09:22:46+00:00"
         },
         {
             "name": "yiisoft/yii2-shell",

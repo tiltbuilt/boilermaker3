@@ -448,10 +448,10 @@ fieldLayouts:
         name: Background
         uid: b095beb1-b0d7-4a13-b970-9eb29dff3bc8
         userCondition: null
-handle: styleAdjustmentsContentWrapper
+handle: styleAdjustmentContentWrapper
 hasTitleField: false
 icon: palette
-name: 'Style Adjustments - Content Wrapper'
+name: 'Style Adjustment - Content Wrapper'
 showSlugField: false
 showStatusField: true
 slugTranslationKeyFormat: null
