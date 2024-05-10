@@ -72,6 +72,77 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
+            heading: Color
+            type: craft\fieldlayoutelements\Heading
+            uid: 13c0512f-3000-418b-a869-b50d353b7977
+            userCondition: null
+          -
+            dismissible: false
+            elementCondition: null
+            style: tip
+            tip: 'These fields can be used to override the colors of the caption from the color scheme.'
+            type: craft\fieldlayoutelements\Tip
+            uid: 82da4155-4d69-4ae7-86cc-dfd2b0436bce
+            userCondition: null
+          -
+            elementCondition: null
+            fieldUid: 487ec441-2218-43e8-8a96-652a0649e437 # Color Picker
+            handle: captionColor
+            includeInCards: false
+            instructions: null
+            label: 'Caption Text Color'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 2eb88ff9-d396-4fe6-89d8-53750c4a395e
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 487ec441-2218-43e8-8a96-652a0649e437 # Color Picker
+            handle: bgColor
+            includeInCards: false
+            instructions: null
+            label: 'Caption Background Color'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 357e37ee-a9ea-4380-beac-adb629bbb7b0
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            heading: Adjustments
+            type: craft\fieldlayoutelements\Heading
+            uid: ee0359a6-2acc-47c2-8368-acc10a6c6e45
+            userCondition: null
+          -
+            elementCondition: null
+            fieldUid: c9cf2b48-b578-41dd-ae7f-82d0ce5a4241 # Image/Video Style Adjustments
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 55a43987-2a9c-4fac-865b-67b18191c9d5
+            userCondition: null
+            warning: null
+            width: 100
+        name: Styling
+        uid: eef9073e-99f3-415e-8ba6-05762e179bd2
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
             fieldUid: 6b484609-7d28-4f55-990e-f5212885d922 # Custom ID
             handle: null
             includeInCards: false

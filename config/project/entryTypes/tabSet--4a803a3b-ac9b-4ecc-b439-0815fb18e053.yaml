@@ -72,7 +72,21 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
-            fieldUid: 5514a63a-0a23-42f9-9333-5576b0e95462 # Color Mode
+            heading: Color
+            type: craft\fieldlayoutelements\Heading
+            uid: bb890500-09df-476d-885d-908b47d37f4a
+            userCondition: null
+          -
+            dismissible: false
+            elementCondition: null
+            style: tip
+            tip: 'The color settings here are applied to all of the sub tabs'
+            type: craft\fieldlayoutelements\Tip
+            uid: cbb0a133-086e-4ecb-aff7-fbcd8994d1eb
+            userCondition: null
+          -
+            elementCondition: null
+            fieldUid: 5514a63a-0a23-42f9-9333-5576b0e95462 # Color Scheme
             handle: null
             includeInCards: false
             instructions: null
@@ -88,10 +102,10 @@ fieldLayouts:
           -
             elementCondition: null
             fieldUid: 487ec441-2218-43e8-8a96-652a0649e437 # Color Picker
-            handle: null
+            handle: bgColor
             includeInCards: false
             instructions: null
-            label: null
+            label: 'Background Color'
             providesThumbs: false
             required: false
             tip: null
@@ -100,6 +114,12 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
+          -
+            elementCondition: null
+            heading: Adjustments
+            type: craft\fieldlayoutelements\Heading
+            uid: 7897ee90-32bc-442b-93fa-e2b974e63b56
+            userCondition: null
           -
             elementCondition: null
             fieldUid: 67336236-2b0e-4d01-bb98-029a923a6932 # Tab Set Style Adjustments

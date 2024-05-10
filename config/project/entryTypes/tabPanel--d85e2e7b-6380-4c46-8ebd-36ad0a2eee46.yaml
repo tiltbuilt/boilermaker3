@@ -72,7 +72,13 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
-            fieldUid: 5514a63a-0a23-42f9-9333-5576b0e95462 # Color Mode
+            heading: Color
+            type: craft\fieldlayoutelements\Heading
+            uid: 075959af-5820-4248-924d-e24ac54573fd
+            userCondition: null
+          -
+            elementCondition: null
+            fieldUid: 5514a63a-0a23-42f9-9333-5576b0e95462 # Color Scheme
             handle: null
             includeInCards: false
             instructions: null
@@ -88,10 +94,10 @@ fieldLayouts:
           -
             elementCondition: null
             fieldUid: 487ec441-2218-43e8-8a96-652a0649e437 # Color Picker
-            handle: null
+            handle: bgColor
             includeInCards: false
             instructions: null
-            label: null
+            label: 'Background Color'
             providesThumbs: false
             required: false
             tip: null
@@ -100,6 +106,12 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
+          -
+            elementCondition: null
+            heading: Adjustments
+            type: craft\fieldlayoutelements\Heading
+            uid: bd48ed4c-e5b2-49fa-87fc-5e71c251bed0
+            userCondition: null
           -
             elementCondition: null
             fieldUid: f13a58c0-cc0e-41c6-b75b-f014f8de92a6 # Tab Panel Style Adjustments

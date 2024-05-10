@@ -39,4 +39,4 @@ fieldLayouts:
         userCondition: null
 handle: companyInfo
 name: 'Company Info'
-sortOrder: 3
+sortOrder: 1

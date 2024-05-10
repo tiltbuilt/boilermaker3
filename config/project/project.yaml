@@ -1,4 +1,4 @@
-dateModified: 1715127744
+dateModified: 1715361596
 elementSources:
   craft\elements\Entry:
     -
@@ -74,6 +74,7 @@ meta:
     3fa40ffc-bcf8-4f2f-9462-19c808265175: 'Multiline Text With Search' # Multiline Text With Search
     4a803a3b-ac9b-4ecc-b439-0815fb18e053: 'Tab Set' # Tab Set
     4c3b1224-ae0a-41b2-b608-0ad42c53ffb5: 'Slider Set' # Slider Set
+    4ccd8d3b-ddf4-4ac6-89c4-8d344eb6a427: 'Row Style Adjustments' # Row Style Adjustments
     5ad5f513-b34c-48ac-80bf-b573ed1e1f78: 'On Off' # On Off
     5ced14c8-e41a-4186-99ba-01c331a7e430: 'Style Adjustment - Header' # Style Adjustment - Header
     5d95a350-fb34-496c-8c66-da3952eb4373: 'Text Alignment' # Text Alignment
@@ -81,6 +82,7 @@ meta:
     5feec917-01fb-4987-bd1a-c38c337de8cf: Font # Font
     6a43a3aa-97db-498c-b938-2d84a3519729: Pages # Pages
     6b484609-7d28-4f55-990e-f5212885d922: 'Custom ID' # Custom ID
+    6f85f87f-2394-4346-8cc1-3c89dbc64756: 'Style Adjustment - Row' # Style Adjustment - Row
     7c366b82-7c53-4dd2-a425-1c416a3e1464: Embeds # Embeds
     7f182d27-ea6e-4a71-a3f8-5c9d0f147eed: 'Device Size' # Device Size
     7ff3d23a-91a6-4110-a3b0-b131dd2c3ee3: 'Style Adjustment - Accordion' # Style Adjustment - Accordion
@@ -91,13 +93,14 @@ meta:
     37a64193-e3ef-4a2d-aa91-555b436b1d7d: 'Italic?' # Italic?
     40a37d8a-41c1-47af-bc27-28d08f99a909: Slides # Slides
     47acc143-9347-4976-bd50-02778ffeabf1: 'Button Styles' # Button Styles
-    51c1b748-da08-41e2-8bd4-b301b9fb6321: 'Column Vertical Alignment' # Column Vertical Alignment
+    049ec87b-57e9-4b3e-8d53-44cb8874474b: Width # Width
     55cb62d2-f02a-4bd8-849c-695f3a2e92b1: Columns # Columns
     56d80f6e-2a67-464f-af70-0d46d267a0e2: 'Items Per Page' # Items Per Page
     57d8551d-6bb8-45ac-a118-25f3bf7c5b6a: 'Style Adjustment - Repeaters' # Style Adjustment - Repeaters
     57eb287d-cdc2-4fba-8588-5dc66ff28c86: 'Line Height' # Line Height
     62bb1cf0-026e-410e-a685-701783c6ae9e: 'Header Style Adjustments' # Header Style Adjustments
     65c293ae-ed92-4c10-b2d3-1251a63c1402: Modal # Modal
+    67dbaf8c-d352-485f-a230-5ba94ad31c07: 'Column Layout' # Column Layout
     69b9aab4-6d39-462c-b88a-8d4971791897: Simple # Simple
     71ab40f6-9c7f-41cc-9887-255aa3c9603a: 'Style Adjustment - Tab Panel' # Style Adjustment - Tab Panel
     79d28a86-5f89-45cb-99a4-a97fa0992c73: 'Video Asset' # Video Asset
@@ -119,7 +122,7 @@ meta:
     3388d3b4-cb9f-47ee-8874-09e50df3c0bb: 'Section Styling Adjustments' # Section Styling Adjustments
     3710a5c7-fa54-4a2c-a07b-4f7a31f5bd25: 'Background Repeat' # Background Repeat
     4600cc8f-8e3f-45bf-bbb9-9e48d2e181ed: 'Phone Number' # Phone Number
-    5514a63a-0a23-42f9-9333-5576b0e95462: 'Color Mode' # Color Mode
+    5514a63a-0a23-42f9-9333-5576b0e95462: 'Color Scheme' # Color Scheme
     8125ecc7-14a0-48fa-beb2-ae316b8c9c0d: 'Entries to List' # Entries to List
     15890ba2-38e4-4bce-9ccc-45ed62101d3e: Section # Section
     93013c2a-acd5-4b87-b999-b352741b10fd: 'Repeater Content' # Repeater Content
@@ -145,6 +148,7 @@ meta:
     adca13f3-4ae5-49c5-83c4-cab3dd9f5ece: 'Button Size' # Button Size
     b1dd9550-b7de-4c8d-ac15-30a80aef59ff: 'Text Case' # Text Case
     b1e1aad8-a87c-4914-9445-bbbbb92076ee: Heading # Heading
+    b60b76cf-1ca2-42b6-9ba2-6ad3de0f0e4f: 'Row Layout' # Row Layout
     b81cc92d-9e5b-440d-8461-cdf9ab64807e: Opacity # Opacity
     b644bda8-1050-46f5-9453-0b3d19812289: Documents # Documents
     b696e4a1-c7cf-4e07-a0be-b9f4f18a2f53: Home # Home
@@ -153,26 +157,31 @@ meta:
     ba9877c7-223a-4c59-b461-4cf1a5068a34: 'Font Size' # Font Size
     bae3f95d-8506-49cb-891a-048c975b11d4: 'Heading Level' # Heading Level
     bb8a7c17-de8b-4008-bcca-10c9a30824b5: 'Notification Alerts' # Notification Alerts
+    bb89e543-0de1-4a53-9480-2e7c0e8a69a5: 'Aspect Ratio' # Aspect Ratio
     bbe3f16b-50e0-4f6a-9db0-bb6359934f84: 'CTA Style Adjustments' # CTA Style Adjustments
     bcc81e37-c9a5-4aaa-a456-847dd36ebf95: CTA # CTA
     bea4db36-ae23-4382-ad57-5031c47c5ab6: 'Nav List to Display' # Nav List to Display
-    c012ee7e-6cb9-4139-803a-2e2dea537718: 'Column Size' # Column Size
     c025e168-6f53-4831-9433-670f03c62851: Buttons # Buttons
     c3d75796-b930-48a0-b387-b5469be4094b: 'Full Listing Button' # Full Listing Button
+    c9cf2b48-b578-41dd-ae7f-82d0ce5a4241: 'Image/Video Style Adjustments' # Image/Video Style Adjustments
     c43e08b0-14a5-4aee-adb4-4e78e9c3d9fe: 'Main Content' # Main Content
     c43e9602-b393-4012-b9c3-c4b391c74cd6: Video # Video
+    cc44dfc3-f9d6-4fcc-9940-621e8a3981f0: 'Quote Style Adjustments' # Quote Style Adjustments
     d1c26bcb-25db-404d-ba73-7e4e3c7fc0a1: 'Slide Transition Delay' # Slide Transition Delay
     d7a280bb-af78-455c-9bd1-1fc2f7e4018d: OpenClosed # OpenClosed
     d85e2e7b-6380-4c46-8ebd-36ad0a2eee46: 'Tab Panel' # Tab Panel
+    ddb8108e-63a9-4567-80ba-7ab621baad89: 'Style Adjustment - Quote' # Style Adjustment - Quote
     de6881eb-f48b-4119-889c-95d3bf6692e5: 'Style Adjustment - Tab Set' # Style Adjustment - Tab Set
     e2f8e7ee-d666-4bd1-bfe9-ece40a043b3e: Repeater # Repeater
     e6aadd12-c632-4735-b22d-b5a758ab5003: 'Boilermaker 3' # Boilermaker 3
-    e2924a45-982c-4a78-8a31-72f8b97462d5: 'Column Order' # Column Order
+    e8d249f8-2c18-4b51-b311-baabbd94f999: 'Style Adjustment - Image/Video' # Style Adjustment - Image/Video
     e15525d6-6952-4e06-992e-6cf63f053365: Tabs # Tabs
     ea38d6d4-055b-43b8-b876-2bcab46e11c8: 'Company Info' # Company Info
+    ee6d1ced-9ba0-4c31-9f10-d3e6057ae634: 'Style Adjustment - Column' # Style Adjustment - Column
     ee64f702-a8f1-46ee-8dea-79f8ad82e25b: 'Custom Attributes' # Custom Attributes
     f1b466ce-fb41-471a-90d4-5d0fd23f346d: 'Image Asset' # Image Asset
     f4d725e6-48b8-4083-a921-ecc0925a0bff: 'Background Size' # Background Size
+    f7dc9df7-f17d-4c82-9b2e-2bd2986c309f: 'Column Style Adjustments' # Column Style Adjustments
     f13a58c0-cc0e-41c6-b75b-f014f8de92a6: 'Tab Panel Style Adjustments' # Tab Panel Style Adjustments
     f22d8a3b-9296-4b9a-b338-0d599eaa364a: 'Section to List' # Section to List
     f103b592-617a-4840-8a3b-ce98a171eb09: 'Style Adjustment - Content Wrapper' # Style Adjustment - Content Wrapper

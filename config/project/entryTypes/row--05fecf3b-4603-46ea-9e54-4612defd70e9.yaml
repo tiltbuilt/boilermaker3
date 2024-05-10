@@ -54,6 +54,43 @@ fieldLayouts:
         userCondition: null
       -
         elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: b60b76cf-1ca2-42b6-9ba2-6ad3de0f0e4f # Row Layout
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b9300129-0d96-457c-8d22-1f21940e9e22
+            userCondition: null
+            warning: null
+            width: 100
+        name: Layout
+        uid: 8c7bd85d-1048-4c33-ad08-d7dac4c2a428
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 4ccd8d3b-ddf4-4ac6-89c4-8d344eb6a427 # Row Style Adjustments
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f8bf9d5e-0ec3-49a0-a6b5-0ad718e3e16f
+            userCondition: null
+            warning: null
+            width: 100
         name: Styling
         uid: 8c888ec0-5287-4152-a12d-0e922bbaf7c0
         userCondition: null

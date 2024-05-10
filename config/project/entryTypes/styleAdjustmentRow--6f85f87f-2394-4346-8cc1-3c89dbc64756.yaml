@@ -1,6 +1,6 @@
-color: lime
+color: pink
 fieldLayouts:
-  602761bd-0558-4ccc-9ed4-25035ccc88d3:
+  dea97ba6-7fc9-41dc-a8e1-edd5579df7c6:
     tabs:
       -
         elementCondition: null
@@ -30,13 +30,13 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: 7dd38a2f-a68f-4f4f-af10-d2874e8aad21
+            uid: f6e0949a-94cc-40b4-a8c5-2b49ea67591a
             userCondition: null
             warning: null
             width: 100
           -
             elementCondition: null
-            fieldUid: 9ceecee1-0248-4ae3-a12a-c90171e5f42f # Content
+            fieldUid: 7f182d27-ea6e-4a71-a3f8-5c9d0f147eed # Device Size
             handle: null
             includeInCards: false
             instructions: null
@@ -45,135 +45,120 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: ffa0fd04-151f-4094-a7d2-0a689296d2f5
+            uid: 942e7d04-e832-4164-91ad-63b9a937b10e
             userCondition: null
             warning: null
             width: 100
-        name: Content
-        uid: a18837ef-f239-47ad-b80a-5ec134c43f02
+        name: 'Device Size'
+        uid: 7039b369-184f-4aa9-a67f-a15ad65f773a
         userCondition: null
       -
         elementCondition: null
         elements:
           -
             elementCondition: null
-            heading: Color
+            heading: Padding
             type: craft\fieldlayoutelements\Heading
-            uid: 2bb219e1-8202-477e-8295-d38dc0f02ad1
+            uid: 09eeb1c8-7c73-4475-b5eb-06f079eec711
             userCondition: null
           -
             elementCondition: null
-            fieldUid: 5514a63a-0a23-42f9-9333-5576b0e95462 # Color Scheme
-            handle: null
+            fieldUid: 91d05e51-ee38-4e73-af4c-ebed7e7572d3 # Spacing
+            handle: pt
             includeInCards: false
             instructions: null
-            label: null
+            label: 'Top Padding'
             providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 1e7cdb7b-5cd0-4749-9df8-b821e70a7e5e
+            uid: 2d6f6db2-8fc7-4692-ab34-d2d3ed0e4f66
             userCondition: null
             warning: null
-            width: 100
+            width: 50
           -
             elementCondition: null
-            fieldUid: 487ec441-2218-43e8-8a96-652a0649e437 # Color Picker
-            handle: bgColor
+            fieldUid: 91d05e51-ee38-4e73-af4c-ebed7e7572d3 # Spacing
+            handle: pb
             includeInCards: false
             instructions: null
-            label: 'Background Color'
+            label: 'Bottom Padding'
             providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 4828bf4d-05a0-4a1c-a43b-4093be361a58
+            uid: 7407ed6c-06ed-425c-9d47-54b3d933c8d1
             userCondition: null
             warning: null
-            width: 100
+            width: 50
           -
             elementCondition: null
-            heading: Adjustments
+            heading: Margin
             type: craft\fieldlayoutelements\Heading
-            uid: b7542f30-08f2-4954-89c9-f391f85fba80
+            uid: 80430d80-7620-4339-8201-10bde6016256
             userCondition: null
           -
             elementCondition: null
-            fieldUid: 569d975f-7001-40dd-b088-6f9614f17e06 # Content Wrapper Style Adjustments
-            handle: null
+            fieldUid: 91d05e51-ee38-4e73-af4c-ebed7e7572d3 # Spacing
+            handle: mt
             includeInCards: false
             instructions: null
-            label: null
+            label: 'Top Margin'
             providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 46dd5dc5-b0d2-4df1-b558-2d8a33446209
+            uid: 3c8b7d83-cf8d-4a58-8fda-e3047e6b77c8
             userCondition: null
             warning: null
-            width: 100
-        name: Styling
-        uid: b42c56c6-36d3-4ec4-9476-3e7154204af8
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: 91d05e51-ee38-4e73-af4c-ebed7e7572d3 # Spacing
+            handle: mb
+            includeInCards: false
+            instructions: null
+            label: 'Bottom Margin'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 88347619-5ab5-477e-8aca-159fdbf4bd20
+            userCondition: null
+            warning: null
+            width: 50
+        name: Spacing
+        uid: f0d2f66b-5769-4e21-8d17-0c71604df985
         userCondition: null
       -
         elementCondition: null
         elements:
           -
             elementCondition: null
-            fieldUid: 6b484609-7d28-4f55-990e-f5212885d922 # Custom ID
-            handle: null
+            fieldUid: a2da31ae-7341-4dd1-b245-5ee55d44cbc2 # Yes No
+            handle: hidden
             includeInCards: false
             instructions: null
-            label: null
+            label: 'Hidden?'
             providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 0d6e1e93-38ca-405d-a935-f5c62bdbbd8f
+            uid: fc05c71e-4f7f-4e7c-a1e3-2c86e7df85e5
             userCondition: null
             warning: null
             width: 100
-          -
-            elementCondition: null
-            fieldUid: a78e7e89-26cf-4a0e-a36d-b48ca76d7ba5 # Custom Classes
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: null
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 9d984080-00be-4234-a6a2-c62e0226bd6d
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            elementCondition: null
-            fieldUid: ee64f702-a8f1-46ee-8dea-79f8ad82e25b # Custom Attributes
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: null
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 70d72450-b609-4046-a6e7-d48fb9de6841
-            userCondition: null
-            warning: null
-            width: 100
-        name: Advanced
-        uid: 3cc35afe-af1b-4ee8-aa89-d2d5c11e61b9
+        name: Display
+        uid: 517b6548-de19-47ba-a8ed-891f60f958ff
         userCondition: null
-handle: contentWrapper
-hasTitleField: true
-icon: candy
-name: 'Content Wrapper'
+handle: styleAdjustmentRow
+hasTitleField: false
+icon: palette
+name: 'Style Adjustment - Row'
 showSlugField: false
 showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
-titleFormat: ''
+titleFormat: '{object.owner.title}-styles-{ object.deviceSize }'
 titleTranslationKeyFormat: null
 titleTranslationMethod: site

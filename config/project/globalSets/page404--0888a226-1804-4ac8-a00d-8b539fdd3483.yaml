@@ -24,4 +24,4 @@ fieldLayouts:
         userCondition: null
 handle: page404
 name: '404 Page Content'
-sortOrder: 1
+sortOrder: 2

@@ -1,14 +1,14 @@
 columnSuffix: null
-handle: columns
+handle: quoteStyleAdjustments
 instructions: null
-name: Columns
+name: 'Quote Style Adjustments'
 searchable: false
 settings:
   createButtonLabel: null
   entryTypes:
-    - b6075a2a-820f-44f0-857b-358c60cb2bcb # Layout Column
+    - ddb8108e-63a9-4567-80ba-7ab621baad89 # Style Adjustment - Quote
   includeTableView: false
-  maxEntries: 5
+  maxEntries: 6
   minEntries: null
   pageSize: 50
   propagationKeyFormat: null

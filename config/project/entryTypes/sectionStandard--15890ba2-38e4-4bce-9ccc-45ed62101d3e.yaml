@@ -57,7 +57,13 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
-            fieldUid: 5514a63a-0a23-42f9-9333-5576b0e95462 # Color Mode
+            heading: Color
+            type: craft\fieldlayoutelements\Heading
+            uid: ce0adc81-91e4-409d-98bc-6b2cbd087e11
+            userCondition: null
+          -
+            elementCondition: null
+            fieldUid: 5514a63a-0a23-42f9-9333-5576b0e95462 # Color Scheme
             handle: null
             includeInCards: false
             instructions: null
@@ -85,6 +91,12 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
+          -
+            elementCondition: null
+            heading: Adjustments
+            type: craft\fieldlayoutelements\Heading
+            uid: 759d1107-9906-41b8-aa40-921f8aa4d237
+            userCondition: null
           -
             elementCondition: null
             fieldUid: 3388d3b4-cb9f-47ee-8874-09e50df3c0bb # Section Styling Adjustments

@@ -16,7 +16,7 @@ fieldLayouts:
             includeInCards: false
             inputType: null
             instructions: null
-            label: null
+            label: 'Main Headline Text'
             max: null
             min: null
             name: null
@@ -87,11 +87,25 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
+            heading: Color
+            type: craft\fieldlayoutelements\Heading
+            uid: 9df28174-ab49-4f7a-8b90-c7d9063797fb
+            userCondition: null
+          -
+            dismissible: false
+            elementCondition: null
+            style: tip
+            tip: 'Use these fields to override the colors from the color scheme if desired.'
+            type: craft\fieldlayoutelements\Tip
+            uid: c46c10c2-5eee-4c37-90b1-4df50f10a8b9
+            userCondition: null
+          -
+            elementCondition: null
             fieldUid: 487ec441-2218-43e8-8a96-652a0649e437 # Color Picker
-            handle: null
+            handle: headlineColor
             includeInCards: false
             instructions: null
-            label: null
+            label: 'Headline Color'
             providesThumbs: false
             required: false
             tip: null
@@ -100,6 +114,27 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
+          -
+            elementCondition: null
+            fieldUid: 487ec441-2218-43e8-8a96-652a0649e437 # Color Picker
+            handle: subheadColor
+            includeInCards: false
+            instructions: null
+            label: 'Subhead Color'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 97b31351-cea6-44b5-a858-34fbb595aa4c
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            heading: Adjustments
+            type: craft\fieldlayoutelements\Heading
+            uid: 1342e631-8c9b-4bfe-a268-a85427a0cbbb
+            userCondition: null
           -
             elementCondition: null
             fieldUid: 62bb1cf0-026e-410e-a685-701783c6ae9e # Header Style Adjustments

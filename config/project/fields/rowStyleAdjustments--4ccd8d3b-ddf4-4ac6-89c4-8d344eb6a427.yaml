@@ -1,14 +1,14 @@
 columnSuffix: null
-handle: columns
+handle: rowStyleAdjustments
 instructions: null
-name: Columns
+name: 'Row Style Adjustments'
 searchable: false
 settings:
   createButtonLabel: null
   entryTypes:
-    - b6075a2a-820f-44f0-857b-358c60cb2bcb # Layout Column
+    - 6f85f87f-2394-4346-8cc1-3c89dbc64756 # Style Adjustment - Row
   includeTableView: false
-  maxEntries: 5
+  maxEntries: 6
   minEntries: null
   pageSize: 50
   propagationKeyFormat: null

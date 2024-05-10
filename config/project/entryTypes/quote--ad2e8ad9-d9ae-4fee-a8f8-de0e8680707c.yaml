@@ -87,6 +87,69 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
+            heading: Color
+            type: craft\fieldlayoutelements\Heading
+            uid: 0b27b140-d7a8-429f-9640-ede5b3a1dd5b
+            userCondition: null
+          -
+            elementCondition: null
+            fieldUid: 487ec441-2218-43e8-8a96-652a0649e437 # Color Picker
+            handle: quoteColor
+            includeInCards: false
+            instructions: null
+            label: 'Quote Text Color'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 497b3737-5e4d-4b66-b998-3e6a46e619f1
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 487ec441-2218-43e8-8a96-652a0649e437 # Color Picker
+            handle: creditColor
+            includeInCards: false
+            instructions: null
+            label: 'Quote Credit Color'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 2edb9745-5d7e-48b6-a6be-7990b9b2217f
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            heading: Adjustment
+            type: craft\fieldlayoutelements\Heading
+            uid: ee8bcba8-4214-458b-a534-6f00715d5cf2
+            userCondition: null
+          -
+            elementCondition: null
+            fieldUid: cc44dfc3-f9d6-4fcc-9940-621e8a3981f0 # Quote Style Adjustments
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: aaae68d1-4e48-47c4-b7a7-860f69a04487
+            userCondition: null
+            warning: null
+            width: 100
+        name: Styling
+        uid: ec51c722-f780-477a-a65a-dcfcb50c16a3
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
             fieldUid: 6b484609-7d28-4f55-990e-f5212885d922 # Custom ID
             handle: null
             includeInCards: false

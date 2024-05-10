@@ -152,7 +152,13 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
-            fieldUid: 5514a63a-0a23-42f9-9333-5576b0e95462 # Color Mode
+            heading: Color
+            type: craft\fieldlayoutelements\Heading
+            uid: 34051c35-cc92-4be3-8b34-d4fc1e5d0154
+            userCondition: null
+          -
+            elementCondition: null
+            fieldUid: 5514a63a-0a23-42f9-9333-5576b0e95462 # Color Scheme
             handle: null
             includeInCards: false
             instructions: null
@@ -168,10 +174,10 @@ fieldLayouts:
           -
             elementCondition: null
             fieldUid: 487ec441-2218-43e8-8a96-652a0649e437 # Color Picker
-            handle: null
+            handle: bgColor
             includeInCards: false
             instructions: null
-            label: null
+            label: 'Background Color'
             providesThumbs: false
             required: false
             tip: null
@@ -180,6 +186,12 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
+          -
+            elementCondition: null
+            heading: Adjustments
+            type: craft\fieldlayoutelements\Heading
+            uid: fb6b1286-07dc-4871-9859-652c44886a89
+            userCondition: null
           -
             elementCondition: null
             fieldUid: bbe3f16b-50e0-4f6a-9db0-bb6359934f84 # CTA Style Adjustments

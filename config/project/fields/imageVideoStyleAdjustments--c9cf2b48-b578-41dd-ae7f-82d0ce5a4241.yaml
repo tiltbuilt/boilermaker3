@@ -1,14 +1,14 @@
 columnSuffix: null
-handle: columns
+handle: imageVideoStyleAdjustments
 instructions: null
-name: Columns
+name: 'Image/Video Style Adjustments'
 searchable: false
 settings:
   createButtonLabel: null
   entryTypes:
-    - b6075a2a-820f-44f0-857b-358c60cb2bcb # Layout Column
+    - e8d249f8-2c18-4b51-b311-baabbd94f999 # Style Adjustment - Image/Video
   includeTableView: false
-  maxEntries: 5
+  maxEntries: 6
   minEntries: null
   pageSize: 50
   propagationKeyFormat: null
