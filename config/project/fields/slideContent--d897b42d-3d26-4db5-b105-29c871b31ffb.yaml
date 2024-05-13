@@ -1,0 +1,26 @@
+columnSuffix: null
+handle: slideContent
+instructions: null
+name: 'Slide Content'
+searchable: false
+settings:
+  availableTransforms: ''
+  availableVolumes: ''
+  ckeConfig: 073c9d03-dcc0-4435-99fe-2df91703e911 # Slide
+  createButtonLabel: 'New Content Element'
+  defaultTransform: null
+  enableSourceEditingForNonAdmins: false
+  entryTypes:
+    - b1e1aad8-a87c-4914-9445-bbbbb92076ee # Heading
+    - 335fab75-2107-4c96-80b2-14808539eadd # Button Group
+    - a6e56255-d417-4ac8-9a3f-256c30684cd0 # Image
+    - 8186c832-97e2-479b-8fdf-4641f25cf4be # Slide Content Layout Row
+  purifierConfig: null
+  purifyHtml: true
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  showWordCount: false
+  wordLimit: null
+translationKeyFormat: null
+translationMethod: none
+type: craft\ckeditor\Field

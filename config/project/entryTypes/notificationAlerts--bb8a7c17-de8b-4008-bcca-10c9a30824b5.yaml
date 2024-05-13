@@ -81,16 +81,16 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: 4dbe62f4-8253-43b4-9cda-058e34d922c8
-            handle: barColor
+            fieldUid: ff110645-b126-49e5-9ed9-a720a1a9d3d2 # Notification Bar Color
+            handle: null
             includeInCards: false
             instructions: null
-            label: 'Bar Color'
+            label: null
             providesThumbs: false
-            required: true
+            required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 61e6fb53-3245-43ff-b2de-609a925f5643
+            uid: b7d0c855-5bce-4a05-b964-2722d5ca7f7e
             userCondition: null
             warning: null
             width: 100

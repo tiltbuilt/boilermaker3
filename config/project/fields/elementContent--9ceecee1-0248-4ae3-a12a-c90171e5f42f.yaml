@@ -5,7 +5,7 @@ name: Content
 searchable: true
 settings:
   availableTransforms: ''
-  availableVolumes: '*'
+  availableVolumes: ''
   ckeConfig: c43e08b0-14a5-4aee-adb4-4e78e9c3d9fe # Main Content
   createButtonLabel: 'New Content Element'
   defaultTransform: null
@@ -15,6 +15,7 @@ settings:
     - bcc81e37-c9a5-4aaa-a456-847dd36ebf95 # CTA
     - ad1fd6cd-1d72-49dd-82fc-6a604b11a71c # Icon Content Block
     - ad2e8ad9-d9ae-4fee-a8f8-de0e8680707c # Quote
+    - a6e56255-d417-4ac8-9a3f-256c30684cd0 # Image
     - c43e9602-b393-4012-b9c3-c4b391c74cd6 # Video
     - 486d3e65-7880-4e2e-803e-daecc6657a1d # Content Wrapper
     - 82c290d4-2826-4d74-bcc2-8f94ddc4b0b0 # Accordion Set

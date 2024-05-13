@@ -174,21 +174,6 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-          -
-            elementCondition: null
-            fieldUid: 54321551-57ae-4812-8a1d-c491760d59ad # Multi-Column Settings
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: null
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 26e2852f-f0b1-47db-ba2b-dac29be1c964
-            userCondition: null
-            warning: null
-            width: 100
         name: Type
         uid: a93bf4cd-a10e-4c27-a427-e7b0849f2f9a
         userCondition: null

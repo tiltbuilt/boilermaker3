@@ -49,8 +49,181 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
+          -
+            elementCondition: null
+            heading: 'Additional Elements'
+            type: craft\fieldlayoutelements\Heading
+            uid: 9dce1772-691d-4554-80e0-25ce1df489a5
+            userCondition: null
+          -
+            dismissible: false
+            elementCondition: null
+            style: tip
+            tip: 'These elements are optional'
+            type: craft\fieldlayoutelements\Tip
+            uid: 871c9ede-f097-45fa-b58a-695c36cf7b03
+            userCondition: null
+          -
+            elementCondition: null
+            fieldUid: 0a94a9c4-7b94-408c-919b-9c4a6c070e37 # Header Block
+            handle: headline
+            includeInCards: false
+            instructions: null
+            label: Headline
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 7ac9924a-fde4-41bb-b991-2b2fa9e6a8fa
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 0f72b724-e0a8-4044-a3aa-12255ade6ea1 # Basic Text with Search
+            handle: simpleText
+            includeInCards: false
+            instructions: null
+            label: Text
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 48589f4d-af97-41ba-849d-37f63d8bf021
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: c025e168-6f53-4831-9433-670f03c62851 # Buttons
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 14123b15-dbc9-479a-9e37-4c70138e383e
+            userCondition: null
+            warning: null
+            width: 100
         name: Content
         uid: d3ab5979-9abe-44a4-b2ff-211e724ba117
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            heading: Color
+            type: craft\fieldlayoutelements\Heading
+            uid: 68d70ee0-a510-445c-9859-5c6845f02cde
+            userCondition: null
+          -
+            elementCondition: null
+            fieldUid: 487ec441-2218-43e8-8a96-652a0649e437 # Color Picker
+            handle: iconColor
+            includeInCards: false
+            instructions: null
+            label: 'Icon Color'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f9984952-d83d-465e-8274-f3112f688236
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            heading: Buttons
+            type: craft\fieldlayoutelements\Heading
+            uid: 7e161cea-53ed-46a4-b6fb-6bac229049cc
+            userCondition: null
+          -
+            elementCondition: null
+            fieldUid: 47acc143-9347-4976-bd50-02778ffeabf1 # Button Styles
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 2a8bc3bf-1c48-4ea5-bcda-bfec9fc080b1
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: adca13f3-4ae5-49c5-83c4-cab3dd9f5ece # Button Size
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 82deed9d-feda-4404-9a19-95e4ae294849
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: a2da31ae-7341-4dd1-b245-5ee55d44cbc2 # Yes No
+            handle: fullWidthPhone
+            includeInCards: false
+            instructions: null
+            label: 'Full Width on Phone'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 49de5aa3-6d46-438d-b238-6ece23a4a282
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 487ec441-2218-43e8-8a96-652a0649e437 # Color Picker
+            handle: btnColor
+            includeInCards: false
+            instructions: null
+            label: 'Button Color'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 7d0a40eb-584c-403e-a173-9108d4791f14
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            heading: Adjustments
+            type: craft\fieldlayoutelements\Heading
+            uid: 6eee2a0a-3dbc-4856-b40c-f9c56f81c825
+            userCondition: null
+          -
+            elementCondition: null
+            fieldUid: 85d1b6aa-228a-4340-bf82-fbdbeec66ee9 # Icon Style Adjustments
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 4d14207c-91a5-46ec-a2ac-2663614837fc
+            userCondition: null
+            warning: null
+            width: 100
+        name: Styling
+        uid: c1a5de84-f4f1-450c-981e-4cb755f2dd89
         userCondition: null
       -
         elementCondition: null

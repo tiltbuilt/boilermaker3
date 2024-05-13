@@ -1,0 +1,20 @@
+columnSuffix: null
+handle: pageHeaderBackground
+instructions: null
+name: 'Page Header Background'
+searchable: false
+settings:
+  createButtonLabel: null
+  entryTypes:
+    - d50bf5e2-cf37-49d5-99dc-0f5fe25e5121 # Background
+  includeTableView: false
+  maxEntries: 6
+  minEntries: null
+  pageSize: 50
+  propagationKeyFormat: null
+  propagationMethod: all
+  showCardsInGrid: false
+  viewMode: cards
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

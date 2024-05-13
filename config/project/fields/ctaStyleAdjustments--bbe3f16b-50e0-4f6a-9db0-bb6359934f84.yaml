@@ -4,7 +4,7 @@ instructions: null
 name: 'CTA Style Adjustments'
 searchable: false
 settings:
-  createButtonLabel: null
+  createButtonLabel: 'Adjust Style'
   entryTypes:
     - 03773267-1517-45c4-9a3e-c92f4340a1b2 # Style Adjustment - CTA
   includeTableView: false

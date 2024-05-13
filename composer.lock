@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2d52ed85de8321a43cb71a11c0f261ad",
+    "content-hash": "72d99128d443d623be43586e16d3cce5",
     "packages": [
         {
             "name": "amphp/amp",
@@ -5316,11 +5316,6 @@
         {
             "name": "paragonie/constant_time_encoding",
             "version": "v2.7.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/paragonie/constant_time_encoding.git",
-                "reference": "52a0d99e69f56b9ec27ace92ba56897fe6993105"
-            },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/paragonie/constant_time_encoding/zipball/52a0d99e69f56b9ec27ace92ba56897fe6993105",
@@ -5330,17 +5325,12 @@
             "require": {
                 "php": "^7|^8"
             },
-            "require-dev": {
-                "phpunit/phpunit": "^6|^7|^8|^9",
-                "vimeo/psalm": "^1|^2|^3|^4"
-            },
             "type": "library",
             "autoload": {
                 "psr-4": {
                     "ParagonIE\\ConstantTime\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -5373,11 +5363,6 @@
                 "hex2bin",
                 "rfc4648"
             ],
-            "support": {
-                "email": "info@paragonie.com",
-                "issues": "https://github.com/paragonie/constant_time_encoding/issues",
-                "source": "https://github.com/paragonie/constant_time_encoding"
-            },
             "time": "2024-05-08T12:18:48+00:00"
         },
         {
@@ -6331,15 +6316,15 @@
         },
         {
             "name": "psr/http-factory",
-            "version": "1.0.2",
+            "version": "1.1.0",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/http-factory/zipball/e616d01114759c4c489f93b099585439f795fe35",
-                "reference": "e616d01114759c4c489f93b099585439f795fe35",
+                "url": "https://api.github.com/repos/php-fig/http-factory/zipball/2b4765fddfe3b508ac62f829e852b1501d3f6e8a",
+                "reference": "2b4765fddfe3b508ac62f829e852b1501d3f6e8a",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.0.0",
+                "php": ">=7.1",
                 "psr/http-message": "^1.0 || ^2.0"
             },
             "type": "library",
@@ -6362,7 +6347,7 @@
                     "homepage": "https://www.php-fig.org/"
                 }
             ],
-            "description": "Common interfaces for PSR-7 HTTP message factories",
+            "description": "PSR-17: Common interfaces for PSR-7 HTTP message factories",
             "keywords": [
                 "factory",
                 "http",
@@ -6373,7 +6358,7 @@
                 "request",
                 "response"
             ],
-            "time": "2023-04-10T20:10:41+00:00"
+            "time": "2024-04-15T12:06:14+00:00"
         },
         {
             "name": "psr/http-message",
@@ -7763,17 +7748,18 @@
         },
         {
             "name": "symfony/filesystem",
-            "version": "v6.4.6",
+            "version": "v6.4.7",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/filesystem/zipball/9919b5509ada52cc7f66f9a35c86a4a29955c9d3",
-                "reference": "9919b5509ada52cc7f66f9a35c86a4a29955c9d3",
+                "url": "https://api.github.com/repos/symfony/filesystem/zipball/78dde75f8f6dbbca4ec436a4b0087f7af02076d4",
+                "reference": "78dde75f8f6dbbca4ec436a4b0087f7af02076d4",
                 "shasum": ""
             },
             "require": {
                 "php": ">=8.1",
                 "symfony/polyfill-ctype": "~1.8",
-                "symfony/polyfill-mbstring": "~1.8"
+                "symfony/polyfill-mbstring": "~1.8",
+                "symfony/process": "^5.4|^6.4"
             },
             "type": "library",
             "autoload": {
@@ -7799,7 +7785,7 @@
             ],
             "description": "Provides basic utilities for the filesystem",
             "homepage": "https://symfony.com",
-            "time": "2024-03-21T19:36:20+00:00"
+            "time": "2024-04-18T09:22:46+00:00"
         },
         {
             "name": "symfony/finder",
@@ -8657,15 +8643,15 @@
         },
         {
             "name": "symfony/process",
-            "version": "v7.0.7",
+            "version": "v6.4.7",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/process/zipball/3839e56b94dd1dbd13235d27504e66baf23faba0",
-                "reference": "3839e56b94dd1dbd13235d27504e66baf23faba0",
+                "url": "https://api.github.com/repos/symfony/process/zipball/cdb1c81c145fd5aa9b0038bab694035020943381",
+                "reference": "cdb1c81c145fd5aa9b0038bab694035020943381",
                 "shasum": ""
             },
             "require": {
-                "php": ">=8.2"
+                "php": ">=8.1"
             },
             "type": "library",
             "autoload": {
@@ -8691,7 +8677,7 @@
             ],
             "description": "Executes commands in sub-processes",
             "homepage": "https://symfony.com",
-            "time": "2024-04-18T09:29:19+00:00"
+            "time": "2024-04-18T09:22:46+00:00"
         },
         {
             "name": "symfony/property-access",
@@ -9492,15 +9478,15 @@
         },
         {
             "name": "verbb/auth",
-            "version": "2.0.0-beta.2",
+            "version": "2.0.0",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/verbb/auth/zipball/aea7df8f38614d471b7b41ff882837c9ab05e773",
-                "reference": "aea7df8f38614d471b7b41ff882837c9ab05e773",
+                "url": "https://api.github.com/repos/verbb/auth/zipball/8dd1204a21b13622cca7e7945324de316356762b",
+                "reference": "8dd1204a21b13622cca7e7945324de316356762b",
                 "shasum": ""
             },
             "require": {
-                "craftcms/cms": "^5.0.0-beta.1",
+                "craftcms/cms": "^5.0.0",
                 "firebase/php-jwt": "~3.0 || ~4.0 || ~5.0 || ~6.0",
                 "jakeasmith/http_build_url": "^1.0",
                 "lcobucci/jwt": "^3.4 || ^4.0",
@@ -9510,7 +9496,7 @@
                 "paragonie/random-lib": "^2.0",
                 "php": "^8.2",
                 "psr/http-message": "^1.0 || ^2.0",
-                "verbb/base": "^3.0.0-beta.1"
+                "verbb/base": "^3.0.0"
             },
             "type": "library",
             "autoload": {
@@ -9528,19 +9514,19 @@
                 }
             ],
             "description": "A Craft CMS module to make working with authentication for third-parties a breeze.",
-            "time": "2024-04-11T12:55:31+00:00"
+            "time": "2024-05-10T14:06:27+00:00"
         },
         {
             "name": "verbb/base",
-            "version": "3.0.0-beta.3",
+            "version": "3.0.0",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/verbb/verbb-base/zipball/9706647a4c4629484535d16ad8e38b8ebc5543cb",
-                "reference": "9706647a4c4629484535d16ad8e38b8ebc5543cb",
+                "url": "https://api.github.com/repos/verbb/verbb-base/zipball/5e283ec2aa7e1af8b43e15974e78b5e47822be41",
+                "reference": "5e283ec2aa7e1af8b43e15974e78b5e47822be41",
                 "shasum": ""
             },
             "require": {
-                "craftcms/cms": "^5.0.0-beta.1",
+                "craftcms/cms": "^5.0.0",
                 "php": "^8.2"
             },
             "type": "yii-module",
@@ -9559,7 +9545,7 @@
                 }
             ],
             "description": "Common utilities and building-blocks for Verbb plugins for Craft CMS.",
-            "time": "2024-04-12T00:31:22+00:00"
+            "time": "2024-05-10T13:55:03+00:00"
         },
         {
             "name": "verbb/buttonbox",
@@ -9620,17 +9606,17 @@
         },
         {
             "name": "verbb/field-manager",
-            "version": "4.0.0-beta.1",
+            "version": "4.0.0",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/verbb/field-manager/zipball/e38a062405713380ec9a8b265be32528a36ae791",
-                "reference": "e38a062405713380ec9a8b265be32528a36ae791",
+                "url": "https://api.github.com/repos/verbb/field-manager/zipball/275194f69a1684677f1afa32a96972543382b8f0",
+                "reference": "275194f69a1684677f1afa32a96972543382b8f0",
                 "shasum": ""
             },
             "require": {
-                "craftcms/cms": "^5.0.0-beta.1",
+                "craftcms/cms": "^5.0.0",
                 "php": "^8.2",
-                "verbb/base": "^3.0.0-beta.1"
+                "verbb/base": "^3.0.0"
             },
             "type": "craft-plugin",
             "extra": {
@@ -9668,7 +9654,7 @@
                 "docs": "https://github.com/verbb/field-manager",
                 "rss": "https://github.com/verbb/field-manager/commits/v2.atom"
             },
-            "time": "2024-03-04T09:29:54+00:00"
+            "time": "2024-05-13T00:40:03+00:00"
         },
         {
             "name": "verbb/formie",
@@ -9901,18 +9887,18 @@
         },
         {
             "name": "verbb/shortcodes",
-            "version": "4.0.0-beta.1",
+            "version": "4.0.0",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/verbb/shortcodes/zipball/597a0245fe91f715619e8685227420f8a7ae2190",
-                "reference": "597a0245fe91f715619e8685227420f8a7ae2190",
+                "url": "https://api.github.com/repos/verbb/shortcodes/zipball/2984e9f0b50ff55486fc953e6df5d22fce8f726b",
+                "reference": "2984e9f0b50ff55486fc953e6df5d22fce8f726b",
                 "shasum": ""
             },
             "require": {
-                "craftcms/cms": "^5.0.0-beta.1",
+                "craftcms/cms": "^5.0.0",
                 "php": "^8.2",
                 "thunderer/shortcode": "^0.7.4",
-                "verbb/base": "^3.0.0-beta.1"
+                "verbb/base": "^3.0.0"
             },
             "type": "craft-plugin",
             "extra": {
@@ -9954,22 +9940,22 @@
                 "docs": "https://github.com/verbb/shortcodes",
                 "rss": "https://github.com/verbb/shortcodes/commits/v2.atom"
             },
-            "time": "2024-03-04T09:30:22+00:00"
+            "time": "2024-05-12T13:55:08+00:00"
         },
         {
             "name": "verbb/social-share",
-            "version": "2.0.0-beta.1",
+            "version": "2.0.0",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/verbb/social-share/zipball/25beaef8560897f740e24f940d5e9091e7d0922d",
-                "reference": "25beaef8560897f740e24f940d5e9091e7d0922d",
+                "url": "https://api.github.com/repos/verbb/social-share/zipball/9a430eff1ff39f27312895531c141da90935beac",
+                "reference": "9a430eff1ff39f27312895531c141da90935beac",
                 "shasum": ""
             },
             "require": {
-                "craftcms/cms": "^5.0.0-beta.1",
+                "craftcms/cms": "^5.0.0",
                 "php": "^8.2",
-                "verbb/auth": "^2.0.0-beta.1",
-                "verbb/base": "^3.0.0-beta.1"
+                "verbb/auth": "^2.0.0",
+                "verbb/base": "^3.0.0"
             },
             "type": "craft-plugin",
             "extra": {
@@ -10006,21 +9992,21 @@
                 "docs": "https://github.com/verbb/social-share",
                 "rss": "https://github.com/verbb/social-share/commits/v2.atom"
             },
-            "time": "2024-03-04T09:30:37+00:00"
+            "time": "2024-05-13T00:50:09+00:00"
         },
         {
             "name": "verbb/tablemaker",
-            "version": "5.0.0-beta.2",
+            "version": "5.0.0",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/verbb/tablemaker/zipball/f2de0808a235de43585634346509c54a71ae9be8",
-                "reference": "f2de0808a235de43585634346509c54a71ae9be8",
+                "url": "https://api.github.com/repos/verbb/tablemaker/zipball/092d98e6d618c8cc2718105c6528a14ec5ba8fe9",
+                "reference": "092d98e6d618c8cc2718105c6528a14ec5ba8fe9",
                 "shasum": ""
             },
             "require": {
-                "craftcms/cms": "^5.0.0-beta.1",
+                "craftcms/cms": "^5.0.0",
                 "php": "^8.2",
-                "verbb/base": "^3.0.0-beta.1"
+                "verbb/base": "^3.0.0"
             },
             "type": "craft-plugin",
             "extra": {
@@ -10063,7 +10049,7 @@
                 "docs": "https://github.com/verbb/tablemaker",
                 "rss": "https://github.com/verbb/tablemaker/commits/v2.atom"
             },
-            "time": "2024-04-12T01:09:19+00:00"
+            "time": "2024-05-12T13:33:34+00:00"
         },
         {
             "name": "vlucas/phpdotenv",

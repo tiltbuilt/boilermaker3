@@ -127,6 +127,36 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 50
+          -
+            elementCondition: null
+            fieldUid: 9cc69c32-6fb9-465d-b7ce-b805d00f5449 # Row Margins
+            handle: ml
+            includeInCards: false
+            instructions: null
+            label: 'Left Margin'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a64598fa-d8bf-4d72-8166-4a68f7952bbd
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: 9cc69c32-6fb9-465d-b7ce-b805d00f5449 # Row Margins
+            handle: mr
+            includeInCards: false
+            instructions: null
+            label: 'Right Margin'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d16196de-cdf2-4526-84ea-4d68b30dfa45
+            userCondition: null
+            warning: null
+            width: 50
         name: Spacing
         uid: f0d2f66b-5769-4e21-8d17-0c71604df985
         userCondition: null

@@ -1,0 +1,164 @@
+color: indigo
+fieldLayouts:
+  a15a2b56-1374-4d56-b389-bdc1c4a1a937:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: ab9e78aa-fb3d-4019-99b6-b6a6c620781d
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 7f182d27-ea6e-4a71-a3f8-5c9d0f147eed # Device Size
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c800c557-90f9-469c-80cb-1a61934ca3a5
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: f1b466ce-fb41-471a-90d4-5d0fd23f346d # Image Asset
+            handle: bgImg
+            includeInCards: false
+            instructions: null
+            label: 'Background Image'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 4ca73be9-40aa-42c1-897e-75c78a9ad4da
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: f4d725e6-48b8-4083-a921-ecc0925a0bff # Background Size
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: dcd283c4-b835-47dc-bd61-fe49e1c6298a
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition:
+              class: craft\elements\conditions\entries\EntryCondition
+              conditionRules:
+                -
+                  class: craft\fields\conditions\OptionsFieldConditionRule
+                  fieldUid: f4d725e6-48b8-4083-a921-ecc0925a0bff # Background Size
+                  layoutElementUid: dcd283c4-b835-47dc-bd61-fe49e1c6298a
+                  operator: in
+                  uid: 4747505f-4309-4485-8b53-acfa2229dc8f
+                  values:
+                    - auto
+              elementType: craft\elements\Entry
+              fieldContext: global
+            fieldUid: 3710a5c7-fa54-4a2c-a07b-4f7a31f5bd25 # Background Repeat
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 93787413-e01a-4ef6-b843-2e03d6bf18c6
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition:
+              class: craft\elements\conditions\entries\EntryCondition
+              conditionRules:
+                -
+                  class: craft\fields\conditions\OptionsFieldConditionRule
+                  fieldUid: f4d725e6-48b8-4083-a921-ecc0925a0bff # Background Size
+                  layoutElementUid: dcd283c4-b835-47dc-bd61-fe49e1c6298a
+                  operator: in
+                  uid: 9d114e83-70ce-4fe1-b7e2-e12b55aa96a1
+                  values:
+                    - auto
+              elementType: craft\elements\Entry
+              fieldContext: global
+            fieldUid: 0fe2ca3f-eb30-4294-96a2-1154bd95e41e # Background Position
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 76d38eb7-ce2b-4d26-94c6-c91655fe9bbe
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: b81cc92d-9e5b-440d-8461-cdf9ab64807e # Opacity
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 044b8fe2-0faa-452b-a9c2-41ce4ff702fc
+            userCondition: null
+            warning: null
+            width: 100
+        name: 'Background Settings'
+        uid: 1eca071c-ba40-4e22-831f-d1d0296f1b47
+        userCondition: null
+handle: background
+hasTitleField: false
+icon: image
+name: Background
+showSlugField: false
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: '{object.owner.title}-pageheader-bg-{ object.deviceSize }'
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

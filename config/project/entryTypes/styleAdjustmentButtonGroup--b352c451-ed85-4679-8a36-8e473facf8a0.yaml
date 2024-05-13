@@ -1,0 +1,122 @@
+color: pink
+fieldLayouts:
+  b3073c67-74d4-4b31-a5ec-b08447d28404:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 91f151d3-bf18-4798-b96f-105cc0062eca
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 7f182d27-ea6e-4a71-a3f8-5c9d0f147eed # Device Size
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ba351afb-2044-4970-a1eb-288f23be2a70
+            userCondition: null
+            warning: null
+            width: 100
+        name: 'Device Size'
+        uid: d51accc6-eb67-416f-94c2-c58911da30a1
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 91d05e51-ee38-4e73-af4c-ebed7e7572d3 # Spacing
+            handle: mt
+            includeInCards: false
+            instructions: null
+            label: 'Top Margin'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 0ba2f3fe-7689-46e9-b173-001b569d1a6a
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: 91d05e51-ee38-4e73-af4c-ebed7e7572d3 # Spacing
+            handle: mb
+            includeInCards: false
+            instructions: null
+            label: 'Bottom Margin'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: fadfb7e0-59f6-40b7-8cea-9c90f4316cec
+            userCondition: null
+            warning: null
+            width: 50
+        name: Spacing
+        uid: 3b64e0c8-f04d-4c0d-9d24-07e94a9f9b5d
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: a2da31ae-7341-4dd1-b245-5ee55d44cbc2 # Yes No
+            handle: hidden
+            includeInCards: false
+            instructions: null
+            label: 'Hidden?'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ec86ffb9-8f06-4764-b31a-b5b7dafc9f35
+            userCondition: null
+            warning: null
+            width: 100
+        name: Display
+        uid: 80035e2d-4645-4958-ad3f-88bae7b64f5b
+        userCondition: null
+handle: styleAdjustmentButtonGroup
+hasTitleField: false
+icon: palette
+name: 'Style Adjustment - Button Group'
+showSlugField: false
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: '{object.owner.title}-styles-{ object.deviceSize }'
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

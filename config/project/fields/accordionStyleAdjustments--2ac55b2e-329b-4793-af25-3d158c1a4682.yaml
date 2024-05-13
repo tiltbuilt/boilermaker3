@@ -4,7 +4,7 @@ instructions: null
 name: 'Accordion Style Adjustments'
 searchable: false
 settings:
-  createButtonLabel: null
+  createButtonLabel: 'Adjust Style'
   entryTypes:
     - 7ff3d23a-91a6-4110-a3b0-b131dd2c3ee3 # Style Adjustment - Accordion
   includeTableView: false

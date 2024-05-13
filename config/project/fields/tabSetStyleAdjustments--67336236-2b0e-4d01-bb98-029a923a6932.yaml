@@ -4,7 +4,7 @@ instructions: null
 name: 'Tab Set Style Adjustments'
 searchable: false
 settings:
-  createButtonLabel: null
+  createButtonLabel: 'Adjust Style'
   entryTypes:
     - de6881eb-f48b-4119-889c-95d3bf6692e5 # Style Adjustment - Tab Set
   includeTableView: false

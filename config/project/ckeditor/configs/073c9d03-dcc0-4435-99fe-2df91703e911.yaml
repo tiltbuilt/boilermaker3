@@ -1,0 +1,8 @@
+headingLevels: false
+name: Slide
+toolbar:
+  - createEntry
+  - '|'
+  - bold
+  - italic
+  - link

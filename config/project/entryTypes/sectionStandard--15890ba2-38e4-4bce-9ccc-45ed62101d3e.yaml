@@ -57,6 +57,21 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
+            fieldUid: a2da31ae-7341-4dd1-b245-5ee55d44cbc2 # Yes No
+            handle: fullscreen
+            includeInCards: false
+            instructions: null
+            label: 'Full Screen Width?'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a5ec895d-edcd-4799-8efe-530cacd102c7
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
             heading: Color
             type: craft\fieldlayoutelements\Heading
             uid: ce0adc81-91e4-409d-98bc-6b2cbd087e11

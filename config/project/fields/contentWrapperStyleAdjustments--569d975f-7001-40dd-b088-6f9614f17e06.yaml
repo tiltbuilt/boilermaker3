@@ -4,7 +4,7 @@ instructions: null
 name: 'Content Wrapper Style Adjustments'
 searchable: false
 settings:
-  createButtonLabel: null
+  createButtonLabel: 'Adjust Style'
   entryTypes:
     - f103b592-617a-4840-8a3b-ce98a171eb09 # Style Adjustment - Content Wrapper
   includeTableView: false

@@ -256,6 +256,58 @@ settings:
                               -
                                 - fieldUid
                                 - adca13f3-4ae5-49c5-83c4-cab3dd9f5ece # Button Size
+                          -
+                            __assoc__:
+                              -
+                                - type
+                                - craft\fieldlayoutelements\CustomField
+                              -
+                                - handle
+                                - fullWidthPhone
+                              -
+                                - label
+                                - 'Full Width on Phone?'
+                              -
+                                - required
+                                - false
+                              -
+                                - providesThumbs
+                                - false
+                              -
+                                - includeInCards
+                                - false
+                              -
+                                - width
+                                - 100
+                              -
+                                - uid
+                                - ee5fd6bc-db5c-4574-afce-092e56a8d6ac
+                              -
+                                - fieldUid
+                                - a2da31ae-7341-4dd1-b245-5ee55d44cbc2 # Yes No
+                          -
+                            __assoc__:
+                              -
+                                - type
+                                - craft\fieldlayoutelements\CustomField
+                              -
+                                - required
+                                - false
+                              -
+                                - providesThumbs
+                                - false
+                              -
+                                - includeInCards
+                                - false
+                              -
+                                - width
+                                - 100
+                              -
+                                - uid
+                                - 2582cd00-1a15-4724-93b0-8a92408319e4
+                              -
+                                - fieldUid
+                                - 4e9bbb37-55ed-437d-bdbd-9a1dcbc20d73 # Button Color
                   -
                     __assoc__:
                       -
@@ -588,6 +640,58 @@ settings:
                               -
                                 - fieldUid
                                 - adca13f3-4ae5-49c5-83c4-cab3dd9f5ece # Button Size
+                          -
+                            __assoc__:
+                              -
+                                - type
+                                - craft\fieldlayoutelements\CustomField
+                              -
+                                - handle
+                                - fullWidthPhone
+                              -
+                                - label
+                                - 'Full Width on Phone?'
+                              -
+                                - required
+                                - false
+                              -
+                                - providesThumbs
+                                - false
+                              -
+                                - includeInCards
+                                - false
+                              -
+                                - width
+                                - 100
+                              -
+                                - uid
+                                - 9e471834-66b1-43f4-90b6-20d54319bce1
+                              -
+                                - fieldUid
+                                - a2da31ae-7341-4dd1-b245-5ee55d44cbc2 # Yes No
+                          -
+                            __assoc__:
+                              -
+                                - type
+                                - craft\fieldlayoutelements\CustomField
+                              -
+                                - required
+                                - false
+                              -
+                                - providesThumbs
+                                - false
+                              -
+                                - includeInCards
+                                - false
+                              -
+                                - width
+                                - 100
+                              -
+                                - uid
+                                - d4c858ed-bd3b-4e9e-806f-8f42f76e1b0d
+                              -
+                                - fieldUid
+                                - 4e9bbb37-55ed-437d-bdbd-9a1dcbc20d73 # Button Color
                   -
                     __assoc__:
                       -
@@ -919,6 +1023,58 @@ settings:
                               -
                                 - fieldUid
                                 - adca13f3-4ae5-49c5-83c4-cab3dd9f5ece # Button Size
+                          -
+                            __assoc__:
+                              -
+                                - type
+                                - craft\fieldlayoutelements\CustomField
+                              -
+                                - handle
+                                - fullWidthPhone
+                              -
+                                - label
+                                - 'Full Width on Phone?'
+                              -
+                                - required
+                                - false
+                              -
+                                - providesThumbs
+                                - false
+                              -
+                                - includeInCards
+                                - false
+                              -
+                                - width
+                                - 100
+                              -
+                                - uid
+                                - d3718bba-9707-4bdb-a127-7b940f176963
+                              -
+                                - fieldUid
+                                - a2da31ae-7341-4dd1-b245-5ee55d44cbc2 # Yes No
+                          -
+                            __assoc__:
+                              -
+                                - type
+                                - craft\fieldlayoutelements\CustomField
+                              -
+                                - required
+                                - false
+                              -
+                                - providesThumbs
+                                - false
+                              -
+                                - includeInCards
+                                - false
+                              -
+                                - width
+                                - 100
+                              -
+                                - uid
+                                - da00e7f8-cc93-49f5-8e12-18f65dbf4b2b
+                              -
+                                - fieldUid
+                                - 4e9bbb37-55ed-437d-bdbd-9a1dcbc20d73 # Button Color
                   -
                     __assoc__:
                       -
@@ -1247,6 +1403,58 @@ settings:
                               -
                                 - fieldUid
                                 - adca13f3-4ae5-49c5-83c4-cab3dd9f5ece # Button Size
+                          -
+                            __assoc__:
+                              -
+                                - type
+                                - craft\fieldlayoutelements\CustomField
+                              -
+                                - handle
+                                - fullWidthPhone
+                              -
+                                - label
+                                - 'Full Width on Phone?'
+                              -
+                                - required
+                                - false
+                              -
+                                - providesThumbs
+                                - false
+                              -
+                                - includeInCards
+                                - false
+                              -
+                                - width
+                                - 100
+                              -
+                                - uid
+                                - be96e100-2be7-4c2f-8b4a-fc3e0f7fc1f2
+                              -
+                                - fieldUid
+                                - a2da31ae-7341-4dd1-b245-5ee55d44cbc2 # Yes No
+                          -
+                            __assoc__:
+                              -
+                                - type
+                                - craft\fieldlayoutelements\CustomField
+                              -
+                                - required
+                                - false
+                              -
+                                - providesThumbs
+                                - false
+                              -
+                                - includeInCards
+                                - false
+                              -
+                                - width
+                                - 100
+                              -
+                                - uid
+                                - 943808a8-a90f-4921-8ba9-3a51d04159bc
+                              -
+                                - fieldUid
+                                - 4e9bbb37-55ed-437d-bdbd-9a1dcbc20d73 # Button Color
                   -
                     __assoc__:
                       -
@@ -1859,6 +2067,58 @@ settings:
                               -
                                 - fieldUid
                                 - adca13f3-4ae5-49c5-83c4-cab3dd9f5ece # Button Size
+                          -
+                            __assoc__:
+                              -
+                                - type
+                                - craft\fieldlayoutelements\CustomField
+                              -
+                                - handle
+                                - fullWidthPhone
+                              -
+                                - label
+                                - 'Full width on Phone?'
+                              -
+                                - required
+                                - false
+                              -
+                                - providesThumbs
+                                - false
+                              -
+                                - includeInCards
+                                - false
+                              -
+                                - width
+                                - 100
+                              -
+                                - uid
+                                - 23a2a04a-14cf-4d0f-ba19-7f0c88c19eb8
+                              -
+                                - fieldUid
+                                - a2da31ae-7341-4dd1-b245-5ee55d44cbc2 # Yes No
+                          -
+                            __assoc__:
+                              -
+                                - type
+                                - craft\fieldlayoutelements\CustomField
+                              -
+                                - required
+                                - false
+                              -
+                                - providesThumbs
+                                - false
+                              -
+                                - includeInCards
+                                - false
+                              -
+                                - width
+                                - 100
+                              -
+                                - uid
+                                - e1f3336f-5949-447b-886b-ef17c2eddb85
+                              -
+                                - fieldUid
+                                - 4e9bbb37-55ed-437d-bdbd-9a1dcbc20d73 # Button Color
                   -
                     __assoc__:
                       -
@@ -2192,6 +2452,58 @@ settings:
                               -
                                 - fieldUid
                                 - adca13f3-4ae5-49c5-83c4-cab3dd9f5ece # Button Size
+                          -
+                            __assoc__:
+                              -
+                                - type
+                                - craft\fieldlayoutelements\CustomField
+                              -
+                                - handle
+                                - fullWidthPhone
+                              -
+                                - label
+                                - 'Full Width on Phone?'
+                              -
+                                - required
+                                - false
+                              -
+                                - providesThumbs
+                                - false
+                              -
+                                - includeInCards
+                                - false
+                              -
+                                - width
+                                - 100
+                              -
+                                - uid
+                                - 9e37dd57-9796-46ad-b6d5-21187372fbb9
+                              -
+                                - fieldUid
+                                - a2da31ae-7341-4dd1-b245-5ee55d44cbc2 # Yes No
+                          -
+                            __assoc__:
+                              -
+                                - type
+                                - craft\fieldlayoutelements\CustomField
+                              -
+                                - required
+                                - false
+                              -
+                                - providesThumbs
+                                - false
+                              -
+                                - includeInCards
+                                - false
+                              -
+                                - width
+                                - 100
+                              -
+                                - uid
+                                - 98b47861-0299-42bb-bb5f-3f5479591788
+                              -
+                                - fieldUid
+                                - 4e9bbb37-55ed-437d-bdbd-9a1dcbc20d73 # Button Color
                   -
                     __assoc__:
                       -
@@ -2807,6 +3119,58 @@ settings:
                               -
                                 - fieldUid
                                 - adca13f3-4ae5-49c5-83c4-cab3dd9f5ece # Button Size
+                          -
+                            __assoc__:
+                              -
+                                - type
+                                - craft\fieldlayoutelements\CustomField
+                              -
+                                - handle
+                                - fullWidthPhone
+                              -
+                                - label
+                                - 'Full Width on Phone?'
+                              -
+                                - required
+                                - false
+                              -
+                                - providesThumbs
+                                - false
+                              -
+                                - includeInCards
+                                - false
+                              -
+                                - width
+                                - 100
+                              -
+                                - uid
+                                - 45b823a9-8b5e-4b9f-97e0-02a4671f1dc7
+                              -
+                                - fieldUid
+                                - a2da31ae-7341-4dd1-b245-5ee55d44cbc2 # Yes No
+                          -
+                            __assoc__:
+                              -
+                                - type
+                                - craft\fieldlayoutelements\CustomField
+                              -
+                                - required
+                                - false
+                              -
+                                - providesThumbs
+                                - false
+                              -
+                                - includeInCards
+                                - false
+                              -
+                                - width
+                                - 100
+                              -
+                                - uid
+                                - 1822d79e-671a-479a-9406-ff4fb9057a2d
+                              -
+                                - fieldUid
+                                - 4e9bbb37-55ed-437d-bdbd-9a1dcbc20d73 # Button Color
                   -
                     __assoc__:
                       -

@@ -1,7 +1,7 @@
 columnSuffix: null
-handle: buttonStyles
+handle: verticalAlignment
 instructions: null
-name: 'Button Styles'
+name: 'Vertical Alignment'
 searchable: false
 settings:
   options:
@@ -9,10 +9,10 @@ settings:
       __assoc__:
         -
           - label
-          - 'Standard Button'
+          - 'Default (No Change)'
         -
           - value
-          - btn-standard
+          - ''
         -
           - default
           - '1'
@@ -20,10 +20,10 @@ settings:
       __assoc__:
         -
           - label
-          - 'Text Button'
+          - 'Match Heights'
         -
           - value
-          - btn-text
+          - items-stretch
         -
           - default
           - ''
@@ -31,10 +31,32 @@ settings:
       __assoc__:
         -
           - label
-          - 'Text Button with Arrow'
+          - Top
         -
           - value
-          - btn-text-arrow
+          - items-start
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Middle
+        -
+          - value
+          - items-center
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Bottom
+        -
+          - value
+          - items-end
         -
           - default
           - ''

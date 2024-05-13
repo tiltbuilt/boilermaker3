@@ -4,7 +4,7 @@ instructions: null
 name: 'Image/Video Style Adjustments'
 searchable: false
 settings:
-  createButtonLabel: null
+  createButtonLabel: 'Adjust Style'
   entryTypes:
     - e8d249f8-2c18-4b51-b311-baabbd94f999 # Style Adjustment - Image/Video
   includeTableView: false

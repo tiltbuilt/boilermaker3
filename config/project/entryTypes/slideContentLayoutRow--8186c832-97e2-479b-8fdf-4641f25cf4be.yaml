@@ -1,0 +1,158 @@
+color: green
+fieldLayouts:
+  d871cc70-29c5-4161-914b-321c26867c79:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 298d0cad-83e5-4efa-9b9d-103de1cbdd08
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 68048c93-ca73-447b-9387-512eebe4e90b # Slide Columns
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d1fd7d4d-dbbe-413b-81f2-406506ee5566
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: b4280f34-a818-403c-9b37-54feee06d23a
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: b60b76cf-1ca2-42b6-9ba2-6ad3de0f0e4f # Row Layout
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 6ef0f5d5-1f37-44c6-8c11-0a85755bce20
+            userCondition: null
+            warning: null
+            width: 100
+        name: Layout
+        uid: de2d5641-fc70-4f87-b3d9-67fda8923dcc
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 4ccd8d3b-ddf4-4ac6-89c4-8d344eb6a427 # Row Style Adjustments
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 628ac4d8-4845-4c58-b935-3c93d7201b85
+            userCondition: null
+            warning: null
+            width: 100
+        name: Styling
+        uid: 74e58bf5-8d6e-4113-af18-cf806c49debe
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 6b484609-7d28-4f55-990e-f5212885d922 # Custom ID
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 231e1ca9-aa4b-44a3-9852-0169f7e9b2e1
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: a78e7e89-26cf-4a0e-a36d-b48ca76d7ba5 # Custom Classes
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 48dc1562-d452-41e8-b1d8-3893544c74a2
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: ee64f702-a8f1-46ee-8dea-79f8ad82e25b # Custom Attributes
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 1be096ee-33f2-4ba6-bfb2-18f7e31d8d34
+            userCondition: null
+            warning: null
+            width: 100
+        name: Advanced
+        uid: 5a7e768a-7c1d-4fda-a596-4a2abc3aed01
+        userCondition: null
+handle: slideContentLayoutRow
+hasTitleField: false
+icon: table-layout
+name: 'Slide Content Layout Row'
+showSlugField: false
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: 'slide-{object.owner.title}-row'
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

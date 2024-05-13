@@ -153,6 +153,54 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
+            heading: Color
+            type: craft\fieldlayoutelements\Heading
+            uid: abf2a981-5c94-47e8-884f-d6ccaeb043ca
+            userCondition: null
+          -
+            elementCondition: null
+            fieldUid: 5514a63a-0a23-42f9-9333-5576b0e95462 # Color Scheme
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 10028daf-64e6-48f9-a239-32318d57acd8
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            heading: Adjustments
+            type: craft\fieldlayoutelements\Heading
+            uid: 0826a161-652b-4962-a4d6-d80ff07cdb7b
+            userCondition: null
+          -
+            elementCondition: null
+            fieldUid: 481490a1-1752-4ffc-b455-f05dadea8141 # Slider Set Style Adjustments
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ab0b5e5c-c769-4cfb-95b5-39d78b9ed1df
+            userCondition: null
+            warning: null
+            width: 100
+        name: Styling
+        uid: 5759cff1-b617-4af3-979c-3c3743f1ecb9
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
             fieldUid: 6b484609-7d28-4f55-990e-f5212885d922 # Custom ID
             handle: null
             includeInCards: false
