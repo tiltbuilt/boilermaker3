@@ -57,12 +57,6 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
-            heading: 'Main Headline'
-            type: craft\fieldlayoutelements\Heading
-            uid: f1a7eb79-46e6-4bca-9085-ce2ad48b7a8f
-            userCondition: null
-          -
-            elementCondition: null
             fieldUid: 5feec917-01fb-4987-bd1a-c38c337de8cf # Font
             handle: headlineFont
             includeInCards: false
@@ -153,10 +147,31 @@ fieldLayouts:
             width: 50
           -
             elementCondition: null
-            heading: Subhead
+            heading: Alignment
             type: craft\fieldlayoutelements\Heading
-            uid: 84332f01-c3cb-43bc-8916-46d6a5131ef1
+            uid: 27199440-1218-41b3-bbe9-d9d88e7491f2
             userCondition: null
+          -
+            elementCondition: null
+            fieldUid: 5d95a350-fb34-496c-8c66-da3952eb4373 # Text Alignment
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 97cc4c30-4b32-42ad-b5bf-cede5be0e941
+            userCondition: null
+            warning: null
+            width: 100
+        name: Type
+        uid: 0b3d629c-fdf3-4d1e-853b-a3739d51deb9
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
           -
             elementCondition: null
             fieldUid: 5feec917-01fb-4987-bd1a-c38c337de8cf # Font
@@ -249,27 +264,21 @@ fieldLayouts:
             width: 50
           -
             elementCondition: null
-            heading: Alignment
-            type: craft\fieldlayoutelements\Heading
-            uid: 27199440-1218-41b3-bbe9-d9d88e7491f2
-            userCondition: null
-          -
-            elementCondition: null
-            fieldUid: 5d95a350-fb34-496c-8c66-da3952eb4373 # Text Alignment
-            handle: null
+            fieldUid: 91d05e51-ee38-4e73-af4c-ebed7e7572d3 # Spacing
+            handle: subheadSpacing
             includeInCards: false
-            instructions: null
-            label: null
+            instructions: 'This field adjusts the space between the subhead and the headline if needed.It is applied as top margin if the subhead is set to be below the headline and bottom margin if it is above the headline.'
+            label: 'Subhead Spacing'
             providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 97cc4c30-4b32-42ad-b5bf-cede5be0e941
+            uid: 91a4d856-6bf3-46bd-b42e-d0a91cc51db9
             userCondition: null
             warning: null
             width: 100
-        name: Type
-        uid: 0b3d629c-fdf3-4d1e-853b-a3739d51deb9
+        name: Subhead
+        uid: 7ce6b076-73cd-42cf-9cc1-007622f2e5c3
         userCondition: null
       -
         elementCondition: null
@@ -304,22 +313,7 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 50
-          -
-            elementCondition: null
-            fieldUid: 91d05e51-ee38-4e73-af4c-ebed7e7572d3 # Spacing
-            handle: subheadSpacing
-            includeInCards: false
-            instructions: 'This field adjusts the space between the subhead and the headline if needed.It is applied as top margin if the subhead is set to be below the headline and bottom margin if it is above the headline.'
-            label: 'Subhead Spacing'
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 91a4d856-6bf3-46bd-b42e-d0a91cc51db9
-            userCondition: null
-            warning: null
-            width: 100
-        name: Spacing
+        name: Margins
         uid: f514a90e-3f23-47c3-80ab-4326664d8565
         userCondition: null
       -
@@ -327,16 +321,16 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
-            fieldUid: a2da31ae-7341-4dd1-b245-5ee55d44cbc2 # Yes No
-            handle: hidden
+            fieldUid: 206d3220-640b-4b20-a440-faaa801a11d9 # Display
+            handle: null
             includeInCards: false
             instructions: null
-            label: 'Hidden?'
+            label: null
             providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 0f213b16-c15e-4ed7-8d28-6dcd2e683b96
+            uid: 8afc329e-b44e-43bd-885c-5b16d493cb2f
             userCondition: null
             warning: null
             width: 100

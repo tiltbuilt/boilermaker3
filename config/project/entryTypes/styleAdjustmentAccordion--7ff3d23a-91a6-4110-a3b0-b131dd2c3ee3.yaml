@@ -247,7 +247,7 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 50
-        name: Spacing
+        name: Padding
         uid: 5fa1ad12-03d5-4226-a274-8c8107bce752
         userCondition: null
       -
@@ -255,16 +255,16 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
-            fieldUid: a2da31ae-7341-4dd1-b245-5ee55d44cbc2 # Yes No
-            handle: hidden
+            fieldUid: 206d3220-640b-4b20-a440-faaa801a11d9 # Display
+            handle: null
             includeInCards: false
             instructions: null
-            label: 'Hidden?'
+            label: null
             providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: df7eaeca-6419-4853-afa3-564f1db41697
+            uid: af914aed-fd81-46a5-8e6a-086f3bf9eb34
             userCondition: null
             warning: null
             width: 100

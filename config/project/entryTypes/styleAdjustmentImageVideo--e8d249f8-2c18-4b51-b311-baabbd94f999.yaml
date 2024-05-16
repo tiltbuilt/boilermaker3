@@ -57,12 +57,6 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
-            heading: Size
-            type: craft\fieldlayoutelements\Heading
-            uid: ad31f485-c8cf-4676-93ef-f2c99db03b2d
-            userCondition: null
-          -
-            elementCondition: null
             fieldUid: 049ec87b-57e9-4b3e-8d53-44cb8874474b # Width
             handle: null
             includeInCards: false
@@ -91,12 +85,12 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 50
-          -
-            elementCondition: null
-            heading: Spacing
-            type: craft\fieldlayoutelements\Heading
-            uid: e42bb372-8945-4598-8841-d5e3764dbce1
-            userCondition: null
+        name: Size
+        uid: e45d93eb-4963-4635-91ab-73762c13b049
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
           -
             elementCondition: null
             fieldUid: 91d05e51-ee38-4e73-af4c-ebed7e7572d3 # Spacing
@@ -157,17 +151,19 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 50
-        name: 'Size and Spacing'
+        name: Margins
         uid: be0aa6b2-99b5-4c46-a89a-072fb51c2886
         userCondition: null
       -
         elementCondition: null
         elements:
           -
+            dismissible: false
             elementCondition: null
-            heading: Type
-            type: craft\fieldlayoutelements\Heading
-            uid: 40911752-b29a-4e1c-97af-3d89071999f7
+            style: tip
+            tip: 'These fields act as overrides to the caption styling that is set in the style sheet'
+            type: craft\fieldlayoutelements\Tip
+            uid: b40b2501-7668-467b-854c-e4d09073b187
             userCondition: null
           -
             elementCondition: null
@@ -280,15 +276,15 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
+        name: Type
+        uid: d55bbad0-3993-4784-8979-30c04bcfc797
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
           -
             elementCondition: null
-            heading: Background
-            type: craft\fieldlayoutelements\Heading
-            uid: b783765a-29f2-449d-ad08-98846aa59076
-            userCondition: null
-          -
-            elementCondition: null
-            fieldUid: 487ec441-2218-43e8-8a96-652a0649e437 # Color Picker
+            fieldUid: 206d3220-640b-4b20-a440-faaa801a11d9 # Display
             handle: null
             includeInCards: false
             instructions: null
@@ -297,28 +293,7 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: d029c36a-b268-4a93-9443-04e3cea2ed18
-            userCondition: null
-            warning: null
-            width: 100
-        name: Caption
-        uid: d55bbad0-3993-4784-8979-30c04bcfc797
-        userCondition: null
-      -
-        elementCondition: null
-        elements:
-          -
-            elementCondition: null
-            fieldUid: a2da31ae-7341-4dd1-b245-5ee55d44cbc2 # Yes No
-            handle: hidden
-            includeInCards: false
-            instructions: null
-            label: 'Hidden?'
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 27dabf3f-1ed3-4679-8f45-f9711b4fc9ae
+            uid: d5830d72-d92b-41d4-8815-e6018a40ad55
             userCondition: null
             warning: null
             width: 100

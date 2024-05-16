@@ -4,15 +4,15 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "72d99128d443d623be43586e16d3cce5",
+    "content-hash": "4162d31b56f8dd9ef9e983cf900c2aac",
     "packages": [
         {
             "name": "amphp/amp",
-            "version": "v3.0.1",
+            "version": "v3.0.2",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/amphp/amp/zipball/ff63f10210adb6e83335e0e25522bac5cd7dc4e2",
-                "reference": "ff63f10210adb6e83335e0e25522bac5cd7dc4e2",
+                "url": "https://api.github.com/repos/amphp/amp/zipball/138801fb68cfc9c329da8a7b39d01ce7291ee4b0",
+                "reference": "138801fb68cfc9c329da8a7b39d01ce7291ee4b0",
                 "shasum": ""
             },
             "require": {
@@ -64,7 +64,7 @@
                 "non-blocking",
                 "promise"
             ],
-            "time": "2024-04-18T15:24:36+00:00"
+            "time": "2024-05-10T21:37:46+00:00"
         },
         {
             "name": "amphp/byte-stream",
@@ -816,11 +816,11 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.306.1",
+            "version": "3.306.6",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/99e13a3647edffba9110948acc85052e3169e46a",
-                "reference": "99e13a3647edffba9110948acc85052e3169e46a",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/79a618bb5624e52f31de7083a26d1749050aa5a0",
+                "reference": "79a618bb5624e52f31de7083a26d1749050aa5a0",
                 "shasum": ""
             },
             "require": {
@@ -877,7 +877,7 @@
                 "s3",
                 "sdk"
             ],
-            "time": "2024-05-07T18:11:42+00:00"
+            "time": "2024-05-14T18:05:44+00:00"
         },
         {
             "name": "bacon/bacon-qr-code",
@@ -958,7 +958,7 @@
         },
         {
             "name": "cakephp/core",
-            "version": "5.0.7",
+            "version": "5.0.8",
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/cakephp/core/zipball/163ba348b96870de24b7cf34abdcd8d0c3794ed7",
@@ -1008,7 +1008,7 @@
         },
         {
             "name": "cakephp/utility",
-            "version": "5.0.7",
+            "version": "5.0.8",
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/cakephp/utility/zipball/6d624cefc3e005ebf9bd2e7d8a1d35f5f4601ff8",
@@ -1288,11 +1288,11 @@
         },
         {
             "name": "craftcms/ckeditor",
-            "version": "4.0.4",
+            "version": "4.0.5",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/ckeditor/zipball/292041545298e467f47166c58661d305c498d90d",
-                "reference": "292041545298e467f47166c58661d305c498d90d",
+                "url": "https://api.github.com/repos/craftcms/ckeditor/zipball/358ada3a176f53feaab1b9479391b9356a29a39e",
+                "reference": "358ada3a176f53feaab1b9479391b9356a29a39e",
                 "shasum": ""
             },
             "require": {
@@ -1336,15 +1336,15 @@
                 "docs": "https://github.com/craftcms/ckeditor/blob/master/README.md",
                 "rss": "https://github.com/craftcms/ckeditor/commits/master.atom"
             },
-            "time": "2024-04-25T18:37:15+00:00"
+            "time": "2024-05-14T17:27:27+00:00"
         },
         {
             "name": "craftcms/cms",
-            "version": "5.1.2",
+            "version": "5.1.3",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/76de732e423edc1c13382ecdbc90673492f5647d",
-                "reference": "76de732e423edc1c13382ecdbc90673492f5647d",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/495d5bd84e77d064e304f495493a0832943c1faa",
+                "reference": "495d5bd84e77d064e304f495493a0832943c1faa",
                 "shasum": ""
             },
             "require": {
@@ -1441,7 +1441,7 @@
                 "docs": "https://craftcms.com/docs/5.x/",
                 "rss": "https://github.com/craftcms/cms/releases.atom"
             },
-            "time": "2024-05-07T18:41:50+00:00"
+            "time": "2024-05-14T18:49:55+00:00"
         },
         {
             "name": "craftcms/feed-me",
@@ -2718,18 +2718,18 @@
         },
         {
             "name": "google/gax",
-            "version": "v1.32.0",
+            "version": "v1.33.0",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/googleapis/gax-php/zipball/9b06449585573f76540cb55d8d0d041e232057ce",
-                "reference": "9b06449585573f76540cb55d8d0d041e232057ce",
+                "url": "https://api.github.com/repos/googleapis/gax-php/zipball/12a158e9b503df0087ebf9e218e8d75dc815a521",
+                "reference": "12a158e9b503df0087ebf9e218e8d75dc815a521",
                 "shasum": ""
             },
             "require": {
                 "google/auth": "^1.34.0",
                 "google/common-protos": "^4.4",
                 "google/grpc-gcp": "^0.4",
-                "google/longrunning": "~0.2",
+                "google/longrunning": "~0.4",
                 "google/protobuf": "^v3.25.3||^4.26.1",
                 "grpc/grpc": "^1.13",
                 "guzzlehttp/promises": "^2.0",
@@ -2755,7 +2755,7 @@
             "keywords": [
                 "google"
             ],
-            "time": "2024-04-25T15:45:37+00:00"
+            "time": "2024-05-14T14:55:14+00:00"
         },
         {
             "name": "google/grpc-gcp",
@@ -7027,11 +7027,11 @@
         },
         {
             "name": "spacecatninja/imager-x-power-pack",
-            "version": "1.0.0",
+            "version": "1.0.3",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spacecatninja/craft-imager-x-power-pack/zipball/f1d4852f176ef10b27eb49711981cfc7dd2e35ef",
-                "reference": "f1d4852f176ef10b27eb49711981cfc7dd2e35ef",
+                "url": "https://api.github.com/repos/spacecatninja/craft-imager-x-power-pack/zipball/c9d8bc1b3d1035e8a0be7101625a38684fdbb3ca",
+                "reference": "c9d8bc1b3d1035e8a0be7101625a38684fdbb3ca",
                 "shasum": ""
             },
             "require": {
@@ -7082,7 +7082,7 @@
                 "docs": "https://github.com/spacecatninja/craft-imager-x-power-pack/blob/master/README.md",
                 "issues": "https://github.com/spacecatninja/craft-imager-x-power-pack/issues"
             },
-            "time": "2024-05-03T18:29:51+00:00"
+            "time": "2024-05-14T11:57:55+00:00"
         },
         {
             "name": "spicyweb/craft-embedded-assets",
@@ -9478,11 +9478,16 @@
         },
         {
             "name": "verbb/auth",
-            "version": "2.0.0",
+            "version": "2.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/verbb/auth.git",
+                "reference": "e18f5d642b12ad75110a0ca4a2eac4e8b4569cce"
+            },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/verbb/auth/zipball/8dd1204a21b13622cca7e7945324de316356762b",
-                "reference": "8dd1204a21b13622cca7e7945324de316356762b",
+                "url": "https://api.github.com/repos/verbb/auth/zipball/e18f5d642b12ad75110a0ca4a2eac4e8b4569cce",
+                "reference": "e18f5d642b12ad75110a0ca4a2eac4e8b4569cce",
                 "shasum": ""
             },
             "require": {
@@ -9504,6 +9509,7 @@
                     "verbb\\auth\\": "src/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -9514,7 +9520,20 @@
                 }
             ],
             "description": "A Craft CMS module to make working with authentication for third-parties a breeze.",
-            "time": "2024-05-10T14:06:27+00:00"
+            "support": {
+                "docs": "https://github.com/verbb/auth",
+                "email": "support@verbb.io",
+                "issues": "https://github.com/verbb/auth/issues?state=open",
+                "rss": "https://github.com/verbb/auth/commits/v2.atom",
+                "source": "https://github.com/verbb/auth"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/verbb",
+                    "type": "github"
+                }
+            ],
+            "time": "2024-05-15T12:46:28+00:00"
         },
         {
             "name": "verbb/base",
@@ -9549,17 +9568,22 @@
         },
         {
             "name": "verbb/buttonbox",
-            "version": "5.0.0-beta.1",
+            "version": "5.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/verbb/buttonbox.git",
+                "reference": "d17c4f03719673a3d19b9e86291e69b6817a09ee"
+            },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/verbb/buttonbox/zipball/b4594031201786c201fa4df108177445ac531c65",
-                "reference": "b4594031201786c201fa4df108177445ac531c65",
+                "url": "https://api.github.com/repos/verbb/buttonbox/zipball/d17c4f03719673a3d19b9e86291e69b6817a09ee",
+                "reference": "d17c4f03719673a3d19b9e86291e69b6817a09ee",
                 "shasum": ""
             },
             "require": {
-                "craftcms/cms": "^5.0.0-beta.1",
+                "craftcms/cms": "^5.0.0",
                 "php": "^8.2",
-                "verbb/base": "^3.0.0-beta.1"
+                "verbb/base": "^3.0.0"
             },
             "type": "craft-plugin",
             "extra": {
@@ -9574,6 +9598,7 @@
                     "verbb\\buttonbox\\": "src/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -9589,20 +9614,26 @@
             ],
             "description": "A collection of utility field types.",
             "keywords": [
+                "Craft",
                 "buttonbox",
                 "cms",
-                "craft",
                 "craft-plugin",
                 "craftcms"
             ],
             "support": {
+                "docs": "https://github.com/verbb/buttonbox",
                 "email": "support@verbb.io",
                 "issues": "https://github.com/verbb/buttonbox/issues?state=open",
-                "source": "https://github.com/verbb/buttonbox",
-                "docs": "https://github.com/verbb/buttonbox",
-                "rss": "https://github.com/verbb/buttonbox/commits/v2.atom"
+                "rss": "https://github.com/verbb/buttonbox/commits/v2.atom",
+                "source": "https://github.com/verbb/buttonbox"
             },
-            "time": "2024-03-04T09:29:33+00:00"
+            "funding": [
+                {
+                    "url": "https://github.com/verbb",
+                    "type": "github"
+                }
+            ],
+            "time": "2024-05-10T14:48:17+00:00"
         },
         {
             "name": "verbb/field-manager",
@@ -11191,11 +11222,11 @@
         },
         {
             "name": "nette/php-generator",
-            "version": "v4.1.4",
+            "version": "v4.1.5",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nette/php-generator/zipball/b135071d8da108445e4df2fc6a75522b23c0237d",
-                "reference": "b135071d8da108445e4df2fc6a75522b23c0237d",
+                "url": "https://api.github.com/repos/nette/php-generator/zipball/690b00d81d42d5633e4457c43ef9754573b6f9d6",
+                "reference": "690b00d81d42d5633e4457c43ef9754573b6f9d6",
                 "shasum": ""
             },
             "require": {
@@ -11239,7 +11270,7 @@
                 "php",
                 "scaffolding"
             ],
-            "time": "2024-03-07T23:06:26+00:00"
+            "time": "2024-05-12T17:31:02+00:00"
         },
         {
             "name": "nette/utils",

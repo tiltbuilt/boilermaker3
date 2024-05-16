@@ -38,9 +38,9 @@ fieldLayouts:
         name: Content
         uid: 2e687427-c0b4-48d6-8474-b81904db643b
         userCondition: null
-fs: images
-handle: images
-name: Images
+fs: mediaUploads
+handle: media
+name: Media
 sortOrder: 1
 subpath: ''
 titleTranslationKeyFormat: null

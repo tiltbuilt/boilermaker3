@@ -189,12 +189,6 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
-            heading: 'Padding (Spacing Inside the Section)'
-            type: craft\fieldlayoutelements\Heading
-            uid: 2507e461-bb9b-42b3-9a90-f469d1c67d51
-            userCondition: null
-          -
-            elementCondition: null
             fieldUid: 91d05e51-ee38-4e73-af4c-ebed7e7572d3 # Spacing
             handle: pt
             includeInCards: false
@@ -253,12 +247,12 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 50
-          -
-            elementCondition: null
-            heading: 'Margins (Spacing Between This Section and Others)'
-            type: craft\fieldlayoutelements\Heading
-            uid: b52d231d-d671-4a7b-b43e-4aab9ceb7542
-            userCondition: null
+        name: Padding
+        uid: e48c592a-75ac-4b68-a295-73339b5697ea
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
           -
             elementCondition: null
             fieldUid: 91d05e51-ee38-4e73-af4c-ebed7e7572d3 # Spacing
@@ -289,24 +283,24 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 50
-        name: Spacing
-        uid: e48c592a-75ac-4b68-a295-73339b5697ea
+        name: Margins
+        uid: 4cb94ed7-7ec7-4e8e-b182-01d47bb3a47d
         userCondition: null
       -
         elementCondition: null
         elements:
           -
             elementCondition: null
-            fieldUid: a2da31ae-7341-4dd1-b245-5ee55d44cbc2 # Yes No
-            handle: hidden
+            fieldUid: 206d3220-640b-4b20-a440-faaa801a11d9 # Display
+            handle: null
             includeInCards: false
-            instructions: 'Turn this switch on to hide this section at this device size'
-            label: 'Hidden?'
+            instructions: null
+            label: null
             providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: c06c5549-1a85-4675-ac22-ca0013556dee
+            uid: e676ee96-cc54-4620-a3ff-8a4eaff06df0
             userCondition: null
             warning: null
             width: 100
@@ -318,16 +312,16 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
-            fieldUid: f1b466ce-fb41-471a-90d4-5d0fd23f346d # Image Asset
-            handle: bgImg
+            fieldUid: 3218b554-b14a-4cc0-8b53-3f4b5b1bcd4c # Background Image/Video
+            handle: null
             includeInCards: false
-            instructions: 'Select the image to use as the background for this device size.'
-            label: 'Background Image'
+            instructions: null
+            label: null
             providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: ae0067df-6a51-45be-88a3-2d1d773bc5d5
+            uid: 744c54d7-8135-4ae4-baa8-8ee7db30d8c3
             userCondition: null
             warning: null
             width: 100

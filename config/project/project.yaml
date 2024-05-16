@@ -1,4 +1,4 @@
-dateModified: 1715636857
+dateModified: 1715898560
 elementSources:
   craft\elements\Entry:
     -
@@ -51,13 +51,13 @@ fs:
       path: $EMBED_ASSETS_PATH
     type: craft\fs\Local
     url: $EMBED_ASSETS_URL
-  images:
+  mediaUploads:
     hasUrls: true
-    name: Images
+    name: 'Media Uploads'
     settings:
-      path: $IMAGE_ASSETS_PATH
+      path: $MEDIA_UPLOADS_PATH
     type: craft\fs\Local
-    url: $IMAGE_ASSETS_URL
+    url: $MEDIA_UPLOADS_URL
 meta:
   __names__:
     0a94a9c4-7b94-408c-919b-9c4a6c070e37: 'Header Block' # Header Block
@@ -117,6 +117,7 @@ meta:
     85d1b6aa-228a-4340-bf82-fbdbeec66ee9: 'Icon Style Adjustments' # Icon Style Adjustments
     91d05e51-ee38-4e73-af4c-ebed7e7572d3: Spacing # Spacing
     93bf7bd8-1004-4c0c-be4d-7b59aa97021e: 'List Order' # List Order
+    206d3220-640b-4b20-a440-faaa801a11d9: Display # Display
     263e5dea-ef08-42a5-8e17-6418ad4de62b: 'Slide Column' # Slide Column
     335fab75-2107-4c96-80b2-14808539eadd: 'Button Group' # Button Group
     400ed272-3701-4004-b0e0-a74db3d25030: Accordion # Accordion
@@ -124,11 +125,14 @@ meta:
     486d3e65-7880-4e2e-803e-daecc6657a1d: 'Content Wrapper' # Content Wrapper
     487ec441-2218-43e8-8a96-652a0649e437: 'Color Picker' # Color Picker
     524fa6fd-cc9f-4e7a-8791-a28ce1bb3c97: 'Single URL' # Single URL
+    554d8669-e659-48d2-a13d-a32598ca78cb: 'Side by Side Photo Style Adjustments' # Side by Side Photo Style Adjustments
     558fedab-c14e-4f41-a438-ba8c394113a5: 'Notification Bar Alerts' # Notification Bar Alerts
     569d975f-7001-40dd-b088-6f9614f17e06: 'Content Wrapper Style Adjustments' # Content Wrapper Style Adjustments
     589d7e58-f378-455e-b073-055e9221964b: Pages # Pages
     732c729f-8dbb-4f01-a463-c163ddc13eab: 'Left Right' # Left Right
     0888a226-1804-4ac8-a00d-8b539fdd3483: '404 Page Content' # 404 Page Content
+    938f3198-1925-4908-b0e0-8dfd786c00f1: 'Side by Side Photo Section' # Side by Side Photo Section
+    3218b554-b14a-4cc0-8b53-3f4b5b1bcd4c: 'Background Image/Video' # Background Image/Video
     3388d3b4-cb9f-47ee-8874-09e50df3c0bb: 'Section Styling Adjustments' # Section Styling Adjustments
     3710a5c7-fa54-4a2c-a07b-4f7a31f5bd25: 'Background Repeat' # Background Repeat
     4600cc8f-8e3f-45bf-bbb9-9e48d2e181ed: 'Phone Number' # Phone Number
@@ -158,6 +162,7 @@ meta:
     a6e56255-d417-4ac8-9a3f-256c30684cd0: Image # Image
     a7d4ee4f-543c-4209-b4fd-5df98550137d: 'Cards Per Row' # Cards Per Row
     a78e7e89-26cf-4a0e-a36d-b48ca76d7ba5: 'Custom Classes' # Custom Classes
+    a547c85e-ce84-4cd3-9a43-5727af411343: 'Style Adjustment - Side by Side Photo Section' # Style Adjustment - Side by Side Photo Section
     acdcfd1c-89a2-4090-989d-17db6ad24060: Icon # Icon
     acec3806-c4ac-4430-a8d9-24915eacc052: Modals # Modals
     ad1fd6cd-1d72-49dd-82fc-6a604b11a71c: 'Icon Content Block' # Icon Content Block
@@ -214,7 +219,7 @@ meta:
     f103b592-617a-4840-8a3b-ce98a171eb09: 'Style Adjustment - Content Wrapper' # Style Adjustment - Content Wrapper
     f162c9c9-8174-4ba1-a691-5b2e30f57c37: Root # Root
     f7399346-9a4c-44e7-99c4-ca44c88fbb0f: 'Content Links' # Content Links
-    fa819c1c-abac-42ac-b1e5-3de37862ccf3: Images # Images
+    fa819c1c-abac-42ac-b1e5-3de37862ccf3: Media # Media
     fd3b49a5-f45c-4fff-9e83-efae0bfb34d4: 'Style Adjustment - Section' # Style Adjustment - Section
     fdc69893-7848-4bd4-8f1d-3df385771a84: 'Repeater Style Adjustments' # Repeater Style Adjustments
     fe981b00-296b-4916-816f-a8e2670638e3: 'Style Adjustment - Form' # Style Adjustment - Form

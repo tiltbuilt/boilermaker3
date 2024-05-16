@@ -1,0 +1,65 @@
+{#
+/**
+ * Tilt Boilermaker - Standard Page Section Template
+ * -----
+ * Loads the appropriate page partial or the default
+ * 
+ * @author    TILT, LLC <support@tiltbuilt.com>
+ * @copyright Copyright (c) 2019, TILT, LLC
+ * @link      https://tiltbuilt.com
+ */
+#}
+
+{# Load in global macros for use across all Twig templates #}
+{% import '_macros/globalMacros' as gMacros %}
+
+{# Create array for classes to pass to macros for section #}
+{% set sectionClassList = [] %}
+
+{# Set block id attribute value #}
+{% if entry.customId is defined and entry.customId != '' %}
+	{% set blockId = entry.customId|replace({' ': '-'})|trim %}
+{% else %}
+	{% set blockId = 'section-' ~ entry.id %}
+{% endif %}
+
+{# Set block type handle as class name for styling #}
+{% set blockClass = entry.type.handle|kebab %}
+
+{# Get classes for element animation settings #}
+{% set animClasses = [] %}
+{% if entry.animateReveal %}
+	{% if entry.animateChildren %}
+		{% set animClasses = animClasses|merge(['anim-parent']) %}
+		{% if entry.staggerAnimations %}
+			{% set animClasses = animClasses|merge(['anim-stagger']) %}
+		{% endif %}
+	{% else %}
+		{% set animClasses = animClasses|merge(['anim-elem']) %}
+	{% endif %}
+	{% set sectionClassList = sectionClassList|merge(animClasses) %}
+{% endif %}
+
+{# Set color classes #}
+{% set colorClasses = [] %}
+{% set colorScheme = entry.colorScheme.class %}
+{% set colorClasses = colorClasses|merge([colorScheme]) %}
+{% if entry.bgColor|length %}
+	{% set colorClasses = colorClasses|merge(['bg-' ~ entry.bgColor]) %}
+{% endif %}
+{% set sectionClassList = sectionClassList|merge(colorClasses) %}
+
+{# Retrieve styling adjustments #}
+{% set adjustments = entry.sectionStylingAdjustments.eagerly().all() %}
+
+
+<section id="{{blockId}}" class="{{- blockClass -}} {{- gMacros.classesOut(adjustments, 'Display') -}} {{- gMacros.classesOut(adjustments, 'Margins', true) -}} {{- sectionClassList|join(' ') }} {{ entry.customClasses }}" {{- gMacros.attributesOut(entry.customAttributes) -}}>
+	<div class="container {{- entry.fullscreen ? 'container-fullscreen' -}}">
+		<div class="inner {{- gMacros.classesOut(adjustments, 'Type') -}} {{- gMacros.classesOut(adjustments, 'Padding', true) -}}">
+			{{entry.elementContent|raw}}						
+		</div>
+		<div class="background">
+			{{ gMacros.buildElementBackground(adjustments, {'default': '100vw'}, null, null) }}
+		</div>
+	</div>	
+</section>

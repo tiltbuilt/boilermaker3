@@ -57,14 +57,8 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
-            heading: 'Quote Type Styling'
-            type: craft\fieldlayoutelements\Heading
-            uid: fe80eeee-7647-4bef-b15b-4e1d60140f08
-            userCondition: null
-          -
-            elementCondition: null
             fieldUid: 5feec917-01fb-4987-bd1a-c38c337de8cf # Font
-            handle: quoteFont
+            handle: font
             includeInCards: false
             instructions: null
             label: null
@@ -79,7 +73,7 @@ fieldLayouts:
           -
             elementCondition: null
             fieldUid: ba9877c7-223a-4c59-b461-4cf1a5068a34 # Font Size
-            handle: quoteFontSize
+            handle: fontSize
             includeInCards: false
             instructions: null
             label: null
@@ -94,7 +88,7 @@ fieldLayouts:
           -
             elementCondition: null
             fieldUid: 57eb287d-cdc2-4fba-8588-5dc66ff28c86 # Line Height
-            handle: quoteLineHeight
+            handle: lineHeight
             includeInCards: false
             instructions: null
             label: null
@@ -109,7 +103,7 @@ fieldLayouts:
           -
             elementCondition: null
             fieldUid: 37a64193-e3ef-4a2d-aa91-555b436b1d7d # Italic?
-            handle: quoteItalic
+            handle: italic
             includeInCards: false
             instructions: null
             label: null
@@ -124,7 +118,7 @@ fieldLayouts:
           -
             elementCondition: null
             fieldUid: b1dd9550-b7de-4c8d-ac15-30a80aef59ff # Text Case
-            handle: quoteTextCase
+            handle: textCase
             includeInCards: false
             instructions: null
             label: null
@@ -139,7 +133,7 @@ fieldLayouts:
           -
             elementCondition: null
             fieldUid: 0a727c99-d7ce-4920-b1db-ce06d0647067 # Letter Spacing
-            handle: quoteLetterSpacing
+            handle: letterSpacing
             includeInCards: false
             instructions: null
             label: null
@@ -151,12 +145,12 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 50
-          -
-            elementCondition: null
-            heading: 'Quote Credit Type Styling'
-            type: craft\fieldlayoutelements\Heading
-            uid: e533f531-4f7c-485d-924d-8c532c3f8303
-            userCondition: null
+        name: Type
+        uid: f3bbc4af-121a-429d-8dc6-d19404973fed
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
           -
             elementCondition: null
             fieldUid: 5feec917-01fb-4987-bd1a-c38c337de8cf # Font
@@ -247,8 +241,8 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 50
-        name: Type
-        uid: f3bbc4af-121a-429d-8dc6-d19404973fed
+        name: 'Credit Type'
+        uid: 26719bd9-fa25-44e3-aa57-12f2dd3ddde2
         userCondition: null
       -
         elementCondition: null
@@ -283,7 +277,7 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 50
-        name: Spacing
+        name: Margins
         uid: 35431efb-8dc8-464a-b6b3-fef5d8f37f48
         userCondition: null
       -
@@ -291,16 +285,16 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
-            fieldUid: a2da31ae-7341-4dd1-b245-5ee55d44cbc2 # Yes No
-            handle: hidden
+            fieldUid: 206d3220-640b-4b20-a440-faaa801a11d9 # Display
+            handle: null
             includeInCards: false
             instructions: null
-            label: 'Hidden?'
+            label: null
             providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: b4b56fcb-e9d6-4e00-a25d-18c867fbe048
+            uid: 70dbea30-c91c-468a-acf1-5ef9ce343af3
             userCondition: null
             warning: null
             width: 100

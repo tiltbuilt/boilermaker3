@@ -1,7 +1,7 @@
 columnSuffix: null
-handle: imageAsset
+handle: bgImg
 instructions: null
-name: 'Image Asset'
+name: 'Background Image/Video'
 searchable: false
 settings:
   allowSelfRelations: false
@@ -9,12 +9,13 @@ settings:
   allowUploads: true
   allowedKinds:
     - image
+    - video
   branchLimit: null
   defaultUploadLocationSource: 'volume:fa819c1c-abac-42ac-b1e5-3de37862ccf3' # Media
   defaultUploadLocationSubpath: null
   localizeRelations: false
   maintainHierarchy: false
-  maxRelations: null
+  maxRelations: 1
   minRelations: null
   previewMode: full
   restrictFiles: true
@@ -27,7 +28,8 @@ settings:
   showSiteMenu: false
   showUnpermittedFiles: false
   showUnpermittedVolumes: false
-  sources: '*'
+  sources:
+    - 'volume:fa819c1c-abac-42ac-b1e5-3de37862ccf3' # Media
   targetSiteId: null
   validateRelatedElements: false
   viewMode: large

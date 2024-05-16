@@ -1,0 +1,260 @@
+{#
+/**
+ * Global macros
+ * -----
+ * 
+ * @author    TILT, LLC <support@tiltbuilt.com>
+ * @copyright Copyright (c) 2019, TILT, LLC
+ * @link      https://tiltbuilt.com
+ * @package   tiltrus
+ */
+#}
+
+{# Strip tags from a string except for a certain subset #}
+
+{% macro stripTags(string, safeTagsString) %}
+  {% set safeTagsString = (safeTagsString ? safeTagsString : '<b><strong><i><em><a><br>') %}
+  {{- string|striptags(safeTagsString)|raw -}}
+{% endmacro stripTags %}
+
+
+{# EMBED RENDERING #}
+
+{# Render any header embeds for the current entry/category #}
+
+{% macro entryHeaderEmbeds(object) %}
+  {% if object|length and object['headerEmbeds'] is defined and object.headerEmbeds|length %}
+	{{ object.headerEmbeds|raw }}
+  {% endif %}
+{% endmacro entryHeaderEmbeds %}
+
+{# Render any body tag embeds for the current entry/category #}
+{% macro entryBodyEmbeds(object) %}
+  {% if object|length and object['bodyTagEmbeds'] is defined and object.bodyTagEmbeds|length %}
+	{{ object.bodyTagEmbeds|raw }}
+  {% endif %}
+{% endmacro entryBodyEmbeds %}
+
+{# Render any footer embeds for the current entry/category #}
+{% macro entryFooterEmbeds(object) %}
+  {% if object|length and object['footerEmbeds'] is defined and object.footerEmbeds|length %}
+	{{ object.footerEmbeds|raw }}
+  {% endif %}
+{% endmacro entryFooterEmbeds %}
+
+
+{# Social Link Rendering #}
+
+{# Render social icon links #}
+{% macro socialIconLinks() %}
+  {% if companyInfo.socialMediaLinks is defined and companyInfo.socialMediaLinks|length %}
+	{% for socialLink in companyInfo.socialMediaLinks.all() %}
+		<a href="{{ socialLink.linkUrl }}" class="social-icon-link" title="{{ socialLink.linkName }}" target="_blank"><svg><use xlink:href="#{{ socialLink.linkIcon.value }}"></use></svg></a>
+	{% endfor %}
+  {% endif %}
+{% endmacro socialIconLinks %}
+
+
+{# Class and Attribute Rendering #}
+
+{# General Classes by Tab #}	
+{% macro classesOut(adjustments, tabName, useFieldName) %}
+	{% set classList = [] %}
+	{% for adjSet in adjustments %}
+		{# Get Device Size for Adjustments #}
+		{% set devSize = adjSet.deviceSize %}
+		{% if devSize|length %}
+			{% set devSize = devSize ~ ':' %}	
+		{% endif %}
+				
+		{% set fLayout = adjSet.getFieldLayout() %}
+		{% for tabObj in fLayout.tabs %}
+			{% if tabObj.name == tabName %}
+				{% for tabEl in tabObj.elements %}				
+					{% if tabEl.className is same as("craft\\fieldlayoutelements\\CustomField") %}
+						{% if adjSet.getFieldValue(tabEl.field.handle)|length %}
+							{% if useFieldName %}
+								{% set classItem = devSize ~ tabEl.field.handle ~ '-' ~adjSet.getFieldValue(tabEl.field.handle) %}
+							{% else %}
+								{% set classItem = devSize ~ adjSet.getFieldValue(tabEl.field.handle) %}
+							{% endif %}
+							{% set classList = classList|merge([classItem]) %}
+						{% endif %}
+					{% endif %}				
+				{% endfor %}
+			{% endif %}
+		{% endfor %}
+	{% endfor %}
+	{{ classList|join(' ') }}	
+{% endmacro classesOut %}
+
+{# Attributes #}
+{% macro attributesOut(attributes) %}
+	{% set attrList = [] %}
+	{% for attrItem in attributes %}
+		{% if attrItem.attribute|length and attrItem.value|length %}
+			{% set attrList = attrList|merge([attrItem.attribute|replace({' ': '-'})|trim ~ '=' ~ attrItem.value|trim]) %}
+		{% endif %}
+	{% endfor %}
+	{{ attrList|join(' ') }}
+{% endmacro attributesOut %}
+
+
+{# Background Rendering
+  -----
+  Output a background node based on an element's Background Imagery field.
+#}
+{%- macro buildElementBackground(adjustments, sizesAtr, aspect, loadType) -%}
+	{% set bgSizes = [] %}
+	{% for adjSet in adjustments %}
+		{% if adjSet.bgImg|length %}
+			{% set bgSizes = bgSizes|merge([adjSet.deviceSize]) %}
+		{% endif %}
+	{% endfor %}
+	{% if aspect|length %}		
+		{% set tfSize = 'sizedImage-' ~ aspect|replace({'/': '-'}) %}
+		{% set tfSizeWebp = 'sizedImageWebp-' ~ aspect|replace({'/': '-'}) %}
+	{% else %}
+		{% set tfSize = 'contentImage' %}
+		{% set tfSizeWebp = 'contentImageWebp' %}
+	{% endif %}
+	{% for adjSet in adjustments %}
+		{% if adjSet.bgImg|length %}
+			{# Build class list for each background div #}	
+			{% set bgOuterClasses = ['background'] %}			
+			{% if adjSet.deviceSize != '' %}
+				{% set bgOuterClasses = bgOuterClasses|merge(['hidden', adjSet.deviceSize ~ ':block']) %}
+			{% endif %}
+			
+			{# add classes to hide background div on appropriate device sites by checking to see what other sizes are prsent above this one #}
+			{% switch adjSet.deviceSize %}
+				{% case 'sm' %}
+					{% if 'md' in bgSizes %}
+						{% set bgOuterClasses = bgOuterClasses|merge(['md:hidden']) %}
+					{% elseif 'lg' in bgSizes %}
+						{% set bgOuterClasses = bgOuterClasses|merge(['lg:hidden']) %}
+					{% elseif 'xl' in bgSizes %}
+						{% set bgOuterClasses = bgOuterClasses|merge(['xl:hidden']) %}
+					{% elseif '2xl' in bgSizes %}
+						{% set bgOuterClasses = bgOuterClasses|merge(['2xl:hidden']) %}
+					{% endif %}
+					
+				{% case 'md' %}			
+					{% if 'lg' in bgSizes %}
+						{% set bgOuterClasses = bgOuterClasses|merge(['lg:hidden']) %}
+					{% elseif 'xl' in bgSizes %}
+						{% set bgOuterClasses = bgOuterClasses|merge(['xl:hidden']) %}
+					{% elseif '2xl' in bgSizes %}
+						{% set bgOuterClasses = bgOuterClasses|merge(['2xl:hidden']) %}
+					{% endif %}
+					
+				{% case 'lg' %}			
+					{% if 'xl' in bgSizes %}
+						{% set bgOuterClasses = bgOuterClasses|merge(['xl:hidden']) %}
+					{% elseif '2xl' in bgSizes %}
+						{% set bgOuterClasses = bgOuterClasses|merge(['2xl:hidden']) %}
+					{% endif %}
+				
+				{% case 'xl' %}			
+					{% if '2xl' in bgSizes %}
+						{% set bgOuterClasses = bgOuterClasses|merge(['2xl:hidden']) %}
+					{% endif %}
+					
+				{% case '2xl:' %}
+					
+				{% default %}
+					{% if 'sm' in bgSizes %}
+						{% set bgOuterClasses = bgOuterClasses|merge(['sm:hidden']) %}
+					{% elseif 'md' in bgSizes %}
+						{% set bgOuterClasses = bgOuterClasses|merge(['md:hidden']) %}
+					{% elseif 'lg' in bgSizes %}
+						{% set bgOuterClasses = bgOuterClasses|merge(['lg:hidden']) %}
+					{% elseif 'xl' in bgSizes %}
+						{% set bgOuterClasses = bgOuterClasses|merge(['xl:hidden']) %}
+					{% elseif '2xl' in bgSizes %}
+						{% set bgOuterClasses = bgOuterClasses|merge(['2xl:hidden']) %}
+					{% endif %}
+					
+			{% endswitch %}
+			
+			<div class="{{- bgOuterClasses|join(' ') }}">
+				{% set bgAsset = adjSet.bgImg.eagerly().one() %}
+				{% set loadClass = null %}
+				{# check loadType, if it is set and value is 1 use owl carousel load class, otherwise use lazyload #}
+				{% if loadType is defined and loadType != null and loadType != 0 %}
+					{% set loadClass = 'swiper-lazy' %}
+				{% else %}
+					{% set loadClass = 'lazyload' %}
+				{% endif %}			
+				{% set bgInnerClasses = ['background', adjSet.opacity] %}
+				{% set bgElemClasses = ['background', loadClass] %}
+				
+				{# Check if BG Asset is image or video #}
+				{% if bgAsset.kind == 'image' %}
+					{% if adjSet.backgroundRepeat == 'bg-no-repeat' or adjSet.backgroundRepeat == '' %}
+						<div class="{{- bgInnerClasses|join(' ') }}">	
+							{% if adjSet.backgroundSize == 'auto' or adjSet.backgroundSize == '' %}
+								{% set bgElemClasses = bgElemClasses|merge(['object-scale-down']) %}
+							{% else %}
+								{% set  bgElemClasses = bgElemClasses|merge(['object-' ~ adjSet.backgroundSize])%}
+							{% endif %}
+							{% if adjSet.backgroundPosition != '' %}
+								{% set bgElemClasses = bgElemClasses|merge(['object-' ~ adjSet.backgroundPosition]) %}
+							{% endif %}
+							
+							{# set image to bgAsset for transformations #}
+							{% set image = bgAsset %}					
+							{%- set transformedImages = craft.imagerx.transformImage(image, tfSize)	%}					
+							{% if craft.imager.serverSupportsWebp() %}
+							  {% set transformedImagesWebp = craft.imagerx.transformImage(image, tfSizeWebp) %}
+							  
+							  <picture class="background">		  
+										
+								{% if craft.imager.serverSupportsWebp() %}
+								  <source data-sizes="auto" data-srcset="{{ craft.imager.srcset(transformedImagesWebp) }}" type="image/webp">
+								{% endif %}
+							  
+								  <img src="{{ craft.imager.placeholder({width: image.width, height: image.height}) }}"
+								  width="{{image.width}}"
+								  height="{{image.height}}"
+								  data-sizes="auto"
+								  data-src="{{ transformedImages[0] }}"
+								  data-srcset="{{ craft.imager.srcset(transformedImages) }}"
+								  alt="background" 
+								  class="{{- bgElemClasses|join(' ') }}"
+								  >
+							  </picture>
+							{% endif %}
+						</div>
+					{% else %}
+						{% set bgInnerClasses = bgInnerClasses|merge([adjSet.backgroundRepeat, 'bg-auto', 'bg-' ~ adjSet.backgroundPosition]) %}
+						<div class="{{- bgInnerClasses|join(' ') }}" style="background-image:url('{{ bgAsset.url }}');"></div>
+					{% endif %}
+				{% elseif bgAsset.kind == 'video' %}
+					{% if adjSet.backgroundSize == 'auto' or adjSet.backgroundSize == '' %}
+						{% set bgElemClasses = bgElemClasses|merge(['object-scale-down']) %}
+					{% else %}
+						{% set  bgElemClasses = bgElemClasses|merge(['object-' ~ adjSet.backgroundSize])%}
+					{% endif %}
+					{% if adjSet.backgroundPosition != '' %}
+						{% set bgElemClasses = bgElemClasses|merge(['object-' ~ adjSet.backgroundPosition]) %}
+					{% endif %}
+					
+					<div class="{{- bgInnerClasses|join(' ') }}">
+						<video          
+						  class="{{- bgElemClasses|join(' ') }}"
+						  aria-hidden="true"
+						  role="presentation"
+						  preload=""
+						  autoplay playsinline muted loop
+						  data-src="{{ bgAsset.url }}"
+						  type="{{ bgAsset.mimeType }}"
+						></video>
+					</div>
+				{% endif %}	
+			</div>	
+			
+		{% endif %}
+	{% endfor %} 
+{%- endmacro buildElementBackground -%}
+

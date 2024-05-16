@@ -182,12 +182,6 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
-            heading: 'Padding (Applied to each tab in the panel)'
-            type: craft\fieldlayoutelements\Heading
-            uid: 7e0cc6ce-b2ac-40cc-90ba-beaf9f0d4e46
-            userCondition: null
-          -
-            elementCondition: null
             fieldUid: 91d05e51-ee38-4e73-af4c-ebed7e7572d3 # Spacing
             handle: pt
             includeInCards: false
@@ -246,12 +240,12 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 50
-          -
-            elementCondition: null
-            heading: 'Margin (Applied to the tab set)'
-            type: craft\fieldlayoutelements\Heading
-            uid: 62f5539f-9ee6-496c-9972-ca9c837e2cce
-            userCondition: null
+        name: Padding
+        uid: 2db889bf-1afa-4307-98f4-7fe7b4d4fbb6
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
           -
             elementCondition: null
             fieldUid: 91d05e51-ee38-4e73-af4c-ebed7e7572d3 # Spacing
@@ -282,24 +276,24 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 50
-        name: Spacing
-        uid: 2db889bf-1afa-4307-98f4-7fe7b4d4fbb6
+        name: Margins
+        uid: cc20bf4f-7421-41c1-8fb3-65bec6d2f02a
         userCondition: null
       -
         elementCondition: null
         elements:
           -
             elementCondition: null
-            fieldUid: a2da31ae-7341-4dd1-b245-5ee55d44cbc2 # Yes No
-            handle: hidden
+            fieldUid: 206d3220-640b-4b20-a440-faaa801a11d9 # Display
+            handle: null
             includeInCards: false
             instructions: null
-            label: 'Hidden?'
+            label: null
             providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 0f5d4cb3-37e1-436d-aa3b-97dd8ed8488c
+            uid: 3dd65269-2ea2-4e41-b238-730312a547b7
             userCondition: null
             warning: null
             width: 100

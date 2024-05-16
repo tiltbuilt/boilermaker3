@@ -189,12 +189,6 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
-            heading: Padding
-            type: craft\fieldlayoutelements\Heading
-            uid: 5eb38ca9-5319-449e-9368-ba2b0651f898
-            userCondition: null
-          -
-            elementCondition: null
             fieldUid: 91d05e51-ee38-4e73-af4c-ebed7e7572d3 # Spacing
             handle: pt
             includeInCards: false
@@ -253,12 +247,12 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 50
-          -
-            elementCondition: null
-            heading: Margin
-            type: craft\fieldlayoutelements\Heading
-            uid: 96947ae5-526e-415e-b338-16105d9469cf
-            userCondition: null
+        name: Padding
+        uid: af3b713c-7cf7-4298-a61a-5770b41e17f4
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
           -
             elementCondition: null
             fieldUid: 91d05e51-ee38-4e73-af4c-ebed7e7572d3 # Spacing
@@ -289,24 +283,45 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 50
-        name: Spacing
-        uid: af3b713c-7cf7-4298-a61a-5770b41e17f4
+        name: Margins
+        uid: b479c415-997d-46df-8ccf-aaa3cc861688
         userCondition: null
       -
         elementCondition: null
         elements:
           -
             elementCondition: null
-            fieldUid: f1b466ce-fb41-471a-90d4-5d0fd23f346d # Image Asset
-            handle: bgImg
+            fieldUid: 206d3220-640b-4b20-a440-faaa801a11d9 # Display
+            handle: null
             includeInCards: false
             instructions: null
-            label: 'Background Image'
+            label: null
             providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 1f4d57b1-c1d4-410f-b13c-259ef2098a4d
+            uid: c70be8e5-cffe-4e05-a258-bd6553ce3977
+            userCondition: null
+            warning: null
+            width: 100
+        name: Display
+        uid: d7a8cc17-9e62-4462-af74-08de9e204d79
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 3218b554-b14a-4cc0-8b53-3f4b5b1bcd4c # Background Image/Video
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d9b4275f-bc70-45e8-8be4-bead94537374
             userCondition: null
             warning: null
             width: 100

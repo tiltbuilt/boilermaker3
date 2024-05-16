@@ -39,15 +39,7 @@ settings:
             -
               - type
               - singleline
-  defaults:
-    -
-      __assoc__:
-        -
-          - col1
-          - ''
-        -
-          - col2
-          - ''
+  defaults: null
   maxRows: null
   minRows: null
   staticRows: false

@@ -85,7 +85,7 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 50
-        name: Spacing
+        name: Margins
         uid: 3b64e0c8-f04d-4c0d-9d24-07e94a9f9b5d
         userCondition: null
       -
@@ -93,16 +93,16 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
-            fieldUid: a2da31ae-7341-4dd1-b245-5ee55d44cbc2 # Yes No
-            handle: hidden
+            fieldUid: 206d3220-640b-4b20-a440-faaa801a11d9 # Display
+            handle: null
             includeInCards: false
             instructions: null
-            label: 'Hidden?'
+            label: null
             providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: ec86ffb9-8f06-4764-b31a-b5b7dafc9f35
+            uid: 8742ebea-ccd4-4361-9d3e-c3f8c7ba0c90
             userCondition: null
             warning: null
             width: 100

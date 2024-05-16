@@ -70,12 +70,12 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-          -
-            elementCondition: null
-            heading: Spacing
-            type: craft\fieldlayoutelements\Heading
-            uid: 60f829c5-d835-4923-b777-f9d92b09fa18
-            userCondition: null
+        name: Sizing
+        uid: c250ed4c-9513-4625-b664-6871a6d5c92f
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
           -
             elementCondition: null
             fieldUid: 91d05e51-ee38-4e73-af4c-ebed7e7572d3 # Spacing
@@ -106,7 +106,7 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 50
-        name: 'Sizing and Spacing'
+        name: Margins
         uid: 6ee1ddf7-dbd6-41a6-895b-40ea758964c4
         userCondition: null
       -
@@ -114,16 +114,16 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
-            fieldUid: a2da31ae-7341-4dd1-b245-5ee55d44cbc2 # Yes No
-            handle: hidden
+            fieldUid: 206d3220-640b-4b20-a440-faaa801a11d9 # Display
+            handle: null
             includeInCards: false
             instructions: null
-            label: 'Hidden?'
+            label: null
             providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 4e847b36-8ae0-4d62-9fa1-7a6421def768
+            uid: 07bb0c76-65c0-404d-aa2e-e1cd13650c5a
             userCondition: null
             warning: null
             width: 100
