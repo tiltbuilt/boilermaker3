@@ -119,7 +119,8 @@
 		{% set tfSizeWebp = 'contentImageWebp' %}
 	{% endif %}
 	{% for adjSet in adjustments %}
-		{% if adjSet.bgImg|length %}
+		{% set bgAsset = adjSet.bgImg.one() %}
+		{% if bgAsset|length %}
 			{# Build class list for each background div #}	
 			{% set bgOuterClasses = ['background'] %}			
 			{% if adjSet.deviceSize != '' %}
@@ -177,8 +178,7 @@
 					
 			{% endswitch %}
 			
-			<div class="{{- bgOuterClasses|join(' ') }}">
-				{% set bgAsset = adjSet.bgImg.eagerly().one() %}
+			<div class="{{- bgOuterClasses|join(' ') }}">				
 				{% set loadClass = null %}
 				{# check loadType, if it is set and value is 1 use owl carousel load class, otherwise use lazyload #}
 				{% if loadType is defined and loadType != null and loadType != 0 %}

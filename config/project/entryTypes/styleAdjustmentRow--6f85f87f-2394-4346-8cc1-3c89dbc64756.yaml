@@ -57,12 +57,6 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
-            heading: Padding
-            type: craft\fieldlayoutelements\Heading
-            uid: 09eeb1c8-7c73-4475-b5eb-06f079eec711
-            userCondition: null
-          -
-            elementCondition: null
             fieldUid: 91d05e51-ee38-4e73-af4c-ebed7e7572d3 # Spacing
             handle: pt
             includeInCards: false

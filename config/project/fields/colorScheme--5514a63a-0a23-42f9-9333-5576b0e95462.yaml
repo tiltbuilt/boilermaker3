@@ -20,6 +20,20 @@ settings:
         -
           - class
           - colormode-light
+    -
+      __assoc__:
+        -
+          - label
+          - 'Dark Mode'
+        -
+          - color
+          - '#000,#FFF'
+        -
+          - default
+          - ''
+        -
+          - class
+          - colormode-dark
   palette: null
   setRandom: false
   useConfigFile: false

@@ -34,7 +34,7 @@ settings:
           - Visible
         -
           - value
-          - block
+          - not-hidden
         -
           - default
           - ''
