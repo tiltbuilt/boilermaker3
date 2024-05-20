@@ -1,4 +1,45 @@
-<div>column - template - - {{entry.colorScheme}}
+{#
+/**
+ * Tilt Boilermaker - Standard Layout Column Template
+ * -----
+ * Loads the appropriate page partial or the default
+ * 
+ * @author    TILT, LLC <support@tiltbuilt.com>
+ * @copyright Copyright (c) 2019, TILT, LLC
+ * @link      https://tiltbuilt.com
+ */
+#}
+
+{# Load in global macros for use across all Twig templates #}
+{% import '_macros/globalMacros' as gMacros %}
+
+{# Create array for classes to pass to macros for section #}
+{% set columnClassList = [] %}
+
+{# Set block id attribute value #}
+{% if entry.customId is defined and entry.customId != '' %}
+	{% set blockId = entry.customId|replace({' ': '-'})|trim %}
+{% else %}
+	{% set blockId = 'section-' ~ entry.id %}
+{% endif %}
+
+{# Set block type handle as class name for styling #}
+{% set blockClass = entry.type.handle|kebab %}
+
+{# Set color classes #}
+{% if  entry.colorScheme.class|length %}
+	{% set colorScheme = entry.colorScheme.class %}
+	{% do _globals.set('colorSchemeFallBack', _globals.get('colorScheme')) %}
+	{% do _globals.set('colorScheme', colorScheme) %}
+{% else %}
+	{% set colorScheme = _globals.get('colorScheme') %}
+{% endif %}
+{% set colorClasses = colorClasses|merge([colorScheme]]) %}
+{% if entry.bgColor|length %}
+	{% set colorClasses = colorClasses|merge(['bg-' ~ entry.bgColor]) %}
+{% endif %}
+
+<div>column - template - {{colorScheme}} - {{entry.colorScheme}}
 	
 	{{entry.elementContent|raw}}
 </div>

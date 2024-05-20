@@ -114,7 +114,7 @@ fieldLayouts:
             userCondition: null
           -
             elementCondition: null
-            fieldUid: 3388d3b4-cb9f-47ee-8874-09e50df3c0bb # Section Styling Adjustments
+            fieldUid: 3388d3b4-cb9f-47ee-8874-09e50df3c0bb # Section Style Adjustments
             handle: null
             includeInCards: false
             instructions: null

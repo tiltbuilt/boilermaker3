@@ -42,8 +42,31 @@
 	{% endif %}
 {% endfor %}
 
+{# Get classes for element animation settings #}
+{% if entry.owner.entryType == "sectionStandard" %}
+	
+{% else %}
+
+{% endif %}
+
+
+{% if entry.animateReveal %}
+	{% if entry.animateChildren %}
+		{% set animClasses = animClasses|merge(['anim-parent']) %}
+		{% do _globals.set('animSetting', 'anim-elem') %}
+		{% if entry.staggerAnimations %}
+			{% set animClasses = animClasses|merge(['anim-stagger']) %}
+		{% endif %}
+	{% else %}
+		{% set animClasses = animClasses|merge(['anim-elem']) %}
+		{% do _globals.set('animSetting', null) %}
+	{% endif %}
+	{% set sectionClassList = sectionClassList|merge(animClasses) %}
+{% endif %}
+
+
 {# Retrieve styling adjustments #}
-{% set adjustments = entry.rowStylingAdjustments.eagerly().all() %}
+{% set adjustments = entry.rowStyleAdjustments.eagerly().all() %}
 
 <div id="{{blockId}}" class="{{- blockClass -}} {{- gMacros.classesOut(adjustments, 'Display') -}} {{- gMacros.classesOut(adjustments, 'Margins', true) -}} {{- gMacros.classesOut(adjustments, 'Padding', true) -}} {{- rowClassList|join(' ') }} {{ entry.customClasses }}" {{- gMacros.attributesOut(entry.customAttributes) -}}>
 	{% for column in rowContent %}

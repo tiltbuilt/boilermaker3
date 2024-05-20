@@ -31,11 +31,13 @@
 {% if entry.animateReveal %}
 	{% if entry.animateChildren %}
 		{% set animClasses = animClasses|merge(['anim-parent']) %}
+		{% do _globals.set('animSetting', 'anim-elem') %}
 		{% if entry.staggerAnimations %}
 			{% set animClasses = animClasses|merge(['anim-stagger']) %}
 		{% endif %}
 	{% else %}
 		{% set animClasses = animClasses|merge(['anim-elem']) %}
+		{% do _globals.set('animSetting', null) %}
 	{% endif %}
 	{% set sectionClassList = sectionClassList|merge(animClasses) %}
 {% endif %}
@@ -43,6 +45,8 @@
 {# Set color classes #}
 {% set colorClasses = [] %}
 {% set colorScheme = entry.colorScheme.class %}
+{% do _globals.set('colorScheme', colorScheme) %}
+{% do _globals.set('colorSchemeFallBack', colorScheme) %}
 {% set colorClasses = colorClasses|merge([colorScheme]) %}
 {% if entry.bgColor|length %}
 	{% set colorClasses = colorClasses|merge(['bg-' ~ entry.bgColor]) %}
@@ -50,8 +54,7 @@
 {% set sectionClassList = sectionClassList|merge(colorClasses) %}
 
 {# Retrieve styling adjustments #}
-{% set adjustments = entry.sectionStylingAdjustments.eagerly().with('bgImg').all() %}
-
+{% set adjustments = entry.sectionStyleAdjustments.eagerly().with('bgImg').all() %}
 
 <section id="{{blockId}}" class="{{- blockClass -}} {{- gMacros.classesOut(adjustments, 'Display') -}} {{- gMacros.classesOut(adjustments, 'Margins', true) -}} {{- sectionClassList|join(' ') }} {{ entry.customClasses }}" {{- gMacros.attributesOut(entry.customAttributes) -}}>
 	<div class="container {{- entry.fullscreen ? 'container-fullscreen' -}}">

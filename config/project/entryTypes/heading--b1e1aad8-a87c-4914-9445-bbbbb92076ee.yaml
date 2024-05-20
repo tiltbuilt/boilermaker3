@@ -63,7 +63,7 @@ fieldLayouts:
             uid: f1d6104a-7887-4f72-96a0-5e15a7d7852f
             userCondition: null
             warning: null
-            width: 75
+            width: 100
           -
             elementCondition: null
             fieldUid: 77532772-badf-4ce5-a93b-6752273d81bb # Subhead Position
@@ -78,7 +78,7 @@ fieldLayouts:
             uid: 287f346b-8868-40e8-a7e0-408fa444e7c0
             userCondition: null
             warning: null
-            width: 25
+            width: 100
         name: Content
         uid: a70d97af-159d-463f-ac71-a8066ef1f2c6
         userCondition: null

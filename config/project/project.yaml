@@ -1,4 +1,4 @@
-dateModified: 1715981789
+dateModified: 1716239935
 elementSources:
   craft\elements\Entry:
     -
@@ -133,7 +133,7 @@ meta:
     0888a226-1804-4ac8-a00d-8b539fdd3483: '404 Page Content' # 404 Page Content
     938f3198-1925-4908-b0e0-8dfd786c00f1: 'Side by Side Photo Section' # Side by Side Photo Section
     3218b554-b14a-4cc0-8b53-3f4b5b1bcd4c: 'Background Image/Video' # Background Image/Video
-    3388d3b4-cb9f-47ee-8874-09e50df3c0bb: 'Section Styling Adjustments' # Section Styling Adjustments
+    3388d3b4-cb9f-47ee-8874-09e50df3c0bb: 'Section Style Adjustments' # Section Style Adjustments
     3710a5c7-fa54-4a2c-a07b-4f7a31f5bd25: 'Background Repeat' # Background Repeat
     4600cc8f-8e3f-45bf-bbb9-9e48d2e181ed: 'Phone Number' # Phone Number
     5514a63a-0a23-42f9-9333-5576b0e95462: 'Color Scheme' # Color Scheme

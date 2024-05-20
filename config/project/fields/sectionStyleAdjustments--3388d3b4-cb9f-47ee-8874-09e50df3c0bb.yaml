@@ -1,7 +1,7 @@
 columnSuffix: null
-handle: sectionStylingAdjustments
+handle: sectionStyleAdjustments
 instructions: null
-name: 'Section Styling Adjustments'
+name: 'Section Style Adjustments'
 searchable: false
 settings:
   createButtonLabel: 'Adjust Style'

@@ -1,1 +1,12 @@
-<div>cta from template - {{entry.owner.colorScheme.class}}</div>
+{% if  entry.colorScheme.class|length %}
+	{% set colorScheme = entry.colorScheme.class %}
+	{% do _globals.set('colorSchemeFallBack', _globals.get('colorScheme')) %}
+	{% do _globals.set('colorScheme', colorScheme) %}
+{% else %}
+	{% set colorScheme = _globals.get('colorScheme') %}
+{% endif %}
+<div>cta from template {{colorScheme}}-</div>
+{% if  entry.colorScheme.class|length %}	
+	{% do _globals.set('colorScheme', _globals.get('colorSchemeFallBack')) %}
+	{% do _globals.set('colorSchemeFallBack', colorScheme) %}
+{% endif %}
