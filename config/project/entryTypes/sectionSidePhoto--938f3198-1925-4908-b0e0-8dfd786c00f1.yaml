@@ -165,26 +165,43 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
-            fieldUid: a2da31ae-7341-4dd1-b245-5ee55d44cbc2 # Yes No
-            handle: animateReveal
+            fieldUid: 05601664-3d38-4def-9b37-d9ccaf72ed5c # Reveal Animation
+            handle: null
             includeInCards: false
             instructions: null
-            label: 'Animate Reveal?'
+            label: null
             providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 678e8a0e-9d36-4288-9e7a-26022314370b
+            uid: d7a0d74f-0f1f-4e01-b93a-038aaba38f62
             userCondition: null
             warning: null
             width: 100
           -
-            elementCondition: null
+            elementCondition:
+              class: craft\elements\conditions\entries\EntryCondition
+              conditionRules:
+                -
+                  class: craft\fields\conditions\OptionsFieldConditionRule
+                  fieldUid: 05601664-3d38-4def-9b37-d9ccaf72ed5c # Reveal Animation
+                  layoutElementUid: d7a0d74f-0f1f-4e01-b93a-038aaba38f62
+                  operator: in
+                  uid: 07abbf3d-c541-4af4-883a-f19ac9dfa0ce
+                  values:
+                    - slideUpFadeIn
+                    - slideDownFadeIn
+                    - slideLeftFadeIn
+                    - slideRightFadeIn
+                    - scaleUpFadeIn
+                    - scaleDownFadeIn
+              elementType: craft\elements\Entry
+              fieldContext: global
             fieldUid: a2da31ae-7341-4dd1-b245-5ee55d44cbc2 # Yes No
-            handle: animateChildren
+            handle: animateContent
             includeInCards: false
-            instructions: null
-            label: 'Animate Child Blocks?'
+            instructions: 'Activate this switch if you want to animate the content of the section, but leave the background in place.'
+            label: 'Animate Content'
             providesThumbs: false
             required: false
             tip: null
@@ -194,12 +211,22 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            elementCondition: null
+            elementCondition:
+              class: craft\elements\conditions\entries\EntryCondition
+              conditionRules:
+                -
+                  class: craft\fields\conditions\LightswitchFieldConditionRule
+                  fieldUid: a2da31ae-7341-4dd1-b245-5ee55d44cbc2 # Yes No
+                  layoutElementUid: 3ea6add7-251d-4c7a-aa06-9ebb7c138834
+                  uid: c4964006-e7fa-40cc-b21e-740e35bb0fb9
+                  value: true
+              elementType: craft\elements\Entry
+              fieldContext: global
             fieldUid: e3f9e59c-e941-404e-8bc8-b4c57ff28d5c # YesNo - Yes
             handle: staggerAnimations
             includeInCards: false
             instructions: null
-            label: 'Stagger Child Animations?'
+            label: 'Stagger Content Animations?'
             providesThumbs: false
             required: false
             tip: null

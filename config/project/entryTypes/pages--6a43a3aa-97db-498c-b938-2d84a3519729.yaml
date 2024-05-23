@@ -234,16 +234,16 @@ fieldLayouts:
             userCondition: null
           -
             elementCondition: null
-            fieldUid: 5514a63a-0a23-42f9-9333-5576b0e95462 # Color Scheme
+            fieldUid: e5d8e3b7-10f0-430f-af2f-f9acf11b2e77 # Page Header Color Scheme
             handle: null
             includeInCards: false
             instructions: null
             label: null
             providesThumbs: false
-            required: false
+            required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: ab68440b-daa2-4ae7-af50-ba827549e258
+            uid: 90e39a81-9d99-443d-aff3-035fe8b0ff15
             userCondition: null
             warning: null
             width: 100

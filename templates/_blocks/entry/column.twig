@@ -27,19 +27,50 @@
 {% set blockClass = entry.type.handle|kebab %}
 
 {# Set color classes #}
-{% if  entry.colorScheme.class|length %}
+{% set colorClasses = [] %}
+{% if entry.colorScheme != null %}
 	{% set colorScheme = entry.colorScheme.class %}
 	{% do _globals.set('colorSchemeFallBack', _globals.get('colorScheme')) %}
 	{% do _globals.set('colorScheme', colorScheme) %}
 {% else %}
 	{% set colorScheme = _globals.get('colorScheme') %}
 {% endif %}
-{% set colorClasses = colorClasses|merge([colorScheme]]) %}
+{% set colorClasses = colorClasses|merge([colorScheme]) %}
 {% if entry.bgColor|length %}
 	{% set colorClasses = colorClasses|merge(['bg-' ~ entry.bgColor]) %}
 {% endif %}
+{% set columnClassList = columnClassList|merge(colorClasses) %}
 
-<div>column - template - {{colorScheme}} - {{entry.colorScheme}}
-	
-	{{entry.elementContent|raw}}
+{# Set Layout Styles #}
+{% for layoutItem in entry.columnLayout %}
+	{% set devSize = layoutItem.deviceSize %}
+	{% if devSize|length %}
+		{% set devSize = devSize ~ ':' %}	
+	{% endif %}
+	{% if layoutItem.columnWidth|length %}
+		{% set columnClassList = columnClassList|merge([devSize ~ 'w-' ~ layoutItem.columnWidth]) %}
+	{% endif %}
+	{% if layoutItem.display|length %}
+		{% set columnClassList = columnClassList|merge([devSize ~ layoutItem.display]) %}
+	{% endif %}
+	{% if layoutItem.columnOrder|length %}
+		{% set columnClassList = columnClassList|merge([devSize ~ layoutItem.columnOrder]) %}
+	{% endif %}
+	{% if layoutItem.verticalAlignment|length %}
+		{% set columnClassList = columnClassList|merge([devSize ~ layoutItem.verticalAlignment]) %}
+	{% endif %}
+{% endfor %}
+
+{# Retrieve styling adjustments #}
+{% set adjustments = entry.columnStyleAdjustments.eagerly().all() %}
+
+<div id="{{blockId}}" class="{{- blockClass -}} {{- gMacros.classesOut(adjustments, 'Margins', true) -}} {{- columnClassList|join(' ') }} {{ entry.customClasses }}" {{- gMacros.attributesOut(entry.customAttributes) -}}>	
+	<div class="inner {{- gMacros.classesOut(adjustments, 'Type') -}} {{- gMacros.classesOut(adjustments, 'Padding', true) -}}">
+		{{entry.elementContent|raw}}							
+	</div>
+	<div class="background">
+		{{ gMacros.buildElementBackground(adjustments, {'default': '100vw'}, null, null) }}
+	</div>		
 </div>
+{# reset color scheme global #}
+{% do _globals.set('colorSchemeFallBack', _globals.get('colorSchemeFallBack')) %}

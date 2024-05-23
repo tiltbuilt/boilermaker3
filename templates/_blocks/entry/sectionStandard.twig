@@ -27,19 +27,16 @@
 {% set blockClass = entry.type.handle|kebab %}
 
 {# Get classes for element animation settings #}
-{% set animClasses = [] %}
-{% if entry.animateReveal %}
-	{% if entry.animateChildren %}
-		{% set animClasses = animClasses|merge(['anim-parent']) %}
-		{% do _globals.set('animSetting', 'anim-elem') %}
-		{% if entry.staggerAnimations %}
-			{% set animClasses = animClasses|merge(['anim-stagger']) %}
-		{% endif %}
+{% set animClass = null %}
+{% if entry.revealAnimation|length %}
+	{% if entry.animateContent %}
+		{% do _globals.set('animSetting', entry.revealAnimation) %}
+		{% set animClass = entry.revealAnimation.value %}		
 	{% else %}
-		{% set animClasses = animClasses|merge(['anim-elem']) %}
 		{% do _globals.set('animSetting', null) %}
-	{% endif %}
-	{% set sectionClassList = sectionClassList|merge(animClasses) %}
+		{% set animClass = null %}
+		{% set sectionClassList = sectionClassList|merge([entry.revealAnimation]) %}		
+	{% endif %}	
 {% endif %}
 
 {# Set color classes #}
@@ -59,7 +56,11 @@
 <section id="{{blockId}}" class="{{- blockClass -}} {{- gMacros.classesOut(adjustments, 'Display') -}} {{- gMacros.classesOut(adjustments, 'Margins', true) -}} {{- sectionClassList|join(' ') }} {{ entry.customClasses }}" {{- gMacros.attributesOut(entry.customAttributes) -}}>
 	<div class="container {{- entry.fullscreen ? 'container-fullscreen' -}}">
 		<div class="inner {{- gMacros.classesOut(adjustments, 'Type') -}} {{- gMacros.classesOut(adjustments, 'Padding', true) -}}">
-			{{entry.elementContent|raw}}						
+			{% if animClass %}				
+				{{entry.elementContent|raw|retconAttr([ 'p', 'ol', 'ul' ], { 'class' : animClass }, false)}}
+			{% else %}
+				{{entry.elementContent|raw}}
+			{% endif %}						
 		</div>
 		<div class="background">
 			{{ gMacros.buildElementBackground(adjustments, {'default': '100vw'}, null, null) }}

@@ -66,7 +66,13 @@
 {# Set block type handle as class name for styling #}
 {% set blockClass = entry.type.handle|kebab %}
 
-{# Set color classes #}
+{# animation classes #}
+{% set animClass = '' %}
+{% if _globals.get('animSetting') and 'section' in entry.owner.type.handle %}
+	{% set animClass = _globals.get('animSetting') %}
+{% endif %}
+
+{# Set color class #}
 {% set colorScheme = _globals.get('colorScheme') %}
 {% if entry.headlineColor|length %}
 	{% set colorClass = 'text-' ~ entry.headlineColor %}
@@ -74,13 +80,14 @@
 	{% set colorClass = colorScheme %}
 {% endif %}
 
+
 {# Retrieve styling adjustments #}
 {% set adjustments = entry.headerStyleAdjustments.eagerly().all() %}
 
-<{{entry.headingLevel}} id="{{blockId}}" class="{{ blockClass }} {{ colorClass }} {{- gMacros.classesOut(adjustments, 'Display') -}} {{- gMacros.classesOut(adjustments, 'Margins', true) -}} {{- gMacros.classesOut(adjustments, 'Type') -}} {{ entry.customClasses }}" {{- gMacros.attributesOut(entry.customAttributes) -}}>
+<{{entry.headingLevel}} id="{{blockId}}" class="{{ blockClass }} {{ colorClass }} {{animClass}} {{- gMacros.classesOut(adjustments, 'Display') -}} {{- gMacros.classesOut(adjustments, 'Margins', true) -}} {{- gMacros.classesOut(adjustments, 'Type') -}} {{ entry.customClasses }}" {{- gMacros.attributesOut(entry.customAttributes) -}}>
 
 	{% if entry.subheadText|length and entry.subheadPosition == 1 %}
-		<div id="{{blockId}}-subhead" class="{{- _self.subheadClasses(adjustments, entry.subheadColor, entry.subheadPosition) -}}">				
+		<div id="{{blockId}}-subhead" class="{{- _self.subheadClasses(adjustments, entry.subheadColor, entry.subheadPosition) -}}">		
 			{{ gMacros.stripTags(entry.subheadText) }}			
 		</div>
 	{% endif %}
@@ -88,9 +95,9 @@
 	{{entry.title}}
 	
 	{% if entry.subheadText|length and entry.subheadPosition == 0 %}
-		<div id="{{blockId}}-subhead" class="{{- _self.subheadClasses(adjustments, entry.subheadColor, entry.subheadPosition) -}}">				
+		<div id="{{blockId}}-subhead" class="{{- _self.subheadClasses(adjustments, entry.subheadColor, entry.subheadPosition) -}}">		
 			{{ gMacros.stripTags(entry.subheadText) }}			
 		</div>
 	{% endif %}
-
+		
 </{{entry.headingLevel}}>

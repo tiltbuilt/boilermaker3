@@ -1,3 +1,4 @@
+{#
 {% if  entry.colorScheme.class|length %}
 	{% set colorScheme = entry.colorScheme.class %}
 	{% do _globals.set('colorSchemeFallBack', _globals.get('colorScheme')) %}
@@ -10,3 +11,4 @@
 	{% do _globals.set('colorScheme', _globals.get('colorSchemeFallBack')) %}
 	{% do _globals.set('colorSchemeFallBack', colorScheme) %}
 {% endif %}
+#}

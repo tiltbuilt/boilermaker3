@@ -238,16 +238,52 @@ settings:
           __assoc__:
             -
               - heading
-              - 'Hidden?'
+              - Display
             -
               - handle
-              - hidden
+              - display
             -
               - width
               - ''
             -
               - type
-              - lightswitch
+              - select
+            -
+              - options
+              -
+                -
+                  __assoc__:
+                    -
+                      - label
+                      - 'Default (No Change)'
+                    -
+                      - value
+                      - ''
+                    -
+                      - default
+                      - true
+                -
+                  __assoc__:
+                    -
+                      - label
+                      - Hidden
+                    -
+                      - value
+                      - hidden
+                    -
+                      - default
+                      - false
+                -
+                  __assoc__:
+                    -
+                      - label
+                      - 'Not Hidden'
+                    -
+                      - value
+                      - not-hidden
+                    -
+                      - default
+                      - false
       -
         - col4
         -

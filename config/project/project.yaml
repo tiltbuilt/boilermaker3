@@ -1,4 +1,4 @@
-dateModified: 1716239935
+dateModified: 1716486933
 elementSources:
   craft\elements\Entry:
     -
@@ -149,6 +149,7 @@ meta:
     781363bc-1fd0-4fcc-83b2-80a20c416f57: 'Content Cards' # Content Cards
     03773267-1517-45c4-9a3e-c92f4340a1b2: 'Style Adjustment - CTA' # Style Adjustment - CTA
     4720320b-f7d0-49ec-a327-0db0e3a2dd7c: 'Slider Size' # Slider Size
+    05601664-3d38-4def-9b37-d9ccaf72ed5c: 'Reveal Animation' # Reveal Animation
     6283122d-7dc0-4b8d-8895-140bc4e66973: 'Page Builder' # Page Builder
     13531367-46d6-4c50-8ec6-9bb2a6ab5ab1: 'Number of Columns' # Number of Columns
     31960640-d715-4966-93ba-b66e61df5207: 'Style Adjustment - Accordion Set' # Style Adjustment - Accordion Set
@@ -202,6 +203,7 @@ meta:
     de6881eb-f48b-4119-889c-95d3bf6692e5: 'Style Adjustment - Tab Set' # Style Adjustment - Tab Set
     e2f8e7ee-d666-4bd1-bfe9-ece40a043b3e: Repeater # Repeater
     e3f9e59c-e941-404e-8bc8-b4c57ff28d5c: 'YesNo - Yes' # YesNo - Yes
+    e5d8e3b7-10f0-430f-af2f-f9acf11b2e77: 'Page Header Color Scheme' # Page Header Color Scheme
     e6aadd12-c632-4735-b22d-b5a758ab5003: 'Boilermaker 3' # Boilermaker 3
     e8d249f8-2c18-4b51-b311-baabbd94f999: 'Style Adjustment - Image/Video' # Style Adjustment - Image/Video
     e15525d6-6952-4e06-992e-6cf63f053365: Tabs # Tabs
@@ -291,6 +293,10 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 2.0.1
+  retcon:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
   retour:
     edition: standard
     enabled: true
