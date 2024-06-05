@@ -1,4 +1,4 @@
-dateModified: 1716486933
+dateModified: 1717521324
 elementSources:
   craft\elements\Entry:
     -
@@ -251,7 +251,7 @@ plugins:
   feed-me:
     edition: standard
     enabled: true
-    schemaVersion: 5.1.0.0
+    schemaVersion: 5.1.0.1
   field-manager:
     edition: standard
     enabled: true
@@ -260,7 +260,7 @@ plugins:
     edition: standard
     enabled: true
     licenseKey: ILVR9UKTOZXCUXJHV4EXLPO2
-    schemaVersion: 3.4.3
+    schemaVersion: 3.4.5
   hyper:
     edition: standard
     enabled: true
@@ -324,6 +324,10 @@ plugins:
     enabled: true
     schemaVersion: 3.0.0
   typogrify:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  vite:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
