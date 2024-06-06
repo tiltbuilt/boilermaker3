@@ -9,5 +9,5 @@ return [
 	'errorEntry' => 'src/js/app.js',
 	'manifestPath' => Craft::getAlias('@webroot') . '/dist/.vite/manifest.json',
 	'serverPublic' => Craft::getAlias('@web')  . '/dist/',
-	'useDevServer' => (bool) App::env('VITE_USE_DEV_SERVER'),
+	'useDevServer' => App::env('ENVIRONMENT') === 'dev' || App::env('CRAFT_ENVIRONMENT') === 'dev',
 ];

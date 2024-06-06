@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c697351a24fe0b5997d1169d824e5300",
+    "content-hash": "f958746d6b8bfda611f426bf749636c0",
     "packages": [
         {
             "name": "amphp/amp",
@@ -5455,6 +5455,50 @@
             "time": "2023-11-29T20:28:41+00:00"
         },
         {
+            "name": "ozdemirburak/iris",
+            "version": "3.1.1",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ozdemirburak/iris/zipball/909650aa1ba67de4560a459a261c830b8050bf56",
+                "reference": "909650aa1ba67de4560a459a261c830b8050bf56",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^8.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "OzdemirBurak\\Iris\\": "src"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Burak Özdemir",
+                    "homepage": "https://ozdemirburak.com"
+                }
+            ],
+            "description": "PHP library for color manipulation and conversion.",
+            "homepage": "https://github.com/ozdemirburak/iris",
+            "keywords": [
+                "color",
+                "conversion",
+                "hex",
+                "hexa",
+                "hsl",
+                "hsla",
+                "hsv",
+                "manipulation",
+                "rgb",
+                "rgba",
+                "transformation"
+            ],
+            "time": "2023-02-22T23:12:10+00:00"
+        },
+        {
             "name": "paragonie/constant_time_encoding",
             "version": "v2.7.0",
             "dist": {
@@ -8963,11 +9007,6 @@
         {
             "name": "symfony/property-access",
             "version": "v7.1.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/property-access.git",
-                "reference": "74e39e6a6276b8e384f34c6ddbc10a6c9a60193a"
-            },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/property-access/zipball/74e39e6a6276b8e384f34c6ddbc10a6c9a60193a",
@@ -8978,9 +9017,6 @@
                 "php": ">=8.2",
                 "symfony/property-info": "^6.4|^7.0"
             },
-            "require-dev": {
-                "symfony/cache": "^6.4|^7.0"
-            },
             "type": "library",
             "autoload": {
                 "psr-4": {
@@ -8990,7 +9026,6 @@
                     "/Tests/"
                 ]
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -9016,23 +9051,6 @@
                 "property",
                 "property-path",
                 "reflection"
-            ],
-            "support": {
-                "source": "https://github.com/symfony/property-access/tree/v7.1.1"
-            },
-            "funding": [
-                {
-                    "url": "https://symfony.com/sponsor",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/fabpot",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                    "type": "tidelift"
-                }
             ],
             "time": "2024-05-31T14:57:53+00:00"
         },
@@ -9979,6 +9997,223 @@
             "time": "2024-05-10T14:48:17+00:00"
         },
         {
+            "name": "verbb/color-mixer",
+            "version": "4.0.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/verbb/color-mixer/zipball/33a6d46f09a456d2933396fbebd8026aa170aa4c",
+                "reference": "33a6d46f09a456d2933396fbebd8026aa170aa4c",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^5.0.0",
+                "ozdemirburak/iris": "^3.0",
+                "php": "^8.2",
+                "verbb/base": "^3.0.0"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Color Mixer",
+                "handle": "craft-color-mixer",
+                "changelogUrl": "https://raw.githubusercontent.com/verbb/color-mixer/craft-5/CHANGELOG.md",
+                "class": "verbb\\colormixer\\ColorMixer"
+            },
+            "autoload": {
+                "psr-4": {
+                    "verbb\\colormixer\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Verbb",
+                    "homepage": "https://verbb.io"
+                },
+                {
+                    "name": "whoisjuan",
+                    "homepage": "https://www.whoisjuan.me"
+                },
+                {
+                    "name": "Ether Creative",
+                    "homepage": "https://ethercreative.co.uk"
+                }
+            ],
+            "description": "A set of Twig filters for modifying colors.",
+            "keywords": [
+                "cms",
+                "craft",
+                "craft color mixer",
+                "craft-plugin",
+                "craftcms"
+            ],
+            "support": {
+                "email": "support@verbb.io",
+                "issues": "https://github.com/verbb/color-mixer/issues?state=open",
+                "source": "https://github.com/verbb/color-mixer",
+                "docs": "https://github.com/verbb/color-mixer",
+                "rss": "https://github.com/verbb/color-mixer/commits/v2.atom"
+            },
+            "time": "2024-05-10T15:03:56+00:00"
+        },
+        {
+            "name": "verbb/default-dashboard",
+            "version": "3.0.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/verbb/default-dashboard/zipball/2244bcf04ce882bc0adf49c13c4b6f4080dc3d18",
+                "reference": "2244bcf04ce882bc0adf49c13c4b6f4080dc3d18",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^5.0.0",
+                "php": "^8.2",
+                "verbb/base": "^3.0.0"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Default Dashboard",
+                "handle": "default-dashboard",
+                "changelogUrl": "https://raw.githubusercontent.com/verbb/default-dashboard/craft-5/CHANGELOG.md",
+                "class": "verbb\\defaultdashboard\\DefaultDashboard"
+            },
+            "autoload": {
+                "psr-4": {
+                    "verbb\\defaultdashboard\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Verbb",
+                    "homepage": "https://verbb.io"
+                }
+            ],
+            "description": "Set default dashboard widgets for users.",
+            "keywords": [
+                "cms",
+                "craft",
+                "craft-plugin",
+                "craftcms"
+            ],
+            "support": {
+                "email": "support@verbb.io",
+                "issues": "https://github.com/verbb/default-dashboard/issues?state=open",
+                "source": "https://github.com/verbb/default-dashboard",
+                "docs": "https://github.com/verbb/default-dashboard",
+                "rss": "https://github.com/verbb/default-dashboard/commits/v2.atom"
+            },
+            "time": "2024-05-13T00:43:28+00:00"
+        },
+        {
+            "name": "verbb/element-index-defaults",
+            "version": "4.0.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/verbb/element-index-defaults/zipball/e3d6bd43e8abc2520d41b4b57b4d63d7688c3e82",
+                "reference": "e3d6bd43e8abc2520d41b4b57b4d63d7688c3e82",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^5.0.0",
+                "php": "^8.2",
+                "verbb/base": "^3.0.0"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Element Index Defaults",
+                "handle": "element-index-defaults",
+                "changelogUrl": "https://raw.githubusercontent.com/verbb/element-index-defaults/craft-5/CHANGELOG.md",
+                "class": "verbb\\elementindexdefaults\\ElementIndexDefaults"
+            },
+            "autoload": {
+                "psr-4": {
+                    "verbb\\elementindexdefaults\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Verbb",
+                    "homepage": "https://verbb.io"
+                }
+            ],
+            "description": "Setup default columns for your element indexes.",
+            "keywords": [
+                "cms",
+                "craft",
+                "craft-plugin",
+                "craftcms"
+            ],
+            "support": {
+                "email": "support@verbb.io",
+                "issues": "https://github.com/verbb/element-index-defaults/issues?state=open",
+                "source": "https://github.com/verbb/element-index-defaults",
+                "docs": "https://github.com/verbb/element-index-defaults",
+                "rss": "https://github.com/verbb/element-index-defaults/commits/v2.atom"
+            },
+            "time": "2024-05-13T00:41:53+00:00"
+        },
+        {
+            "name": "verbb/expanded-singles",
+            "version": "3.0.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/verbb/expanded-singles/zipball/c5814abd424a1e62ec46461250a64315a3c686c6",
+                "reference": "c5814abd424a1e62ec46461250a64315a3c686c6",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^5.0.0",
+                "php": "^8.2",
+                "verbb/base": "^3.0.0"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Expanded Singles",
+                "handle": "expanded-singles",
+                "description": "Alters the Entries Index sidebar to list all Singles, rather than grouping them under a 'Singles' link.",
+                "documentationUrl": "https://github.com/verbb/expanded-singles",
+                "changelogUrl": "https://raw.githubusercontent.com/verbb/expanded-singles/craft-5/CHANGELOG.md",
+                "class": "verbb\\expandedsingles\\ExpandedSingles"
+            },
+            "autoload": {
+                "psr-4": {
+                    "verbb\\expandedsingles\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Verbb",
+                    "homepage": "https://verbb.io"
+                }
+            ],
+            "description": "Extract Single entries to be top-level entries.",
+            "keywords": [
+                "cms",
+                "craft",
+                "craft-plugin",
+                "craftcms",
+                "expanded singles"
+            ],
+            "support": {
+                "email": "support@verbb.io",
+                "issues": "https://github.com/verbb/expanded-singles/issues?state=open",
+                "source": "https://github.com/verbb/expanded-singles",
+                "docs": "https://github.com/verbb/expanded-singles",
+                "rss": "https://github.com/verbb/expanded-singles/commits/v2.atom"
+            },
+            "time": "2024-05-13T00:41:07+00:00"
+        },
+        {
             "name": "verbb/field-manager",
             "version": "4.0.0",
             "dist": {
@@ -10205,6 +10440,58 @@
                 "rss": "https://github.com/verbb/icon-picker/commits/v2.atom"
             },
             "time": "2024-05-18T13:25:16+00:00"
+        },
+        {
+            "name": "verbb/knock-knock",
+            "version": "3.0.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/verbb/knock-knock/zipball/ebc839ffb7951fdd60d5b16b005074fee2febb3a",
+                "reference": "ebc839ffb7951fdd60d5b16b005074fee2febb3a",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^5.0.0",
+                "php": "^8.2",
+                "verbb/base": "^3.0.0"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Knock Knock",
+                "handle": "knock-knock",
+                "changelogUrl": "https://raw.githubusercontent.com/verbb/knock-knock/craft-5/CHANGELOG.md",
+                "class": "verbb\\knockknock\\KnockKnock"
+            },
+            "autoload": {
+                "psr-4": {
+                    "verbb\\knockknock\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Verbb",
+                    "homepage": "https://verbb.io"
+                }
+            ],
+            "description": "Password protect your public facing Craft website with a single password.",
+            "keywords": [
+                "cms",
+                "craft",
+                "craft-plugin",
+                "craftcms",
+                "knock-knock"
+            ],
+            "support": {
+                "email": "support@verbb.io",
+                "issues": "https://github.com/verbb/knock-knock/issues?state=open",
+                "source": "https://github.com/verbb/knock-knock",
+                "docs": "https://github.com/verbb/knock-knock",
+                "rss": "https://github.com/verbb/knock-knock/commits/v2.atom"
+            },
+            "time": "2024-05-13T00:37:40+00:00"
         },
         {
             "name": "verbb/navigation",

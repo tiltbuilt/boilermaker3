@@ -12,10 +12,10 @@ export default defineConfig(({command}) => ({
 			transformMixedEsModules: true,
 		},
 		manifest: true,
-		outDir: 'web/dist/',
+		outDir: path.resolve(__dirname, 'web/dist/'),
 		rollupOptions: {
 			input: {
-				app: 'src/js/app.js',
+				app: path.resolve(__dirname, 'src/js/app.js'),
 			}
 		},
 		sourcemap: true,
