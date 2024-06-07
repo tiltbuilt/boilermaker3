@@ -1,3 +1,5 @@
+import('tailwindcss').Config
+const colors = require('tailwindcss/colors')
 module.exports = {
   corePlugins: {
 	container: false,

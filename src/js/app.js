@@ -1,6 +1,7 @@
 /* CSS */
 import "@css/app.pcss";
-import 'swiper/css/bundle';
+import Swiper from 'swiper/bundle';
+//import 'swiper/css' ;
 
 /* JS */
 import 'lazysizes';
@@ -9,12 +10,12 @@ import { ExpoScaleEase, RoughEase, SlowMo } from "gsap/EasePack";
 import { CSSRulePlugin } from "gsap/CSSRulePlugin";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import * as YTPlayer from 'yt-player';
+//import * as YTPlayer from 'yt-player';
 
 
 /* SCRIPTS HERE */
 
-
+console.log('dude?');
 
 /**
  * Alpine JS
@@ -22,8 +23,10 @@ import * as YTPlayer from 'yt-player';
  * when components start getting initialized.
  */
 import Alpine from 'alpinejs';
-window.Alpine = Alpine;
-Alpine.start();
+if (typeof window.Alpine === "undefined") {
+  window.Alpine = Alpine;
+  Alpine.start();
+}
 
 // Accept HMR as per: https://vitejs.dev/guide/api-hmr.html
 if (import.meta.hot) {

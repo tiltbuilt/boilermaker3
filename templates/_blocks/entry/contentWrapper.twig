@@ -36,9 +36,13 @@
 
 {# Set color classes #}
 {% set colorClasses = [] %}
-{% set colorScheme = entry.colorScheme.class %}
-{% do _globals.set('colorScheme', colorScheme) %}
-{% do _globals.set('colorSchemeFallBack', colorScheme) %}
+{% if entry.colorScheme != null %}
+	{% set colorScheme = entry.colorScheme.class %}
+	{% do _globals.set('colorSchemeFallBack', _globals.get('colorScheme')) %}
+	{% do _globals.set('colorScheme', colorScheme) %}
+{% else %}
+	{% set colorScheme = _globals.get('colorScheme') %}
+{% endif %}
 {% set colorClasses = colorClasses|merge([colorScheme]) %}
 {% if entry.bgColor|length %}
 	{% set colorClasses = colorClasses|merge(['bg-' ~ entry.bgColor]) %}
@@ -57,4 +61,4 @@
 	</div>		
 </div>
 {# reset color scheme global #}
-{% do _globals.set('colorSchemeFallBack', _globals.get('colorSchemeFallBack')) %}
+{% do _globals.set('colorScheme', _globals.get('colorSchemeFallBack')) %}
