@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f958746d6b8bfda611f426bf749636c0",
+    "content-hash": "35d791695ddc78fe67dede79c642a10c",
     "packages": [
         {
             "name": "amphp/amp",
@@ -1340,11 +1340,11 @@
         },
         {
             "name": "craftcms/cms",
-            "version": "5.1.9",
+            "version": "5.1.10",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/72226af00a4321bc4cb859b074c4e95f84b438e1",
-                "reference": "72226af00a4321bc4cb859b074c4e95f84b438e1",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/3fe8e67e1026084c282ced906617a78f175174f2",
+                "reference": "3fe8e67e1026084c282ced906617a78f175174f2",
                 "shasum": ""
             },
             "require": {
@@ -1441,7 +1441,7 @@
                 "docs": "https://craftcms.com/docs/5.x/",
                 "rss": "https://github.com/craftcms/cms/releases.atom"
             },
-            "time": "2024-06-05T16:15:54+00:00"
+            "time": "2024-06-07T21:58:22+00:00"
         },
         {
             "name": "craftcms/feed-me",
@@ -4484,11 +4484,11 @@
         },
         {
             "name": "mmikkel/retcon",
-            "version": "3.0.0",
+            "version": "3.1.0",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mmikkel/Retcon-Craft/zipball/87f893eec16395e8f22eb93a0e83ce7336030627",
-                "reference": "87f893eec16395e8f22eb93a0e83ce7336030627",
+                "url": "https://api.github.com/repos/mmikkel/Retcon-Craft/zipball/43fc2d8b517159cc7f1bacdf2c8988d9a5b145c6",
+                "reference": "43fc2d8b517159cc7f1bacdf2c8988d9a5b145c6",
                 "shasum": ""
             },
             "require": {
@@ -4535,7 +4535,7 @@
                 "docs": "https://github.com/mmikkel/Retcon-Craft/blob/master/README.md",
                 "issues": "https://github.com/mmikkel/Retcon-Craft/issues"
             },
-            "time": "2024-03-28T14:51:21+00:00"
+            "time": "2024-06-10T21:21:17+00:00"
         },
         {
             "name": "mollie/mollie-api-php",
@@ -7784,11 +7784,11 @@
         },
         {
             "name": "symfony/css-selector",
-            "version": "v7.0.7",
+            "version": "v7.1.1",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/css-selector/zipball/b08a4ad89e84b29cec285b7b1f781a7ae51cf4bc",
-                "reference": "b08a4ad89e84b29cec285b7b1f781a7ae51cf4bc",
+                "url": "https://api.github.com/repos/symfony/css-selector/zipball/1c7cee86c6f812896af54434f8ce29c8d94f9ff4",
+                "reference": "1c7cee86c6f812896af54434f8ce29c8d94f9ff4",
                 "shasum": ""
             },
             "require": {
@@ -7822,7 +7822,7 @@
             ],
             "description": "Converts CSS selectors to XPath expressions",
             "homepage": "https://symfony.com",
-            "time": "2024-04-18T09:29:19+00:00"
+            "time": "2024-05-31T14:57:53+00:00"
         },
         {
             "name": "symfony/deprecation-contracts",
@@ -7870,11 +7870,11 @@
         },
         {
             "name": "symfony/dom-crawler",
-            "version": "v7.0.7",
+            "version": "v7.1.1",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/dom-crawler/zipball/7cb4ae7166a8a36916be390dbb3819474fb06a29",
-                "reference": "7cb4ae7166a8a36916be390dbb3819474fb06a29",
+                "url": "https://api.github.com/repos/symfony/dom-crawler/zipball/01ce8174447f1f1dd33a5854b01beef79061d9fa",
+                "reference": "01ce8174447f1f1dd33a5854b01beef79061d9fa",
                 "shasum": ""
             },
             "require": {
@@ -7907,7 +7907,7 @@
             ],
             "description": "Eases DOM navigation for HTML and XML documents",
             "homepage": "https://symfony.com",
-            "time": "2024-04-18T09:29:19+00:00"
+            "time": "2024-05-31T14:57:53+00:00"
         },
         {
             "name": "symfony/event-dispatcher",

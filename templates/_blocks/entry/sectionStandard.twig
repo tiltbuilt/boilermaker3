@@ -57,7 +57,7 @@
 	<div class="container {{- entry.fullscreen ? 'container-fullscreen' -}}">
 		<div class="inner {{- gMacros.classesOut(adjustments, 'Type') -}} {{- gMacros.classesOut(adjustments, 'Padding', true) -}}">
 			{% if animClass %}				
-				{{entry.elementContent|raw|retconAttr([ 'p', 'ol', 'ul' ], { 'class' : animClass }, false)}}
+				{{entry.elementContent|raw|retconAttr(['body > p', 'body > ol', 'body > ul'], { 'class' : animClass }, false)}}
 			{% else %}
 				{{entry.elementContent|raw}}
 			{% endif %}						

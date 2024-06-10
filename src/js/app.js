@@ -23,9 +23,11 @@ console.log('dude?');
  * when components start getting initialized.
  */
 import Alpine from 'alpinejs';
+import collapse from '@alpinejs/collapse';
 if (typeof window.Alpine === "undefined") {
   window.Alpine = Alpine;
   Alpine.start();
+  Alpine.plugin(collapse);
 }
 
 // Accept HMR as per: https://vitejs.dev/guide/api-hmr.html
