@@ -10,60 +10,64 @@
  */
 #}
 
-{# Load in global macros for use across all Twig templates #}
-{% import '_macros/globalMacros' as gMacros %}
+{% if entry.enabled %}
 
-{# Create array for classes to pass to macros for section #}
-{% set sectionClassList = [] %}
-
-{# Set block id attribute value #}
-{% if entry.customId is defined and entry.customId != '' %}
-	{% set blockId = entry.customId|replace({' ': '-'})|trim %}
-{% else %}
-	{% set blockId = 'section-' ~ entry.id %}
-{% endif %}
-
-{# Set block type handle as class name for styling #}
-{% set blockClass = entry.type.handle|kebab %}
-
-{# Get classes for element animation settings #}
-{% set animClass = null %}
-{% if entry.revealAnimation|length %}
-	{% if entry.animateContent %}
-		{% do _globals.set('animSetting', entry.revealAnimation) %}
-		{% set animClass = entry.revealAnimation.value %}		
+	{# Load in global macros for use across all Twig templates #}
+	{% import '_macros/globalMacros' as gMacros %}
+	
+	{# Create array for classes to pass to macros for section #}
+	{% set sectionClassList = [] %}
+	
+	{# Set block id attribute value #}
+	{% if entry.customId is defined and entry.customId != '' %}
+		{% set blockId = entry.customId|replace({' ': '-'})|trim %}
 	{% else %}
-		{% do _globals.set('animSetting', null) %}
-		{% set animClass = null %}
-		{% set sectionClassList = sectionClassList|merge([entry.revealAnimation]) %}		
-	{% endif %}	
+		{% set blockId = 'section-' ~ entry.id %}
+	{% endif %}
+	
+	{# Set block type handle as class name for styling #}
+	{% set blockClass = entry.type.handle|kebab %}
+	
+	{# Get classes for element animation settings #}
+	{% set animClass = null %}
+	{% if entry.revealAnimation|length %}
+		{% if entry.animateContent %}
+			{% do _globals.set('animSetting', entry.revealAnimation) %}
+			{% set animClass = entry.revealAnimation.value %}		
+		{% else %}
+			{% do _globals.set('animSetting', null) %}
+			{% set animClass = null %}
+			{% set sectionClassList = sectionClassList|merge([entry.revealAnimation]) %}		
+		{% endif %}	
+	{% endif %}
+	
+	{# Set color classes #}
+	{% set colorClasses = [] %}
+	{% set colorScheme = entry.colorScheme.class %}
+	{% do _globals.set('colorScheme', colorScheme) %}
+	{% do _globals.set('colorSchemeFallBack', colorScheme) %}
+	{% set colorClasses = colorClasses|merge([colorScheme]) %}
+	{% if entry.bgColor|length %}
+		{% set colorClasses = colorClasses|merge(['bg-' ~ entry.bgColor]) %}
+	{% endif %}
+	{% set sectionClassList = sectionClassList|merge(colorClasses) %}
+	
+	{# Retrieve styling adjustments #}
+	{% set adjustments = entry.sectionStyleAdjustments.eagerly().with('bgImg').all() %}
+	
+	<section id="{{blockId}}" class="{{- blockClass -}} {{- gMacros.classesOut(adjustments, 'Display') -}} {{- gMacros.classesOut(adjustments, 'Margins', true) -}} {{- sectionClassList|join(' ') }} {{ entry.customClasses }}" {{- gMacros.attributesOut(entry.customAttributes) -}}>
+		<div class="container {{- entry.fullscreen ? 'container-fullscreen' -}}">
+			<div class="inner {{- gMacros.classesOut(adjustments, 'Type') -}} {{- gMacros.classesOut(adjustments, 'Padding', true) -}}">
+				{% if animClass %}				
+					{{entry.elementContent|raw|retconAttr(['body > p', 'body > ol', 'body > ul'], { 'class' : animClass }, false)}}
+				{% else %}
+					{{entry.elementContent|raw}}
+				{% endif %}						
+			</div>
+			<div class="background">
+				{{ gMacros.buildElementBackground(adjustments, {'default': '100vw'}, null, null) }}
+			</div>
+		</div>	
+	</section>
+
 {% endif %}
-
-{# Set color classes #}
-{% set colorClasses = [] %}
-{% set colorScheme = entry.colorScheme.class %}
-{% do _globals.set('colorScheme', colorScheme) %}
-{% do _globals.set('colorSchemeFallBack', colorScheme) %}
-{% set colorClasses = colorClasses|merge([colorScheme]) %}
-{% if entry.bgColor|length %}
-	{% set colorClasses = colorClasses|merge(['bg-' ~ entry.bgColor]) %}
-{% endif %}
-{% set sectionClassList = sectionClassList|merge(colorClasses) %}
-
-{# Retrieve styling adjustments #}
-{% set adjustments = entry.sectionStyleAdjustments.eagerly().with('bgImg').all() %}
-
-<section id="{{blockId}}" class="{{- blockClass -}} {{- gMacros.classesOut(adjustments, 'Display') -}} {{- gMacros.classesOut(adjustments, 'Margins', true) -}} {{- sectionClassList|join(' ') }} {{ entry.customClasses }}" {{- gMacros.attributesOut(entry.customAttributes) -}}>
-	<div class="container {{- entry.fullscreen ? 'container-fullscreen' -}}">
-		<div class="inner {{- gMacros.classesOut(adjustments, 'Type') -}} {{- gMacros.classesOut(adjustments, 'Padding', true) -}}">
-			{% if animClass %}				
-				{{entry.elementContent|raw|retconAttr(['body > p', 'body > ol', 'body > ul'], { 'class' : animClass }, false)}}
-			{% else %}
-				{{entry.elementContent|raw}}
-			{% endif %}						
-		</div>
-		<div class="background">
-			{{ gMacros.buildElementBackground(adjustments, {'default': '100vw'}, null, null) }}
-		</div>
-	</div>	
-</section>

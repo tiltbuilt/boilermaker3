@@ -2,5 +2,36 @@
  * This injects any component classes registered by plugins.
  *
  */
-@tailwind components;
+@import "tailwindcss/components";
 
+@layer components {
+    
+    .container {	
+        /* These classes must stay in order to ensure functionality */
+        @apply mx-auto max-w-full xl:max-w-screen-xl 2xl:max-w-screen-2xl;
+        /*The default classes and style below can be changed on a per-project basis  */  
+        
+       &.container-fullwidth {
+          /* These classes must stay in order to ensure functionality */
+          @apply xl:max-w-full;
+          /* The default classes and style below can be changed on a per-project basis */
+       }    
+    }
+    
+    @variants responsive {
+        /* TEXT WRAP */
+        
+        .text-wrap-left {
+            @apply float-left mr-normal mb-normal;		
+        }
+        
+        .text-wrap-right {
+            @apply float-right ml-normal mb-normal;			
+        }
+        
+        .text-wrap-none {
+            @apply float-none;		
+        }
+    }	
+    
+}

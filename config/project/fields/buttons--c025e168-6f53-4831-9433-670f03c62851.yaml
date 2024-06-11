@@ -262,35 +262,6 @@ settings:
                                 - type
                                 - craft\fieldlayoutelements\CustomField
                               -
-                                - handle
-                                - fullWidthPhone
-                              -
-                                - label
-                                - 'Full Width on Phone?'
-                              -
-                                - required
-                                - false
-                              -
-                                - providesThumbs
-                                - false
-                              -
-                                - includeInCards
-                                - false
-                              -
-                                - width
-                                - 100
-                              -
-                                - uid
-                                - ee5fd6bc-db5c-4574-afce-092e56a8d6ac
-                              -
-                                - fieldUid
-                                - a2da31ae-7341-4dd1-b245-5ee55d44cbc2 # Yes No
-                          -
-                            __assoc__:
-                              -
-                                - type
-                                - craft\fieldlayoutelements\CustomField
-                              -
                                 - required
                                 - false
                               -
@@ -640,35 +611,6 @@ settings:
                               -
                                 - fieldUid
                                 - adca13f3-4ae5-49c5-83c4-cab3dd9f5ece # Button Size
-                          -
-                            __assoc__:
-                              -
-                                - type
-                                - craft\fieldlayoutelements\CustomField
-                              -
-                                - handle
-                                - fullWidthPhone
-                              -
-                                - label
-                                - 'Full Width on Phone?'
-                              -
-                                - required
-                                - false
-                              -
-                                - providesThumbs
-                                - false
-                              -
-                                - includeInCards
-                                - false
-                              -
-                                - width
-                                - 100
-                              -
-                                - uid
-                                - 9e471834-66b1-43f4-90b6-20d54319bce1
-                              -
-                                - fieldUid
-                                - a2da31ae-7341-4dd1-b245-5ee55d44cbc2 # Yes No
                           -
                             __assoc__:
                               -
@@ -1029,35 +971,6 @@ settings:
                                 - type
                                 - craft\fieldlayoutelements\CustomField
                               -
-                                - handle
-                                - fullWidthPhone
-                              -
-                                - label
-                                - 'Full Width on Phone?'
-                              -
-                                - required
-                                - false
-                              -
-                                - providesThumbs
-                                - false
-                              -
-                                - includeInCards
-                                - false
-                              -
-                                - width
-                                - 100
-                              -
-                                - uid
-                                - d3718bba-9707-4bdb-a127-7b940f176963
-                              -
-                                - fieldUid
-                                - a2da31ae-7341-4dd1-b245-5ee55d44cbc2 # Yes No
-                          -
-                            __assoc__:
-                              -
-                                - type
-                                - craft\fieldlayoutelements\CustomField
-                              -
                                 - required
                                 - false
                               -
@@ -1403,35 +1316,6 @@ settings:
                               -
                                 - fieldUid
                                 - adca13f3-4ae5-49c5-83c4-cab3dd9f5ece # Button Size
-                          -
-                            __assoc__:
-                              -
-                                - type
-                                - craft\fieldlayoutelements\CustomField
-                              -
-                                - handle
-                                - fullWidthPhone
-                              -
-                                - label
-                                - 'Full Width on Phone?'
-                              -
-                                - required
-                                - false
-                              -
-                                - providesThumbs
-                                - false
-                              -
-                                - includeInCards
-                                - false
-                              -
-                                - width
-                                - 100
-                              -
-                                - uid
-                                - be96e100-2be7-4c2f-8b4a-fc3e0f7fc1f2
-                              -
-                                - fieldUid
-                                - a2da31ae-7341-4dd1-b245-5ee55d44cbc2 # Yes No
                           -
                             __assoc__:
                               -
@@ -2073,35 +1957,6 @@ settings:
                                 - type
                                 - craft\fieldlayoutelements\CustomField
                               -
-                                - handle
-                                - fullWidthPhone
-                              -
-                                - label
-                                - 'Full width on Phone?'
-                              -
-                                - required
-                                - false
-                              -
-                                - providesThumbs
-                                - false
-                              -
-                                - includeInCards
-                                - false
-                              -
-                                - width
-                                - 100
-                              -
-                                - uid
-                                - 23a2a04a-14cf-4d0f-ba19-7f0c88c19eb8
-                              -
-                                - fieldUid
-                                - a2da31ae-7341-4dd1-b245-5ee55d44cbc2 # Yes No
-                          -
-                            __assoc__:
-                              -
-                                - type
-                                - craft\fieldlayoutelements\CustomField
-                              -
                                 - required
                                 - false
                               -
@@ -2203,7 +2058,6 @@ settings:
           - sources
           -
             - 'section:589d7e58-f378-455e-b073-055e9221964b' # Pages
-            - singles
     -
       __assoc__:
         -
@@ -2452,35 +2306,6 @@ settings:
                               -
                                 - fieldUid
                                 - adca13f3-4ae5-49c5-83c4-cab3dd9f5ece # Button Size
-                          -
-                            __assoc__:
-                              -
-                                - type
-                                - craft\fieldlayoutelements\CustomField
-                              -
-                                - handle
-                                - fullWidthPhone
-                              -
-                                - label
-                                - 'Full Width on Phone?'
-                              -
-                                - required
-                                - false
-                              -
-                                - providesThumbs
-                                - false
-                              -
-                                - includeInCards
-                                - false
-                              -
-                                - width
-                                - 100
-                              -
-                                - uid
-                                - 9e37dd57-9796-46ad-b6d5-21187372fbb9
-                              -
-                                - fieldUid
-                                - a2da31ae-7341-4dd1-b245-5ee55d44cbc2 # Yes No
                           -
                             __assoc__:
                               -
@@ -3119,35 +2944,6 @@ settings:
                               -
                                 - fieldUid
                                 - adca13f3-4ae5-49c5-83c4-cab3dd9f5ece # Button Size
-                          -
-                            __assoc__:
-                              -
-                                - type
-                                - craft\fieldlayoutelements\CustomField
-                              -
-                                - handle
-                                - fullWidthPhone
-                              -
-                                - label
-                                - 'Full Width on Phone?'
-                              -
-                                - required
-                                - false
-                              -
-                                - providesThumbs
-                                - false
-                              -
-                                - includeInCards
-                                - false
-                              -
-                                - width
-                                - 100
-                              -
-                                - uid
-                                - 45b823a9-8b5e-4b9f-97e0-02a4671f1dc7
-                              -
-                                - fieldUid
-                                - a2da31ae-7341-4dd1-b245-5ee55d44cbc2 # Yes No
                           -
                             __assoc__:
                               -
@@ -3825,6 +3621,362 @@ settings:
         -
           - sources
           - '*'
+    -
+      __assoc__:
+        -
+          - type
+          - verbb\hyper\links\Entry
+        -
+          - label
+          - Modal
+        -
+          - handle
+          - MLshZJkrkb
+        -
+          - enabled
+          - true
+        -
+          - isCustom
+          - false
+        -
+          - layoutUid
+          - 57b39371-493d-4d37-b193-76dbf0009cbc
+        -
+          - layoutConfig
+          -
+            __assoc__:
+              -
+                - tabs
+                -
+                  -
+                    __assoc__:
+                      -
+                        - name
+                        - Content
+                      -
+                        - uid
+                        - abfd3c0b-77e5-4b39-8bf5-f775f51e38c3
+                      -
+                        - elements
+                        -
+                          -
+                            __assoc__:
+                              -
+                                - type
+                                - verbb\hyper\fieldlayoutelements\LinkField
+                              -
+                                - attribute
+                                - linkValue
+                              -
+                                - mandatory
+                                - true
+                              -
+                                - requirable
+                                - true
+                              -
+                                - autocomplete
+                                - false
+                              -
+                                - autofocus
+                                - false
+                              -
+                                - autocorrect
+                                - true
+                              -
+                                - autocapitalize
+                                - true
+                              -
+                                - disabled
+                                - false
+                              -
+                                - readonly
+                                - false
+                              -
+                                - translatable
+                                - false
+                              -
+                                - required
+                                - true
+                              -
+                                - providesThumbs
+                                - false
+                              -
+                                - includeInCards
+                                - false
+                              -
+                                - width
+                                - 100
+                              -
+                                - uid
+                                - 105da4bd-8b22-421c-a695-4e2e1f7e00e2
+                          -
+                            __assoc__:
+                              -
+                                - type
+                                - verbb\hyper\fieldlayoutelements\LinkTextField
+                              -
+                                - attribute
+                                - linkText
+                              -
+                                - requirable
+                                - true
+                              -
+                                - autocomplete
+                                - false
+                              -
+                                - autofocus
+                                - false
+                              -
+                                - autocorrect
+                                - true
+                              -
+                                - autocapitalize
+                                - true
+                              -
+                                - disabled
+                                - false
+                              -
+                                - readonly
+                                - false
+                              -
+                                - placeholder
+                                - 'e.g. Read more'
+                              -
+                                - mandatory
+                                - false
+                              -
+                                - translatable
+                                - false
+                              -
+                                - required
+                                - false
+                              -
+                                - providesThumbs
+                                - false
+                              -
+                                - includeInCards
+                                - false
+                              -
+                                - width
+                                - 100
+                              -
+                                - uid
+                                - 2fa5d4b3-8df6-4633-8168-b78a8c28529e
+                          -
+                            __assoc__:
+                              -
+                                - type
+                                - verbb\hyper\fieldlayoutelements\AriaLabelField
+                              -
+                                - attribute
+                                - ariaLabel
+                              -
+                                - requirable
+                                - true
+                              -
+                                - autocomplete
+                                - false
+                              -
+                                - autofocus
+                                - false
+                              -
+                                - autocorrect
+                                - true
+                              -
+                                - autocapitalize
+                                - true
+                              -
+                                - disabled
+                                - false
+                              -
+                                - readonly
+                                - false
+                              -
+                                - mandatory
+                                - false
+                              -
+                                - translatable
+                                - false
+                              -
+                                - required
+                                - false
+                              -
+                                - providesThumbs
+                                - false
+                              -
+                                - includeInCards
+                                - false
+                              -
+                                - width
+                                - 100
+                              -
+                                - uid
+                                - 51f5a6b0-e107-4199-8f71-7fbd9b50ba6f
+                  -
+                    __assoc__:
+                      -
+                        - name
+                        - Styling
+                      -
+                        - uid
+                        - cfc80151-8de0-4f88-a8e3-ba5c92966629
+                      -
+                        - elements
+                        -
+                          -
+                            __assoc__:
+                              -
+                                - type
+                                - craft\fieldlayoutelements\CustomField
+                              -
+                                - required
+                                - false
+                              -
+                                - providesThumbs
+                                - false
+                              -
+                                - includeInCards
+                                - false
+                              -
+                                - width
+                                - 50
+                              -
+                                - uid
+                                - e30cd96e-6395-48a5-8b0d-c4d27b50387e
+                              -
+                                - fieldUid
+                                - 47acc143-9347-4976-bd50-02778ffeabf1 # Button Styles
+                          -
+                            __assoc__:
+                              -
+                                - type
+                                - craft\fieldlayoutelements\CustomField
+                              -
+                                - required
+                                - false
+                              -
+                                - providesThumbs
+                                - false
+                              -
+                                - includeInCards
+                                - false
+                              -
+                                - width
+                                - 50
+                              -
+                                - uid
+                                - 412550c3-5fc1-4b84-a8a8-41d0d13d2428
+                              -
+                                - fieldUid
+                                - adca13f3-4ae5-49c5-83c4-cab3dd9f5ece # Button Size
+                          -
+                            __assoc__:
+                              -
+                                - type
+                                - craft\fieldlayoutelements\CustomField
+                              -
+                                - required
+                                - false
+                              -
+                                - providesThumbs
+                                - false
+                              -
+                                - includeInCards
+                                - false
+                              -
+                                - width
+                                - 100
+                              -
+                                - uid
+                                - 3364edc0-52ae-4dfa-913e-0039df88a5c7
+                              -
+                                - fieldUid
+                                - 4e9bbb37-55ed-437d-bdbd-9a1dcbc20d73 # Button Color
+                  -
+                    __assoc__:
+                      -
+                        - name
+                        - Advanced
+                      -
+                        - uid
+                        - 187635c1-1d9d-4b8c-8112-8a5005b7a21f
+                      -
+                        - elements
+                        -
+                          -
+                            __assoc__:
+                              -
+                                - type
+                                - craft\fieldlayoutelements\CustomField
+                              -
+                                - required
+                                - false
+                              -
+                                - providesThumbs
+                                - false
+                              -
+                                - includeInCards
+                                - false
+                              -
+                                - width
+                                - 100
+                              -
+                                - uid
+                                - 7390f22e-1b3b-4908-a8bc-f289776f1628
+                              -
+                                - fieldUid
+                                - 6b484609-7d28-4f55-990e-f5212885d922 # Custom ID
+                          -
+                            __assoc__:
+                              -
+                                - type
+                                - craft\fieldlayoutelements\CustomField
+                              -
+                                - required
+                                - false
+                              -
+                                - providesThumbs
+                                - false
+                              -
+                                - includeInCards
+                                - false
+                              -
+                                - width
+                                - 100
+                              -
+                                - uid
+                                - 6378e403-74da-415e-9fc8-7377b938a08e
+                              -
+                                - fieldUid
+                                - a78e7e89-26cf-4a0e-a36d-b48ca76d7ba5 # Custom Classes
+                          -
+                            __assoc__:
+                              -
+                                - type
+                                - craft\fieldlayoutelements\CustomField
+                              -
+                                - required
+                                - false
+                              -
+                                - providesThumbs
+                                - false
+                              -
+                                - includeInCards
+                                - false
+                              -
+                                - width
+                                - 100
+                              -
+                                - uid
+                                - 5350e8bb-7296-4c12-8fd6-c1ee5f7bb934
+                              -
+                                - fieldUid
+                                - ee64f702-a8f1-46ee-8dea-79f8ad82e25b # Custom Attributes
+        -
+          - sources
+          -
+            - 'section:acec3806-c4ac-4430-a8d9-24915eacc052' # Modals
+            - 'section:589d7e58-f378-455e-b073-055e9221964b' # Pages
   maxLinks: null
   minLinks: null
   multipleLinks: true

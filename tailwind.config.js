@@ -1,19 +1,28 @@
 import('tailwindcss').Config
 const colors = require('tailwindcss/colors')
-module.exports = {
-  corePlugins: {
-	container: false,
-  },
+module.exports = {  
   plugins: [	
+	require('@tailwindcss/aspect-ratio'),
 	require('@tailwindcss/typography'),
+	require('@tailwindcss/forms'),	
   ],
   content: [
-	'./templates/**/*.twig',
+	'./templates/**/*.{html,twig}', './src/**/*.{pcss,css,js}'
   ],
   theme: {
+	container: {
+	  center: true,
+	},
 	extend: {
 	  minHeight: {
 		'screenh' : '100vh',
+	  },
+	  aspectRatio: {
+		'4/3': '4/3',
+		'3/2': '3/2',
+		'3/1': '3/1',
+		'2/1': '2/1',
+		'4/1': '4/1',  
 	  },
 	},
 	colors: {
