@@ -39,9 +39,11 @@
 {% endblock %}
 
 {% block pageContent %}		
+	
 	{% for block in pageContent %}
 		{{block.render()}}
 	{% endfor %}
+	
 {% endblock %}
 
 {% block pageFooter %}

@@ -31,9 +31,9 @@ prepros-6.config
 /web/imager/*
 /web/blitz/*
 /web/cache/blitz/*
-/node_modules
+/node_modules/*
 /vendor
-/web/dist/mix-manifest.json
+/web/dist
 
 # local env files
 /.env

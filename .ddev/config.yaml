@@ -14,6 +14,8 @@ hooks:
         - exec: npm install
         - exec: npm run build
         - exec: composer install
+    pre-stop:
+        - exec: php craft db/backup
 use_dns_when_possible: true
 composer_version: "2"
 web_environment: []
