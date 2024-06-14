@@ -38,37 +38,36 @@
 /* GENERAL TEXT STYLES */
  
  p, ul, ol {
-   @apply mt-base;    
+   margin: 0;
+   margin-top: theme('spacing.normal');    
 	  
-   & > li {
-	 @apply m-0 mt-half;
+   & > li {	 
+	 margin: 0;
+	 margin-top: theme('spacing.half');
+	 
    }
    
    ul, ol {
-	 @apply mb-0;
+	 margin-bottom: 0;
    }
  }
  
  *:first-child {
-   margin-top: 0px;
+   margin-top: 0;
  }
- 
- p {
-   @apply mb-0 mx-0;
- }
+  
  
  .main {  
    
    [class*='text-wrap-left']:first-child + p {
-	 @apply mt-0;
+	 margin-top: 0;
    }
    
    [class*='text-wrap-right']:first-child + p {
-	 @apply mt-0;
+	 margin-top: 0;
    }
    
-   ul.bullet-list {
-	 @apply mt-0 mr-0;
+   ul.bullet-list {	 
 	 list-style-type: none;
 	 list-style-position: outside;
 	 margin-left: 1.1em;
@@ -83,7 +82,7 @@
    
    ul.lined-list {
 	 li {
-	   @apply pt-half;
+	   padding-top: theme('spacing.half');
 	   border-top: solid 2px;
 	   
 	   &:first-child {
@@ -92,8 +91,7 @@
 	 }
    }
    
-   ol {
-	 @apply mb-0 mr-0;
+   ol {	 
 	 list-style-type: decimal;
 	 list-style-position: outside;
 	 margin-left: 1.1em;
@@ -228,7 +226,9 @@
  /* NOTIFICATION BAR */ 
  
  .notification-bar-icon svg, .notification-bar-icon i {  
-	 @apply block mx-auto;
+	 display: block;
+	 margin-left: auto;
+	 margin-right: auto;
 	 fill: currentColor;
 	 width: 7.5rem;
 	 height: 7.5rem;
