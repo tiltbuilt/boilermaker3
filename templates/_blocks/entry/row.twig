@@ -28,6 +28,13 @@
 {# Set block type handle as class name for styling #}
 {% set blockClass = entry.type.handle|kebab %}
 
+{% set animClass = '' %}
+{% if animSetting and 'section' in entry.owner.type.handle %}
+	{% set animClass = animSetting %}	
+{% else %}
+	{% set animClass = null %}		
+{% endif %}
+
 {# insert layout changes #}
 {% for layoutItem in entry.rowLayout %}
 	{% set devSize = layoutItem.deviceSize %}
@@ -42,16 +49,15 @@
 	{% endif %}
 {% endfor %}
 
-{# animation classes #}
-{% if _globals.get('animSetting') %}
-	{% set rowClassList = rowClassList|merge([_globals.get('animSetting')]) %}
-{% endif %}
 
 {# Retrieve styling adjustments #}
 {% set adjustments = entry.rowStyleAdjustments.eagerly().all() %}
 
 <div id="{{blockId}}" class="{{- blockClass -}} {{- gMacros.classesOut(adjustments, 'Display') -}} {{- gMacros.classesOut(adjustments, 'Margins', true) -}} {{- gMacros.classesOut(adjustments, 'Padding', true) -}} {{- rowClassList|join(' ') }} {{ entry.customClasses }}" {{- gMacros.attributesOut(entry.customAttributes) -}}>
 	{% for column in rowContent %}
-		{{column.render()}}
+		{{column.render({
+			'animSetting': animClass,
+			'colorScheme': colorScheme
+		})}}
 	{% endfor %}
 </div>

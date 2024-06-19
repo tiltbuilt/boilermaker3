@@ -67,6 +67,7 @@
 {% set blockClass = entry.type.handle|kebab %}
 
 {# animation classes #}
+{% set animClass = '' %}
 {% if animSetting and 'section' in entry.owner.type.handle %}
 	{% set animClass = animSetting %}
 {% endif %}

@@ -7,7 +7,7 @@ module.exports = {
 	require('@tailwindcss/forms'),	
   ],
   content: [
-	'./templates/**/*.{html,twig}', './src/**/*.{pcss,css,js}',	
+	'./templates/**/*.{html,twig}', './src/**/*.js',	
   ],
   theme: {
 	container: {
@@ -32,11 +32,12 @@ module.exports = {
 		'2x': '3rem',
 		'3x': '4.5rem',
 		'4x': '6rem',
-		'neghalf': '-0.75rem',
-		'negbase': '-1.5rem',
-		'neg2x': '-3rem',
-		'neg3x': '-4.5rem',
-		'neg4x': '-6rem',
+		'neg-half': '-0.75rem',
+		'neg-quarter': '-0.375rem',
+		'neg-base': '-1.5rem',
+		'neg-2x': '-3rem',
+		'neg-3x': '-4.5rem',
+		'neg-4x': '-6rem',
 		'normal': 'clamp(1.5rem, 2.35vw, 4.5rem)',
 		'extra': 'clamp(3rem, 3.5vw, 6rem)',
 		'neg-normal': 'clamp(-1rem, -2.35vw, -1.4rem)',
@@ -92,6 +93,36 @@ module.exports = {
 	  'scaling-6xl': ['clamp(4.8rem, 4.6vw, 7.2rem)', '1'],
 	  'scaling-7xl': ['clamp(6rem, 5.625vw, 9.6rem)', '1'],
 	  'scaling-8xl': ['clamp(7.2rem, 7.5vw, 12.8rem)', '1'],
-	},
+	},	
   },
+  safelist: [	  
+	  {
+		pattern: /(text|bg)-(white|black|transparent|red)/, //adjust colors to match list available in color def
+		variants: ['hover', 'focus'],
+	  },
+	  {
+		pattern: /(text|bg)-gray-(100|200|300|400|500|600|700|800|900)/, //adjust colors to match list available in color def
+		variants: ['hover', 'focus'],
+	  },
+	  {
+		pattern: /(p|m)(t|b|l|r)-(none|quarter|half|base|2x|3x|4x|normal|extra|neg-quarter|neg-half|neg-base|neg-2x|neg-3x|neg-4x|neg-normal|neg-extra)/, //adjust sizes to match list available in spacing def
+		variants: ['sm', 'md', 'lg', 'xl', '2xl'],
+	  },
+	  {
+		pattern: /text-(scaling-)?(xs|sm|base|lg|xl|2xl|3xl|4xl|5xl|6xl|7xl|8xl|left|center|right|justify)/, //adjust sizes to match list available in text size def and alignment settings
+		variants: ['sm', 'md', 'lg', 'xl', '2xl'],
+	  },
+	  {
+		pattern: /(not-)?italic/, 
+		variants: ['sm', 'md', 'lg', 'xl', '2xl'],
+	  },
+	  {
+		pattern: /tracking-(tighter|tight|normal|wide|wider|widest)/, 
+		variants: ['sm', 'md', 'lg', 'xl', '2xl'],
+	  },
+	  {
+		pattern: /(normal-case|capitalize|uppercase|lowercase)/, 
+		variants: ['sm', 'md', 'lg', 'xl', '2xl'],
+	  },
+  ],
 };

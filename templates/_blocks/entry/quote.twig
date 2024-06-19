@@ -60,12 +60,11 @@
 
 {# animation classes #}
 {% set animClass = '' %}
-{% if _globals.get('animSetting') and 'section' in entry.owner.type.handle %}
-	{% set animClass = _globals.get('animSetting') %}
+{% if animSetting and 'section' in entry.owner.type.handle %}
+	{% set animClass = animSetting %}
 {% endif %}
 
 {# Set color class #}
-{% set colorScheme = _globals.get('colorScheme') %}
 {% if entry.quoteColor|length %}
 	{% set colorClass = 'text-' ~ entry.quoteColor %}
 {% else %}

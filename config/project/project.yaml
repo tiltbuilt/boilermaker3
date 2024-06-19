@@ -1,4 +1,4 @@
-dateModified: 1718305219
+dateModified: 1718825592
 elementSources:
   craft\elements\Entry:
     -
@@ -196,8 +196,10 @@ meta:
     d7b08a46-def6-44b3-9d7d-4ef745756fca: 'Style Adjustment - Slide' # Style Adjustment - Slide
     d50bf5e2-cf37-49d5-99dc-0f5fe25e5121: Background # Background
     d85e2e7b-6380-4c46-8ebd-36ad0a2eee46: 'Tab Panel' # Tab Panel
+    d136f8d9-17af-4766-82b7-9c58403b6446: ui-svg-sprites # ui-svg-sprites
     d897b42d-3d26-4db5-b105-29c871b31ffb: 'Slide Content' # Slide Content
     d81788e7-2fa5-4804-876d-57de4924e46f: 'Style Adjustment - Icon' # Style Adjustment - Icon
+    dc77699b-4b92-46d2-bd7c-d70bc8319d04: font-awesome-all # font-awesome-all
     dd25301d-9012-41dd-aa43-19f023540545: 'Button Group Style Adjustment' # Button Group Style Adjustment
     ddb8108e-63a9-4567-80ba-7ab621baad89: 'Style Adjustment - Quote' # Style Adjustment - Quote
     de6881eb-f48b-4119-889c-95d3bf6692e5: 'Style Adjustment - Tab Set' # Style Adjustment - Tab Set
@@ -276,7 +278,7 @@ plugins:
     edition: standard
     enabled: true
     licenseKey: ILVR9UKTOZXCUXJHV4EXLPO2
-    schemaVersion: 3.4.5
+    schemaVersion: 3.4.6
   hyper:
     edition: standard
     enabled: true
@@ -287,6 +289,15 @@ plugins:
     enabled: true
     licenseKey: VD3VWGXDBO9AXH1TW54FHKP5
     schemaVersion: 1.2.3
+    settings:
+      enableCache: false
+      iconItemSize: 32
+      iconItemSizeLarge: 40
+      iconItemWrapperSize: 56
+      iconItemWrapperSizeLarge: 72
+      iconSetsPath: '@webroot/dist/svg/'
+      iconSetsUrl: '@web/dist/svg/'
+      redactorFieldHandle: icon
   imager-x:
     edition: pro
     enabled: true

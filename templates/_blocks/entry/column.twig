@@ -20,20 +20,26 @@
 {% if entry.customId is defined and entry.customId != '' %}
 	{% set blockId = entry.customId|replace({' ': '-'})|trim %}
 {% else %}
-	{% set blockId = 'section-' ~ entry.id %}
+	{% set blockId = 'column-' ~ entry.id %}
 {% endif %}
 
 {# Set block type handle as class name for styling #}
 {% set blockClass = entry.type.handle|kebab %}
 
+{# Get classes for element animation settings #}
+{# animation classes #}
+{% set animClass = '' %}
+{% if animSetting %}
+	{% set animClass = animSetting %}	
+{% else %}
+	{% set animClass = null %}		
+{% endif %}
+
+
 {# Set color classes #}
 {% set colorClasses = [] %}
 {% if entry.colorScheme != null %}
-	{% set colorScheme = entry.colorScheme.class %}
-	{% do _globals.set('colorSchemeFallBack', _globals.get('colorScheme')) %}
-	{% do _globals.set('colorScheme', colorScheme) %}
-{% else %}
-	{% set colorScheme = _globals.get('colorScheme') %}
+	{% set colorScheme = entry.colorScheme.class %}	
 {% endif %}
 {% set colorClasses = colorClasses|merge([colorScheme]) %}
 {% if entry.bgColor|length %}
@@ -66,12 +72,23 @@
 
 <div id="{{blockId}}" class="{{- blockClass -}} {{- gMacros.classesOut(adjustments, 'Margins', true) -}} {{- columnClassList|join(' ') }} {{ entry.customClasses }}" {{- gMacros.attributesOut(entry.customAttributes) -}}>	
 	<div class="inner column-inner {{- gMacros.classesOut(adjustments, 'Type') -}} {{- gMacros.classesOut(adjustments, 'Padding', true) -}}">
-		{{entry.elementContent|raw}}							
+		{% for chunk in entry.elementContent %}
+			{% if chunk.type == 'markup' %}
+				{% if animClass %}
+					{{chunk|raw|retconAttr(['body > p', 'body > ol', 'body > ul'], { 'class' : animClass }, false)}}
+				{% else %}
+					{{chunk|raw}}
+				{% endif %}
+			{% else %}
+				{{ chunk.entry.render({
+					'animSetting': animClass,
+					'colorScheme': colorScheme
+				}) }}
+			{% endif %}
+		{% endfor %}							
 	</div>
 	<div class="background">
 		{{ gMacros.buildElementBackground(adjustments, {'default': '100vw'}, null, null) }}
 	</div>		
 </div>
-{# reset color scheme global #}
-{% do _globals.set('colorScheme', _globals.get('colorSchemeFallBack')) %}
-	
+
