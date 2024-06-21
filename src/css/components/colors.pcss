@@ -1,0 +1,70 @@
+/* color scheme classes are applied to every element so inheritance issues are avoided background color overrides may be needed for scenarios where a background color class and colorscheme are applied together */
+
+.colormode-light {
+	
+	&.section-standard {
+		color: theme('colors.black');
+		background-color: theme('colors.white');
+	}
+	
+	&.accordion {
+		background-color: theme('colors.gray.300');
+		color: theme('colors.black');
+		
+		/* adjust these styles if you want the button to be a different color, etc. */
+		& > .accordion-header > .accordion-button {
+			
+			&:hover {
+				background-color: theme('colors.gray.400');
+				color: theme('colors.black');
+			}
+		}
+	}
+	
+}
+
+.colormode-dark {
+	
+	&.section-standard {
+		color: theme('colors.white');
+		background-color: theme('colors.black');
+	}
+	
+	&.accordion {
+		background-color: theme('colors.gray.700');
+		color: theme('colors.white');
+		
+		/* adjust these styles if you want the button to be a different color, etc. */
+		& > .accordion-header > .accordion-button {
+			
+			&:hover {
+				background-color: theme('colors.gray.600');
+				color: theme('colors.white');
+			}
+		}
+	}
+	
+}
+
+.colormode-red {
+	
+	&.section-standard {
+		color: theme('colors.white');
+		background-color: theme('colors.black');
+	}
+	
+	&.accordion {
+		background-color: theme('colors.red');
+		color: theme('colors.white');
+		
+		/* adjust these styles if you want the button to be a different color, etc. */
+		& > .accordion-header > .accordion-button {
+			
+			&:hover {
+				background-color: lighten(theme('colors.red'), 20%);
+				color: theme('colors.white');
+			}
+		}
+	}
+	
+}

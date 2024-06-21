@@ -4,7 +4,8 @@ module.exports = {
   plugins: [	
 	require('@tailwindcss/aspect-ratio'),
 	require('@tailwindcss/typography'),
-	require('@tailwindcss/forms'),	
+	require('@tailwindcss/forms'),
+	require('@tailwindcss/container-queries'),	
   ],
   content: [
 	'./templates/**/*.{html,twig}', './src/**/*.js',	

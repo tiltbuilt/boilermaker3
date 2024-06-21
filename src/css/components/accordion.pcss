@@ -12,6 +12,14 @@
 	margin-top: theme('spacing.normal');	 
  }
  
+ .accordion {
+	margin-top: theme('spacing.half');
+	
+	&:first-child {
+		margin-top: 0;
+	}
+ }
+ 
  .accordion-header {
 	padding: 0;
 	margin: 0;
@@ -19,19 +27,36 @@
  }
  
  .accordion-button {
-	display: flex;
-	padding-top: theme('spacing.3');
-	padding-bottom: theme('spacing.3');
-	padding-left: theme('spacing.normal');
-	padding-right: theme('spacing.normal');
+	display: flex;	
 	width: 100%;
 	justify-content: space-between;
+	align-content: center;
 	/* add classes below to style type etc. in button */
+	padding-top: theme('spacing.3');
+	padding-bottom: theme('spacing.3');
+	padding-left: theme('spacing.base');
+	padding-right: theme('spacing.base');
+	font-weight: bold;
+	text-transform: uppercase;
+	transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), background-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 	
  }
  
+ .accordion-icon {
+	transition: transform 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+ } 
+ 
  .accordion-content {
-	padding: theme('spacing.normal');
+	padding-left: theme('spacing.base');
+	padding-right: theme('spacing.base');
+	padding-top: theme('spacing.half');
+	padding-bottom: theme('spacing.normal');	
+ }
+ 
+ /* STYLING FOR ACCORDION ICON FOR DIFFERENT STATES - CHANGE BASED ON DESIGN */
+ 
+ .accordion-button[aria-expanded='true'] > .accordion-icon {
+	transform: rotate(90deg);
  }
 
  

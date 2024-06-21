@@ -54,7 +54,8 @@
 		{% if animClass %}
 			{% set accClassList = accClassList|merge([animClass]) %}
 		{% endif %}		
-		{% set colorClasses = [] %}
+		{% set colorClasses = [] %}		
+		
 		{# Set accordion id attribute value #}
 		{% if acc.customId is defined and acc.customId != '' %}
 			{% set accId = acc.customId|replace({' ': '-'})|trim %}
@@ -88,28 +89,42 @@
 			{% set accIcon = null %}
 		{% endif %}		
 		
-		{# sort out padding #}
+		{# sort out content styling #}
 		{% set accAdjustments = acc.accordionStyleAdjustments.eagerly().all() %}
-		{% set padListMaster = ['accordion-content'] %}		
+		{% set styleListMaster = ['accordion-content'] %}
+		{% set styleObj = {} %}		
 		{% for adj in accAdjustments %}
 			{% set devSize = adj.deviceSize %}
 			{% if devSize|length %}
 				{% set devSize = devSize ~ ':' %}	
 			{% endif %}		
-			{% if adj.pt|length %}
-				{% set padListMaster = padListMaster|merge([devSize ~ 'pt-' ~ adj.pt]) %}
-			{% endif %}
-			{% if adj.pb|length %}
-				{% set padListMaster = padListMaster|merge([devSize ~ 'pb-' ~ adj.pb]) %}
-			{% endif %}
-			{% if adj.pl|length %}
-				{% set padListMaster = padListMaster|merge([devSize ~ 'pl-' ~ adj.pl]) %}
-			{% endif %}
-			{% if adj.pr|length %}
-				{% set padListMaster = padListMaster|merge([devSize ~ 'pr-' ~ adj.pr]) %}
-			{% endif %}			
+			{# loop through the tabs in the accordion adjustments and add to the style object, accordion adjustments get priority, so set class name to key and value to compare against set adjustments so the set adjustments that don't have conflicts get added but not the ones with accordion overrides #}
+			{% set fLayout = adj.getFieldLayout() %}
+			{% for tabObj in fLayout.tabs %}
+				{% if tabObj.name != "Device Size" %}
+					{% if tabObj.name == "Padding" %}
+						{% for tabEl in tabObj.elements %}				
+							{% if tabEl.className is same as("craft\\fieldlayoutelements\\CustomField") %}
+								{% if adj.getFieldValue(tabEl.field.handle)|length %}
+									{% set styleHandle = devSize ~ tabEl.field.handle %}
+									{% set styleObj = styleObj|merge({(styleHandle) : devSize ~ tabEl.field.handle ~ '-' ~ adj.getFieldValue(tabEl.field.handle)}) %}
+								{% endif %}
+							{% endif %}				
+						{% endfor %}
+					{% else %}
+						{% for tabEl in tabObj.elements %}	
+							{% if tabEl.className is same as("craft\\fieldlayoutelements\\CustomField") %}
+								{% if adj.getFieldValue(tabEl.field.handle)|length %}
+									{% set styleHandle = devSize ~ tabEl.field.handle %}
+									{% set styleObj = styleObj|merge({(styleHandle) : devSize ~ adj.getFieldValue(tabEl.field.handle)}) %}
+								{% endif %}
+							{% endif %}
+						{% endfor %}
+					{% endif %}
+				{% endif %}
+			{% endfor %}					
 		{% endfor %}
-		{# sweep through padding adjustments from accordion set and if adjustment doesn't have an override already in the list from the accordion itself, then add it.#}
+		{# sweep through adjustments from accordion set and if adjustment doesn't have an override already in the list from the accordion itself, then add it.#}
 		{% for setAdj in adjustments %}			
 			{% set devSize = setAdj.deviceSize %}
 			{% if devSize|length %}
@@ -117,25 +132,35 @@
 			{% endif %}
 			{% set fLayout = setAdj.getFieldLayout() %}
 			{% for tabObj in fLayout.tabs %}
-				{% if tabObj.name == "Padding" %}
-					{% for tabEl in tabObj.elements %}				
-						{% if tabEl.className is same as("craft\\fieldlayoutelements\\CustomField") %}
-							{% if setAdj.getFieldValue(tabEl.field.handle)|length %}
-								{% set classItem = devSize ~ tabEl.field.handle %}
-								{% set writeIn = true %}
-								{% for padClass in padListMaster %}
-									{% if classItem in padClass %}
-										{% set writeIn = false %}
+				{% if tabObj.name != "Device Size" %}
+					{% if tabObj.name == "Padding" %}
+						{% for tabEl in tabObj.elements %}				
+							{% if tabEl.className is same as("craft\\fieldlayoutelements\\CustomField") %}
+								{% if setAdj.getFieldValue(tabEl.field.handle)|length %}
+									{% set styleHandle = devSize ~ tabEl.field.handle %}
+									{% if styleObj[styleHandle] is not defined %}
+										{% set styleObj = styleObj|merge({(styleHandle) : devSize ~ tabEl.field.handle ~ '-' ~ setAdj.getFieldValue(tabEl.field.handle)}) %}
 									{% endif %}
-								{% endfor %}
-								{% if writeIn %}
-									{% set padListMaster = padListMaster|merge([classItem ~ '-' ~ setAdj.getFieldValue(tabEl.field.handle)]) %}
-								{% endif %}								
+								{% endif %}
+							{% endif %}				
+						{% endfor %}
+					{% else %}
+						{% for tabEl in tabObj.elements %}
+							{% if tabEl.className is same as("craft\\fieldlayoutelements\\CustomField") %}						
+								{% if setAdj.getFieldValue(tabEl.field.handle)|length %}
+									{% set styleHandle = devSize ~ tabEl.field.handle %}
+									{% if styleObj[styleHandle] is not defined %}
+										{% set styleObj = styleObj|merge({(styleHandle) : devSize ~ setAdj.getFieldValue(tabEl.field.handle)}) %}
+									{% endif %}
+								{% endif %}						
 							{% endif %}
-						{% endif %}				
-					{% endfor %}
+						{% endfor %}
+					{% endif %}
 				{% endif %}
 			{% endfor %}
+		{% endfor %}
+		{% for key, value in styleObj %}
+			{% set styleListMaster = styleListMaster|merge([value]) %}
 		{% endfor %}
 			
 		<div id="{{accId}}" x-data="{
@@ -179,12 +204,20 @@
 			</{{setHeaderLevel}}>
 	
 			<div x-show="expanded" x-collapse.duration.500ms >
-				<div class="{{- padListMaster|join(' ') }} {{- gMacros.classesOut(adjustments, 'Type') -}}">					
-					{{acc.elementContent|raw}} 					
+				<div class="{{- styleListMaster|join(' ') }}">				
+					{% for chunk in acc.elementContent %}
+						{% if chunk.type == 'markup' %}
+							{{chunk|raw}}
+						{% else %}
+							{{ chunk.entry.render({
+								'animSetting': null,
+								'colorScheme': accColorScheme
+							}) }}
+						{% endif %}
+					{% endfor %} 					
 				</div>
 			</div>
-		</div>
-		
+		</div>		
 	{% endfor %}	
 </div>
 
