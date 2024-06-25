@@ -41,8 +41,8 @@ module.exports = {
 		'neg-4x': '-6rem',
 		'normal': 'clamp(1.5rem, 2.35vw, 4.5rem)',
 		'extra': 'clamp(3rem, 3.5vw, 6rem)',
-		'neg-normal': 'clamp(-1rem, -2.35vw, -1.4rem)',
-		'neg-extra': 'clamp(-3rem, -3.5vw, 6rem)',
+		'neg-normal': 'clamp(-4.5rem, -2.35vw, -1.5rem)',
+		'neg-extra': 'clamp(-6rem, -3.5vw, -3rem)',
 	  },
 	},
 	colors: {
@@ -125,5 +125,21 @@ module.exports = {
 		pattern: /(normal-case|capitalize|uppercase|lowercase)/, 
 		variants: ['sm', 'md', 'lg', 'xl', '2xl'],
 	  },
+	  {
+		pattern: /w-(full|1\/5|1\/4|1\/3|2\/5|1\/2|3\/5|2\/3|3\/4|4\/5)/, 
+		variants: ['sm', 'md', 'lg', 'xl', '2xl'],
+	  },
+	  {
+		pattern: /order-(first|last|1|2|3|4|5)/, 
+		variants: ['sm', 'md', 'lg', 'xl', '2xl'],
+	  },
+	  {
+		pattern: /(items|self)-(stretch|start|center|end)/, 
+		variants: ['sm', 'md', 'lg', 'xl', '2xl'],
+	  },
+	  {
+		pattern: /justify-(start|center|end|between|evenly)/, 
+		variants: ['sm', 'md', 'lg', 'xl', '2xl'],
+	  },	  
   ],
 };

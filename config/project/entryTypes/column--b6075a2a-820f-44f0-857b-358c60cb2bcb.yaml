@@ -99,16 +99,16 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: 487ec441-2218-43e8-8a96-652a0649e437 # Color Picker
+            fieldUid: d12df536-921c-4ee2-b0bc-84a97d7c9e95 # Column Background Color
             handle: bgColor
             includeInCards: false
             instructions: null
-            label: 'Background Color'
+            label: null
             providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 1547f0ae-6d71-497c-a8b5-5dc41e4b57f8
+            uid: c2a2c363-478b-4d0e-8f04-3e8c1d6dccb3
             userCondition: null
             warning: null
             width: 100

@@ -86,7 +86,23 @@
   >
   
 	{% set tabs = entry.tabs.eagerly().all() %}
-	{% for tab in tabs %} 
+	{% for tab in tabs %}
+	  {# set colors for accordion #}
+	  {% set colorClasses = [] %}
+	  {% if tab.colorScheme != null %}
+		  {% set tabColorScheme = tab.colorScheme.class %}			
+	  {% else %}
+		  {% set tabColorScheme = colorScheme %}
+	  {% endif %}
+	  {% set colorClasses = colorClasses|merge([tabColorScheme]) %}
+	  {% if tab.bgColor|length %}
+		  {% set colorClasses = colorClasses|merge(['bg-' ~ tab.bgColor]) %}
+	  {% else %}
+		  {% if entry.bgColor|length %}
+			  {% set colorClasses = colorClasses|merge(['bg-' ~ entry.bgColor]) %}
+		  {% endif %}
+	  {% endif %}
+	  
 	  <!-- Tab -->
 	  <li>
 		<button
@@ -98,7 +114,7 @@
 		  :tabindex="isSelected($el.id) ? 0 : -1"
 		  :aria-selected="isSelected($el.id)"
 		  :class="isSelected($el.id) ? 'tab-active' "
-		  class="inline-flex "
+		  class="tab-set-btn {{ colorClasses|join(' ') }}"
 		  role="tab"
 		>
 		{% if tab.icon|length %}
@@ -112,7 +128,7 @@
 			{% endif %}
 			</div>
 		{% endif %}
-		{{tab.title}}</button>
+		<span>{{tab.title}}</span></button>
 	  </li>
 	{% endfor %}      
   </ul> 
@@ -226,7 +242,7 @@
 		x-show="isSelected($id('tab', whichChild($el, $el.parentElement)))"
 		:aria-labelledby="$id('tab', whichChild($el, $el.parentElement))"
 		role="tabpanel"
-		class=""
+		class="{{- tabClassList|join(' ') }}" {{- gMacros.attributesOut(tab.customAttributes) -}}
 	  >     
 		{% for chunk in tab.elementContent %}
 			{% if chunk.type == 'markup' %}

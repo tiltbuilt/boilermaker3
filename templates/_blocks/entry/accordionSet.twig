@@ -178,7 +178,7 @@
 			set expanded(value) {
 				this.active = value ? this.id : null
 			},
-		}" role="region" class="{{- accClassList|join(' ') }} {{- gMacros.classesOut(adjustments, 'Display') -}}">
+		}" role="region" class="{{- accClassList|join(' ') }} {{- gMacros.classesOut(adjustments, 'Display') -}}" {{- gMacros.attributesOut(acc.customAttributes) -}}>
 			<{{setHeaderLevel}} class="accordion-header">
 				<button
 					x-on:click="expanded = !expanded"
