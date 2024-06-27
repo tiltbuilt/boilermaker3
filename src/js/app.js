@@ -15,7 +15,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 /* SCRIPTS HERE */
 
-console.log('dude?');
 
 /**
  * Alpine JS
@@ -25,6 +24,19 @@ console.log('dude?');
 import Alpine from 'alpinejs';
 import collapse from '@alpinejs/collapse';
 import focus from '@alpinejs/focus';
+
+/* global modal setup */
+
+/*
+Alpine.store('pageModal', {
+    on: false,
+ 
+    toggle() {
+        this.on = ! this.on
+    }
+})
+*/
+
 if (typeof window.Alpine === "undefined") {
   Alpine.plugin(collapse);
   Alpine.plugin(focus);

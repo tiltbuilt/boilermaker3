@@ -43,6 +43,34 @@
 		}
 	}
 	
+	/* buttons */
+	
+	&.btn-standard {
+		background-color: theme('colors.gray.500');
+		color: theme('colors.white');
+		
+		&:hover {
+			background-color: theme('colors.gray.700');
+			color: theme('colors.white');
+		}
+	}
+	
+	&.btn-text {
+		color: theme('colors.gray.700');
+		
+		&:hover {
+			color: theme('colors.gray.500');
+		}
+	}
+	
+	&.btn-text-arrow {
+		color: theme('colors.gray.700');
+		
+		&:hover {
+			color: theme('colors.gray.500');
+		}
+	}
+	
 }
 
 .colormode-dark {
@@ -81,8 +109,36 @@
 			background-color: theme('colors.gray.400');
 		}
 		
-		&&[aria-selected=true] {
+		&[aria-selected=true] {
 			background-color: theme('colors.gray.700');
+			color: theme('colors.white');
+		}
+	}
+	
+	/* buttons */
+	
+	&.btn-standard {
+		background-color: theme('colors.gray.700');
+		color: theme('colors.white');
+		
+		&:hover {
+			background-color: theme('colors.gray.400');
+			color: theme('colors.white');
+		}
+	}
+	
+	&.btn-text {
+		color: theme('colors.gray.400');
+		
+		&:hover {
+			color: theme('colors.white');
+		}
+	}
+	
+	&.btn-text-arrow {
+		color: theme('colors.gray.400');
+		
+		&:hover {
 			color: theme('colors.white');
 		}
 	}
@@ -125,10 +181,48 @@
 			background-color: theme('colors.gray.400');
 		}
 		
-		&&[aria-selected=true] {
+		&[aria-selected=true] {
 			background-color: theme('colors.red');
 			color: theme('colors.white');
 		}
 	}
 	
+	/* buttons */
+	
+	&.btn-standard {
+		background-color: theme('colors.red');
+		color: theme('colors.white');
+		
+		&:hover {
+			background-color: lighten(theme('colors.red'), 20%);
+			color: theme('colors.white');
+		}
+	}
+	
+	&.btn-text {
+		color: theme('colors.red');
+		
+		&:hover {
+			color: lighten(theme('colors.red'), 20%);
+		}
+	}
+	
+	&.btn-text-arrow {
+		color: theme('colors.red');
+		
+		&:hover {
+			color: lighten(theme('colors.red'), 20%);
+		}
+	}
+	
+}
+
+.btn-standard.btn-red {
+	background-color: theme('colors.red');
+	color: theme('colors.white');
+	
+	&:hover {
+		background-color: lighten(theme('colors.red'), 20%);
+		color: theme('colors.white');
+	}
 }

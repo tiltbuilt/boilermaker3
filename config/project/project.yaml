@@ -1,4 +1,4 @@
-dateModified: 1719349099
+dateModified: 1719443341
 elementSources:
   craft\elements\Entry:
     -
@@ -18,7 +18,15 @@ elementSources:
       heading: 'Page Level Content'
       type: heading
     -
-      key: singles
+      defaultSort:
+        - title
+        - asc
+      disabled: false
+      key: 'single:b696e4a1-c7cf-4e07-a0be-b9f4f18a2f53' # Home
+      tableAttributes:
+        - postDate
+        - expiryDate
+        - link
       type: native
     -
       key: 'section:589d7e58-f378-455e-b073-055e9221964b' # Pages
@@ -32,6 +40,9 @@ elementSources:
     -
       key: 'section:558fedab-c14e-4f41-a438-ba8c394113a5' # Notification Bar Alerts
       type: native
+    -
+      heading: ''
+      type: heading
 email:
   fromEmail: brian@tiltthis.com
   fromName: 'Boilermaker 3'
@@ -169,6 +180,7 @@ meta:
     ad1fd6cd-1d72-49dd-82fc-6a604b11a71c: 'Icon Content Block' # Icon Content Block
     ad2e8ad9-d9ae-4fee-a8f8-de0e8680707c: Quote # Quote
     adca13f3-4ae5-49c5-83c4-cab3dd9f5ece: 'Button Size' # Button Size
+    aeeead9c-f591-4d95-a990-f8bea54fb0ef: 'Heading Style' # Heading Style
     b1dd9550-b7de-4c8d-ac15-30a80aef59ff: 'Text Case' # Text Case
     b1e1aad8-a87c-4914-9445-bbbbb92076ee: Heading # Heading
     b60b76cf-1ca2-42b6-9ba2-6ad3de0f0e4f: 'Row Layout' # Row Layout
@@ -206,6 +218,7 @@ meta:
     de6881eb-f48b-4119-889c-95d3bf6692e5: 'Style Adjustment - Tab Set' # Style Adjustment - Tab Set
     e2f8e7ee-d666-4bd1-bfe9-ece40a043b3e: Repeater # Repeater
     e3f9e59c-e941-404e-8bc8-b4c57ff28d5c: 'YesNo - Yes' # YesNo - Yes
+    e5bff211-8719-442c-8ca7-caf236c14273: 'Subhead Style' # Subhead Style
     e5d8e3b7-10f0-430f-af2f-f9acf11b2e77: 'Page Header Color Scheme' # Page Header Color Scheme
     e6aadd12-c632-4735-b22d-b5a758ab5003: 'Boilermaker 3' # Boilermaker 3
     e8d249f8-2c18-4b51-b311-baabbd94f999: 'Style Adjustment - Image/Video' # Style Adjustment - Image/Video

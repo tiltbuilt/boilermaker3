@@ -29,14 +29,15 @@
 {# Get classes for element animation settings #}
 {# animation classes #}
 {% set animClass = '' %}
-{% if _globals.get('animSetting') and 'section' in entry.owner.type.handle %}
-	{% set animClass = _globals.get('animSetting') %}
-	{% set btnSetClassList = btnSetClassList|merge([animClass]) %}		
+{% if animSetting and 'section' in entry.owner.type.handle %}
+	{% set animClass = animSetting %}
+	{% set btnSetClassList = btnSetClassList|merge([animClass]) %}
+{% else %}
+	{% set animClass = null %}		
 {% endif %}
 
 {# Set color class #}
-{% set colorScheme = _globals.get('colorScheme') %}
-{% if entry.btnColor|length %}
+{% if entry.btnColor.value|length %}
 	{% set colorClass = 'btn-' ~ entry.btnColor %}
 {% else %}
 	{% set colorClass = colorScheme %}

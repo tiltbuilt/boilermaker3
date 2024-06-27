@@ -98,7 +98,7 @@ module.exports = {
   },
   safelist: [	  
 	  {
-		pattern: /(text|bg)-(white|black|transparent|red)/, //adjust colors to match list available in color def
+		pattern: /(text|bg|btn)-(white|black|transparent|red)/, //adjust colors to match list available in color def
 		variants: ['hover', 'focus'],
 	  },
 	  {
@@ -139,6 +139,10 @@ module.exports = {
 	  },
 	  {
 		pattern: /justify-(start|center|end|between|evenly)/, 
+		variants: ['sm', 'md', 'lg', 'xl', '2xl'],
+	  },
+	  {
+		pattern: /btn-(standard|text|text-arrow|sm|md|lg)/, 
 		variants: ['sm', 'md', 'lg', 'xl', '2xl'],
 	  },	  
   ],

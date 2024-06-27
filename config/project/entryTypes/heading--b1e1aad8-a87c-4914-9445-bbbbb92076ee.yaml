@@ -87,6 +87,53 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
+            heading: 'Type Style'
+            type: craft\fieldlayoutelements\Heading
+            uid: 0516af06-0a83-4846-890e-d08beb3e72fa
+            userCondition: null
+          -
+            elementCondition: null
+            fieldUid: aeeead9c-f591-4d95-a990-f8bea54fb0ef # Heading Style
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e554bb46-5847-4596-ad6e-af34b33fd73c
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition:
+              class: craft\elements\conditions\entries\EntryCondition
+              conditionRules:
+                -
+                  class: craft\fields\conditions\TextFieldConditionRule
+                  fieldUid: 0f72b724-e0a8-4044-a3aa-12255ade6ea1 # Basic Text with Search
+                  layoutElementUid: f1d6104a-7887-4f72-96a0-5e15a7d7852f
+                  operator: notempty
+                  uid: 75f97ee2-587b-4230-b172-a7345ea47514
+                  value: ''
+              elementType: craft\elements\Entry
+              fieldContext: global
+            fieldUid: e5bff211-8719-442c-8ca7-caf236c14273 # Subhead Style
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 34775be6-9c0e-4d7c-964f-2f86afd255f8
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
             heading: Color
             type: craft\fieldlayoutelements\Heading
             uid: 9df28174-ab49-4f7a-8b90-c7d9063797fb

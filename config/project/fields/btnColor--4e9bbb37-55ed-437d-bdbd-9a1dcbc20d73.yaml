@@ -19,6 +19,48 @@ settings:
         -
           - default
           - '1'
+    -
+      __assoc__:
+        -
+          - label
+          - White
+        -
+          - value
+          - btn-white
+        -
+          - cssColour
+          - FFF
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Black
+        -
+          - value
+          - btn-black
+        -
+          - cssColour
+          - '000'
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Red
+        -
+          - value
+          - btn-red
+        -
+          - cssColour
+          - FF0000
+        -
+          - default
+          - ''
   placeholderText: 'Select an option'
 translationKeyFormat: null
 translationMethod: none
