@@ -154,10 +154,10 @@
 	</div>
 	
 	{% block modalContent %}				
-		{#}
+		
 		<!-- Modal -->
 		<div
-			x-show="open"
+			x-show="modalopen"
 			style="display: none"
 			x-on:keydown.escape.prevent.stop="open = false"
 			role="dialog"

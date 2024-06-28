@@ -29,7 +29,11 @@
 			{% endblock headContent %}
 			</head>
 
-			<body id="{{ block('pageId') }}" {% if block('bodyAttr') is defined %}{{block('bodyAttr')}}{% endif %}>					
+			<body 
+				id="{{ block('pageId') }}" 
+				{% if block('bodyAttr') is defined %}{{block('bodyAttr')}}{% endif %}
+				x-data="{ modalopen: false }"
+			>					
 				{% block bodyContent %}
 					{# -- Page content that should be included in the <body> -- #}
 					<!--[if lte IE 10]>
