@@ -1,0 +1,38 @@
+{#
+/**
+ * Tilt Boilermaker - Pages entry template
+ * -----
+ * Loads the appropriate page partial or the default
+ * 
+ * @author    TILT, LLC <support@tiltbuilt.com>
+ * @copyright Copyright (c) 2019, TILT, LLC
+ * @link      https://tiltbuilt.com
+ */
+#}
+
+
+{# Load in global macros for use across all Twig templates #}
+{% import '_macros/globalMacros' as gMacros %}
+
+{% set entry = craft.entries().id(craft.app.request.getQueryParam('entryid')).one() %}
+
+{% set pageContent = entry.pageBuilder.eagerly().all() %}
+
+{# -- Layout template for HTML pages -- #}
+{% extends "_layouts/genericPageLayout.twig" %}
+
+{% block pageHeader %}
+   {% if entry.showPageHeader %}	
+	  {% include [
+		 '_partials/pageHeader'           
+	   ] %}       
+   {% endif %}	 
+{% endblock %}
+
+{% block pageContent %}		
+	
+	{% for block in pageContent %}
+		{{block.render()}}
+	{% endfor %}
+	
+{% endblock %}

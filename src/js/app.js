@@ -24,22 +24,12 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Alpine from 'alpinejs';
 import collapse from '@alpinejs/collapse';
 import focus from '@alpinejs/focus';
-
-/* global modal setup */
-
-/*
-Alpine.store('pageModal', {
-    on: false,
- 
-    toggle() {
-        this.on = ! this.on
-    }
-})
-*/
+import persist from '@alpinejs/persist';
 
 if (typeof window.Alpine === "undefined") {
   Alpine.plugin(collapse);
   Alpine.plugin(focus);
+  Alpine.plugin(persist);
   window.Alpine = Alpine;  
   Alpine.start();
 }

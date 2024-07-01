@@ -30,75 +30,7 @@
 {# -- Any CSS that should be included before </head> -- #}
 {% block headCss %}
 		
-	{# LOADER STYLES INLINE #}
-		
-		<style>
-			#loader {
-			  display: none;
-			  flex-direction: row;
-			  width: 100vw;
-			  height: 100vh;
-			  position: fixed;
-			  background-color: #FFF;
-			  top: 0px;
-			  left: 0px;
-			  z-index: 9999999;
-			  box-sizing: border-box;		  
-		  }
-		  
-		  .pageloaded #loader {
-			  display: none;
-			  width: 0px;
-			  height: 0px;
-			  z-index: -9999;
-			  overflow: hidden;
-			  left: -10px;
-			  top: -10px;
-		  }
-		  /*
-		  .loader-inner {
-			  width: 120px;
-			  height: 120px;
-			  position: fixed;
-			  top: 50%;
-			  left: 50%;
-			  transform: translate(-50%, -50%);
-			  box-sizing: border-box;
-			  
-		  }
-		  
-		  .loader-circle {
-			  border: 8px solid #EDF2F7; 
-			  border-top: 8px solid #a5ce3a; 
-			  border-radius: 50%;
-			  width: 120px;
-			  height: 120px;
-			  animation: spin 1.5s linear infinite;
-			  position: absolute;
-			  top: 0px;
-			  left: 0px;
-			  box-sizing: border-box;		
-		  }
-		  
-		  .loader-icon {
-			  display: block;
-			  position: absolute;
-			  z-index: 10;
-			  width: 60px;
-			  height: auto;
-			  left: 50%;
-			  top: 50%;
-			  transform: translate(-50%, -50%);
-			  box-sizing: border-box;
-		  }
-		  
-		  @keyframes spin {
-			0% { transform: rotate(0deg); }
-			100% { transform: rotate(360deg); }
-		  }
-		  */
-		  
-		</style>
+	
 {% endblock headCss %}
 
 {# -- Page body -- #}
@@ -108,22 +40,7 @@
 {% block bodyAttr %}{% endblock %}
 
 {% block bodyHtml %}
-	{{ parent() }}
-	{# Break the chain to disable the loader entirely #}
-	{% if 1==1==1 %}
-	  {# Break the chain to disable the loader in Live Preview only #}
-	  {% if 1==1==1 or not craft.app.request.isPreview %}
-		{# Page loader element #}
-		<div id="loader">
-		  <!--
-		  <div class="loader-inner">
-			  <img src="/dist/img/loader-icon.svg" alt="Loading" class="loader-icon">
-			  <div class="loader-circle"></div>
-		  </div>
-		  -->		
-		</div>
-	  {% endif %}
-	{% endif %}
+	
 		
 	<div id="page-wrapper">
 		<div id="login-status-bar-wrapper"></div>
@@ -155,69 +72,69 @@
 	
 	{% block modalContent %}				
 		
-		<!-- Modal -->
+		<!-- Modal -->			
+			
 		<div
-			x-show="modalopen"
+			x-show="modalOpen"
 			style="display: none"
-			x-on:keydown.escape.prevent.stop="open = false"
+			x-on:keydown.escape.prevent.stop="modalOpen = false"
 			role="dialog"
 			aria-modal="true"
 			x-id="['modal-title']"
 			:aria-labelledby="$id('modal-title')"
-			class="fixed inset-0 z-10 overflow-y-auto"
+			class="modal-wrapper-outer"
 		>
 			<!-- Overlay -->
-			<div x-show="open" x-transition.opacity class="fixed inset-0 bg-black bg-opacity-50"></div>
+			<div x-show="modalOpen" x-transition.opacity class="modal-overlay"></div>
+			
+			<!-- close button -->
+			<button id="btn-modal-close" class="modal-close" type="button" x-show="modalOpen" x-on:click="modalOpen = false; $refs[focusEl].focus();">			  
+				<i class="fa-solid fa-xmark"></i>
+			</button>
 		
 			<!-- Panel -->
 			<div
-				x-show="open" x-transition
-				x-on:click="open = false"
-				class="relative flex min-h-screen items-center justify-center p-4"
+				x-show="modalOpen" x-transition
+				x-on:click="modalOpen = false"
+				class="modal-wrapper-inner"
 			>
+				
 				<div
 					x-on:click.stop
-					x-trap.noscroll.inert="open"
-					class="relative w-full max-w-2xl overflow-y-auto rounded-xl bg-white p-12 shadow-lg"
+					x-trap.noscroll.inert="modalOpen"
+					class="modal-window"
 				>
 					<!-- Title -->
-					<h2 class="text-3xl font-bold" :id="$id('modal-title')">Confirm</h2>
+					<h2 class="hidden" :id="$id('modal-title')" x-text="modalTitle"></h2>
 		
-					<!-- Content -->
-					<p class="mt-2 text-gray-600">Are you sure you want to learn how to create an awesome modal?</p>
-		
-					<!-- Buttons -->
-					<div class="mt-8 flex space-x-2">
-						<button type="button" x-on:click="open = false" class="rounded-md border border-gray-200 bg-white px-5 py-2.5">
-							Confirm
-						</button>
-		
-						<button type="button" x-on:click="open = false" class="rounded-md border border-gray-200 bg-white px-5 py-2.5">
-							Cancel
-						</button>
-					</div>
+					<div
+					  x-show="showLoading"
+					  x-transition:leave="transition ease-out duration-500"
+					  x-transition:leave-start="opacity-100"
+					  x-transition:leave-end="opacity-0"
+					  class="absolute h-full w-full inset-0 z-20 flex flex-col justify-center items-center text-gray-600 bg-white"
+					  {# class="absolute h-full w-full inset-0 z-20 flex flex-col justify-center items-center text-gray-100  bg-black" #}
+					  >
+						<svg version="1.1" id="L9" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+						  viewBox="0 0 100 100" enable-background="new 0 0 0 0" xml:space="preserve" class="w-16 h-16 fill-current">
+							<path d="M73,50c0-12.7-10.3-23-23-23S27,37.3,27,50 M30.9,50c0-10.5,8.5-19.1,19.1-19.1S69.1,39.5,69.1,50">
+							  <animateTransform
+								 attributeName="transform"
+								 attributeType="XML"
+								 type="rotate"
+								 dur="1s"
+								 from="0 50 50"
+								 to="360 50 50"
+								 repeatCount="indefinite" />
+						  </path>
+						</svg>
+						Loading&hellip;
+					  </div>
+					<div x-html="modalHtml"></div>
 				</div>
 			</div>
-		</div>
+		</div>			
 		
-		
-		
-		
-		{#
-		<div id="modal-wrapper" class="closed">       
-			<div id="modal" class="closed" role="dialog" aria-labelledby="modal-title" aria-describedby="modal-description" aria-hidden="true">
-				<button id="btn-modal-close" class="btn-modal-close">
-					<svg><use xlink:href="#icon-close"></use></svg>
-				</button>
-				<div id="modal-content">
-					<div class="modal-spinner">
-						<img src="/dist/img/ajax-loader-gray-300.gif" alt="Loading" />
-					</div>
-				</div>
-			</div>
-			<div id="modal-overlay"></div>	
-		</div>
-		#}	
 	{% endblock %}	
 			
 {% endblock bodyHtml %}

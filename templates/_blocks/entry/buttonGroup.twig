@@ -13,6 +13,15 @@
 {# Load in global macros for use across all Twig templates #}
 {% import '_macros/globalMacros' as gMacros %}
 
+{# Non-modal button code macro #}
+{% macro linkCode (button, btnClasses) %}
+	<a {% if button.customId|length %}id="{{button.customId}}"{% endif %} href="{{ button.url }}" {{- button.target|length ? ' target="_blank"' : '' }} class="{{- btnClasses|join(' ') }} {{ button.customClasses }}" {% if button.ariaLabel|length %}aria-label="{{button.ariaLabel}}"{% endif %}  {{- gMacros.attributesOut(button.customAttributes) -}}>
+		<span>{{ (button.text|length) ? button.text : 'Learn More' }}</span>
+	</a>
+{% endmacro linkCode %}
+
+
+
 {# Create array for classes to pass to macros for set #}
 {% set btnSetClassList = [] %}
 
@@ -84,14 +93,30 @@
 		{% if button.getLinkType().label == 'Modal' %}
 			{# modal #}
 			{% set modalUrl = '/resources/entrymodal?entryid=' ~ button.linkValue %}
-			<button {% if button.customId|length %}id="{{button.customId}}"{% endif %} type="button" class="{{- btnClasses|join(' ') }} {{ entry.customClasses }}" {% if button.ariaLabel|length %}aria-label="{{button.ariaLabel}}"{% endif %} data-modal-target="{{ modalUrl}}"  {{- gMacros.attributesOut(button.customAttributes) -}}>
-				<span>{{ (button.text|length) ? button.text : 'Learn More' }}</span>
-			</button>
+			{% set modalEntry = craft.entries().id(button.linkValue).one() %}
+			{% if not craft.app.request.isAjax() %}
+				<button {% if button.customId|length %}id="{{button.customId}}" x-ref="{{button.customId}}"{% else %}id="{{blockId}}-button{{loop.index}}" x-ref="{{blockId}}-button{{loop.index}}"{% endif %} type="button" class="{{- btnClasses|join(' ') }} {{ button.customClasses }}" {% if button.ariaLabel|length %}aria-label="{{button.ariaLabel}}"{% endif %} {{- gMacros.attributesOut(button.customAttributes) -}}
+			    x-on:click="modalHtml='loading...'; showLoading = true; modalOpen = !modalOpen; modalTitle='{{modalEntry.title}}'; focusEl='{% if button.customId|length %}{{button.customId}}{% else %}{{blockId}}-button{{loop.index}}{% endif %}';
+			    fetch('{{ modalUrl }}', {
+			    	method: 'GET',
+					headers: {
+						'X-Requested-With': 'XMLHttpRequest',
+					},
+				})
+				.then(response => response.text())
+				.then(text => {
+					modalHtml = text
+					showLoading = false;			   
+				});"			 
+				>
+					<span>{{ (button.text|length) ? button.text : 'Learn More' }}</span>
+				</button>
+			{% elseif modalEntry.section.handle == "pages" %}
+				{{- _self.linkCode(button, btnClasses) -}}
+			{% endif %}			
 		{% else %}
 			{# everything else #}
-			<a {% if button.customId|length %}id="{{button.customId}}"{% endif %} href="{{ button.url }}" {{- button.target|length ? ' target="_blank"' : '' }} class="{{- btnClasses|join(' ') }} {{ entry.customClasses }}" {% if button.ariaLabel|length %}aria-label="{{button.ariaLabel}}"{% endif %}  {{- gMacros.attributesOut(button.customAttributes) -}}>
-				<span>{{ (button.text|length) ? button.text : 'Learn More' }}</span>
-			</a>
+			{{- _self.linkCode(button, btnClasses) -}}
 		{% endif %}			
 	{% endfor %}				
 </div>
