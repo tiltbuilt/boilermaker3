@@ -1,0 +1,77 @@
+{#
+/**
+ * Tilt Boilermaker - Video Template
+ * -----
+ * Loads the appropriate page partial or the default
+ * 
+ * @author    TILT, LLC <support@tiltbuilt.com>
+ * @copyright Copyright (c) 2019, TILT, LLC
+ * @link      https://tiltbuilt.com
+ */
+#}
+
+{# Load in global macros for use across all Twig templates #}
+{% import '_macros/globalMacros' as gMacros %}
+
+{# Create array for classes to pass to macros for section #}
+{% set videoClassList = [] %}
+
+{# Set block id attribute value #}
+{% if entry.customId is defined and entry.customId != '' %}
+	{% set blockId = entry.customId|replace({' ': '-'})|trim %}
+{% else %}
+	{% set blockId = 'video-' ~ entry.id %}
+{% endif %}
+
+{# Set block type handle as class name for styling #}
+{% set blockClass = entry.type.handle|kebab %}
+
+{# Get classes for element animation settings #}
+{# animation classes #}
+{% set animClass = '' %}
+{% if animSetting and 'section' in entry.owner.type.handle %}
+	{% set animClass = animSetting %}
+	{% set wrapperClassList = wrapperClassList|merge([animClass]) %}
+{% else %}
+	{% set animClass = null %}		
+{% endif %}
+
+{# Set color classes #}
+{% set colorClasses = [] %}
+{% set colorClasses = colorClasses|merge([colorScheme]) %}
+{% if entry.captionColor|length %}
+	{% set colorClasses = colorClasses|merge(['text-' ~ entry.captionColor]) %}
+{% endif %}
+{% if entry.bgColor|length %}
+	{% set colorClasses = colorClasses|merge(['bg-' ~ entry.bgColor]) %}
+{% endif %}
+{% set videoClassList = wrapperClassList|merge(colorClasses) %}
+
+{# Retrieve styling adjustments #}
+{% set adjustments = entry.imageVideoStyleAdjustments.eagerly().all() %}
+
+{# set outer tag depending on if element has caption or not #}
+{% if entry.videoCaption != '' %}
+	{% set outerTag = 'figure' %}
+{% else %}
+	{% set outerTag = 'div' %}
+{% endif %}
+
+{# size classes #}
+{% set sizeClasses = [] %}
+{% set aspectClasses = [] %}
+
+
+{# OUTPUT #}
+{% if embeddedVideo and embeddedVideo.isSafe %}
+	<{{outerTag}} id="{{blockId}}" class="{{- blockClass -}} {{- gMacros.classesOut(adjustments, 'Display') -}} {{- gMacros.classesOut(adjustments, 'Margins', true) -}} {{- videoClassList|join(' ') }} {{ entry.customClasses }}" {{- gMacros.attributesOut(entry.customAttributes) -}}>
+		<div class="video-embed-wrapper" style="">
+			<div class="video-player">						
+				{{ embeddedVideo.getIframeCode(
+					['rel=0', 'modestbranding=1'],
+					['loading=lazy', 'allowfullscreen']
+				) }}
+			</div>
+		</div>
+	</{{outerTag}} >
+{% endif %}

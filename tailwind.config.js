@@ -144,6 +144,14 @@ module.exports = {
 	  {
 		pattern: /btn-(standard|text|text-arrow|sm|md|lg)/, 
 		variants: ['sm', 'md', 'lg', 'xl', '2xl'],
+	  },
+	  {
+		pattern: /aspect-(auto|square|video|4\/3|3\/2|3\/1|2\/1|4\/1)/, 
+		variants: ['sm', 'md', 'lg', 'xl', '2xl'],
+	  },
+	  {
+		pattern: /w-(full|1\/5|1\/4|1\/3|2\/5|1\/2|3\/5|2\/3|3\/4)/, 
+		variants: ['sm', 'md', 'lg', 'xl', '2xl'],
 	  },	  
   ],
 };
