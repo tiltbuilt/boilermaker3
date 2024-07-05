@@ -50,7 +50,7 @@ settings:
           - None
         -
           - value
-          - '0'
+          - none
         -
           - default
           - ''

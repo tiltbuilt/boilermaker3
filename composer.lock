@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "833dc2c3dc40df1db4f90bcb9d1ab2d7",
+    "content-hash": "6256df4f774d7b69a43c3d859794d7ae",
     "packages": [
         {
             "name": "amphp/amp",
@@ -495,11 +495,11 @@
         },
         {
             "name": "amphp/pipeline",
-            "version": "v1.2.0",
+            "version": "v1.2.1",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/amphp/pipeline/zipball/f1c2ce35d27ae86ead018adb803eccca7421dd9b",
-                "reference": "f1c2ce35d27ae86ead018adb803eccca7421dd9b",
+                "url": "https://api.github.com/repos/amphp/pipeline/zipball/66c095673aa5b6e689e63b52d19e577459129ab3",
+                "reference": "66c095673aa5b6e689e63b52d19e577459129ab3",
                 "shasum": ""
             },
             "require": {
@@ -536,7 +536,7 @@
                 "iterator",
                 "non-blocking"
             ],
-            "time": "2024-03-10T14:48:16+00:00"
+            "time": "2024-07-04T00:56:47+00:00"
         },
         {
             "name": "amphp/process",
@@ -3222,11 +3222,6 @@
         {
             "name": "illuminate/collections",
             "version": "v10.48.15",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/illuminate/collections.git",
-                "reference": "37c863cffb345869dd134eff8e646bc82a19cc96"
-            },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/illuminate/collections/zipball/37c863cffb345869dd134eff8e646bc82a19cc96",
@@ -3256,7 +3251,6 @@
                     "Illuminate\\Support\\": ""
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -3268,20 +3262,11 @@
             ],
             "description": "The Illuminate Collections package.",
             "homepage": "https://laravel.com",
-            "support": {
-                "issues": "https://github.com/laravel/framework/issues",
-                "source": "https://github.com/laravel/framework"
-            },
             "time": "2024-06-19T14:25:05+00:00"
         },
         {
             "name": "illuminate/conditionable",
             "version": "v10.48.15",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/illuminate/conditionable.git",
-                "reference": "d0958e4741fc9d6f516a552060fd1b829a85e009"
-            },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/illuminate/conditionable/zipball/d0958e4741fc9d6f516a552060fd1b829a85e009",
@@ -3302,7 +3287,6 @@
                     "Illuminate\\Support\\": ""
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -3314,20 +3298,11 @@
             ],
             "description": "The Illuminate Conditionable package.",
             "homepage": "https://laravel.com",
-            "support": {
-                "issues": "https://github.com/laravel/framework/issues",
-                "source": "https://github.com/laravel/framework"
-            },
             "time": "2023-02-03T08:06:17+00:00"
         },
         {
             "name": "illuminate/contracts",
             "version": "v10.48.15",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/illuminate/contracts.git",
-                "reference": "8d7152c4a1f5d9cf7da3e8b71f23e4556f6138ac"
-            },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/illuminate/contracts/zipball/8d7152c4a1f5d9cf7da3e8b71f23e4556f6138ac",
@@ -3350,7 +3325,6 @@
                     "Illuminate\\Contracts\\": ""
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -3362,20 +3336,11 @@
             ],
             "description": "The Illuminate Contracts package.",
             "homepage": "https://laravel.com",
-            "support": {
-                "issues": "https://github.com/laravel/framework/issues",
-                "source": "https://github.com/laravel/framework"
-            },
             "time": "2024-01-15T18:52:32+00:00"
         },
         {
             "name": "illuminate/macroable",
             "version": "v10.48.15",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/illuminate/macroable.git",
-                "reference": "dff667a46ac37b634dcf68909d9d41e94dc97c27"
-            },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/illuminate/macroable/zipball/dff667a46ac37b634dcf68909d9d41e94dc97c27",
@@ -3396,7 +3361,6 @@
                     "Illuminate\\Support\\": ""
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -3408,10 +3372,6 @@
             ],
             "description": "The Illuminate Macroable package.",
             "homepage": "https://laravel.com",
-            "support": {
-                "issues": "https://github.com/laravel/framework/issues",
-                "source": "https://github.com/laravel/framework"
-            },
             "time": "2023-06-05T12:46:42+00:00"
         },
         {
@@ -6747,11 +6707,11 @@
         },
         {
             "name": "putyourlightson/craft-blitz",
-            "version": "5.3.3",
+            "version": "5.4.0",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/putyourlightson/craft-blitz/zipball/2133cb256e62ab4e6323cd67b118a365cbf0b5b4",
-                "reference": "2133cb256e62ab4e6323cd67b118a365cbf0b5b4",
+                "url": "https://api.github.com/repos/putyourlightson/craft-blitz/zipball/cb58fe34c310c2e7de6dbb279ebb6d6825a5a17f",
+                "reference": "cb58fe34c310c2e7de6dbb279ebb6d6825a5a17f",
                 "shasum": ""
             },
             "require": {
@@ -6795,7 +6755,7 @@
                 "source": "https://github.com/putyourlightson/craft-blitz",
                 "issues": "https://github.com/putyourlightson/craft-blitz/issues"
             },
-            "time": "2024-06-27T15:13:52+00:00"
+            "time": "2024-07-04T10:13:23+00:00"
         },
         {
             "name": "putyourlightson/craft-sprig-core",
@@ -10074,11 +10034,11 @@
         },
         {
             "name": "verbb/default-dashboard",
-            "version": "3.0.0",
+            "version": "3.0.1",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/verbb/default-dashboard/zipball/2244bcf04ce882bc0adf49c13c4b6f4080dc3d18",
-                "reference": "2244bcf04ce882bc0adf49c13c4b6f4080dc3d18",
+                "url": "https://api.github.com/repos/verbb/default-dashboard/zipball/82dbc2b646ae72fd69395de792c85971ed8999ad",
+                "reference": "82dbc2b646ae72fd69395de792c85971ed8999ad",
                 "shasum": ""
             },
             "require": {
@@ -10121,7 +10081,7 @@
                 "docs": "https://github.com/verbb/default-dashboard",
                 "rss": "https://github.com/verbb/default-dashboard/commits/v2.atom"
             },
-            "time": "2024-05-13T00:43:28+00:00"
+            "time": "2024-07-04T00:48:25+00:00"
         },
         {
             "name": "verbb/element-index-defaults",

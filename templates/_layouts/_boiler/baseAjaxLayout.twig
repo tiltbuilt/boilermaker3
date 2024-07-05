@@ -19,8 +19,7 @@
 
 {% block htmlPage %}
 {% minify %}
-	<div id='modal-description' class='sr-only'>{{entry.excerpt}}</div>
-	<h1 id="modal-title" tabindex='-1'>{{entry.title}}</h1>
+	<div id='modal-description' class='sr-only'>{{entry.excerpt}}</div>	
 	<div id="modal-content-inner-wrapper">
 	{# -- Primary content block -- #}
 	{% block pageContent %}

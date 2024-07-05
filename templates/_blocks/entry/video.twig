@@ -16,6 +16,9 @@
 {# Create array for classes to pass to macros for section #}
 {% set videoClassList = [] %}
 
+{% set video = entry.videoAsset.eagerly().one() %}
+{% set embeddedVideo = craft.embeddedAssets.get(video) %}
+
 {# Set block id attribute value #}
 {% if entry.customId is defined and entry.customId != '' %}
 	{% set blockId = entry.customId|replace({' ': '-'})|trim %}
@@ -24,14 +27,14 @@
 {% endif %}
 
 {# Set block type handle as class name for styling #}
-{% set blockClass = entry.type.handle|kebab %}
+{% set blockClass = "content-video" %}
 
 {# Get classes for element animation settings #}
 {# animation classes #}
 {% set animClass = '' %}
 {% if animSetting and 'section' in entry.owner.type.handle %}
 	{% set animClass = animSetting %}
-	{% set wrapperClassList = wrapperClassList|merge([animClass]) %}
+	{% set videoClassList = videoClassList|merge([animClass]) %}
 {% else %}
 	{% set animClass = null %}		
 {% endif %}
@@ -45,10 +48,10 @@
 {% if entry.bgColor|length %}
 	{% set colorClasses = colorClasses|merge(['bg-' ~ entry.bgColor]) %}
 {% endif %}
-{% set videoClassList = wrapperClassList|merge(colorClasses) %}
+{% set videoClassList = videoClassList|merge(colorClasses) %}
 
 {# Retrieve styling adjustments #}
-{% set adjustments = entry.imageVideoStyleAdjustments.eagerly().all() %}
+{% set adjustments = entry.videoStyleAdjustments.eagerly().all() %}
 
 {# set outer tag depending on if element has caption or not #}
 {% if entry.videoCaption != '' %}
@@ -57,14 +60,9 @@
 	{% set outerTag = 'div' %}
 {% endif %}
 
-{# size classes #}
-{% set sizeClasses = [] %}
-{% set aspectClasses = [] %}
-
-
 {# OUTPUT #}
 {% if embeddedVideo and embeddedVideo.isSafe %}
-	<{{outerTag}} id="{{blockId}}" class="{{- blockClass -}} {{- gMacros.classesOut(adjustments, 'Display') -}} {{- gMacros.classesOut(adjustments, 'Margins', true) -}} {{- videoClassList|join(' ') }} {{ entry.customClasses }}" {{- gMacros.attributesOut(entry.customAttributes) -}}>
+	<{{outerTag}} id="{{blockId}}" class="{{- blockClass -}} {{- gMacros.widthClasses(adjustments) -}} {{- gMacros.textWrapClasses(adjustments) -}} {{- gMacros.classesOut(adjustments, 'Display') -}} {{- gMacros.classesOut(adjustments, 'Margins', true) -}} {{- videoClassList|join(' ') }} {{ entry.customClasses }}" {{- gMacros.attributesOut(entry.customAttributes) -}}>
 		<div class="video-embed-wrapper" style="">
 			<div class="video-player">						
 				{{ embeddedVideo.getIframeCode(
@@ -73,5 +71,10 @@
 				) }}
 			</div>
 		</div>
-	</{{outerTag}} >
+		{% if entry.videoCaption != '' %}
+			<figcaption class="image-caption {{- gMacros.classesOut(adjustments, 'Type') -}} {{- gMacros.classesOut(adjustments, 'Padding', true) -}}">
+				{{ entry.videoCaption }}						
+			</figcaption>				  
+		{% endif %}
+	</{{outerTag}}>
 {% endif %}

@@ -43,7 +43,7 @@
 		}
 	}
 	
-	/* buttons */
+	/* Buttons */
 	
 	&.btn-standard {
 		background-color: theme('colors.gray.500');
@@ -69,6 +69,48 @@
 		&:hover {
 			color: theme('colors.gray.500');
 		}
+	}
+	
+	/* Media */
+	
+	&.content-image, &.content-video {
+		background-color: theme('colors.gray.300');
+		color: theme('colors.black');
+	}
+	
+	
+	/* TEXT COLOR OVERRIDES */
+	/* Make a style rule for every color available in the text color picker in the CP. These need to be at the end of a color scheme definition */
+	
+	&.text-white {
+		color: theme('colors.white');
+	}
+	
+	&.text-black {
+		color: theme('colors.black');
+	}
+	
+	&.text-red {
+		color: theme('colors.red');
+	}	
+	
+	/* BACKGROUND COLOR OVERRIDES */
+	/* Make a style rule for every color available in the bg color picker in the CP. These need to be at the end of a color scheme definition */
+	
+	&.bg-transparent {
+		background-color: transparent;
+	}
+	
+	&.bg-white {
+		background-color: theme('colors.white');
+	}
+	
+	&.bg-black {
+		background-color: theme('colors.black');
+	}
+	
+	&.bg-red {
+		background-color: theme('colors.red');
 	}
 	
 }
@@ -115,7 +157,7 @@
 		}
 	}
 	
-	/* buttons */
+	/* Buttons */
 	
 	&.btn-standard {
 		background-color: theme('colors.gray.700');
@@ -141,6 +183,13 @@
 		&:hover {
 			color: theme('colors.white');
 		}
+	}
+	
+	/* Media */
+	
+	&.content-image, &.content-video {
+		background-color: theme('colors.gray.700');
+		color: theme('colors.white');
 	}
 	
 }
@@ -187,7 +236,7 @@
 		}
 	}
 	
-	/* buttons */
+	/* Buttons */
 	
 	&.btn-standard {
 		background-color: theme('colors.red');
@@ -215,7 +264,17 @@
 		}
 	}
 	
+	/* Media */
+	
+	&.content-image, &.content-video {
+		background-color: theme('colors.gray.700');
+		color: theme('colors.white');
+	}
+	
 }
+
+
+/* Button Colors */
 
 .btn-standard.btn-red {
 	background-color: theme('colors.red');
@@ -226,3 +285,10 @@
 		color: theme('colors.white');
 	}
 }
+
+
+
+
+
+
+

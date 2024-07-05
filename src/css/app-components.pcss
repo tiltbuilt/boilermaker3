@@ -18,20 +18,24 @@
        }    
     }
     
-    @variants responsive {
-        /* TEXT WRAP */
-        
-        .text-wrap-left {
-            @apply float-left mr-normal mb-normal;		
-        }
-        
-        .text-wrap-right {
-            @apply float-right ml-normal mb-normal;			
-        }
-        
-        .text-wrap-none {
-            @apply float-none;		
-        }
-    }	
     
+    /* TEXT WRAP */
+        
+    .text-wrap-left {
+        @apply float-left mr-normal mb-normal;		
+    }
+    
+    .text-wrap-right {
+        @apply float-right ml-normal mb-normal;			
+    }
+    
+    .text-wrap-none {
+        @apply float-none;		
+    }
+    
+    /* VISIBILITY */
+    	
+    .not-hidden {
+        display: block;
+    }
 }

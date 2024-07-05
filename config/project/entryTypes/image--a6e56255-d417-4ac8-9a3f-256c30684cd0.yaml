@@ -52,10 +52,10 @@ fieldLayouts:
           -
             elementCondition: null
             fieldUid: 0f72b724-e0a8-4044-a3aa-12255ade6ea1 # Basic Text with Search
-            handle: null
+            handle: imageCaption
             includeInCards: false
             instructions: null
-            label: null
+            label: 'Image Caption'
             providesThumbs: false
             required: false
             tip: null
@@ -137,7 +137,7 @@ fieldLayouts:
             userCondition: null
           -
             elementCondition: null
-            fieldUid: c9cf2b48-b578-41dd-ae7f-82d0ce5a4241 # Image/Video Style Adjustments
+            fieldUid: c9cf2b48-b578-41dd-ae7f-82d0ce5a4241 # Image Style Adjustments
             handle: null
             includeInCards: false
             instructions: null

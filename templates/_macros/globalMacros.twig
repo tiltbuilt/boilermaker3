@@ -88,6 +88,43 @@
 	{{ classList|join(' ') }}	
 {% endmacro classesOut %}
 
+{# Width Classes #}
+{% macro widthClasses(adjustments) %}
+	{% set classList = [] %}
+	{% for adjSet in adjustments %}
+		{# Get Device Size for Adjustments #}
+		{% set devSize = adjSet.deviceSize %}
+		{% if devSize|length %}
+			{% set devSize = devSize ~ ':' %}	
+		{% endif %}
+				
+		{% if adjSet.width|length %}
+			{% set classItem = devSize ~ 'w-' ~ adjSet.width %}
+			{% set classList = classList|merge([classItem]) %}
+		{% endif %}	
+	{% endfor %}
+	{{ classList|join(' ') }}	
+{% endmacro widthClasses %}
+
+{# Text Wrap Classes #}
+{% macro textWrapClasses(adjustments) %}
+	{% set classList = [] %}
+	{% for adjSet in adjustments %}
+		{# Get Device Size for Adjustments #}
+		{% set devSize = adjSet.deviceSize %}
+		{% if devSize|length %}
+			{% set devSize = devSize ~ ':' %}	
+		{% endif %}
+				
+		{% if adjSet.textWrap|length %}
+			{% set classItem = devSize ~ adjSet.textWrap %}
+			{% set classList = classList|merge([classItem]) %}
+		{% endif %}	
+	{% endfor %}
+	{{ classList|join(' ') }}	
+{% endmacro textWrapClasses %}
+
+
 {# Attributes #}
 {% macro attributesOut(attributes) %}
 	{% set attrList = [] %}

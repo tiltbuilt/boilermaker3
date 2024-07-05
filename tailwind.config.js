@@ -152,6 +152,10 @@ module.exports = {
 	  {
 		pattern: /w-(full|1\/5|1\/4|1\/3|2\/5|1\/2|3\/5|2\/3|3\/4)/, 
 		variants: ['sm', 'md', 'lg', 'xl', '2xl'],
+	  },
+	  {
+	  	pattern: /(text-wrap-left|text-wrap-right|text-wrap-none|hidden|not-hidden)/, 
+		variants: ['sm', 'md', 'lg', 'xl', '2xl'],
 	  },	  
   ],
 };

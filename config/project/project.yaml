@@ -1,4 +1,4 @@
-dateModified: 1719443341
+dateModified: 1720205383
 elementSources:
   craft\elements\Entry:
     -
@@ -146,6 +146,7 @@ meta:
     3218b554-b14a-4cc0-8b53-3f4b5b1bcd4c: 'Background Image/Video' # Background Image/Video
     3388d3b4-cb9f-47ee-8874-09e50df3c0bb: 'Section Style Adjustments' # Section Style Adjustments
     3710a5c7-fa54-4a2c-a07b-4f7a31f5bd25: 'Background Repeat' # Background Repeat
+    4296db0d-d5cc-4ca0-a1b3-08c226ac2224: 'Video Style Adjustments' # Video Style Adjustments
     4600cc8f-8e3f-45bf-bbb9-9e48d2e181ed: 'Phone Number' # Phone Number
     5514a63a-0a23-42f9-9333-5576b0e95462: 'Color Scheme' # Color Scheme
     8125ecc7-14a0-48fa-beb2-ae316b8c9c0d: 'Entries to List' # Entries to List
@@ -199,7 +200,8 @@ meta:
     bea4db36-ae23-4382-ad57-5031c47c5ab6: 'Nav List to Display' # Nav List to Display
     c025e168-6f53-4831-9433-670f03c62851: Buttons # Buttons
     c3d75796-b930-48a0-b387-b5469be4094b: 'Full Listing Button' # Full Listing Button
-    c9cf2b48-b578-41dd-ae7f-82d0ce5a4241: 'Image/Video Style Adjustments' # Image/Video Style Adjustments
+    c9cf2b48-b578-41dd-ae7f-82d0ce5a4241: 'Image Style Adjustments' # Image Style Adjustments
+    c22c74d6-c1ba-4d51-af9b-d38a798a1e30: 'Text Wrap' # Text Wrap
     c43e08b0-14a5-4aee-adb4-4e78e9c3d9fe: 'Main Content' # Main Content
     c43e9602-b393-4012-b9c3-c4b391c74cd6: Video # Video
     cc44dfc3-f9d6-4fcc-9940-621e8a3981f0: 'Quote Style Adjustments' # Quote Style Adjustments
@@ -212,6 +214,7 @@ meta:
     d136f8d9-17af-4766-82b7-9c58403b6446: ui-svg-sprites # ui-svg-sprites
     d897b42d-3d26-4db5-b105-29c871b31ffb: 'Slide Content' # Slide Content
     d81788e7-2fa5-4804-876d-57de4924e46f: 'Style Adjustment - Icon' # Style Adjustment - Icon
+    d91935cd-7812-422b-9f9f-0317ed62a03b: 'Style Adjustment - Video' # Style Adjustment - Video
     dc77699b-4b92-46d2-bd7c-d70bc8319d04: font-awesome-all # font-awesome-all
     dd25301d-9012-41dd-aa43-19f023540545: 'Button Group Style Adjustment' # Button Group Style Adjustment
     ddb8108e-63a9-4567-80ba-7ab621baad89: 'Style Adjustment - Quote' # Style Adjustment - Quote
@@ -221,7 +224,7 @@ meta:
     e5bff211-8719-442c-8ca7-caf236c14273: 'Subhead Style' # Subhead Style
     e5d8e3b7-10f0-430f-af2f-f9acf11b2e77: 'Page Header Color Scheme' # Page Header Color Scheme
     e6aadd12-c632-4735-b22d-b5a758ab5003: 'Boilermaker 3' # Boilermaker 3
-    e8d249f8-2c18-4b51-b311-baabbd94f999: 'Style Adjustment - Image/Video' # Style Adjustment - Image/Video
+    e8d249f8-2c18-4b51-b311-baabbd94f999: 'Style Adjustment - Image' # Style Adjustment - Image
     e15525d6-6952-4e06-992e-6cf63f053365: Tabs # Tabs
     e5542413-6c20-435f-8598-e457fb2d1a50: 'Page Header Background' # Page Header Background
     ea38d6d4-055b-43b8-b876-2bcab46e11c8: 'Company Info' # Company Info
