@@ -1,4 +1,4 @@
-dateModified: 1720205383
+dateModified: 1720317637
 elementSources:
   craft\elements\Entry:
     -
@@ -159,6 +159,7 @@ meta:
     699240f2-b35b-4fad-b00a-f24ec0b8d982: Slide # Slide
     738845b3-b901-49ce-a17b-8a5c7864eab9: 'Content Card' # Content Card
     781363bc-1fd0-4fcc-83b2-80a20c416f57: 'Content Cards' # Content Cards
+    1274916c-2577-42bf-a9be-c2a1d3ea5336: New # New
     03773267-1517-45c4-9a3e-c92f4340a1b2: 'Style Adjustment - CTA' # Style Adjustment - CTA
     4720320b-f7d0-49ec-a327-0db0e3a2dd7c: 'Slider Size' # Slider Size
     05601664-3d38-4def-9b37-d9ccaf72ed5c: 'Reveal Animation' # Reveal Animation

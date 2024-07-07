@@ -97,6 +97,7 @@ module.exports = {
 	},	
   },
   safelist: [	  
+	  'aspect-square',
 	  {
 		pattern: /(text|bg|btn)-(white|black|transparent|red)/, //adjust colors to match list available in color def
 		variants: ['hover', 'focus'],
@@ -156,6 +157,6 @@ module.exports = {
 	  {
 	  	pattern: /(text-wrap-left|text-wrap-right|text-wrap-none|hidden|not-hidden)/, 
 		variants: ['sm', 'md', 'lg', 'xl', '2xl'],
-	  },	  
+	  },	    
   ],
 };

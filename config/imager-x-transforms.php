@@ -16,10 +16,10 @@ return [
 		],
 		'configOverrides' => [
 			'fillTransforms' => true,
-			'fillInterval' => 300,
+			'fillInterval' => 200,
 		]
 	],
-	'contentImageWebp' => [
+	'contentImage-webp' => [
 		'transforms' => 'contentImage',
 		'defaults' => [
 			'format' => 'webp',
@@ -42,7 +42,7 @@ return [
 		],
 		'configOverrides' => [
 			'fillTransforms' => true,
-			'fillInterval' => 300,
+			'fillInterval' => 200,
 		]
 	],
 	'image-video-webp' => [
@@ -51,7 +51,7 @@ return [
 			'format' => 'webp',
 		]
 	],
-	'image-4-3' => [
+	'image-4/3' => [
 		'transforms' => [
 			['width' => 320],
 			['width' => 640],
@@ -68,16 +68,16 @@ return [
 		],
 		'configOverrides' => [
 			'fillTransforms' => true,
-			'fillInterval' => 300,
+			'fillInterval' => 200,
 		]
 	],
-	'image-4-3-webp' => [
-		'transforms' => 'image-4-3',
+	'image-4/3-webp' => [
+		'transforms' => 'image-4/3',
 		'defaults' => [
 			'format' => 'webp',
 		]
 	],
-	'image-3-2' => [
+	'image-3/2' => [
 		'transforms' => [
 			['width' => 320],
 			['width' => 640],
@@ -94,16 +94,16 @@ return [
 		],
 		'configOverrides' => [
 			'fillTransforms' => true,
-			'fillInterval' => 300,
+			'fillInterval' => 200,
 		]
 	],
-	'image-3-2-webp' => [
-		'transforms' => 'image-3-2',
+	'image-3/2-webp' => [
+		'transforms' => 'image-3/2',
 		'defaults' => [
 			'format' => 'webp',
 		]
 	],
-	'image-3-1' => [
+	'image-3/1' => [
 		'transforms' => [
 			['width' => 320],
 			['width' => 640],
@@ -120,11 +120,11 @@ return [
 		],
 		'configOverrides' => [
 			'fillTransforms' => true,
-			'fillInterval' => 300,
+			'fillInterval' => 200,
 		]
 	],
-	'image-3-1-webp' => [
-		'transforms' => 'image-3-1',
+	'image-3/1-webp' => [
+		'transforms' => 'image-3/1',
 		'defaults' => [
 			'format' => 'webp',
 		]
@@ -146,7 +146,7 @@ return [
 		],
 		'configOverrides' => [
 			'fillTransforms' => true,
-			'fillInterval' => 300,
+			'fillInterval' => 200,
 		]
 	],
 	'image-square-webp' => [
@@ -165,6 +165,10 @@ return [
 		'defaults' => [
 			'ratio' => 3/2,
 			'format' => 'jpg'
+		],
+		'configOverrides' => [
+			'fillTransforms' => true,
+			'fillInterval' => 200,
 		]
 	],
 	'thumbnailWebp' => [
@@ -180,9 +184,8 @@ return [
 			['width' => 600],
 		],
 		'defaults' => [
-			'ratio' => 16/9,
-			'format' => 'jpg'
-		]
+			'ratio' => 16/9,			
+		],		
 	],
 	'seoFacebookImage' => [
 		'transforms' => [
@@ -191,8 +194,7 @@ return [
 			['width' => 1200],
 		],
 		'defaults' => [
-			'ratio' => 300/157,
-			'format' => 'jpg'
+			'ratio' => 300/157,			
 		]
 	],
 	'seoTwitterImage' => [
@@ -202,8 +204,7 @@ return [
 			['width' => 1200],			
 		],
 		'defaults' => [
-			'ratio' => 2/1,
-			'format' => 'jpg'
+			'ratio' => 2/1,			
 		]
 	]
 ];

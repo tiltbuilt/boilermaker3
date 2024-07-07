@@ -78,6 +78,21 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
+            fieldUid: 487ec441-2218-43e8-8a96-652a0649e437 # Color Picker
+            handle: bgColor
+            includeInCards: false
+            instructions: 'Use this field to override the background color that is specified in the color scheme.'
+            label: 'Background Color'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 7e13abd3-b221-48b5-84ec-af9f273e6513
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
             heading: Button
             type: craft\fieldlayoutelements\Heading
             uid: 2a95d88e-e710-4127-88e6-ebe02ee57c5b

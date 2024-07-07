@@ -83,7 +83,7 @@ settings:
                                 - false
                               -
                                 - required
-                                - false
+                                - true
                               -
                                 - providesThumbs
                                 - false
@@ -92,7 +92,7 @@ settings:
                                 - false
                               -
                                 - width
-                                - 50
+                                - 100
                               -
                                 - uid
                                 - 909357a2-ec06-49e1-a7a7-abe9c31b3be5
@@ -100,10 +100,10 @@ settings:
                             __assoc__:
                               -
                                 - type
-                                - verbb\hyper\fieldlayoutelements\LinkTextField
+                                - verbb\hyper\fieldlayoutelements\AriaLabelField
                               -
                                 - attribute
-                                - linkText
+                                - ariaLabel
                               -
                                 - requirable
                                 - true
@@ -126,9 +126,6 @@ settings:
                                 - readonly
                                 - false
                               -
-                                - placeholder
-                                - 'e.g. Read more'
-                              -
                                 - mandatory
                                 - false
                               -
@@ -145,10 +142,10 @@ settings:
                                 - false
                               -
                                 - width
-                                - 50
+                                - 100
                               -
                                 - uid
-                                - fe7e890f-d605-4f2e-9b33-67282a7204f1
+                                - 0249f33a-71ce-4fff-94ec-4254dd6ccd95
                   -
                     __assoc__:
                       -
@@ -164,37 +161,7 @@ settings:
                             __assoc__:
                               -
                                 - type
-                                - verbb\hyper\fieldlayoutelements\LinkTitleField
-                              -
-                                - attribute
-                                - linkTitle
-                              -
-                                - requirable
-                                - true
-                              -
-                                - autocomplete
-                                - false
-                              -
-                                - autofocus
-                                - false
-                              -
-                                - autocorrect
-                                - true
-                              -
-                                - autocapitalize
-                                - true
-                              -
-                                - disabled
-                                - false
-                              -
-                                - readonly
-                                - false
-                              -
-                                - mandatory
-                                - false
-                              -
-                                - translatable
-                                - false
+                                - craft\fieldlayoutelements\CustomField
                               -
                                 - required
                                 - false
@@ -209,42 +176,18 @@ settings:
                                 - 100
                               -
                                 - uid
-                                - c8ed2585-855f-44ca-86a7-337b9c263f87
+                                - d4d10a2f-5f64-431e-bf74-ab1b5b234a80
+                              -
+                                - fieldUid
+                                - a78e7e89-26cf-4a0e-a36d-b48ca76d7ba5 # Custom Classes
                           -
                             __assoc__:
                               -
                                 - type
-                                - verbb\hyper\fieldlayoutelements\ClassesField
+                                - craft\fieldlayoutelements\CustomField
                               -
-                                - attribute
-                                - classes
-                              -
-                                - requirable
-                                - true
-                              -
-                                - autocomplete
-                                - false
-                              -
-                                - autofocus
-                                - false
-                              -
-                                - autocorrect
-                                - true
-                              -
-                                - autocapitalize
-                                - true
-                              -
-                                - disabled
-                                - false
-                              -
-                                - readonly
-                                - false
-                              -
-                                - mandatory
-                                - false
-                              -
-                                - translatable
-                                - false
+                                - handle
+                                - customAttributes2
                               -
                                 - required
                                 - false
@@ -259,43 +202,15 @@ settings:
                                 - 100
                               -
                                 - uid
-                                - 589e2c47-4f0c-4a03-b8e0-38833bae282e
-                          -
-                            __assoc__:
+                                - 4bbc0dac-38cb-4b7f-8cce-e9b48f602805
                               -
-                                - type
-                                - verbb\hyper\fieldlayoutelements\CustomAttributesField
-                              -
-                                - attribute
-                                - customAttributes
-                              -
-                                - requirable
-                                - true
-                              -
-                                - mandatory
-                                - false
-                              -
-                                - translatable
-                                - false
-                              -
-                                - required
-                                - false
-                              -
-                                - providesThumbs
-                                - false
-                              -
-                                - includeInCards
-                                - false
-                              -
-                                - width
-                                - 100
-                              -
-                                - uid
-                                - 83b5bd7d-fbb7-456e-9ec1-a6f7a5504285
+                                - fieldUid
+                                - ee64f702-a8f1-46ee-8dea-79f8ad82e25b # Custom Attributes
         -
           - sources
           -
             - 'volume:b644bda8-1050-46f5-9453-0b3d19812289' # Documents
+            - 'volume:7c366b82-7c53-4dd2-a425-1c416a3e1464' # Embeds
     -
       __assoc__:
         -
@@ -371,7 +286,7 @@ settings:
                                 - false
                               -
                                 - required
-                                - false
+                                - true
                               -
                                 - providesThumbs
                                 - false
@@ -380,7 +295,7 @@ settings:
                                 - false
                               -
                                 - width
-                                - 50
+                                - 100
                               -
                                 - uid
                                 - 1b830701-fa82-4fb1-9952-71eb55a4b095
@@ -388,10 +303,10 @@ settings:
                             __assoc__:
                               -
                                 - type
-                                - verbb\hyper\fieldlayoutelements\LinkTextField
+                                - verbb\hyper\fieldlayoutelements\AriaLabelField
                               -
                                 - attribute
-                                - linkText
+                                - ariaLabel
                               -
                                 - requirable
                                 - true
@@ -414,9 +329,6 @@ settings:
                                 - readonly
                                 - false
                               -
-                                - placeholder
-                                - 'e.g. Read more'
-                              -
                                 - mandatory
                                 - false
                               -
@@ -433,10 +345,10 @@ settings:
                                 - false
                               -
                                 - width
-                                - 50
+                                - 100
                               -
                                 - uid
-                                - af688758-ab5e-4a1a-978c-be647bf62b85
+                                - 0eca308b-9bb1-4bf0-a76e-b0875ed4e211
                   -
                     __assoc__:
                       -
@@ -452,37 +364,7 @@ settings:
                             __assoc__:
                               -
                                 - type
-                                - verbb\hyper\fieldlayoutelements\LinkTitleField
-                              -
-                                - attribute
-                                - linkTitle
-                              -
-                                - requirable
-                                - true
-                              -
-                                - autocomplete
-                                - false
-                              -
-                                - autofocus
-                                - false
-                              -
-                                - autocorrect
-                                - true
-                              -
-                                - autocapitalize
-                                - true
-                              -
-                                - disabled
-                                - false
-                              -
-                                - readonly
-                                - false
-                              -
-                                - mandatory
-                                - false
-                              -
-                                - translatable
-                                - false
+                                - craft\fieldlayoutelements\CustomField
                               -
                                 - required
                                 - false
@@ -497,42 +379,18 @@ settings:
                                 - 100
                               -
                                 - uid
-                                - 8f689704-be0c-435e-9116-fbbe4df814f1
+                                - 10442938-7013-49ad-8cc8-89f70cd778b7
+                              -
+                                - fieldUid
+                                - a78e7e89-26cf-4a0e-a36d-b48ca76d7ba5 # Custom Classes
                           -
                             __assoc__:
                               -
                                 - type
-                                - verbb\hyper\fieldlayoutelements\ClassesField
+                                - craft\fieldlayoutelements\CustomField
                               -
-                                - attribute
-                                - classes
-                              -
-                                - requirable
-                                - true
-                              -
-                                - autocomplete
-                                - false
-                              -
-                                - autofocus
-                                - false
-                              -
-                                - autocorrect
-                                - true
-                              -
-                                - autocapitalize
-                                - true
-                              -
-                                - disabled
-                                - false
-                              -
-                                - readonly
-                                - false
-                              -
-                                - mandatory
-                                - false
-                              -
-                                - translatable
-                                - false
+                                - handle
+                                - customAttributes2
                               -
                                 - required
                                 - false
@@ -547,39 +405,10 @@ settings:
                                 - 100
                               -
                                 - uid
-                                - 91c973df-d4a9-4bd6-8c36-addd8515c18a
-                          -
-                            __assoc__:
+                                - cf36d75e-0852-40f3-b19d-0f42544e839b
                               -
-                                - type
-                                - verbb\hyper\fieldlayoutelements\CustomAttributesField
-                              -
-                                - attribute
-                                - customAttributes
-                              -
-                                - requirable
-                                - true
-                              -
-                                - mandatory
-                                - false
-                              -
-                                - translatable
-                                - false
-                              -
-                                - required
-                                - false
-                              -
-                                - providesThumbs
-                                - false
-                              -
-                                - includeInCards
-                                - false
-                              -
-                                - width
-                                - 100
-                              -
-                                - uid
-                                - 6db42448-eb2b-4d17-a356-9fbae0bcc136
+                                - fieldUid
+                                - ee64f702-a8f1-46ee-8dea-79f8ad82e25b # Custom Attributes
         -
           - sources
           - '*'
@@ -658,7 +487,7 @@ settings:
                                 - false
                               -
                                 - required
-                                - false
+                                - true
                               -
                                 - providesThumbs
                                 - false
@@ -667,7 +496,7 @@ settings:
                                 - false
                               -
                                 - width
-                                - 50
+                                - 100
                               -
                                 - uid
                                 - 3968d5f7-59d6-4e04-8f3d-2294cfaf2628
@@ -675,10 +504,10 @@ settings:
                             __assoc__:
                               -
                                 - type
-                                - verbb\hyper\fieldlayoutelements\LinkTextField
+                                - verbb\hyper\fieldlayoutelements\AriaLabelField
                               -
                                 - attribute
-                                - linkText
+                                - ariaLabel
                               -
                                 - requirable
                                 - true
@@ -701,9 +530,6 @@ settings:
                                 - readonly
                                 - false
                               -
-                                - placeholder
-                                - 'e.g. Read more'
-                              -
                                 - mandatory
                                 - false
                               -
@@ -720,10 +546,10 @@ settings:
                                 - false
                               -
                                 - width
-                                - 50
+                                - 100
                               -
                                 - uid
-                                - 21151e1b-cbfc-45ba-8f20-add926ac2ef7
+                                - 1b9d69bf-7a3f-4174-923e-6b8a6f4e34d2
                   -
                     __assoc__:
                       -
@@ -739,37 +565,7 @@ settings:
                             __assoc__:
                               -
                                 - type
-                                - verbb\hyper\fieldlayoutelements\LinkTitleField
-                              -
-                                - attribute
-                                - linkTitle
-                              -
-                                - requirable
-                                - true
-                              -
-                                - autocomplete
-                                - false
-                              -
-                                - autofocus
-                                - false
-                              -
-                                - autocorrect
-                                - true
-                              -
-                                - autocapitalize
-                                - true
-                              -
-                                - disabled
-                                - false
-                              -
-                                - readonly
-                                - false
-                              -
-                                - mandatory
-                                - false
-                              -
-                                - translatable
-                                - false
+                                - craft\fieldlayoutelements\CustomField
                               -
                                 - required
                                 - false
@@ -784,42 +580,18 @@ settings:
                                 - 100
                               -
                                 - uid
-                                - 587e843e-d93b-4ddc-b31a-6c9fe0b997e3
+                                - dd1b19c5-78fe-4b29-a524-70c119914244
+                              -
+                                - fieldUid
+                                - a78e7e89-26cf-4a0e-a36d-b48ca76d7ba5 # Custom Classes
                           -
                             __assoc__:
                               -
                                 - type
-                                - verbb\hyper\fieldlayoutelements\ClassesField
+                                - craft\fieldlayoutelements\CustomField
                               -
-                                - attribute
-                                - classes
-                              -
-                                - requirable
-                                - true
-                              -
-                                - autocomplete
-                                - false
-                              -
-                                - autofocus
-                                - false
-                              -
-                                - autocorrect
-                                - true
-                              -
-                                - autocapitalize
-                                - true
-                              -
-                                - disabled
-                                - false
-                              -
-                                - readonly
-                                - false
-                              -
-                                - mandatory
-                                - false
-                              -
-                                - translatable
-                                - false
+                                - handle
+                                - customAttributes2
                               -
                                 - required
                                 - false
@@ -834,39 +606,10 @@ settings:
                                 - 100
                               -
                                 - uid
-                                - 8951cd5b-3ea6-4abd-a9c0-41146a6afcb5
-                          -
-                            __assoc__:
+                                - 7f77dee5-480b-4928-8e35-99dc17e0e5c2
                               -
-                                - type
-                                - verbb\hyper\fieldlayoutelements\CustomAttributesField
-                              -
-                                - attribute
-                                - customAttributes
-                              -
-                                - requirable
-                                - true
-                              -
-                                - mandatory
-                                - false
-                              -
-                                - translatable
-                                - false
-                              -
-                                - required
-                                - false
-                              -
-                                - providesThumbs
-                                - false
-                              -
-                                - includeInCards
-                                - false
-                              -
-                                - width
-                                - 100
-                              -
-                                - uid
-                                - 52d68b8d-c16a-4e9a-ab98-a963b4822891
+                                - fieldUid
+                                - ee64f702-a8f1-46ee-8dea-79f8ad82e25b # Custom Attributes
     -
       __assoc__:
         -
@@ -942,7 +685,7 @@ settings:
                                 - false
                               -
                                 - required
-                                - false
+                                - true
                               -
                                 - providesThumbs
                                 - false
@@ -951,7 +694,7 @@ settings:
                                 - false
                               -
                                 - width
-                                - 50
+                                - 100
                               -
                                 - uid
                                 - 51ff679d-e243-4945-b90f-3445d88a3449
@@ -959,10 +702,10 @@ settings:
                             __assoc__:
                               -
                                 - type
-                                - verbb\hyper\fieldlayoutelements\LinkTextField
+                                - verbb\hyper\fieldlayoutelements\AriaLabelField
                               -
                                 - attribute
-                                - linkText
+                                - ariaLabel
                               -
                                 - requirable
                                 - true
@@ -985,9 +728,6 @@ settings:
                                 - readonly
                                 - false
                               -
-                                - placeholder
-                                - 'e.g. Read more'
-                              -
                                 - mandatory
                                 - false
                               -
@@ -1004,10 +744,10 @@ settings:
                                 - false
                               -
                                 - width
-                                - 50
+                                - 100
                               -
                                 - uid
-                                - 41c79daa-93ba-4313-8fa2-6fef16e5985d
+                                - 39f8a10f-9db5-4c03-b57c-96066c2412aa
                   -
                     __assoc__:
                       -
@@ -1023,37 +763,7 @@ settings:
                             __assoc__:
                               -
                                 - type
-                                - verbb\hyper\fieldlayoutelements\LinkTitleField
-                              -
-                                - attribute
-                                - linkTitle
-                              -
-                                - requirable
-                                - true
-                              -
-                                - autocomplete
-                                - false
-                              -
-                                - autofocus
-                                - false
-                              -
-                                - autocorrect
-                                - true
-                              -
-                                - autocapitalize
-                                - true
-                              -
-                                - disabled
-                                - false
-                              -
-                                - readonly
-                                - false
-                              -
-                                - mandatory
-                                - false
-                              -
-                                - translatable
-                                - false
+                                - craft\fieldlayoutelements\CustomField
                               -
                                 - required
                                 - false
@@ -1068,42 +778,15 @@ settings:
                                 - 100
                               -
                                 - uid
-                                - ede764f5-6d4b-4a54-947b-b7e0db7fb20a
+                                - 7ac567d5-686a-490d-8809-ce5fd15a4c3a
+                              -
+                                - fieldUid
+                                - a78e7e89-26cf-4a0e-a36d-b48ca76d7ba5 # Custom Classes
                           -
                             __assoc__:
                               -
                                 - type
-                                - verbb\hyper\fieldlayoutelements\ClassesField
-                              -
-                                - attribute
-                                - classes
-                              -
-                                - requirable
-                                - true
-                              -
-                                - autocomplete
-                                - false
-                              -
-                                - autofocus
-                                - false
-                              -
-                                - autocorrect
-                                - true
-                              -
-                                - autocapitalize
-                                - true
-                              -
-                                - disabled
-                                - false
-                              -
-                                - readonly
-                                - false
-                              -
-                                - mandatory
-                                - false
-                              -
-                                - translatable
-                                - false
+                                - craft\fieldlayoutelements\CustomField
                               -
                                 - required
                                 - false
@@ -1118,39 +801,10 @@ settings:
                                 - 100
                               -
                                 - uid
-                                - be73a3ee-bd5a-4204-a9a6-0ff2642012c1
-                          -
-                            __assoc__:
+                                - ffb97428-7d77-4ce2-8568-7727bbb83042
                               -
-                                - type
-                                - verbb\hyper\fieldlayoutelements\CustomAttributesField
-                              -
-                                - attribute
-                                - customAttributes
-                              -
-                                - requirable
-                                - true
-                              -
-                                - mandatory
-                                - false
-                              -
-                                - translatable
-                                - false
-                              -
-                                - required
-                                - false
-                              -
-                                - providesThumbs
-                                - false
-                              -
-                                - includeInCards
-                                - false
-                              -
-                                - width
-                                - 100
-                              -
-                                - uid
-                                - 80dd7096-01b6-40fa-87c2-c69eeaa83a18
+                                - fieldUid
+                                - ee64f702-a8f1-46ee-8dea-79f8ad82e25b # Custom Attributes
     -
       __assoc__:
         -
@@ -1510,7 +1164,7 @@ settings:
                                 - false
                               -
                                 - required
-                                - false
+                                - true
                               -
                                 - providesThumbs
                                 - false
@@ -1519,7 +1173,7 @@ settings:
                                 - false
                               -
                                 - width
-                                - 50
+                                - 100
                               -
                                 - uid
                                 - 5701d65c-494b-4ead-9cc9-0e32ca19579c
@@ -1527,10 +1181,10 @@ settings:
                             __assoc__:
                               -
                                 - type
-                                - verbb\hyper\fieldlayoutelements\LinkTextField
+                                - verbb\hyper\fieldlayoutelements\AriaLabelField
                               -
                                 - attribute
-                                - linkText
+                                - ariaLabel
                               -
                                 - requirable
                                 - true
@@ -1553,9 +1207,6 @@ settings:
                                 - readonly
                                 - false
                               -
-                                - placeholder
-                                - 'e.g. Read more'
-                              -
                                 - mandatory
                                 - false
                               -
@@ -1572,10 +1223,10 @@ settings:
                                 - false
                               -
                                 - width
-                                - 50
+                                - 100
                               -
                                 - uid
-                                - 28f03852-b8fe-4697-8a2e-ccbf856dab2e
+                                - 1f22d51d-ab4b-4abb-ade1-d0ad74c3847e
                   -
                     __assoc__:
                       -
@@ -1591,37 +1242,7 @@ settings:
                             __assoc__:
                               -
                                 - type
-                                - verbb\hyper\fieldlayoutelements\LinkTitleField
-                              -
-                                - attribute
-                                - linkTitle
-                              -
-                                - requirable
-                                - true
-                              -
-                                - autocomplete
-                                - false
-                              -
-                                - autofocus
-                                - false
-                              -
-                                - autocorrect
-                                - true
-                              -
-                                - autocapitalize
-                                - true
-                              -
-                                - disabled
-                                - false
-                              -
-                                - readonly
-                                - false
-                              -
-                                - mandatory
-                                - false
-                              -
-                                - translatable
-                                - false
+                                - craft\fieldlayoutelements\CustomField
                               -
                                 - required
                                 - false
@@ -1636,42 +1257,15 @@ settings:
                                 - 100
                               -
                                 - uid
-                                - 6e335e8d-32db-4292-a903-fee6bfbfe296
+                                - b61a905b-e597-4d88-a897-198302836dfd
+                              -
+                                - fieldUid
+                                - a78e7e89-26cf-4a0e-a36d-b48ca76d7ba5 # Custom Classes
                           -
                             __assoc__:
                               -
                                 - type
-                                - verbb\hyper\fieldlayoutelements\ClassesField
-                              -
-                                - attribute
-                                - classes
-                              -
-                                - requirable
-                                - true
-                              -
-                                - autocomplete
-                                - false
-                              -
-                                - autofocus
-                                - false
-                              -
-                                - autocorrect
-                                - true
-                              -
-                                - autocapitalize
-                                - true
-                              -
-                                - disabled
-                                - false
-                              -
-                                - readonly
-                                - false
-                              -
-                                - mandatory
-                                - false
-                              -
-                                - translatable
-                                - false
+                                - craft\fieldlayoutelements\CustomField
                               -
                                 - required
                                 - false
@@ -1686,39 +1280,10 @@ settings:
                                 - 100
                               -
                                 - uid
-                                - ce594c79-1daf-4524-9b9a-799187bace6c
-                          -
-                            __assoc__:
+                                - 555010e1-f0d1-4230-8ccd-1802228cc076
                               -
-                                - type
-                                - verbb\hyper\fieldlayoutelements\CustomAttributesField
-                              -
-                                - attribute
-                                - customAttributes
-                              -
-                                - requirable
-                                - true
-                              -
-                                - mandatory
-                                - false
-                              -
-                                - translatable
-                                - false
-                              -
-                                - required
-                                - false
-                              -
-                                - providesThumbs
-                                - false
-                              -
-                                - includeInCards
-                                - false
-                              -
-                                - width
-                                - 100
-                              -
-                                - uid
-                                - db0875b1-a28c-4c98-97a5-609a1906e030
+                                - fieldUid
+                                - ee64f702-a8f1-46ee-8dea-79f8ad82e25b # Custom Attributes
         -
           - sources
           - '*'
@@ -1797,7 +1362,7 @@ settings:
                                 - false
                               -
                                 - required
-                                - false
+                                - true
                               -
                                 - providesThumbs
                                 - false
@@ -1806,7 +1371,7 @@ settings:
                                 - false
                               -
                                 - width
-                                - 50
+                                - 100
                               -
                                 - uid
                                 - bd7629b1-4899-44ad-8995-83cb4b04116f
@@ -1814,10 +1379,10 @@ settings:
                             __assoc__:
                               -
                                 - type
-                                - verbb\hyper\fieldlayoutelements\LinkTextField
+                                - verbb\hyper\fieldlayoutelements\AriaLabelField
                               -
                                 - attribute
-                                - linkText
+                                - ariaLabel
                               -
                                 - requirable
                                 - true
@@ -1840,9 +1405,6 @@ settings:
                                 - readonly
                                 - false
                               -
-                                - placeholder
-                                - 'e.g. Read more'
-                              -
                                 - mandatory
                                 - false
                               -
@@ -1859,10 +1421,10 @@ settings:
                                 - false
                               -
                                 - width
-                                - 50
+                                - 100
                               -
                                 - uid
-                                - b0b38e51-9c47-4ea4-8095-290ffeb68fc3
+                                - 98266196-5f2c-4eb7-81ff-665a64ffc4cb
                   -
                     __assoc__:
                       -
@@ -1878,37 +1440,7 @@ settings:
                             __assoc__:
                               -
                                 - type
-                                - verbb\hyper\fieldlayoutelements\LinkTitleField
-                              -
-                                - attribute
-                                - linkTitle
-                              -
-                                - requirable
-                                - true
-                              -
-                                - autocomplete
-                                - false
-                              -
-                                - autofocus
-                                - false
-                              -
-                                - autocorrect
-                                - true
-                              -
-                                - autocapitalize
-                                - true
-                              -
-                                - disabled
-                                - false
-                              -
-                                - readonly
-                                - false
-                              -
-                                - mandatory
-                                - false
-                              -
-                                - translatable
-                                - false
+                                - craft\fieldlayoutelements\CustomField
                               -
                                 - required
                                 - false
@@ -1923,42 +1455,15 @@ settings:
                                 - 100
                               -
                                 - uid
-                                - f2f59ae6-c785-4345-b4f8-ab37f189b97d
+                                - 96428790-78f9-44ee-be69-f6c129a64757
+                              -
+                                - fieldUid
+                                - a78e7e89-26cf-4a0e-a36d-b48ca76d7ba5 # Custom Classes
                           -
                             __assoc__:
                               -
                                 - type
-                                - verbb\hyper\fieldlayoutelements\ClassesField
-                              -
-                                - attribute
-                                - classes
-                              -
-                                - requirable
-                                - true
-                              -
-                                - autocomplete
-                                - false
-                              -
-                                - autofocus
-                                - false
-                              -
-                                - autocorrect
-                                - true
-                              -
-                                - autocapitalize
-                                - true
-                              -
-                                - disabled
-                                - false
-                              -
-                                - readonly
-                                - false
-                              -
-                                - mandatory
-                                - false
-                              -
-                                - translatable
-                                - false
+                                - craft\fieldlayoutelements\CustomField
                               -
                                 - required
                                 - false
@@ -1973,39 +1478,10 @@ settings:
                                 - 100
                               -
                                 - uid
-                                - 666273ac-2cbb-42ed-b1ae-ef47978571d2
-                          -
-                            __assoc__:
+                                - 77a4d373-c3d6-4232-b448-1e93a8b8743f
                               -
-                                - type
-                                - verbb\hyper\fieldlayoutelements\CustomAttributesField
-                              -
-                                - attribute
-                                - customAttributes
-                              -
-                                - requirable
-                                - true
-                              -
-                                - mandatory
-                                - false
-                              -
-                                - translatable
-                                - false
-                              -
-                                - required
-                                - false
-                              -
-                                - providesThumbs
-                                - false
-                              -
-                                - includeInCards
-                                - false
-                              -
-                                - width
-                                - 100
-                              -
-                                - uid
-                                - 0ae68175-0179-4aaf-ac98-4dc29db442dc
+                                - fieldUid
+                                - ee64f702-a8f1-46ee-8dea-79f8ad82e25b # Custom Attributes
     -
       __assoc__:
         -
@@ -2368,7 +1844,7 @@ settings:
                                 - false
                               -
                                 - required
-                                - false
+                                - true
                               -
                                 - providesThumbs
                                 - false
@@ -2377,7 +1853,7 @@ settings:
                                 - false
                               -
                                 - width
-                                - 50
+                                - 100
                               -
                                 - uid
                                 - 487e60e3-2ba2-4792-b450-0a4fc5a2fabf
@@ -2385,10 +1861,10 @@ settings:
                             __assoc__:
                               -
                                 - type
-                                - verbb\hyper\fieldlayoutelements\LinkTextField
+                                - verbb\hyper\fieldlayoutelements\AriaLabelField
                               -
                                 - attribute
-                                - linkText
+                                - ariaLabel
                               -
                                 - requirable
                                 - true
@@ -2411,9 +1887,6 @@ settings:
                                 - readonly
                                 - false
                               -
-                                - placeholder
-                                - 'e.g. Read more'
-                              -
                                 - mandatory
                                 - false
                               -
@@ -2430,10 +1903,10 @@ settings:
                                 - false
                               -
                                 - width
-                                - 50
+                                - 100
                               -
                                 - uid
-                                - b386dca2-9913-4eb3-ba04-7ca36bfd6a11
+                                - fbc614cc-dc82-49cf-9fc0-be772cab6428
                   -
                     __assoc__:
                       -
@@ -2449,37 +1922,7 @@ settings:
                             __assoc__:
                               -
                                 - type
-                                - verbb\hyper\fieldlayoutelements\LinkTitleField
-                              -
-                                - attribute
-                                - linkTitle
-                              -
-                                - requirable
-                                - true
-                              -
-                                - autocomplete
-                                - false
-                              -
-                                - autofocus
-                                - false
-                              -
-                                - autocorrect
-                                - true
-                              -
-                                - autocapitalize
-                                - true
-                              -
-                                - disabled
-                                - false
-                              -
-                                - readonly
-                                - false
-                              -
-                                - mandatory
-                                - false
-                              -
-                                - translatable
-                                - false
+                                - craft\fieldlayoutelements\CustomField
                               -
                                 - required
                                 - false
@@ -2494,42 +1937,15 @@ settings:
                                 - 100
                               -
                                 - uid
-                                - bb8a5ec1-204b-488f-a882-fb7b0a8bc093
+                                - 5fd13278-092f-4060-8766-d7658d309ace
+                              -
+                                - fieldUid
+                                - a78e7e89-26cf-4a0e-a36d-b48ca76d7ba5 # Custom Classes
                           -
                             __assoc__:
                               -
                                 - type
-                                - verbb\hyper\fieldlayoutelements\ClassesField
-                              -
-                                - attribute
-                                - classes
-                              -
-                                - requirable
-                                - true
-                              -
-                                - autocomplete
-                                - false
-                              -
-                                - autofocus
-                                - false
-                              -
-                                - autocorrect
-                                - true
-                              -
-                                - autocapitalize
-                                - true
-                              -
-                                - disabled
-                                - false
-                              -
-                                - readonly
-                                - false
-                              -
-                                - mandatory
-                                - false
-                              -
-                                - translatable
-                                - false
+                                - craft\fieldlayoutelements\CustomField
                               -
                                 - required
                                 - false
@@ -2544,39 +1960,10 @@ settings:
                                 - 100
                               -
                                 - uid
-                                - 9b3367ff-71ba-4ea7-90a8-2cfe48a2c48f
-                          -
-                            __assoc__:
+                                - 58aca7d8-baad-47cf-a6d3-8725e2d3b05f
                               -
-                                - type
-                                - verbb\hyper\fieldlayoutelements\CustomAttributesField
-                              -
-                                - attribute
-                                - customAttributes
-                              -
-                                - requirable
-                                - true
-                              -
-                                - mandatory
-                                - false
-                              -
-                                - translatable
-                                - false
-                              -
-                                - required
-                                - false
-                              -
-                                - providesThumbs
-                                - false
-                              -
-                                - includeInCards
-                                - false
-                              -
-                                - width
-                                - 100
-                              -
-                                - uid
-                                - b675f121-a3f8-4ca3-af95-dac487e59e67
+                                - fieldUid
+                                - ee64f702-a8f1-46ee-8dea-79f8ad82e25b # Custom Attributes
     -
       __assoc__:
         -
@@ -2864,6 +2251,493 @@ settings:
         -
           - sources
           - '*'
+    -
+      __assoc__:
+        -
+          - type
+          - verbb\hyper\links\FormieForm
+        -
+          - label
+          - Form
+        -
+          - handle
+          - default-verbb-hyper-links-formie-form
+        -
+          - enabled
+          - false
+        -
+          - isCustom
+          - false
+        -
+          - layoutUid
+          - 084717a7-5192-4538-90a5-d86ff5d0330d
+        -
+          - layoutConfig
+          -
+            __assoc__:
+              -
+                - tabs
+                -
+                  -
+                    __assoc__:
+                      -
+                        - name
+                        - Content
+                      -
+                        - uid
+                        - 7c1e01c4-e911-4c92-8a8e-1e5d783e48e9
+                      -
+                        - elements
+                        -
+                          -
+                            __assoc__:
+                              -
+                                - type
+                                - verbb\hyper\fieldlayoutelements\LinkField
+                              -
+                                - attribute
+                                - linkValue
+                              -
+                                - mandatory
+                                - true
+                              -
+                                - requirable
+                                - true
+                              -
+                                - autocomplete
+                                - false
+                              -
+                                - autofocus
+                                - false
+                              -
+                                - autocorrect
+                                - true
+                              -
+                                - autocapitalize
+                                - true
+                              -
+                                - disabled
+                                - false
+                              -
+                                - readonly
+                                - false
+                              -
+                                - translatable
+                                - false
+                              -
+                                - required
+                                - false
+                              -
+                                - providesThumbs
+                                - false
+                              -
+                                - includeInCards
+                                - false
+                              -
+                                - width
+                                - 50
+                              -
+                                - uid
+                                - 1e1585a1-0006-49be-89ec-c7de050f9598
+                          -
+                            __assoc__:
+                              -
+                                - type
+                                - verbb\hyper\fieldlayoutelements\LinkTextField
+                              -
+                                - attribute
+                                - linkText
+                              -
+                                - requirable
+                                - true
+                              -
+                                - autocomplete
+                                - false
+                              -
+                                - autofocus
+                                - false
+                              -
+                                - autocorrect
+                                - true
+                              -
+                                - autocapitalize
+                                - true
+                              -
+                                - disabled
+                                - false
+                              -
+                                - readonly
+                                - false
+                              -
+                                - placeholder
+                                - 'e.g. Read more'
+                              -
+                                - mandatory
+                                - false
+                              -
+                                - translatable
+                                - false
+                              -
+                                - required
+                                - false
+                              -
+                                - providesThumbs
+                                - false
+                              -
+                                - includeInCards
+                                - false
+                              -
+                                - width
+                                - 50
+                              -
+                                - uid
+                                - cccf9701-fc99-4786-b928-f112f5130b7c
+                  -
+                    __assoc__:
+                      -
+                        - name
+                        - Advanced
+                      -
+                        - uid
+                        - bf9a1d52-1afe-4a64-9c94-dfe858a220a6
+                      -
+                        - elements
+                        -
+                          -
+                            __assoc__:
+                              -
+                                - type
+                                - verbb\hyper\fieldlayoutelements\LinkTitleField
+                              -
+                                - attribute
+                                - linkTitle
+                              -
+                                - requirable
+                                - true
+                              -
+                                - autocomplete
+                                - false
+                              -
+                                - autofocus
+                                - false
+                              -
+                                - autocorrect
+                                - true
+                              -
+                                - autocapitalize
+                                - true
+                              -
+                                - disabled
+                                - false
+                              -
+                                - readonly
+                                - false
+                              -
+                                - mandatory
+                                - false
+                              -
+                                - translatable
+                                - false
+                              -
+                                - required
+                                - false
+                              -
+                                - providesThumbs
+                                - false
+                              -
+                                - includeInCards
+                                - false
+                              -
+                                - width
+                                - 100
+                              -
+                                - uid
+                                - 9e5be27f-8b7f-4f88-abee-9f3ec4549a2d
+                          -
+                            __assoc__:
+                              -
+                                - type
+                                - verbb\hyper\fieldlayoutelements\ClassesField
+                              -
+                                - attribute
+                                - classes
+                              -
+                                - requirable
+                                - true
+                              -
+                                - autocomplete
+                                - false
+                              -
+                                - autofocus
+                                - false
+                              -
+                                - autocorrect
+                                - true
+                              -
+                                - autocapitalize
+                                - true
+                              -
+                                - disabled
+                                - false
+                              -
+                                - readonly
+                                - false
+                              -
+                                - mandatory
+                                - false
+                              -
+                                - translatable
+                                - false
+                              -
+                                - required
+                                - false
+                              -
+                                - providesThumbs
+                                - false
+                              -
+                                - includeInCards
+                                - false
+                              -
+                                - width
+                                - 100
+                              -
+                                - uid
+                                - 8c9a76c6-d9d9-40bd-9c5d-b75de237a829
+                          -
+                            __assoc__:
+                              -
+                                - type
+                                - verbb\hyper\fieldlayoutelements\CustomAttributesField
+                              -
+                                - attribute
+                                - customAttributes
+                              -
+                                - requirable
+                                - true
+                              -
+                                - mandatory
+                                - false
+                              -
+                                - translatable
+                                - false
+                              -
+                                - required
+                                - false
+                              -
+                                - providesThumbs
+                                - false
+                              -
+                                - includeInCards
+                                - false
+                              -
+                                - width
+                                - 100
+                              -
+                                - uid
+                                - 2d4c2350-38e3-44e7-bceb-e2acb75e39cd
+        -
+          - sources
+          - '*'
+    -
+      __assoc__:
+        -
+          - type
+          - verbb\hyper\links\Entry
+        -
+          - label
+          - Modal
+        -
+          - handle
+          - T5q3DEVZiS
+        -
+          - enabled
+          - true
+        -
+          - isCustom
+          - false
+        -
+          - layoutUid
+          - 1f1b2ea1-0649-4730-92cd-5afbe28348ec
+        -
+          - layoutConfig
+          -
+            __assoc__:
+              -
+                - tabs
+                -
+                  -
+                    __assoc__:
+                      -
+                        - name
+                        - Content
+                      -
+                        - uid
+                        - df1795a8-d167-48df-9b2c-546f1bfbcf58
+                      -
+                        - elements
+                        -
+                          -
+                            __assoc__:
+                              -
+                                - type
+                                - verbb\hyper\fieldlayoutelements\LinkField
+                              -
+                                - attribute
+                                - linkValue
+                              -
+                                - mandatory
+                                - true
+                              -
+                                - requirable
+                                - true
+                              -
+                                - autocomplete
+                                - false
+                              -
+                                - autofocus
+                                - false
+                              -
+                                - autocorrect
+                                - true
+                              -
+                                - autocapitalize
+                                - true
+                              -
+                                - disabled
+                                - false
+                              -
+                                - readonly
+                                - false
+                              -
+                                - translatable
+                                - false
+                              -
+                                - required
+                                - true
+                              -
+                                - providesThumbs
+                                - false
+                              -
+                                - includeInCards
+                                - false
+                              -
+                                - width
+                                - 100
+                              -
+                                - uid
+                                - 58da4941-9623-4a69-955b-3fb3695087db
+                          -
+                            __assoc__:
+                              -
+                                - type
+                                - verbb\hyper\fieldlayoutelements\AriaLabelField
+                              -
+                                - attribute
+                                - ariaLabel
+                              -
+                                - requirable
+                                - true
+                              -
+                                - autocomplete
+                                - false
+                              -
+                                - autofocus
+                                - false
+                              -
+                                - autocorrect
+                                - true
+                              -
+                                - autocapitalize
+                                - true
+                              -
+                                - disabled
+                                - false
+                              -
+                                - readonly
+                                - false
+                              -
+                                - mandatory
+                                - false
+                              -
+                                - translatable
+                                - false
+                              -
+                                - required
+                                - false
+                              -
+                                - providesThumbs
+                                - false
+                              -
+                                - includeInCards
+                                - false
+                              -
+                                - width
+                                - 100
+                              -
+                                - uid
+                                - 15ae129e-0e3a-42b4-97ad-0dbf481f5a8c
+                  -
+                    __assoc__:
+                      -
+                        - name
+                        - Advanced
+                      -
+                        - uid
+                        - 691b8fd7-2691-43ec-b322-3d438b07efe6
+                      -
+                        - elements
+                        -
+                          -
+                            __assoc__:
+                              -
+                                - type
+                                - craft\fieldlayoutelements\CustomField
+                              -
+                                - required
+                                - false
+                              -
+                                - providesThumbs
+                                - false
+                              -
+                                - includeInCards
+                                - false
+                              -
+                                - width
+                                - 100
+                              -
+                                - uid
+                                - a29d4230-aef9-4b1a-9013-a8a980ac4a20
+                              -
+                                - fieldUid
+                                - a78e7e89-26cf-4a0e-a36d-b48ca76d7ba5 # Custom Classes
+                          -
+                            __assoc__:
+                              -
+                                - type
+                                - craft\fieldlayoutelements\CustomField
+                              -
+                                - required
+                                - false
+                              -
+                                - providesThumbs
+                                - false
+                              -
+                                - includeInCards
+                                - false
+                              -
+                                - width
+                                - 100
+                              -
+                                - uid
+                                - 0e04e515-a2aa-4569-a242-b753f2cb46ac
+                              -
+                                - fieldUid
+                                - ee64f702-a8f1-46ee-8dea-79f8ad82e25b # Custom Attributes
+        -
+          - sources
+          -
+            - 'section:acec3806-c4ac-4430-a8d9-24915eacc052' # Modals
+            - 'section:589d7e58-f378-455e-b073-055e9221964b' # Pages
   maxLinks: null
   minLinks: null
   multipleLinks: false

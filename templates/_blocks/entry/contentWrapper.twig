@@ -20,7 +20,7 @@
 {% if entry.customId is defined and entry.customId != '' %}
 	{% set blockId = entry.customId|replace({' ': '-'})|trim %}
 {% else %}
-	{% set blockId = 'section-' ~ entry.id %}
+	{% set blockId = 'wrapper-' ~ entry.id %}
 {% endif %}
 
 {# Set block type handle as class name for styling #}

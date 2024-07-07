@@ -22,11 +22,15 @@ html {
 }
 
 body {
-  @apply w-screen h-screen bg-white text-black leading-normal text-scaling-base;
+  @apply leading-normal text-scaling-base;
+  width: 100vw;
+  height: 100vh;
+  background-color: theme('colors.white');
+  color: theme('colors.black');  
   overflow-x: hidden;  
   
   & > #page-wrapper {
-	@apply w-screen;
+	width: 100vw;
 	min-height: 100vh;
 	overflow: hidden;
 	
