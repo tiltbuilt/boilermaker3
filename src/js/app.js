@@ -1,7 +1,9 @@
 /* CSS */
 import "@css/app.pcss";
+// import Swiper bundle with all modules installed
 import Swiper from 'swiper/bundle';
-//import 'swiper/css' ;
+// import styles bundle
+import 'swiper/css/bundle';
 
 /* JS */
 import 'lazysizes';

@@ -15,6 +15,7 @@
 
 {# Create array for classes to pass to macros for section #}
 {% set formClassList = [] %}
+{% set btnClasses = ['btn', entry.btnStyles, entry.btnSize] %}
 
 {# Set block id attribute value #}
 {% if entry.customId is defined and entry.customId != '' %}
@@ -45,13 +46,20 @@
 {% if entry.bgColor|length %}
 	{% set colorClasses = colorClasses|merge(['bg-' ~ entry.bgColor]) %}
 {% endif %}
-{% set formClassList =formClassList|merge(colorClasses) %}
+{% set formClassList = formClassList|merge(colorClasses) %}
+
+{% if entry.btnColor != '' %}
+	{% set btnClasses = btnClasses|merge([entry.btnColor]) %}
+{% else %}
+	{% set btnClasses = btnClasses|merge([colorScheme]) %}
+{% endif %}
+
 
 {# Retrieve styling adjustments #}
 {% set adjustments = entry.formStyleAdjustments.eagerly().all() %}
 
 <div id="{{blockId}}" class="{{- blockClass -}} {{- gMacros.classesOut(adjustments, 'Display') -}} {{- gMacros.classesOut(adjustments, 'Margins', true) -}} {{- formClassList|join(' ') }} {{ entry.customClasses }}" {{- gMacros.attributesOut(entry.customAttributes) -}}>
-	{% set form = entry.formToDisplay.one() %}	
+	{% set form = entry.formToDisplay.eagerly().one() %}	
 	{{ craft.formie.renderForm(form, {
 		themeConfig: {
 				resetClasses: true,
@@ -64,20 +72,20 @@
 		
 				alertError: {
 					attributes: {
-						class: 'rounded-md bg-red-50 border border-red-200 text-sm text-red-700 p-4 mb-4',
+						class: 'alert-error',
 					},
 				},
 		
 				alertSuccess: {
 					attributes: {
-						class: 'rounded-md bg-green-50 border border-green-200 text-sm text-green-700 p-4 mb-4',
+						class: 'alert-success',
 					},
 				},
 		
 				buttonWrapper: {
 					attributes: {
 						class: [
-							'flex justify-start -mx-2',
+							'flex justify-start mt-base',
 							"{{ buttonsPosition == 'right' ? 'justify-end' }}",
 							"{{ buttonsPosition == 'center' ? 'justify-center' }}",
 							"{{ buttonsPosition == 'left-right' ? 'justify-between' }}",
@@ -92,15 +100,14 @@
 		
 				buttonContainer: {
 					attributes: {
-						class: 'flex justify-start',
+						class: 'form-btn-wrapper',
 					},
 				},
 		
 				saveButton: {
 					attributes: {
 						class: [
-							'inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-indigo-600 hover:underline focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500',
-							'mx-2',
+							'btn btn-text' ~ colorScheme,
 						],
 					},
 				},
@@ -108,18 +115,14 @@
 				backButton: {
 					attributes: {
 						class: [
-							'inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-slate-700 bg-slate-200 hover:bg-slate-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-slate-500',
-							'mx-2',
+							'btn btn-text' ~ colorScheme,
 						],
 					},
 				},
 		
 				submitButton: {
 					attributes: {
-						class: [
-							'inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500',
-							'mx-2 order-10',
-						],
+						class: btnClasses,
 					},
 				},
 		
@@ -173,7 +176,7 @@
 		
 				subFieldRow: {
 					attributes: {
-						class: 'flex flex-wrap -mx-4 mb-4 last:mb-0',
+						class: 'form-row',
 					},
 				},
 		
@@ -185,14 +188,14 @@
 		
 				nestedFieldRow: {
 					attributes: {
-						class: 'flex flex-wrap mb-4 last:mb-0',
+						class: 'form-row',
 					},
 				},
 		
 				row: {
 					attributes: {
 						class: [
-							'flex flex-wrap -mx-4 mb-4',
+							'form-row',
 							"{{ not craft.formie.getVisibleFields(row) ? 'hidden' }}",
 						],
 					},
@@ -200,40 +203,40 @@
 		
 				field: {
 					attributes: {
-						class: 'px-4 flex-1',
+						class: 'form-field-wrapper',
 					},
 				},
 		
 				fieldLabel: {
 					attributes: {
-						class: 'mb-2 block font-bold',
+						class: 'form-label',
 					},
 				},
 		
 				fieldRequired: {
 					attributes: {
-						class: 'text-red-500',
+						class: 'field-required',
 					},
 				},
 		
 				fieldInstructions: {
 					attributes: {
-						class: 'mb-2',
+						class: 'mt-2',
 					},
 				},
 		
 				fieldInput: {
 					attributes: {
 						class: [
-							'shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md',
-							"{{ (submission.getErrors(field.handle) ?? null) ? 'border-red-300' }}",
+							'form-field-input',
+							"{{ (submission.getErrors(field.handle) ?? null) ? 'border-red-600' }}",
 						],
 					},
 				},
 		
 				fieldError: {
 					attributes: {
-						class: 'text-red-500 text-sm mt-1',
+						class: 'field-error',
 					},
 				},
 		
@@ -281,14 +284,14 @@
 					fieldOption: {
 						attributes: {
 							class: [
-								"{{ field.layout == 'horizontal' ? 'inline-block mr-4' : 'flex items-start mb-2' }}",
+								"{{ field.layout == 'horizontal' ? 'inline-block mr-4' : 'flex items-center mt-2' }}",
 							],
 						},
 					},
 		
 					fieldOptionLabel: {
 						attributes: {
-							class: 'ml-2 text-sm leading-4',
+							class: 'ml-4',
 						},
 					},
 		
@@ -296,7 +299,7 @@
 						resetClass: true,
 		
 						attributes: {
-							class: 'focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded',
+							class: 'form-checkbox',
 						},
 					},
 				},
@@ -306,7 +309,7 @@
 						resetClass: true,
 		
 						attributes: {
-							class: 'shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md',
+							class: 'form-dropdown',
 						},
 					},
 				},
@@ -335,14 +338,14 @@
 					fieldOption: {
 						attributes: {
 							class: [
-								"{{ field.layout == 'horizontal' ? 'inline-block mr-4' : 'flex items-start mb-2' }}",
+								"{{ field.layout == 'horizontal' ? 'inline-block mr-4' : 'flex items-center mt-2' }}",
 							],
 						},
 					},
 		
 					fieldOptionLabel: {
 						attributes: {
-							class: 'ml-2 text-sm leading-4',
+							class: 'ml-4',
 						},
 					},
 		
@@ -350,7 +353,7 @@
 						resetClass: true,
 		
 						attributes: {
-							class: 'focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300',
+							class: 'form-radio',
 						},
 					},
 				},

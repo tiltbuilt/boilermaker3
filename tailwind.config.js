@@ -50,8 +50,9 @@ module.exports = {
 	  current: 'currentColor',
 	  black: '#000',
 	  white: '#fff',
-	  red: '#ff0000',
-	  gray: colors.gray,      
+	  red: colors.red,
+	  gray: colors.gray, 
+	  green: colors.green,     
 	},
 	opacity: {
 	  '0': '0',

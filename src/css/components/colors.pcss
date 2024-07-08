@@ -78,6 +78,31 @@
 		color: theme('colors.black');
 	}
 	
+	/* Forms */
+	
+	&.form-block {
+		
+		.form-field-input, .form-dropdown {
+			background-color: theme('colors.gray.300');
+			border-color: theme('colors.gray.300');
+			color: theme('colors.black');
+			
+			&:focus {
+				border-color: theme('colors.gray.500');
+			}
+		}
+		
+		.form-checkbox, .form-radio {
+			border-color: theme('colors.gray.300');
+			color: theme('colors.gray.600');
+			
+			&:focus {
+				border-color: theme('colors.gray.500');
+			}
+		}	
+		
+	}
+	
 	
 	/* TEXT COLOR OVERRIDES */
 	/* Make a style rule for every color available in the text color picker in the CP. These need to be at the end of a color scheme definition */
@@ -91,7 +116,7 @@
 	}
 	
 	&.text-red {
-		color: theme('colors.red');
+		color: theme('colors.red.600');
 	}	
 	
 	/* BACKGROUND COLOR OVERRIDES */
@@ -110,7 +135,7 @@
 	}
 	
 	&.bg-red {
-		background-color: theme('colors.red');
+		background-color: theme('colors.red.600');
 	}
 	
 }
@@ -192,6 +217,65 @@
 		color: theme('colors.white');
 	}
 	
+	/* Forms */
+	
+	&.form-block {
+		
+		.form-field-input, .form-dropdown {
+			background-color: theme('colors.gray.700');
+			border-color: theme('colors.gray.700');
+			color: theme('colors.white');
+			
+			&:focus {
+				border-color: theme('colors.gray.300');
+			}
+		}
+		
+		.form-checkbox, .form-radio {
+			border-color: theme('colors.gray.700');
+			color: theme('colors.white');
+			
+			&:focus {
+				border-color: theme('colors.gray.300');
+			}
+		}
+		
+	}
+	
+	/* TEXT COLOR OVERRIDES */
+	/* Make a style rule for every color available in the text color picker in the CP. These need to be at the end of a color scheme definition */
+	
+	&.text-white {
+		color: theme('colors.white');
+	}
+	
+	&.text-black {
+		color: theme('colors.black');
+	}
+	
+	&.text-red {
+		color: theme('colors.red.600');
+	}	
+	
+	/* BACKGROUND COLOR OVERRIDES */
+	/* Make a style rule for every color available in the bg color picker in the CP. These need to be at the end of a color scheme definition */
+	
+	&.bg-transparent {
+		background-color: transparent;
+	}
+	
+	&.bg-white {
+		background-color: theme('colors.white');
+	}
+	
+	&.bg-black {
+		background-color: theme('colors.black');
+	}
+	
+	&.bg-red {
+		background-color: theme('colors.red.600');
+	}
+	
 }
 
 .colormode-red {
@@ -203,14 +287,14 @@
 	
 	/* accordions */
 	&.accordion {
-		background-color: theme('colors.red');
+		background-color: theme('colors.red.600');
 		color: theme('colors.white');
 		
 		/* adjust these styles if you want the button to be a different color, etc. */
 		& > .accordion-header > .accordion-button {
 			
 			&:hover {
-				background-color: lighten(theme('colors.red'), 20%);
+				background-color: lighten(theme('colors.red.600'), 20%);
 				color: theme('colors.white');
 			}
 		}
@@ -218,7 +302,7 @@
 	
 	/* tab sets */
 	&.tab-panel {
-		background-color: theme('colors.red');
+		background-color: theme('colors.red.600');
 		color: theme('colors.white');
 	}
 	
@@ -231,7 +315,7 @@
 		}
 		
 		&[aria-selected=true] {
-			background-color: theme('colors.red');
+			background-color: theme('colors.red.600');
 			color: theme('colors.white');
 		}
 	}
@@ -239,28 +323,28 @@
 	/* Buttons */
 	
 	&.btn-standard {
-		background-color: theme('colors.red');
+		background-color: theme('colors.red.600');
 		color: theme('colors.white');
 		
 		&:hover {
-			background-color: lighten(theme('colors.red'), 20%);
+			background-color: lighten(theme('colors.red.600'), 20%);
 			color: theme('colors.white');
 		}
 	}
 	
 	&.btn-text {
-		color: theme('colors.red');
+		color: theme('colors.red.600');
 		
 		&:hover {
-			color: lighten(theme('colors.red'), 20%);
+			color: lighten(theme('colors.red.600'), 20%);
 		}
 	}
 	
 	&.btn-text-arrow {
-		color: theme('colors.red');
+		color: theme('colors.red.600');
 		
 		&:hover {
-			color: lighten(theme('colors.red'), 20%);
+			color: lighten(theme('colors.red.600'), 20%);
 		}
 	}
 	
@@ -271,21 +355,100 @@
 		color: theme('colors.white');
 	}
 	
+	/* Forms */
+	
+	&.form-block {
+		
+		.form-field-input, .form-dropdown {
+			background-color: theme('colors.gray.300');
+			border-color: theme('colors.gray.300');
+			color: theme('colors.black');
+			
+			&:focus {
+				border-color: theme('colors.gray.500');
+			}
+		}
+		
+		.form-checkbox, .form-radio {
+			border-color: theme('colors.gray.300');
+			color: theme('colors.gray.600');
+			
+			&:focus {
+				border-color: theme('colors.gray.500');
+			}
+		}
+		
+	}
+	
+	/* TEXT COLOR OVERRIDES */
+	/* Make a style rule for every color available in the text color picker in the CP. These need to be at the end of a color scheme definition */
+	
+	&.text-white {
+		color: theme('colors.white');
+	}
+	
+	&.text-black {
+		color: theme('colors.black');
+	}
+	
+	&.text-red {
+		color: theme('colors.red.600');
+	}	
+	
+	/* BACKGROUND COLOR OVERRIDES */
+	/* Make a style rule for every color available in the bg color picker in the CP. These need to be at the end of a color scheme definition */
+	
+	&.bg-transparent {
+		background-color: transparent;
+	}
+	
+	&.bg-white {
+		background-color: theme('colors.white');
+	}
+	
+	&.bg-black {
+		background-color: theme('colors.black');
+	}
+	
+	&.bg-red {
+		background-color: theme('colors.red.600');
+	}
+	
 }
 
 
 /* Button Colors */
 
 .btn-standard.btn-red {
-	background-color: theme('colors.red');
+	background-color: theme('colors.red.600');
 	color: theme('colors.white');
 	
 	&:hover {
-		background-color: lighten(theme('colors.red'), 20%);
+		background-color: lighten(theme('colors.red.600'), 20%);
 		color: theme('colors.white');
 	}
 }
 
+
+/* UNIVERSAL FORM STYLES */
+
+.alert-error {
+	background-color: theme('colors.red.200');			
+	color: theme('colors.red.600');		
+}
+
+.field-error {
+	color: theme('colors.red.600');
+}
+
+.alert-success {
+	background-color: theme('colors.green.200');			
+	color: theme('colors.green.600');			
+}
+
+.field-required {
+	color: theme('colors.red.600');
+}
 
 
 
