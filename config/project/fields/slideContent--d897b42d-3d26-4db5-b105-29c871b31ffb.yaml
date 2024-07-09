@@ -13,8 +13,6 @@ settings:
   entryTypes:
     - b1e1aad8-a87c-4914-9445-bbbbb92076ee # Heading
     - 335fab75-2107-4c96-80b2-14808539eadd # Button Group
-    - a6e56255-d417-4ac8-9a3f-256c30684cd0 # Image
-    - 8186c832-97e2-479b-8fdf-4641f25cf4be # Slide Content Layout Row
   purifierConfig: null
   purifyHtml: true
   showUnpermittedFiles: false

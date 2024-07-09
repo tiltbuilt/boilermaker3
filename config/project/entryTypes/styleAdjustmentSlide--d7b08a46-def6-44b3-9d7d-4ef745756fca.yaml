@@ -216,7 +216,7 @@ fieldLayouts:
             uid: f21f621c-5a0c-4a6a-80ac-de2799468422
             userCondition: null
             warning: null
-            width: 100
+            width: 50
           -
             elementCondition: null
             fieldUid: 91d05e51-ee38-4e73-af4c-ebed7e7572d3 # Spacing
@@ -231,114 +231,9 @@ fieldLayouts:
             uid: 9753c605-2c3f-4c6c-9586-5f37cf47b85f
             userCondition: null
             warning: null
-            width: 100
+            width: 50
         name: Padding
         uid: ffac40ec-c594-4cc4-9e40-e0d4991ddb6f
-        userCondition: null
-      -
-        elementCondition: null
-        elements:
-          -
-            elementCondition: null
-            fieldUid: 3218b554-b14a-4cc0-8b53-3f4b5b1bcd4c # Background Image/Video
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: null
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: a962d7eb-eabf-4f2c-9fa3-a53c7fb0f64a
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            elementCondition: null
-            fieldUid: f4d725e6-48b8-4083-a921-ecc0925a0bff # Background Size
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: null
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: e26f85ef-365b-45bd-a725-eb20581b5f90
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            elementCondition:
-              class: craft\elements\conditions\entries\EntryCondition
-              conditionRules:
-                -
-                  class: craft\fields\conditions\OptionsFieldConditionRule
-                  fieldUid: f4d725e6-48b8-4083-a921-ecc0925a0bff # Background Size
-                  layoutElementUid: e26f85ef-365b-45bd-a725-eb20581b5f90
-                  operator: in
-                  uid: 5725a90f-5f08-4db4-930a-49c1a4f1a266
-                  values:
-                    - auto
-              elementType: craft\elements\Entry
-              fieldContext: global
-            fieldUid: 3710a5c7-fa54-4a2c-a07b-4f7a31f5bd25 # Background Repeat
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: null
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 9df28acd-a2df-4d94-afb3-1ac193a5ff1c
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            elementCondition:
-              class: craft\elements\conditions\entries\EntryCondition
-              conditionRules:
-                -
-                  class: craft\fields\conditions\OptionsFieldConditionRule
-                  fieldUid: f4d725e6-48b8-4083-a921-ecc0925a0bff # Background Size
-                  layoutElementUid: e26f85ef-365b-45bd-a725-eb20581b5f90
-                  operator: in
-                  uid: 3d2dd7f8-f499-4b82-855e-a8586b045282
-                  values:
-                    - auto
-              elementType: craft\elements\Entry
-              fieldContext: global
-            fieldUid: 0fe2ca3f-eb30-4294-96a2-1154bd95e41e # Background Position
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: null
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 7367b59b-31fb-4d1c-8778-f411631fb12b
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            elementCondition: null
-            fieldUid: b81cc92d-9e5b-440d-8461-cdf9ab64807e # Opacity
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: null
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 368556f2-362b-416a-98cc-f7a629daa77d
-            userCondition: null
-            warning: null
-            width: 100
-        name: Background
-        uid: 8bc84104-fdea-437d-a2f9-e9597522a891
         userCondition: null
 handle: styleAdjustmentSlide
 hasTitleField: false

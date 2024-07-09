@@ -1,4 +1,4 @@
-dateModified: 1720317637
+dateModified: 1720563204
 elementSources:
   craft\elements\Entry:
     -
@@ -129,7 +129,6 @@ meta:
     91d05e51-ee38-4e73-af4c-ebed7e7572d3: Spacing # Spacing
     93bf7bd8-1004-4c0c-be4d-7b59aa97021e: 'List Order' # List Order
     206d3220-640b-4b20-a440-faaa801a11d9: Display # Display
-    263e5dea-ef08-42a5-8e17-6418ad4de62b: 'Slide Column' # Slide Column
     335fab75-2107-4c96-80b2-14808539eadd: 'Button Group' # Button Group
     400ed272-3701-4004-b0e0-a74db3d25030: Accordion # Accordion
     413dfe3a-277c-4fba-a7ed-27de63a9a93f: 'Vertical Alignment' # Vertical Alignment
@@ -149,8 +148,9 @@ meta:
     4296db0d-d5cc-4ca0-a1b3-08c226ac2224: 'Video Style Adjustments' # Video Style Adjustments
     4600cc8f-8e3f-45bf-bbb9-9e48d2e181ed: 'Phone Number' # Phone Number
     5514a63a-0a23-42f9-9333-5576b0e95462: 'Color Scheme' # Color Scheme
+    5947f640-92a3-49d6-adfa-45816ba49d25: 'Slide Horizontal Layout' # Slide Horizontal Layout
     8125ecc7-14a0-48fa-beb2-ae316b8c9c0d: 'Entries to List' # Entries to List
-    8186c832-97e2-479b-8fdf-4641f25cf4be: 'Slide Content Layout Row' # Slide Content Layout Row
+    8977ed51-c96b-4f56-acf0-7b95d3182220: 'Slide Vertical Layout' # Slide Vertical Layout
     15890ba2-38e4-4bce-9ccc-45ed62101d3e: Section # Section
     60656df7-fedd-4651-ae29-cf30fdef7f08: 'Style Adjustment - Slider Set' # Style Adjustment - Slider Set
     68048c93-ca73-447b-9387-512eebe4e90b: 'Slide Columns' # Slide Columns
