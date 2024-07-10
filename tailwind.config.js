@@ -1,8 +1,9 @@
 import('tailwindcss').Config
+
 const colors = require('tailwindcss/colors')
 module.exports = {  
   plugins: [	
-	require('@tailwindcss/aspect-ratio'),
+	//require('@tailwindcss/aspect-ratio'),
 	require('@tailwindcss/typography'),
 	require('@tailwindcss/forms'),
 	require('@tailwindcss/container-queries'),	
@@ -99,6 +100,8 @@ module.exports = {
   },
   safelist: [	  
 	  'aspect-square',
+	  'aspect-video',
+	  'aspect-auto',
 	  {
 		pattern: /(text|bg|btn)-(white|black|transparent|red)/, //adjust colors to match list available in color def
 		variants: ['hover', 'focus'],

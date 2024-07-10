@@ -32,7 +32,8 @@ if (typeof window.Alpine === "undefined") {
   Alpine.plugin(collapse);
   Alpine.plugin(focus);
   Alpine.plugin(persist);
-  window.Alpine = Alpine;  
+  window.Alpine = Alpine;
+  window.Swiper = Swiper;  
   Alpine.start();
 }
 

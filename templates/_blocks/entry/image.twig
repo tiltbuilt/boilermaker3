@@ -149,12 +149,14 @@
 					{# output source tag for each size/aspect #}					
 					{% set dfImg = null %}
 					{% for key,value in minSizes %}
-						{% if aspectData[key] is defined %}
-							{% if key != 'df' %}
-								{% if dfMaxSize == null %}
-									{% set dfMaxSize = minSizes[key] - 1 %}
-								{% endif %}
-							{% endif %}							
+						{% if key != 'df' and aspectData[key] is defined %}
+							{% if dfMaxSize == null %}
+								{% set dfMaxSize = minSizes[key] - 1 %}
+							{% endif %}
+						{% endif %}
+					{% endfor %}
+					{% for key,value in minSizes %}
+						{% if aspectData[key] is defined %}														
 							{% if aspectData[key] != '' and aspectData[key] != 'auto' %} 
 								{%- set xForm = 'image-' ~ aspectData[key]	%}
 							{% else %}
@@ -167,7 +169,7 @@
 							{# set variable for default image to use in img tag #}
 							{% if key == 'df' %}
 								{% set dfImg = transformedImages[0] %}
-							{% endif %}
+							{% endif %}							
 							<source data-sizes="auto" {% if aspectData|length > 1 %}media="{% if key == 'df' %}(max-width: {{dfMaxSize}}px){% else %}(min-width: {{value}}px){% endif %}"{% endif %} data-srcset="{{ craft.imager.srcset(transformedImages) }}" {% if craft.imager.serverSupportsWebp() %}type="image/webp"{% endif %}>
 						{% endif %}						
 					{% endfor %}
@@ -178,8 +180,7 @@
 					  alt="{{ entry.title }}" 
 					  class="lazyload"
 					>									
-				</picture>
-			
+				</picture>				
 			{% else %}
 				{% if craft.imager.serverSupportsWebp() %}
 					{%- set xForm = 'contentImage-webp' %}

@@ -31,7 +31,7 @@
 {% set animClass = '' %}
 {% if animSetting and 'section' in entry.owner.type.handle %}
 	{% set animClass = animSetting %}
-	{% set wrapperClassList = wrapperClassList|merge([animClass]) %}
+	{% set sliderSetClassList = sliderSetClassList|merge([animClass]) %}
 {% else %}
 	{% set animClass = null %}		
 {% endif %}
@@ -45,26 +45,65 @@
 {% set sliderSetClassList = sliderSetClassList|merge([colorScheme]) %}
 
 {# Retrieve styling adjustments #}
-{% set adjustments = entry.contentWrapperStyleAdjustments.eagerly().with('bgImg').all() %}
+{% set adjustments = entry.sliderSetStyleAdjustments.eagerly().all() %}
 
 {# retrieve slide content #}
-{% set slides = entry.slidess.eagerly().all() %}
+{% set slides = entry.slides.eagerly().all() %}
 
-<div id="{{blockId}}" class="@container/{{blockId}} {{- blockClass -}} {{- gMacros.classesOut(adjustments, 'Display') -}} {{- gMacros.classesOut(adjustments, 'Margins', true) -}} {{- sliderSetClassList|join(' ') }} {{ entry.customClasses }}" {{- gMacros.attributesOut(entry.customAttributes) -}} data-autoplay="{{entry.autoplay}}" data-timing="{{entry.slideTransitionDelay}}" data-buttons="{{entry.buttons}}" data-dots="{{entry.dots}}" data-effect="{{entry.slideEffect}}">
-	<div class="swiper-elem {% if entry.slides|length > 1 %}swiper{% endif %}" id="{{ blockId  ~ '-swiper'}}">
+<div id="{{blockId}}" class="@container {{blockClass}} {{ gMacros.classesOut(adjustments, 'Display') -}} {{- gMacros.classesOut(adjustments, 'Margins', true) -}} {{- sliderSetClassList|join(' ') }} {{ entry.customClasses }}" {{- gMacros.attributesOut(entry.customAttributes) -}} 
+{#}
+{% if entry.slides|length > 1 %}
+x-data="{swiper: null}"
+x-init="swiper = new Swiper($refs.container, {
+	loop: true,
+	slidesPerView: 1,
+	spaceBetween: 0,
+	centeredSlides: true,
+	{% if entry.autoplay %}
+		autoplay: {
+			delay: {{entry.slideTransitionDelay}},
+			disableOnInteraction: false,
+			speed: 600,
+		},
+	{% endif %}
+	{% if entry.slideEffect == 'fade' %}
+		effect: 'fade',
+		fadeEffect: {
+			crossFade: true,
+		},
+	{% endif %}
+	{% if (entry.buttons) and (entry.slides|length > 1)  %}
+		navigation: {
+			nextEl: '#{{blockId}}-next',
+			prevEl: '#{{blockId}}-prev',
+		},
+	{% endif %}
+	{% if (entry.dots) and (entry.slides|length > 1)  %}
+		pagination: {
+			el: '#{{blockId}}-pagination',
+			clickable: true,
+		}
+	{% endif %}  
+	});"
+{% endif %}#}
+>
+
+<div class="bg-black @md:bg-red aspect-video"></div>
+	{#}
+	<div class="swiper-container" {% if entry.slides|length > 1 %}x-ref="container"{% endif %} id="{{ blockId  ~ '-swiper'}}">
 		<div class="swiper-wrapper">			
 			{% for slide in slides %}
 				{{slide.render({					
 					'colorScheme': colorScheme,
 					'ownerId': blockId,
-					'slideAspect': sliderSize,
+					'slideAspect': entry.sliderSize,					
 				})}}
 			{% endfor %}
 		</div>
 	</div>
 	
 	{% if (entry.buttons) and (entry.slides|length > 1)  %}
-		<button class="swiper-button-prev" data-target="#{{ blockId  ~ '-swiper'}}" id="{{blockId}}-prev">
+		<button class="swiper-button-prev" @click="swiper.slidePrev()" id="{{blockId}}-prev">
 			{% if gSettings.sliderPreviousIcon|length %}
 				{% if gSettings.sliderPreviousIcon.type == 'svg' %}
 					{{ gSettings.sliderPreviousIcon.inline }}
@@ -78,7 +117,7 @@
 			{% endif %}
 		</button>
 		
-		<button class="swiper-button-next" data-target="#{{ blockId  ~ '-swiper'}}" id="{{blockId}}-next">
+		<button class="swiper-button-next" @click="swiper.slideNext()" id="{{blockId}}-next">
 			{% if gSettings.sliderNextIcon|length %}
 				{% if gSettings.sliderNextIcon.type == 'svg' %}
 					{{ gSettings.sliderNextIcon.inline }}
@@ -93,9 +132,10 @@
 		</button>
 	{% endif %}
 	
-	{% if (block.dots) and (slideList|length > 1)  %}
+	{% if (entry.dots) and (entry.slides|length > 1)  %}
 		<div class="swiper-pagination" id="{{blockId}}-pagination"></div>
 	{% endif %}
+	#}
 		
 </div>
 
