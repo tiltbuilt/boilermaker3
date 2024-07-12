@@ -703,7 +703,31 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            elementCondition: null
+            elementCondition:
+              class: craft\elements\conditions\entries\EntryCondition
+              conditionRules:
+                -
+                  class: craft\fields\conditions\OptionsFieldConditionRule
+                  fieldUid: 13b06d24-aa17-46e3-89b9-c895a68df851 # Repeater Display Type
+                  layoutElementUid: 637190cd-073e-46d0-b3c6-7e32259ccefc
+                  operator: in
+                  uid: c631ef54-b5be-4b78-90c6-c861ae0cd6a3
+                  values:
+                    - textList
+                    - cardList
+                    - cardListSmallImage
+                    - cardListLargeImage
+                -
+                  class: craft\fields\conditions\OptionsFieldConditionRule
+                  fieldUid: 93013c2a-acd5-4b87-b999-b352741b10fd # Repeater Content
+                  layoutElementUid: cd0ef4dc-4cbd-49bf-b9a4-90ef1dd3a468
+                  operator: ni
+                  uid: 1fea5e43-4608-4a8d-a888-32de2167c616
+                  values:
+                    - contentLinks
+                    - navList
+              elementType: craft\elements\Entry
+              fieldContext: global
             heading: Pagination
             type: craft\fieldlayoutelements\Heading
             uid: e3f87921-f86b-4cb1-8f41-d3aab059d379
@@ -714,25 +738,24 @@ fieldLayouts:
               conditionRules:
                 -
                   class: craft\fields\conditions\OptionsFieldConditionRule
-                  fieldUid: 93013c2a-acd5-4b87-b999-b352741b10fd # Repeater Content
-                  layoutElementUid: cd0ef4dc-4cbd-49bf-b9a4-90ef1dd3a468
-                  operator: ni
-                  uid: 3c8dc86e-3218-4d06-b38a-e885b5e21512
-                  values:
-                    - contentLinks
-                    - contentCards
-                    - navList
-                -
-                  class: craft\fields\conditions\OptionsFieldConditionRule
                   fieldUid: 13b06d24-aa17-46e3-89b9-c895a68df851 # Repeater Display Type
                   layoutElementUid: 637190cd-073e-46d0-b3c6-7e32259ccefc
                   operator: in
                   uid: f7bb39a0-00e5-43f8-bece-348dea15e76f
                   values:
+                    - textList
                     - cardList
                     - cardListSmallImage
                     - cardListLargeImage
-                    - textList
+                -
+                  class: craft\fields\conditions\OptionsFieldConditionRule
+                  fieldUid: 93013c2a-acd5-4b87-b999-b352741b10fd # Repeater Content
+                  layoutElementUid: cd0ef4dc-4cbd-49bf-b9a4-90ef1dd3a468
+                  operator: ni
+                  uid: ce0c9135-6b20-45a0-b6ae-49cf2c28a28c
+                  values:
+                    - contentLinks
+                    - navList
               elementType: craft\elements\Entry
               fieldContext: global
             fieldUid: 56d80f6e-2a67-464f-af70-0d46d267a0e2 # Items Per Page

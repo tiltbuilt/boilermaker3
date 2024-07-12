@@ -336,16 +336,16 @@ fieldLayouts:
             userCondition: null
           -
             elementCondition: null
-            fieldUid: e5542413-6c20-435f-8598-e457fb2d1a50 # Page Header Background
-            handle: null
+            fieldUid: 3218b554-b14a-4cc0-8b53-3f4b5b1bcd4c # Background Image/Video
+            handle: headerImg
             includeInCards: false
             instructions: null
-            label: null
+            label: 'Page Header Image'
             providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 838799ce-c16e-452f-a27e-512662b03939
+            uid: c8ce72f5-e48a-4cd6-87c6-ab4799a76e6b
             userCondition: null
             warning: null
             width: 100

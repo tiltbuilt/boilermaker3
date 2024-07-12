@@ -45,7 +45,7 @@
 {% if entry.bgColor|length %}
 	{% set colorClasses = colorClasses|merge(['bg-' ~ entry.bgColor]) %}
 {% endif %}
-{% set wrapperClassList = wrapperClassList|merge(colorClasses) %}
+{% set repeaterClassList = repeaterClassList|merge(colorClasses) %}
 
 
 {#
@@ -54,6 +54,7 @@
   -----
 #}
 
+{# get order setting from field and match to appropriate parameter syntax #}
 {%
   set orderOptions = {
 	'dd' : 'postDate desc',
@@ -61,6 +62,154 @@
 	'r'  : 'RAND()',
 	'az' : 'title asc',
 	'za' : 'title desc',
-	'so' : '',
+	'cp' : '',
   }
 %}
+
+
+{% set listOrder = entry.listOrder in orderOptions|keys ? orderOptions[entry.listOrder] : 'postDate desc' %}
+
+
+{# Set variables for list display type and content type #}
+{% set displayType = entry.repeaterDisplay %}
+{% set contentType = entry.repeaterContent %}
+
+{# Determine whether to use pagination or not #}
+{% set paginateItems = false %}
+{% if contentType != "contentLinks" and contentType != "navList" %}
+	{% if displayType != "buttons" and displayType != "largeSlider" and displayType != "multiCardSlider" %}	
+		{% if entry.itemsPerPage != 0 and entry.showPagination %}
+			{% set paginateItems = true %}
+		{% endif %}	
+	{% endif %}
+{% endif %}
+
+{# Gather list Content #}
+{% set listContent = [] %}
+{% set listData = [] %}
+
+
+{% switch contentType %}
+	{# logic for querying the content for the list based on content type and pagination setting #}
+	{% case "contentLinks" %}		
+			{% set listData = entry.contentLinks %}	
+			
+	{% case "contentCards" %}
+		{% if paginateItems %}
+			{% paginate entry.contentCards.orderBy(listOrder).with(['imageAsset']) as pageInfo, listData %}
+			{% do seomatic.helper.paginate(pageInfo) %}
+		{% else %}
+			{% set listData = entry.contentCards.orderBy(listOrder).with(['imageAsset']).eagerly().all() %}
+		{% endif %}
+		{% set listData = entry.contentCards.orderBy(listOrder).with(['imageAsset']).eagerly().all() %}	
+	
+	{% case "allInSection" %}
+		{% if paginateItems %}
+			{% paginate craft.entries().sectionId(entry.sectionToList).orderBy(listOrder).with(['seoImage','headerImg', 'imageAsset']) as pageInfo, listData %}
+			{% do seomatic.helper.paginate(pageInfo) %}
+		{% else %}
+			{% set listData = craft.entries().sectionId(entry.sectionToList).orderBy(listOrder).with(['seoImage','headerImg', 'imageAsset']).eagerly().all() %}
+		{% endif %}
+	
+	{% case "selectEntry" %}
+		{% if paginateItems %}
+			{% paginate  entry.entriesToList.orderBy(listOrder).with(['seoImage','headerImg', 'imageAsset']) as pageInfo, listData %}
+			{% do seomatic.helper.paginate(pageInfo) %}
+		{% else %}
+			{% set listData =  entry.entriesToList.orderBy(listOrder).with(['seoImage','headerImg', 'imageAsset']).eagerly().all() %}
+		{% endif %}
+	
+	{% case "navList" %}		
+		{% if listOrder == '' %}
+			{% if paginateItems %}
+				{% paginate craft.navigation.nodes().handle(entry.navListToDisplay).fixedOrder() as pageInfo, listData %}
+				{% do seomatic.helper.paginate(pageInfo) %}
+			{% else %}
+				{% set listData = craft.navigation.nodes().handle(entry.navListToDisplay).fixedOrder().eagerly().all() %}
+			{% endif %}
+		{% else %}
+			{% if paginateItems %}
+				{% paginate craft.navigation.nodes().handle(entry.navListToDisplay).orderBy(listOrder) as pageInfo, listData %}
+				{% do seomatic.helper.paginate(pageInfo) %}
+			{% else %}
+				{% set listData = craft.navigation.nodes().handle(entry.navListToDisplay).orderBy(listOrder).eagerly().all() %}
+			{% endif %}		
+		{% endif %}
+				
+{% endswitch %}
+
+{{listData|length}}
+{# retrieve content using query established above #}
+{#}
+{% if paginateItems %}
+	{% paginate listQuery as pageInfo, listData %}
+	{% do seomatic.helper.paginate(pageInfo) %}
+{% else %}
+	{% set listData = listQuery.eagerly().all() %}
+{% endif %}
+#}
+{# content list population by normalizing content data into data objects that can be passed to any of the repeater layout templates and work. Includes special handling for navLists because of diversity of content possible #}
+{#}
+{% set siteThumb = gSettings.thumbnailPlaceholder.eagerly().one %}
+{% for item in listData %}
+	{% if contentType == "navList" %}
+		{{item.type}}
+	{% else %}
+		{{item.className}}
+		}
+		{% if item.title is defined %}
+			{% set itemTitle = item.title %}
+		{% else %}
+			{% set itemTitle = null %}
+		{% endif %}
+		{% if item.url is defined %}
+			{% if item.url|length %}
+				{% set itemUrl = item.url %}
+			{% else %}
+				{% set itemUrl = null %}
+			{% endif %}
+			{% if item.target is defined %}
+				{% set itemTab = item.target|length ? true : false %}
+			{% else %}
+				{% set itemTab = false %}
+			{% endif %}
+		{% else %}
+			{% set itemUrl = null %}
+			{% set itemTab = false %}
+		{% endif %}
+		{% if item.excerpt is defined %}
+			{% set itemExcerpt = item.excerpt %}
+		{% elseif item.cardContent is defined %}
+			{% set itemExcerpt = item.cardContent|raw %}
+		{% else %}
+			{% set itemExcerpt = '' %}
+		{% endif %}
+		{% if item.seoImage is defined and item.seoImage != null %}
+			{% set itemImage = item.seoImage %}
+		{% elseif item.headerImg is defined and item.headerImg != null %}
+			{% set image = item.headerImg %}
+		{% elseif item.imageAsset is defined and item.imageAsset != null %}
+			{% set image = item.imageAsset %}
+		{% else %}
+			{% set image = siteThumb %}
+		{% endif %}
+		{% if entry.showPostDate and item.postDate is defined %}
+			{% set itemDate = item.postDate|date(entry.dateFormat) %}
+		{% else %}
+			{% set itemDate = '' %}
+		{% endif %}	
+			
+	{% endif %}
+	
+	{% set contentItem = {
+		'title': itemTitle,
+		'excerpt': itemExcerpt,
+		'url': itemUrl,
+		'newTab': itemTab,
+		'image': itemImage,
+		'date': itemDate
+	} %}
+	{% set listContent = listContent|merge([contentItem]) %}
+	
+{% endfor %}
+#}
