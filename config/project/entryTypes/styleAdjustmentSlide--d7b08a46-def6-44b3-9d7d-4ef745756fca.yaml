@@ -235,42 +235,6 @@ fieldLayouts:
         name: Padding
         uid: ffac40ec-c594-4cc4-9e40-e0d4991ddb6f
         userCondition: null
-      -
-        elementCondition: null
-        elements:
-          -
-            elementCondition: null
-            fieldUid: 9cc69c32-6fb9-465d-b7ce-b805d00f5449 # Row Margins
-            handle: ml
-            includeInCards: false
-            instructions: null
-            label: 'Left Margin'
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: bd84948b-a746-4fae-aa74-26ac62b0f438
-            userCondition: null
-            warning: null
-            width: 50
-          -
-            elementCondition: null
-            fieldUid: 9cc69c32-6fb9-465d-b7ce-b805d00f5449 # Row Margins
-            handle: mr
-            includeInCards: false
-            instructions: null
-            label: 'Right Margin'
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: e9e6cf2e-f21b-4271-957c-da86387addd1
-            userCondition: null
-            warning: null
-            width: 50
-        name: Margins
-        uid: dcf86f48-11f2-4315-9ac5-04a2620625a1
-        userCondition: null
 handle: styleAdjustmentSlide
 hasTitleField: false
 icon: palette

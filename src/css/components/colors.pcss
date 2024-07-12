@@ -45,7 +45,7 @@
 	
 	/* Buttons */
 	
-	&.btn-standard {
+	&.btn, &.btn.btn-standard {
 		background-color: theme('colors.gray.500');
 		color: theme('colors.white');
 		
@@ -55,16 +55,18 @@
 		}
 	}
 	
-	&.btn-text {
+	&.btn.btn-text {
 		color: theme('colors.gray.700');
+		background-color: transparent;
 		
 		&:hover {
 			color: theme('colors.gray.500');
 		}
 	}
 	
-	&.btn-text-arrow {
+	&.btn.btn-text-arrow {
 		color: theme('colors.gray.700');
+		background-color: transparent;
 		
 		&:hover {
 			color: theme('colors.gray.500');
@@ -101,6 +103,43 @@
 			}
 		}	
 		
+	}
+	
+	/* SLIDERS */
+	
+	&.slider-set {
+		.swiper-button-prev, .swiper-button-next {
+			color: theme('colors.red.500');
+			
+			&:hover {
+				color: theme('colors.red.300');
+			}
+		}
+		
+		.swiper-pagination-bullet {
+			background-color: theme('colors.red.500');
+			
+			&:hover {
+				background-color: theme('colors.red.300');
+			}
+			
+			&.swiper-pagination-bullet-active {
+				background-color: theme('colors.white');
+				
+				&:hover {
+					background-color: theme('colors.white');
+				}
+			}
+		}		
+	}
+	
+	&.slide {
+		background-color: theme('colors.gray.300');
+		
+		.slide-content-wrapper {
+			@apply bg-gray-300 @md:bg-gray-300/70;
+			color: theme('colors.black');			
+		}
 	}
 	
 	
@@ -184,7 +223,7 @@
 	
 	/* Buttons */
 	
-	&.btn-standard {
+	&.btn, &.btn.btn-standard {
 		background-color: theme('colors.gray.700');
 		color: theme('colors.white');
 		
@@ -194,16 +233,18 @@
 		}
 	}
 	
-	&.btn-text {
+	&.btn.btn-text {
 		color: theme('colors.gray.400');
+		background-color: transparent;
 		
 		&:hover {
 			color: theme('colors.white');
 		}
 	}
 	
-	&.btn-text-arrow {
+	&.btn.btn-text-arrow {
 		color: theme('colors.gray.400');
+		background-color: transparent;
 		
 		&:hover {
 			color: theme('colors.white');
@@ -240,6 +281,43 @@
 			}
 		}
 		
+	}
+	
+	/* SLIDERS */
+	
+	&.slider-set {
+		.swiper-button-prev, .swiper-button-next {
+			color: theme('colors.red.500');
+			
+			&:hover {
+				color: theme('colors.red.300');
+			}
+		}
+		
+		.swiper-pagination-bullet {
+			background-color: theme('colors.red.500');
+			
+			&:hover {
+				background-color: theme('colors.red.300');
+			}
+			
+			&.swiper-pagination-bullet-active {
+				background-color: theme('colors.white');
+				
+				&:hover {
+					background-color: theme('colors.white');
+				}
+			}
+		}		
+	}
+	
+	&.slide {
+		background-color: theme('colors.gray.700');
+		
+		.slide-content-wrapper {
+			@apply bg-gray-700 @md:bg-gray-700/70;
+			color: theme('colors.white');			
+		}
 	}
 	
 	/* TEXT COLOR OVERRIDES */
@@ -322,7 +400,7 @@
 	
 	/* Buttons */
 	
-	&.btn-standard {
+	&.btn, &.btn.btn-standard {
 		background-color: theme('colors.red.600');
 		color: theme('colors.white');
 		
@@ -332,16 +410,18 @@
 		}
 	}
 	
-	&.btn-text {
+	&.btn.btn-text {
 		color: theme('colors.red.600');
+		background-color: transparent;
 		
 		&:hover {
 			color: lighten(theme('colors.red.600'), 20%);
 		}
 	}
 	
-	&.btn-text-arrow {
+	&.btn.btn-text-arrow {
 		color: theme('colors.red.600');
+		background-color: transparent;
 		
 		&:hover {
 			color: lighten(theme('colors.red.600'), 20%);
@@ -378,6 +458,43 @@
 			}
 		}
 		
+	}
+	
+	/* SLIDERS */
+	
+	&.slider-set {
+		.swiper-button-prev, .swiper-button-next {
+			color: theme('colors.white');
+			
+			&:hover {
+				color: theme('colors.gray.500');
+			}
+		}
+		
+		.swiper-pagination-bullet {
+			background-color: theme('colors.white');
+			
+			&:hover {
+				background-color: theme('colors.gray.500');
+			}
+			
+			&.swiper-pagination-bullet-active {
+				background-color: theme('colors.black');
+				
+				&:hover {
+					background-color: theme('colors.black');
+				}
+			}
+		}		
+	}
+	
+	&.slide {
+		background-color: theme('colors.red.800');
+		
+		.slide-content-wrapper {
+			@apply bg-red-800 @md:bg-red-800/70;
+			color: theme('colors.white');			
+		}
 	}
 	
 	/* TEXT COLOR OVERRIDES */
@@ -419,13 +536,15 @@
 
 /* Button Colors */
 
-.btn-standard.btn-red {
-	background-color: theme('colors.red.600');
-	color: theme('colors.white');
-	
-	&:hover {
-		background-color: lighten(theme('colors.red.600'), 20%);
+.btn {
+	&.btn-standard.btn-red, &.btn-red {
+		background-color: theme('colors.red.600');
 		color: theme('colors.white');
+		
+		&:hover {
+			background-color: lighten(theme('colors.red.600'), 20%);
+			color: theme('colors.white');
+		}
 	}
 }
 

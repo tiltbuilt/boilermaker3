@@ -102,7 +102,7 @@
 				{% endif %}			
 			{% else %}
 				{# everything else #}
-				<a href="{{entry.linkSettings.url}}" id="{{blockId}}-link" type="button" class="img-link {{ entry.linkSettings.customClasses }}" {% if entry.linkSettings.ariaLabel|length %}aria-label="{{entry.linkSettings.ariaLabel}}"{% endif %} {{- gMacros.attributesOut(entry.linkSettings.customAttributes) -}}>
+				<a href="{{entry.linkSettings.url}}" id="{{blockId}}-link" type="button" class="img-link {{ entry.linkSettings.customClasses }}" {% if entry.linkSettings.ariaLabel|length %}aria-label="{{entry.linkSettings.ariaLabel}}"{% endif %} {{-  entry.linkSettings.target|length ? ' target="_blank"' : '' }} {{- gMacros.attributesOut(entry.linkSettings.customAttributes) -}}>
 			{% endif %}		
 		{% endif %}
 		

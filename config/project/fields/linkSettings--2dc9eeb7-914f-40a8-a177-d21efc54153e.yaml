@@ -83,7 +83,7 @@ settings:
                                 - false
                               -
                                 - required
-                                - true
+                                - false
                               -
                                 - providesThumbs
                                 - false
@@ -286,7 +286,7 @@ settings:
                                 - false
                               -
                                 - required
-                                - true
+                                - false
                               -
                                 - providesThumbs
                                 - false
@@ -487,7 +487,7 @@ settings:
                                 - false
                               -
                                 - required
-                                - true
+                                - false
                               -
                                 - providesThumbs
                                 - false
@@ -685,7 +685,7 @@ settings:
                                 - false
                               -
                                 - required
-                                - true
+                                - false
                               -
                                 - providesThumbs
                                 - false
@@ -1164,7 +1164,7 @@ settings:
                                 - false
                               -
                                 - required
-                                - true
+                                - false
                               -
                                 - providesThumbs
                                 - false
@@ -1362,7 +1362,7 @@ settings:
                                 - false
                               -
                                 - required
-                                - true
+                                - false
                               -
                                 - providesThumbs
                                 - false
@@ -1844,7 +1844,7 @@ settings:
                                 - false
                               -
                                 - required
-                                - true
+                                - false
                               -
                                 - providesThumbs
                                 - false
@@ -2613,7 +2613,7 @@ settings:
                                 - false
                               -
                                 - required
-                                - true
+                                - false
                               -
                                 - providesThumbs
                                 - false

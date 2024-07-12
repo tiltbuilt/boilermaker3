@@ -51,7 +51,7 @@
 {% set slides = entry.slides.eagerly().all() %}
 
 <div id="{{blockId}}" class="@container {{blockClass}} {{ gMacros.classesOut(adjustments, 'Display') -}} {{- gMacros.classesOut(adjustments, 'Margins', true) -}} {{- sliderSetClassList|join(' ') }} {{ entry.customClasses }}" {{- gMacros.attributesOut(entry.customAttributes) -}} 
-{#}
+
 {% if entry.slides|length > 1 %}
 x-data="{swiper: null}"
 x-init="swiper = new Swiper($refs.container, {
@@ -85,18 +85,17 @@ x-init="swiper = new Swiper($refs.container, {
 		}
 	{% endif %}  
 	});"
-{% endif %}#}
+{% endif %}
 >
 
-<div class="bg-black @md:bg-red aspect-video"></div>
-	{#}
 	<div class="swiper-container" {% if entry.slides|length > 1 %}x-ref="container"{% endif %} id="{{ blockId  ~ '-swiper'}}">
 		<div class="swiper-wrapper">			
 			{% for slide in slides %}
 				{{slide.render({					
 					'colorScheme': colorScheme,
 					'ownerId': blockId,
-					'slideAspect': entry.sliderSize,					
+					'slideAspectSm': entry.slidePhotoSizeSmall,
+					'slideAspectLg': entry.slidePhotoSizeLarge,					
 				})}}
 			{% endfor %}
 		</div>
@@ -134,9 +133,7 @@ x-init="swiper = new Swiper($refs.container, {
 	
 	{% if (entry.dots) and (entry.slides|length > 1)  %}
 		<div class="swiper-pagination" id="{{blockId}}-pagination"></div>
-	{% endif %}
-	#}
-		
+	{% endif %}	
 </div>
 
 	

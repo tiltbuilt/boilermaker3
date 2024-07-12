@@ -12,7 +12,7 @@ settings:
           - Left
         -
           - value
-          - justify-left
+          - justify-start
         -
           - default
           - ''
@@ -23,7 +23,7 @@ settings:
           - Right
         -
           - value
-          - justify-right
+          - justify-end
         -
           - default
           - ''

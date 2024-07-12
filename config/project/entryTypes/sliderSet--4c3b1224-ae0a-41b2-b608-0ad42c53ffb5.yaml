@@ -58,10 +58,25 @@ fieldLayouts:
           -
             elementCondition: null
             fieldUid: 4720320b-f7d0-49ec-a327-0db0e3a2dd7c # Slider Size
-            handle: null
+            handle: slidePhotoSizeSmall
             includeInCards: false
-            instructions: null
-            label: null
+            instructions: 'This field sets the aspect ratio for the slide photo in small layout scenarios like sidebars and mobile devices'
+            label: 'Slide Photo Size Small'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 648948ad-0076-44a1-8f80-5b1f2d0bfc61
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 4720320b-f7d0-49ec-a327-0db0e3a2dd7c # Slider Size
+            handle: slidePhotoSizeLarge
+            includeInCards: false
+            instructions: 'This field sets the aspect ratio for the photo in the slider in scenarios where the image is wider than about 750px'
+            label: 'Slide Photo Size - Large'
             providesThumbs: false
             required: false
             tip: null

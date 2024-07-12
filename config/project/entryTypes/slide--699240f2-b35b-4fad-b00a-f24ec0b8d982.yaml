@@ -64,46 +64,6 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-          -
-            elementCondition: null
-            fieldUid: a2da31ae-7341-4dd1-b245-5ee55d44cbc2 # Yes No
-            handle: wholeSlideLink
-            includeInCards: false
-            instructions: null
-            label: 'Make Entire Slide a Link'
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 0a31d3f5-d06e-421d-9a68-9814b0ca70a3
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            elementCondition:
-              class: craft\elements\conditions\entries\EntryCondition
-              conditionRules:
-                -
-                  class: craft\fields\conditions\LightswitchFieldConditionRule
-                  fieldUid: a2da31ae-7341-4dd1-b245-5ee55d44cbc2 # Yes No
-                  layoutElementUid: 0a31d3f5-d06e-421d-9a68-9814b0ca70a3
-                  uid: 577a48e3-e394-4be4-bfa5-1cbf710a8a6e
-                  value: true
-              elementType: craft\elements\Entry
-              fieldContext: global
-            fieldUid: 2dc9eeb7-914f-40a8-a177-d21efc54153e # Link Settings
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: null
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: e8b3005c-62c3-4980-aebb-8ed37838d7a4
-            userCondition: null
-            warning: null
-            width: 100
         name: Content
         uid: e6a5ca0a-ca9b-4d27-b6f9-c330151d7750
         userCondition: null
