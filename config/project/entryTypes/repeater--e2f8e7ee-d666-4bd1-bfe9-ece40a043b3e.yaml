@@ -758,6 +758,7 @@ fieldLayouts:
                   layoutElementUid: ea965d57-c019-4688-bd6d-ea2fa5a525f7
                   maxValue: ''
                   operator: '!='
+                  step: 1
                   uid: ac463ac6-a188-47f4-a50f-8fa55918f475
                   value: '0'
               elementType: craft\elements\Entry
@@ -785,6 +786,7 @@ fieldLayouts:
                   layoutElementUid: ea965d57-c019-4688-bd6d-ea2fa5a525f7
                   maxValue: ''
                   operator: '!='
+                  step: 1
                   uid: 96f5d8b8-9ae3-46cc-a5ce-3c42c29a06ed
                   value: '0'
                 -
@@ -814,6 +816,48 @@ fieldLayouts:
       -
         elementCondition: null
         elements:
+          -
+            elementCondition: null
+            heading: Color
+            type: craft\fieldlayoutelements\Heading
+            uid: 96f5abef-2c83-4460-a7e2-c7c46e70f0ef
+            userCondition: null
+          -
+            elementCondition: null
+            fieldUid: 5514a63a-0a23-42f9-9333-5576b0e95462 # Color Scheme
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 2a42327d-544a-4ccd-b61a-6bdc816e1856
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 487ec441-2218-43e8-8a96-652a0649e437 # Color Picker
+            handle: bgColor
+            includeInCards: false
+            instructions: null
+            label: 'Background Color'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d04130ee-68b5-4ac9-8386-120e7dfbc432
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            heading: Adjustments
+            type: craft\fieldlayoutelements\Heading
+            uid: 5a944388-998c-434f-811c-a3d6c60afb28
+            userCondition: null
           -
             elementCondition: null
             fieldUid: fdc69893-7848-4bd4-8f1d-3df385771a84 # Repeater Style Adjustments
