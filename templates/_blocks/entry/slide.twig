@@ -43,7 +43,7 @@
 {# Retrieve styling adjustments #}
 {% set adjustments = entry.slideStyleAdjustments.eagerly().all() %}
 
-<div id="{{blockId}}" class="{{blockClass}} swiper-slide {{ slideClassList|join(' ') }} {{ entry.customClasses }}" {{- gMacros.attributesOut(entry.customAttributes) -}}>
+<div id="{{blockId}}" class="{{blockClass}} swiper-slide {{ slideClassList|join(' ') }} {{ entry.customClasses }}" {{- gMacros.attributesOut(entry.customAttributes) -}} {% if entry.slideTimingOverride != '' %}data-swiper-autoplay="{{entry.slideTimingOverride}}"{% endif %}>
 	
 	{% if image != null %}
 		<div class="slide-image aspect-{{slideAspectSm}} @md:aspect-{{slideAspectLg}}">			
@@ -58,9 +58,7 @@
 			{%- set mobileStartImage = mobileImages[0] %}
 			{%- set largerImages = craft.imagerx.transformImage(image, xForm) %}
 			{%- set largerStartImage = largerImages[0] %}
-			
-			
-			
+									
 			<img src="{{ craft.imager.placeholder({width: mobileStartImage.width, height: mobileStartImage.height}) }}"
 			  width="{{mobileStartImage.width}}"
 			  height="{{mobileStartImage.height}}"
@@ -71,9 +69,7 @@
 			  class="block @md:hidden"
 			  loading="lazy"
 			>
-			
-			
-			
+					
 			<img src="{{ craft.imager.placeholder({width: largerStartImage.width, height: largerStartImage.height}) }}"
 			  width="{{largerStartImage.width}}"
 			  height="{{largerStartImage.height}}"

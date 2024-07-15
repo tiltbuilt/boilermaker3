@@ -47,6 +47,19 @@
 {# Retrieve styling adjustments #}
 {% set adjustments = entry.sliderSetStyleAdjustments.eagerly().all() %}
 
+{# Aspect Ratio Settings #}
+{% if entry.slidePhotoSizeSm|length %}
+	{% set slidePhotoSizeSmall = entry.slidePhotoSizeSm %}
+{% else %}
+	{% set slidePhotoSizeSmall = gSettings.sliderAspectSm %}
+{% endif %}
+
+{% if entry.slidePhotoSizeLg|length %}
+	{% set slidePhotoSizeLarge = entry.slidePhotoSizeLg %}
+{% else %}
+	{% set slidePhotoSizeLarge = gSettings.sliderAspectLg %}
+{% endif %}
+
 {# retrieve slide content #}
 {% set slides = entry.slides.eagerly().all() %}
 
@@ -94,8 +107,8 @@ x-init="swiper = new Swiper($refs.container, {
 				{{slide.render({					
 					'colorScheme': colorScheme,
 					'ownerId': blockId,
-					'slideAspectSm': entry.slidePhotoSizeSmall,
-					'slideAspectLg': entry.slidePhotoSizeLarge,					
+					'slideAspectSm': slidePhotoSizeSmall,
+					'slideAspectLg': slidePhotoSizeLarge,					
 				})}}
 			{% endfor %}
 		</div>

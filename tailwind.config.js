@@ -20,6 +20,7 @@ module.exports = {
 		'sm': '64rem',
 		'md': '75rem',
 		'lg': '100rem',
+		'xl': '120rem',
 	},	
 	extend: {
 	  minHeight: {
@@ -115,7 +116,7 @@ module.exports = {
 	  },
 	  {
 		pattern: /(p|m)(t|b|l|r)-(none|quarter|half|base|2x|3x|4x|normal|extra|neg-quarter|neg-half|neg-base|neg-2x|neg-3x|neg-4x|neg-normal|neg-extra)/, //adjust sizes to match list available in spacing def
-		variants: ['sm', 'md', 'lg', 'xl', '2xl', '@xs', '@sm', '@md', '@lg'],
+		variants: ['sm', 'md', 'lg', 'xl', '2xl', '@xs', '@sm', '@md', '@lg', '@xl'],
 	  },
 	  {
 		pattern: /text-(scaling-)?(xs|sm|base|lg|xl|2xl|3xl|4xl|5xl|6xl|7xl|8xl|left|center|right|justify)/, //adjust sizes to match list available in text size def and alignment settings
@@ -135,7 +136,7 @@ module.exports = {
 	  },
 	  {
 		pattern: /w-(full|1\/5|1\/4|1\/3|2\/5|1\/2|3\/5|2\/3|3\/4|4\/5)/, 
-		variants: ['sm', 'md', 'lg', 'xl', '2xl', '@xs', '@sm', '@md', '@lg'],
+		variants: ['sm', 'md', 'lg', 'xl', '2xl', '@xs', '@sm', '@md', '@lg', '@xl'],
 	  },
 	  {
 		pattern: /order-(first|last|1|2|3|4|5)/, 
@@ -143,11 +144,11 @@ module.exports = {
 	  },
 	  {
 		pattern: /(items|self)-(stretch|start|center|end)/, 
-		variants: ['sm', 'md', 'lg', 'xl', '2xl', '@xs', '@sm', '@md', '@lg'],
+		variants: ['sm', 'md', 'lg', 'xl', '2xl', '@xs', '@sm', '@md', '@lg', '@xl'],
 	  },
 	  {
 		pattern: /justify-(start|center|end|between|evenly)/, 
-		variants: ['sm', 'md', 'lg', 'xl', '2xl', '@xs', '@sm', '@md', '@lg'],
+		variants: ['sm', 'md', 'lg', 'xl', '2xl', '@xs', '@sm', '@md', '@lg', '@xl'],
 	  },
 	  {
 		pattern: /btn-(standard|text|text-arrow|sm|md|lg)/, 
@@ -155,19 +156,23 @@ module.exports = {
 	  },
 	  {
 		pattern: /aspect-(auto|square|video|4\/3|3\/2|3\/1|2\/1|4\/1)/, 
-		variants: ['sm', 'md', 'lg', 'xl', '2xl', '@xs', '@sm', '@md', '@lg'],
+		variants: ['sm', 'md', 'lg', 'xl', '2xl', '@xs', '@sm', '@md', '@lg', '@xl'],
 	  },
 	  {
 		pattern: /(block|hidden|inline|inline-block|flex)/, 
-		variants: ['sm', 'md', 'lg', 'xl', '2xl', '@xs', '@sm', '@md', '@lg'],
+		variants: ['sm', 'md', 'lg', 'xl', '2xl', '@xs', '@sm', '@md', '@lg', '@xl'],
 	  },
 	  {
 		pattern: /bg-opacity-(\d+)/, 
-		variants: ['sm', 'md', 'lg', 'xl', '2xl', '@xs', '@sm', '@md', '@lg'],
+		variants: ['sm', 'md', 'lg', 'xl', '2xl', '@xs', '@sm', '@md', '@lg', '@xl'],
 	  },	  
 	  {
 	  	pattern: /(text-wrap-left|text-wrap-right|text-wrap-none|hidden|not-hidden)/, 
-		variants: ['sm', 'md', 'lg', 'xl', '2xl'],
+		variants: ['sm', 'md', 'lg', 'xl', '2xl', '@xs', '@sm', '@md', '@lg', '@xl', '@xs/list', '@sm/list', '@md/list', '@lg/list', '@xl/list'],
+	  },
+	  {
+	    pattern: /columns-(\d)/, 
+		variants: ['sm', 'md', 'lg', 'xl', '2xl', '@xs', '@sm', '@md', '@lg', '@xl', '@xs/list', '@sm/list', '@md/list', '@lg/list', '@xl/list'],
 	  },	  	    
   ],
 };

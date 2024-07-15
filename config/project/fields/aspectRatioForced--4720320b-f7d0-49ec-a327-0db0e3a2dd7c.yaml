@@ -1,7 +1,7 @@
 columnSuffix: null
-handle: sliderSize
-instructions: 'This field sets the aspect ratio for the images in the slider on device sizes above phone size. Phone sizes are set to square dimensions intrinsically. All the sizes except for Natural crop the images. Natural uses the dimensions of the images themselves, so if all the images aren''t the same dimensions then the slider will change sizes when each slide transitions.'
-name: 'Slider Size'
+handle: aspectRatioForced
+instructions: null
+name: 'Aspect Ratio - Forced'
 searchable: false
 settings:
   options:
@@ -46,6 +46,17 @@ settings:
         -
           - value
           - 3/1
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Rectangle - 4/1'
+        -
+          - value
+          - 4/1
         -
           - default
           - ''

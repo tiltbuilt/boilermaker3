@@ -47,6 +47,9 @@
 {% endif %}
 {% set repeaterClassList = repeaterClassList|merge(colorClasses) %}
 
+{# Retrieve styling adjustments #}
+{% set adjustments = entry.repeaterStyleAdjustments.eagerly().all() %}
+
 
 {#
   ----
@@ -67,21 +70,34 @@
 %}
 
 
-{% set listOrder = entry.listOrder in orderOptions|keys ? orderOptions[entry.listOrder] : 'postDate desc' %}
+{% set listOrder = orderOptions[entry.listOrder.value] %}
 
 
 {# Set variables for list display type and content type #}
-{% set displayType = entry.repeaterDisplay %}
 {% set contentType = entry.repeaterContent %}
+{% if contentType == 'navList' %}
+	{% set displayType = entry.navListDisplayType %}
+{% else %}
+	{% set displayType = entry.repeaterDisplay %}
+{% endif %}
+
+{# set variables to handle situations where control/display settings aren't compatible with list type #}
 
 {# Determine whether to use pagination or not #}
 {% set paginateItems = false %}
-{% if contentType != "contentLinks" and contentType != "navList" %}
-	{% if displayType != "buttons" and displayType != "largeSlider" and displayType != "multiCardSlider" %}	
-		{% if entry.itemsPerPage != 0 and entry.showPagination %}
+{% if contentType != 'navList' %}
+	{% if displayType != "buttonList" and displayType != "largeSlider" and displayType != "multiCardSlider" %}	
+		{% if entry.itemsPerPage != 0 %}
 			{% set paginateItems = true %}
 		{% endif %}	
 	{% endif %}
+{% endif %}
+
+{# don't show dates on nav lists #}
+{% if contentType == 'navList' %}
+	{% set showDate = false %}
+{% else %}
+	{% set showDate = entry.showPostDate %}
 {% endif %}
 
 {# Gather list Content #}
@@ -91,12 +107,10 @@
 
 {% switch contentType %}
 	{# logic for querying the content for the list based on content type and pagination setting #}
-	{% case "contentLinks" %}		
-			{% set listData = entry.contentLinks %}	
-			
+				
 	{% case "contentCards" %}
 		{% if paginateItems %}
-			{% paginate entry.contentCards.orderBy(listOrder).with(['imageAsset']) as pageInfo, listData %}
+			{% paginate entry.contentCards.orderBy(listOrder).limit(entry.itemsPerPage).with(['imageAsset']) as pageInfo, listData %}
 			{% do seomatic.helper.paginate(pageInfo) %}
 		{% else %}
 			{% set listData = entry.contentCards.orderBy(listOrder).with(['imageAsset']).eagerly().all() %}
@@ -105,7 +119,7 @@
 	
 	{% case "allInSection" %}
 		{% if paginateItems %}
-			{% paginate craft.entries().sectionId(entry.sectionToList).orderBy(listOrder).with(['seoImage','headerImg', 'imageAsset']) as pageInfo, listData %}
+			{% paginate craft.entries().sectionId(entry.sectionToList).orderBy(listOrder).limit(entry.itemsPerPage).with(['seoImage','headerImg', 'imageAsset']) as pageInfo, listData %}
 			{% do seomatic.helper.paginate(pageInfo) %}
 		{% else %}
 			{% set listData = craft.entries().sectionId(entry.sectionToList).orderBy(listOrder).with(['seoImage','headerImg', 'imageAsset']).eagerly().all() %}
@@ -113,93 +127,64 @@
 	
 	{% case "selectEntry" %}
 		{% if paginateItems %}
-			{% paginate  entry.entriesToList.orderBy(listOrder).with(['seoImage','headerImg', 'imageAsset']) as pageInfo, listData %}
+			{% paginate  entry.entriesToList.orderBy(listOrder).limit(entry.itemsPerPage).with(['seoImage','headerImg', 'imageAsset']) as pageInfo, listData %}
 			{% do seomatic.helper.paginate(pageInfo) %}
 		{% else %}
-			{% set listData =  entry.entriesToList.orderBy(listOrder).with(['seoImage','headerImg', 'imageAsset']).eagerly().all() %}
+			{% set listData = entry.entriesToList.orderBy(listOrder).with(['seoImage','headerImg', 'imageAsset']).eagerly().all() %}
 		{% endif %}
 	
-	{% case "navList" %}		
-		{% if listOrder == '' %}
-			{% if paginateItems %}
-				{% paginate craft.navigation.nodes().handle(entry.navListToDisplay).fixedOrder() as pageInfo, listData %}
-				{% do seomatic.helper.paginate(pageInfo) %}
-			{% else %}
-				{% set listData = craft.navigation.nodes().handle(entry.navListToDisplay).fixedOrder().eagerly().all() %}
-			{% endif %}
-		{% else %}
-			{% if paginateItems %}
-				{% paginate craft.navigation.nodes().handle(entry.navListToDisplay).orderBy(listOrder) as pageInfo, listData %}
-				{% do seomatic.helper.paginate(pageInfo) %}
-			{% else %}
-				{% set listData = craft.navigation.nodes().handle(entry.navListToDisplay).orderBy(listOrder).eagerly().all() %}
-			{% endif %}		
-		{% endif %}
-				
+	{% case "navList" %}	
+		{% set listData = craft.navigation.nodes().handle(entry.navListToDisplay).eagerly().all() %}			
+						
 {% endswitch %}
 
-{{listData|length}}
-{# retrieve content using query established above #}
-{#}
-{% if paginateItems %}
-	{% paginate listQuery as pageInfo, listData %}
-	{% do seomatic.helper.paginate(pageInfo) %}
-{% else %}
-	{% set listData = listQuery.eagerly().all() %}
-{% endif %}
-#}
-{# content list population by normalizing content data into data objects that can be passed to any of the repeater layout templates and work. Includes special handling for navLists because of diversity of content possible #}
-{#}
+{# content list population by normalizing content data into data objects that can be passed to any of the repeater layout templates and work. #}
+
 {% set siteThumb = gSettings.thumbnailPlaceholder.eagerly().one %}
-{% for item in listData %}
-	{% if contentType == "navList" %}
-		{{item.type}}
+{% for item in listData %}	
+	{% if item.title is defined %}
+		{% set itemTitle = item.title %}
 	{% else %}
-		{{item.className}}
-		}
-		{% if item.title is defined %}
-			{% set itemTitle = item.title %}
-		{% else %}
-			{% set itemTitle = null %}
-		{% endif %}
-		{% if item.url is defined %}
-			{% if item.url|length %}
-				{% set itemUrl = item.url %}
-			{% else %}
-				{% set itemUrl = null %}
-			{% endif %}
-			{% if item.target is defined %}
-				{% set itemTab = item.target|length ? true : false %}
-			{% else %}
-				{% set itemTab = false %}
-			{% endif %}
+		{% set itemTitle = null %}
+	{% endif %}
+	{% if item.url is defined %}
+		{% if item.url|length %}
+			{% set itemUrl = item.url %}
 		{% else %}
 			{% set itemUrl = null %}
+		{% endif %}
+		{% if item.target.value is defined %}
+			{% set itemTab = item.target|length ? true : false %}
+		{% else %}
 			{% set itemTab = false %}
 		{% endif %}
-		{% if item.excerpt is defined %}
-			{% set itemExcerpt = item.excerpt %}
-		{% elseif item.cardContent is defined %}
-			{% set itemExcerpt = item.cardContent|raw %}
-		{% else %}
-			{% set itemExcerpt = '' %}
-		{% endif %}
-		{% if item.seoImage is defined and item.seoImage != null %}
-			{% set itemImage = item.seoImage %}
-		{% elseif item.headerImg is defined and item.headerImg != null %}
-			{% set image = item.headerImg %}
-		{% elseif item.imageAsset is defined and item.imageAsset != null %}
-			{% set image = item.imageAsset %}
-		{% else %}
-			{% set image = siteThumb %}
-		{% endif %}
-		{% if entry.showPostDate and item.postDate is defined %}
-			{% set itemDate = item.postDate|date(entry.dateFormat) %}
-		{% else %}
-			{% set itemDate = '' %}
-		{% endif %}	
-			
+	{% else %}
+		{% set itemUrl = null %}
+		{% set itemTab = false %}
 	{% endif %}
+	{% if item.excerpt is defined %}
+		{% set itemExcerpt = item.excerpt %}
+	{% elseif item.cardContent is defined %}
+		{% set itemExcerpt = item.cardContent|raw %}
+	{% else %}
+		{% set itemExcerpt = '' %}
+	{% endif %}
+	{% if item.seoImage is defined and item.seoImage != null %}
+		{% set itemImage = item.seoImage %}
+	{% elseif item.headerImgSm is defined and item.headerImgSm != null %}
+		{% set itemImage = item.headerImgSm %}
+	{% elseif item.headerImg is defined and item.headerImg != null %}
+		{% set itemImage = item.headerImg %}
+	{% elseif item.imageAsset is defined and item.imageAsset != null %}
+		{% set itemImage = item.imageAsset %}
+	{% else %}
+		{% set itemImage = siteThumb %}
+	{% endif %}
+	{% if showDate and item.postDate is defined %}
+		{% set itemDate = item.postDate|date(entry.dateFormat) %}
+	{% else %}
+		{% set itemDate = '' %}
+	{% endif %}		
 	
 	{% set contentItem = {
 		'title': itemTitle,
@@ -212,4 +197,57 @@
 	{% set listContent = listContent|merge([contentItem]) %}
 	
 {% endfor %}
-#}
+
+{# begin rendering #}
+
+<div id="{{blockId}}" class="{{ blockClass }} @container/list {{ gMacros.classesOut(adjustments, 'Display') }} {{- gMacros.classesOut(adjustments, 'Margins', true) -}} {{- repeaterClassList|join(' ') }} {{ entry.customClasses }}" {{- gMacros.attributesOut(entry.customAttributes) -}}>
+	
+	{% if listContent|length %}
+	
+		{% switch displayType %}								
+			
+			{% case 'textList' %}
+				{% include ['_partials/repeaters/' ~ displayType] with {'listContent': listContent, 'headingLvl': entry.headingLevel, 'colorScheme': colorScheme, 'listStyle': entry.textListStyle, 'multiColSettings': entry.multiColumnSettings, 'showDate': showDate, 'showExcerpt': entry.showExcerpt} %}
+				
+			{% case 'buttonList' %}
+				{% include ['_partials/repeaters/' ~ displayType] with {'listContent': listContent, 'headingLvl': entry.headingLevel, 'colorScheme': colorScheme, 'btnStyles': entry.btnStyles, 'btnSize': entry.btnSize, 'fullWidthSmall': entry.fullWidthSmall} %}
+				
+			{% case 'cardList' %}
+				{% include ['_partials/repeaters/' ~ displayType] with {'listContent': listContent, 'headingLvl': entry.headingLevel, 'colorScheme': colorScheme, 'showDate': showDate, 'showExcerpt': entry.showExcerpt} %}
+				
+			{% case 'cardListSmallImage' %}	
+				{% include ['_partials/repeaters/' ~ displayType] with {'listContent': listContent, 'headingLvl': entry.headingLevel, 'colorScheme': colorScheme, 'showDate': showDate, 'showExcerpt': entry.showExcerpt} %}
+				
+			{% case 'cardListLargeImage' %}
+				{% include ['_partials/repeaters/' ~ displayType] with {'listContent': listContent, 'headingLvl': entry.headingLevel, 'colorScheme': colorScheme, 'showDate': showDate, 'showExcerpt': entry.showExcerpt} %}
+				
+			{% case 'largeSlider' %}
+				{% include ['_partials/repeaters/' ~ displayType] with {'listContent': listContent, 'headingLvl': entry.headingLevel, 'colorScheme': colorScheme, 'sliderButtons': entry.buttons, 'sliderDots': entry.dots, 'sliderTiming': entry.slideTransitionDelay, 'sliderEffect': entry.slideEffect, 'sliderAutoPlay': entry.autoplay, 'sliderSizeSm': entry.sliderSizeSm, 'sliderSizeLg':entry.sliderSizeLg, 'showDate': showDate, 'showExcerpt': entry.showExcerpt} %}
+				
+			{% case 'multiCardSlider' %}
+				{% include ['_partials/repeaters/' ~ displayType] with {'listContent': listContent, 'headingLvl': entry.headingLevel, 'colorScheme': colorScheme, 'sliderButtons': entry.buttons, 'sliderDots': entry.dots, 'sliderTiming': entry.slideTransitionDelay, 'sliderEffect': entry.slideEffect, 'sliderAutoPlay': entry.autoplay, 'showDate': showDate, 'showExcerpt': entry.showExcerpt} %}
+				
+		{% endswitch %}
+		
+		{% if pageInfo.totalPages > 1 %}
+			{% if entry.showPagination %}
+				{% include ['_partials/_boiler/pagination'] %}
+			{% else %}
+				{% if entry.fullListingButton.url|length %}
+					<div class="full-listing-btn-wrapper {{entry.fullListingButton.btnAlignment}}">
+						<a {% if entry.fullListingButton.customId|length %}id="{{entry.fullListingButton.customId}}"{% endif %} href="{{entry.fullListingButton.url}}" class="btn btn-full-listings {{entry.fullListingButton.btnStyles}} {{entry.fullListingButton.btnSize}} {{colorScheme}} {{entry.fullListingButton.customClasses}}" {{ gMacros.attributesOut(entry.fullListingButton.customAttributes) -}}>
+							{{entry.fullListingButton.text|length ? entry.fullListingButton.text : 'View Full Listings'}}
+						</a>
+					</div>
+				{% endif %}
+			{% endif %}		
+		{% endif %}
+		
+	{% else %}		
+	
+		<div class="list-no-items">
+			  <b>No items found.</b>
+		</div>
+		
+	{% endif %}				
+</div>

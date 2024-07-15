@@ -1,0 +1,71 @@
+{#
+/**
+* Tilt Boilermaker - Repeater Template - Card with Small Image
+* -----
+* Simple cards with title, excerpt and link
+* 
+#}
+
+{# Load in global macros for use across all Twig templates #}
+{% import '_macros/globalMacros' as gMacros %}
+
+<div class="repeater-list-card-wrapper @container/list">	
+	{% for listItem in listContent %}	
+		   {% if listItem.url != null and listItem.url|length %}
+		   {% set outerTag = 'a' %}
+		{% else %}
+			{% set outerTag = 'div' %}
+		{% endif %}
+		
+		<{{outerTag}} {% if listItem.url|length %}<a href="{{ listItem.url }}" {% if listItem.newTab %}target="_blank"{% endif %} {% endif %} class="repeater-card w-full @md/list:w-1/2 @lg/list:w-1/3 @xl/list:w-1/4">			
+			<div class="repeater-card-sm-img-inner">
+				<div class="repeater-card-sm-img">
+					{% set image = listItem.image.eagerly().one() %}
+					{% set mobileXForm = 'image-' ~ gSettings.thumbAspectLg %}
+					{% set xForm = 'image-' ~ gSettings.thumbAspectSm %}
+					{% if craft.imager.serverSupportsWebp() %}
+						{%- set mobileXForm = mobileXForm ~ '-webp' %}
+						{%- set xForm = xForm ~ '-webp' %}
+					{% endif %}
+					{%- set mobileImages = craft.imagerx.transformImage(image, mobileXForm) %}
+					{%- set mobileStartImage = mobileImages[0] %}
+					{%- set largerImages = craft.imagerx.transformImage(image, xForm) %}
+					{%- set largerStartImage = largerImages[0] %}
+											
+					<img src="{{ craft.imager.placeholder({width: mobileStartImage.width, height: mobileStartImage.height}) }}"
+					  width="{{mobileStartImage.width}}"
+					  height="{{mobileStartImage.height}}"
+					  sizes="auto"
+					  src="{{ mobileStartImage }}"
+					  srcset="{{ craft.imager.srcset(mobileImages) }}"
+					  alt="{{ entry.title }}"
+					  class="block @md/list:hidden"
+					  loading="lazy"
+					>
+							
+					<img src="{{ craft.imager.placeholder({width: largerStartImage.width, height: largerStartImage.height}) }}"
+					  width="{{largerStartImage.width}}"
+					  height="{{largerStartImage.height}}"
+					  sizes="auto"
+					  src="{{ largerStartImage }}"
+					  srcset="{{ craft.imager.srcset(largerImages) }}"
+					  alt="{{ entry.title }}"
+					  class="hidden @md/list:block"
+					  loading="lazy"
+					>
+				</div>
+				<div class="repeater-card-content">
+					<{{ headingLvl}} class="repeater-list-card-header">					
+						{{ gMacros.stripTags(listItem.title, '<b><strong><i><em><sup><sub><br>') }}					  
+					</{{ headingLvl }}>
+					{% if showDate and listItem.date|length %}	  		
+						<div class="repeater-date">{{ listItem.date }}</div>	 
+					{% endif %}
+					{% if showExcerpt and listItem.excerpt|length %}	  		
+						<div>{{ listItem.excerpt }}</div>	  				 
+					{% endif %}	
+				</div>
+			</div>			        
+		</{{outerTag}}>	
+	{% endfor %}
+</div>

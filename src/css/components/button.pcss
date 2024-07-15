@@ -20,6 +20,7 @@
 
 .btn-text {  
 	border-radius: 0px;
+	
 }
 
 .btn-text-arrow {
@@ -43,13 +44,61 @@
 	 
 		
 .btn, .btn-md {
-  @apply text-scaling-base py-4 px-8;	 
+	@apply text-scaling-base py-4;
+	
+	&.btn-standard {
+		@apply px-8; 
+	}
+	
+	&.btn-text, &.btn-text-arrow {
+ 		@apply mx-8 px-0; 
+		
+		&:first-child {
+			@apply ml-none;
+		} 
+		
+		&:last-child {
+			@apply mr-none;
+		}
+	}  
 }
 
 .btn-sm {
-  @apply text-scaling-sm py-2 px-4;	 
+	@apply text-scaling-sm py-2;
+	
+	&.btn-standard {
+  		@apply px-4; 
+	}
+	
+	&.btn-text, &.btn-text-arrow {
+   		@apply mx-4 px-0;
+		   
+		&:first-child {
+			@apply ml-none;
+		} 
+		
+		&:last-child {
+			@apply mr-none;
+		} 
+	} 
 }
 
 .btn-lg {
-  @apply text-scaling-lg py-6 px-12;	 
+	@apply text-scaling-lg py-6;
+	
+	&.btn-standard {
+		@apply px-12; 
+	}
+	
+	&.btn-text, &.btn-text-arrow {
+		@apply mx-12 px-0;
+		
+		&:first-child {
+			@apply ml-none;
+		} 
+		
+		&:last-child {
+			@apply mr-none;
+		} 
+	} 	 
 }

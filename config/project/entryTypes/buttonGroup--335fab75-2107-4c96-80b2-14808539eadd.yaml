@@ -96,10 +96,10 @@ fieldLayouts:
           -
             elementCondition: null
             fieldUid: a2da31ae-7341-4dd1-b245-5ee55d44cbc2 # Yes No
-            handle: fullWidthPhone
+            handle: fullWidthSmall
             includeInCards: false
-            instructions: null
-            label: 'Full width on Phone?'
+            instructions: 'Flip this switch on if you want the buttons in this group to take up the full width and stack in small layouts like phones and sidebars.'
+            label: 'Full width in Small Layouts'
             providesThumbs: false
             required: false
             tip: null

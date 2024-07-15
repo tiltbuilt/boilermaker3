@@ -13,10 +13,10 @@ settings:
           __assoc__:
             -
               - heading
-              - 'Device Size'
+              - 'Layout Size'
             -
               - handle
-              - deviceSize
+              - layoutSize
             -
               - width
               - ''
@@ -30,10 +30,10 @@ settings:
                   __assoc__:
                     -
                       - label
-                      - All
+                      - 'Extra Small (Phone Vertical)'
                     -
                       - value
-                      - ''
+                      - '@xs'
                     -
                       - default
                       - true
@@ -41,10 +41,10 @@ settings:
                   __assoc__:
                     -
                       - label
-                      - 'Phone Horizontal and Above'
+                      - 'Small (Phone Horizontal)'
                     -
                       - value
-                      - sm
+                      - '@sm'
                     -
                       - default
                       - false
@@ -52,10 +52,10 @@ settings:
                   __assoc__:
                     -
                       - label
-                      - 'Tablet and Above'
+                      - 'Medium (Tablet)'
                     -
                       - value
-                      - md
+                      - '@md'
                     -
                       - default
                       - false
@@ -63,32 +63,10 @@ settings:
                   __assoc__:
                     -
                       - label
-                      - 'Laptop and Above'
+                      - 'Large (Laptop+)'
                     -
                       - value
-                      - lg
-                    -
-                      - default
-                      - false
-                -
-                  __assoc__:
-                    -
-                      - label
-                      - 'Desktop and Above'
-                    -
-                      - value
-                      - xl
-                    -
-                      - default
-                      - false
-                -
-                  __assoc__:
-                    -
-                      - label
-                      - 'Hi Res'
-                    -
-                      - value
-                      - 2xl
+                      - '@lg'
                     -
                       - default
                       - false

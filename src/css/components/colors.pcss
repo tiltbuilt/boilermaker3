@@ -1,83 +1,102 @@
 /* color scheme classes are applied to every element so inheritance issues are avoided background color overrides may be needed for scenarios where a background color class and colorscheme are applied together */
 
-.colormode-light {
+/* LIGHT COLORMODE */
+
+.colormode-light {	
+	
+	--textColor: theme('colors.black');
+	--linkColor: theme('colors.red.500');
+	--linkHover: theme('colors.red.300');
+	--bgPrimary: theme('colors.white');
+	--bgSecondary: theme('colors.gray.300');
+	--btnColor: theme('colors.gray.500');
+	--btnTextColor: theme('colors.white');
+	--btnHoverColor: theme('colors.gray.700');
+	
+	a {
+		color: var(--linkColor);
+		
+		&:hover {
+			color: var(--linkHover);
+		}
+	}
 	
 	&.section-standard {
-		color: theme('colors.black');
-		background-color: theme('colors.white');
+		color: var(--textColor);
+		background-color: var(--bgPrimary);
 	}
 	
 	/* accordions */
 	&.accordion {
-		background-color: theme('colors.gray.300');
-		color: theme('colors.black');
+		background-color: var(--bgSecondary);
+		color: var(--textColor);
 		
 		/* adjust these styles if you want the button to be a different color, etc. */
 		& > .accordion-header > .accordion-button {
 			
 			&:hover {
 				background-color: theme('colors.gray.400');
-				color: theme('colors.black');
+				color: var(--textColor);
 			}
 		}
 	}
 	
 	/* tab sets */
 	&.tab-panel {
-		background-color: theme('colors.gray.300');
-		color: theme('colors.black');
+		background-color: var(--bgSecondary);
+		color: var(--ltextColor);
 	}
 	
 	&.tab-set-btn {
-		background-color: theme('colors.gray.500');
-		color: theme('colors.white');
+		background-color: var(--btnColor);
+		color: var(--btnTextColor);
 		
 		&:hover {
-			background-color: theme('colors.gray.700');
-			color: theme('colors.white');
+			background-color: var(--btnHoverColor);
+			color: var(--btnTextColor);
 		}
 		
 		&[aria-selected=true] {
-			background-color: theme('colors.gray.300');
-			color: theme('colors.black');
+			background-color: var(--bgSecondary);
+			color: var(--textColor);
 		}
 	}
 	
 	/* Buttons */
 	
 	&.btn, &.btn.btn-standard {
-		background-color: theme('colors.gray.500');
-		color: theme('colors.white');
+		background-color: var(--btnColor);
+		color: var(--btnTextColor);
 		
 		&:hover {
-			background-color: theme('colors.gray.700');
-			color: theme('colors.white');
+			background-color: var(--btnHoverColor);
+			color: var(--btnTextColor);
 		}
 	}
 	
 	&.btn.btn-text {
-		color: theme('colors.gray.700');
+		color: var(--linkColor);
 		background-color: transparent;
 		
 		&:hover {
-			color: theme('colors.gray.500');
+			color: var(--linkHover);
 		}
 	}
 	
 	&.btn.btn-text-arrow {
-		color: theme('colors.gray.700');
+		color: var(--linkColor);
 		background-color: transparent;
 		
 		&:hover {
-			color: theme('colors.gray.500');
+			color: var(--linkHover);
 		}
 	}
 	
 	/* Media */
 	
 	&.content-image, &.content-video {
-		background-color: theme('colors.gray.300');
-		color: theme('colors.black');
+		background-color: var(--bgSecondary);
+		color: var(--textColor);
 	}
 	
 	/* Forms */
@@ -85,9 +104,9 @@
 	&.form-block {
 		
 		.form-field-input, .form-dropdown {
-			background-color: theme('colors.gray.300');
-			border-color: theme('colors.gray.300');
-			color: theme('colors.black');
+			background-color: var(--bgSecondary);
+			border-color: var(--bgSecondary);
+			color: var(--textColor);
 			
 			&:focus {
 				border-color: theme('colors.gray.500');
@@ -95,7 +114,7 @@
 		}
 		
 		.form-checkbox, .form-radio {
-			border-color: theme('colors.gray.300');
+			border-color: theme('colors.gray.400');
 			color: theme('colors.gray.600');
 			
 			&:focus {
@@ -109,18 +128,18 @@
 	
 	&.slider-set {
 		.swiper-button-prev, .swiper-button-next {
-			color: theme('colors.red.500');
+			color: var(--linkColor);
 			
 			&:hover {
-				color: theme('colors.red.300');
+				color: var(--linkHover);
 			}
 		}
 		
 		.swiper-pagination-bullet {
-			background-color: theme('colors.red.500');
+			background-color: var(--linkColor);
 			
 			&:hover {
-				background-color: theme('colors.red.300');
+				background-color: var(--linkHover);
 			}
 			
 			&.swiper-pagination-bullet-active {
@@ -134,11 +153,35 @@
 	}
 	
 	&.slide {
-		background-color: theme('colors.gray.300');
+		background-color: var(--bgSecondary);
 		
 		.slide-content-wrapper {
 			@apply bg-gray-300 @md:bg-gray-300/70;
-			color: theme('colors.black');			
+			color: var(--textColor);			
+		}
+	}
+	
+	/* REPEATERS */
+	
+	&.repeater {
+		a.repeater-card, div.repeater-card {
+			color: var(--textColor);
+			
+			.repeater-list-card-header {
+				color: var(--linkColor); 
+			}
+		}
+		
+		a.repeater-card:hover {
+			color: var(--textColor);
+			
+			.repeater-list-card-header {
+				color: var(--linkHover); 
+			}
+		}
+		
+		.repeater-card-inner {
+			background-color: var(--bgSecondary);
 		}
 	}
 	
@@ -179,83 +222,103 @@
 	
 }
 
+/* DARK COLORMODE */
+
 .colormode-dark {
 	
+	--textColor: theme('colors.white');
+	--linkColor: theme('colors.red.500');
+	--linkHover: theme('colors.red.300');
+	--bgPrimary: theme('colors.black');
+	--bgSecondary: theme('colors.gray.300');
+	--btnColor: theme('colors.gray.700');
+	--btnTextColor: theme('colors.white');
+	--btnHoverColor: theme('colors.gray.400');
+	
+	a {
+		color: var(--linkColor);
+		
+		&:hover {
+			color: var(--linkHover);
+		}
+	}
+	
 	&.section-standard {
-		color: theme('colors.white');
-		background-color: theme('colors.black');
+		color: var(--textColor);
+		background-color: var(--bgPrimary);
 	}
 	
 	/* accordions */
 	&.accordion {
-		background-color: theme('colors.gray.700');
-		color: theme('colors.white');
+		background-color: var(--bgSecondary);
+		color: var(--textColor);
 		
 		/* adjust these styles if you want the button to be a different color, etc. */
 		& > .accordion-header > .accordion-button {
 			
 			&:hover {
-				background-color: theme('colors.gray.600');
-				color: theme('colors.white');
+				background-color: theme('colors.gray.400');
+				color: var(--textColor);
 			}
 		}
 	}
 	
 	/* tab sets */
 	&.tab-panel {
-		background-color: theme('colors.gray.700');
-		color: theme('colors.white');
+		background-color: var(--bgSecondary);
+		color: var(--ltextColor);
 	}
 	
 	&.tab-set-btn {
-		background-color: theme('colors.gray.300');
-		color: theme('colors.black');
+		background-color: var(--btnColor);
+		color: var(--btnTextColor);
 		
 		&:hover {
-			background-color: theme('colors.gray.400');
+			background-color: var(--btnHoverColor);
+			color: var(--btnTextColor);
 		}
 		
 		&[aria-selected=true] {
-			background-color: theme('colors.gray.700');
-			color: theme('colors.white');
+			background-color: var(--bgSecondary);
+			color: var(--textColor);
 		}
 	}
 	
 	/* Buttons */
 	
 	&.btn, &.btn.btn-standard {
-		background-color: theme('colors.gray.700');
-		color: theme('colors.white');
+		background-color: var(--btnColor);
+		color: var(--btnTextColor);
 		
 		&:hover {
-			background-color: theme('colors.gray.400');
-			color: theme('colors.white');
+			background-color: var(--btnHoverColor);
+			color: var(--btnTextColor);
 		}
 	}
 	
 	&.btn.btn-text {
-		color: theme('colors.gray.400');
+		color: var(--linkColor);
 		background-color: transparent;
 		
 		&:hover {
-			color: theme('colors.white');
+			color: var(--linkHover);
 		}
 	}
 	
 	&.btn.btn-text-arrow {
-		color: theme('colors.gray.400');
+		color: var(--linkColor);
 		background-color: transparent;
 		
 		&:hover {
-			color: theme('colors.white');
+			color: var(--linkHover);
 		}
 	}
 	
 	/* Media */
 	
 	&.content-image, &.content-video {
-		background-color: theme('colors.gray.700');
-		color: theme('colors.white');
+		background-color: var(--bgSecondary);
+		color: var(--textColor);
 	}
 	
 	/* Forms */
@@ -263,23 +326,23 @@
 	&.form-block {
 		
 		.form-field-input, .form-dropdown {
-			background-color: theme('colors.gray.700');
-			border-color: theme('colors.gray.700');
-			color: theme('colors.white');
+			background-color: var(--bgSecondary);
+			border-color: var(--bgSecondary);
+			color: var(--textColor);
 			
 			&:focus {
-				border-color: theme('colors.gray.300');
+				border-color: theme('colors.gray.500');
 			}
 		}
 		
 		.form-checkbox, .form-radio {
-			border-color: theme('colors.gray.700');
-			color: theme('colors.white');
+			border-color: theme('colors.gray.400');
+			color: theme('colors.gray.600');
 			
 			&:focus {
-				border-color: theme('colors.gray.300');
+				border-color: theme('colors.gray.500');
 			}
-		}
+		}	
 		
 	}
 	
@@ -287,18 +350,18 @@
 	
 	&.slider-set {
 		.swiper-button-prev, .swiper-button-next {
-			color: theme('colors.red.500');
+			color: var(--linkColor);
 			
 			&:hover {
-				color: theme('colors.red.300');
+				color: var(--linkHover);
 			}
 		}
 		
 		.swiper-pagination-bullet {
-			background-color: theme('colors.red.500');
+			background-color: var(--linkColor);
 			
 			&:hover {
-				background-color: theme('colors.red.300');
+				background-color: var(--linkHover);
 			}
 			
 			&.swiper-pagination-bullet-active {
@@ -312,11 +375,11 @@
 	}
 	
 	&.slide {
-		background-color: theme('colors.gray.700');
+		background-color: var(--bgSecondary);
 		
 		.slide-content-wrapper {
 			@apply bg-gray-700 @md:bg-gray-700/70;
-			color: theme('colors.white');			
+			color: var(--textColor);			
 		}
 	}
 	
@@ -356,16 +419,28 @@
 	
 }
 
+
+/* RED COLORMODE */
+
 .colormode-red {
 	
+	--textColor: theme('colors.black');
+	--linkColor: theme('colors.red.500');
+	--linkHover: theme('colors.red.300');
+	--bgPrimary: theme('colors.white');
+	--bgSecondary: theme('colors.red.600');
+	--btnColor: theme('colors.red.600');
+	--btnTextColor: theme('colors.white');
+	--btnHoverColor: theme('colors.gray.400');
+	
 	&.section-standard {
-		color: theme('colors.white');
-		background-color: theme('colors.black');
+		color: var(--textColor);
+		background-color: var(--bgPrimary);
 	}
 	
 	/* accordions */
 	&.accordion {
-		background-color: theme('colors.red.600');
+		background-color: var(--bgSecondary);
 		color: theme('colors.white');
 		
 		/* adjust these styles if you want the button to be a different color, etc. */
