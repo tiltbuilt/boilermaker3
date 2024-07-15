@@ -44,7 +44,7 @@
 	/* tab sets */
 	&.tab-panel {
 		background-color: var(--bgSecondary);
-		color: var(--ltextColor);
+		color: var(--textColor);
 	}
 	
 	&.tab-set-btn {
@@ -182,6 +182,20 @@
 		
 		.repeater-card-inner {
 			background-color: var(--bgSecondary);
+		}
+		
+		.slider-set {		
+			
+			.swiper-pagination-bullet {
+								
+				&.swiper-pagination-bullet-active {
+					background-color: theme('colors.black');
+					
+					&:hover {
+						background-color: theme('colors.black');
+					}
+				}
+			}		
 		}
 	}
 	
@@ -380,6 +394,44 @@
 		.slide-content-wrapper {
 			@apply bg-gray-700 @md:bg-gray-700/70;
 			color: var(--textColor);			
+		}
+	}
+	
+	/* REPEATERS */
+	
+	&.repeater {
+		a.repeater-card, div.repeater-card {
+			color: var(--textColor);
+			
+			.repeater-list-card-header {
+				color: var(--linkColor); 
+			}
+		}
+		
+		a.repeater-card:hover {
+			color: var(--textColor);
+			
+			.repeater-list-card-header {
+				color: var(--linkHover); 
+			}
+		}
+		
+		.repeater-card-inner {
+			background-color: var(--bgSecondary);
+		}
+		
+		.slider-set {		
+			
+			.swiper-pagination-bullet {
+								
+				&.swiper-pagination-bullet-active {
+					background-color: theme('colors.white');
+					
+					&:hover {
+						background-color: theme('colors.white');
+					}
+				}
+			}		
 		}
 	}
 	

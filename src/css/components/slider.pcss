@@ -129,7 +129,7 @@
 		bottom: 0px;
 		z-index: 20;
 		/*top: 100%;*/
-	}
+	}	
 	
 	.swiper-pagination-bullet {	
 		/* Applies to the dot navigation items themselves */
@@ -139,5 +139,21 @@
 		height: 8px;
 		opacity: 1;	
 		transition: background-color 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+	}
+}
+
+.repeater-slider {
+	.swiper-pagination {
+		/* Applies to the wrapper around the dot navigation */		
+		position: relative;
+		padding-top: theme('spacing.base');
+		padding-bottom: theme('spacing.base');
+		bottom: 0px;
+		z-index: 20;
+		/*top: 100%;*/
+	}
+	
+	.slide {
+		@apply pb-none ;
 	}
 }

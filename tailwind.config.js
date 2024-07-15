@@ -17,7 +17,7 @@ module.exports = {
 	},
 	containers: {
 		'xs': '30rem',
-		'sm': '64rem',
+		'sm': '60rem',
 		'md': '75rem',
 		'lg': '100rem',
 		'xl': '120rem',
@@ -105,7 +105,7 @@ module.exports = {
 	  'scaling-8xl': ['clamp(7.2rem, 7.5vw, 12.8rem)', '1'],
 	},	
   },
-  safelist: [	  	  
+  safelist: [	  
 	  {
 		pattern: /(text|bg|btn)-(white|black|transparent|red)/, //adjust colors to match list available in color def
 		variants: ['hover', 'focus'],
@@ -136,7 +136,7 @@ module.exports = {
 	  },
 	  {
 		pattern: /w-(full|1\/5|1\/4|1\/3|2\/5|1\/2|3\/5|2\/3|3\/4|4\/5)/, 
-		variants: ['sm', 'md', 'lg', 'xl', '2xl', '@xs', '@sm', '@md', '@lg', '@xl'],
+		variants: ['sm', 'md', 'lg', 'xl', '2xl', '@xs', '@sm', '@md', '@lg', '@xl', '@xs/list', '@sm/list', '@md/list', '@lg/list', '@xl/list', '@xs/card', '@sm/card', '@md/card', '@lg/card', '@xl/card'],
 	  },
 	  {
 		pattern: /order-(first|last|1|2|3|4|5)/, 
@@ -144,11 +144,11 @@ module.exports = {
 	  },
 	  {
 		pattern: /(items|self)-(stretch|start|center|end)/, 
-		variants: ['sm', 'md', 'lg', 'xl', '2xl', '@xs', '@sm', '@md', '@lg', '@xl'],
+		variants: ['sm', 'md', 'lg', 'xl', '2xl', '@xs', '@sm', '@md', '@lg', '@xl', '@xs/list', '@sm/list', '@md/list', '@lg/list', '@xl/list', '@xs/card', '@sm/card', '@md/card', '@lg/card', '@xl/card'],
 	  },
 	  {
 		pattern: /justify-(start|center|end|between|evenly)/, 
-		variants: ['sm', 'md', 'lg', 'xl', '2xl', '@xs', '@sm', '@md', '@lg', '@xl'],
+		variants: ['sm', 'md', 'lg', 'xl', '2xl', '@xs', '@sm', '@md', '@lg', '@xl', '@xs/list', '@sm/list', '@md/list', '@lg/list', '@xl/list', '@xs/card', '@sm/card', '@md/card', '@lg/card', '@xl/card'],
 	  },
 	  {
 		pattern: /btn-(standard|text|text-arrow|sm|md|lg)/, 
@@ -167,12 +167,12 @@ module.exports = {
 		variants: ['sm', 'md', 'lg', 'xl', '2xl', '@xs', '@sm', '@md', '@lg', '@xl'],
 	  },	  
 	  {
-	  	pattern: /(text-wrap-left|text-wrap-right|text-wrap-none|hidden|not-hidden)/, 
-		variants: ['sm', 'md', 'lg', 'xl', '2xl', '@xs', '@sm', '@md', '@lg', '@xl', '@xs/list', '@sm/list', '@md/list', '@lg/list', '@xl/list'],
+	  	pattern: /(text-wrap-left|text-wrap-right|text-wrap-none|hidden|not-hidden|block)/, 
+		variants: ['sm', 'md', 'lg', 'xl', '2xl', '@xs', '@sm', '@md', '@lg', '@xl', '@xs/list', '@sm/list', '@md/list', '@lg/list', '@xl/list', '@xs/card', '@sm/card', '@md/card', '@lg/card', '@xl/card'],
 	  },
 	  {
 	    pattern: /columns-(\d)/, 
 		variants: ['sm', 'md', 'lg', 'xl', '2xl', '@xs', '@sm', '@md', '@lg', '@xl', '@xs/list', '@sm/list', '@md/list', '@lg/list', '@xl/list'],
-	  },	  	    
+	  },	  	  	  	    
   ],
 };

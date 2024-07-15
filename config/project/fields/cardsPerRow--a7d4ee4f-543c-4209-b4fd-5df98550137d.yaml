@@ -1,10 +1,10 @@
 columnSuffix: null
 handle: cardsPerRow
-instructions: 'By Default, card repeaters will display 1 card per row on the phone and 3 per row on all other device sizes. If you want to change that, you can specify the number of cards per row for different device sizes with this field. Add a row to the field and specify the sizes with the dropdowns.'
+instructions: null
 name: 'Cards Per Row'
 searchable: false
 settings:
-  addRowLabel: 'Make an Adjustment'
+  addRowLabel: 'Set Row Size'
   columns:
     __assoc__:
       -
@@ -13,10 +13,10 @@ settings:
           __assoc__:
             -
               - heading
-              - 'Device Size'
+              - 'Layout Size'
             -
               - handle
-              - deviceSize
+              - layoutSize
             -
               - width
               - ''
@@ -30,10 +30,10 @@ settings:
                   __assoc__:
                     -
                       - label
-                      - All
+                      - 'Extra Small (Phone Vertical)'
                     -
                       - value
-                      - ''
+                      - '@xs'
                     -
                       - default
                       - true
@@ -41,10 +41,10 @@ settings:
                   __assoc__:
                     -
                       - label
-                      - 'Phone Horizontal and Above'
+                      - 'Small (Phone Horizontal)'
                     -
                       - value
-                      - sm
+                      - '@sm'
                     -
                       - default
                       - false
@@ -52,10 +52,10 @@ settings:
                   __assoc__:
                     -
                       - label
-                      - 'Tablet and Above'
+                      - 'Medium (Tablet)'
                     -
                       - value
-                      - md
+                      - '@md'
                     -
                       - default
                       - false
@@ -63,10 +63,10 @@ settings:
                   __assoc__:
                     -
                       - label
-                      - 'Laptop and Above'
+                      - 'Large (Laptop+)'
                     -
                       - value
-                      - lg
+                      - '@lg'
                     -
                       - default
                       - false
@@ -74,21 +74,10 @@ settings:
                   __assoc__:
                     -
                       - label
-                      - 'Desktop and Above'
+                      - X-Large(Desktop+)
                     -
                       - value
-                      - xl
-                    -
-                      - default
-                      - false
-                -
-                  __assoc__:
-                    -
-                      - label
-                      - 'Hi Res'
-                    -
-                      - value
-                      - 2xl
+                      - '@xl'
                     -
                       - default
                       - false

@@ -548,6 +548,55 @@ fieldLayouts:
                   fieldUid: 13b06d24-aa17-46e3-89b9-c895a68df851 # Repeater Display Type
                   layoutElementUid: 637190cd-073e-46d0-b3c6-7e32259ccefc
                   operator: in
+                  uid: 8552fbb4-b460-48d1-855a-4088c44e4aca
+                  values:
+                    - cardList
+                    - cardListSideImage
+                    - cardListTopImage
+              elementType: craft\elements\Entry
+              fieldContext: global
+            heading: 'Card List Settings'
+            type: craft\fieldlayoutelements\Heading
+            uid: ace9496f-5b47-4372-8bda-f29954e1cb1e
+            userCondition: null
+          -
+            elementCondition:
+              class: craft\elements\conditions\entries\EntryCondition
+              conditionRules:
+                -
+                  class: craft\fields\conditions\OptionsFieldConditionRule
+                  fieldUid: 13b06d24-aa17-46e3-89b9-c895a68df851 # Repeater Display Type
+                  layoutElementUid: 637190cd-073e-46d0-b3c6-7e32259ccefc
+                  operator: in
+                  uid: 6f1549c9-8f72-4e7e-8f06-41166a685df9
+                  values:
+                    - cardList
+                    - cardListSideImage
+                    - cardListTopImage
+              elementType: craft\elements\Entry
+              fieldContext: global
+            fieldUid: a7d4ee4f-543c-4209-b4fd-5df98550137d # Cards Per Row
+            handle: null
+            includeInCards: false
+            instructions: 'This field overrides the global default row size for whichever card type is selected for display.'
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 00b61074-3871-492e-84b2-122f27dd0f69
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition:
+              class: craft\elements\conditions\entries\EntryCondition
+              conditionRules:
+                -
+                  class: craft\fields\conditions\OptionsFieldConditionRule
+                  fieldUid: 13b06d24-aa17-46e3-89b9-c895a68df851 # Repeater Display Type
+                  layoutElementUid: 637190cd-073e-46d0-b3c6-7e32259ccefc
+                  operator: in
                   uid: abb2f084-6a7c-4c74-b39b-1275623de448
                   values:
                     - largeSlider
@@ -765,8 +814,8 @@ fieldLayouts:
                   values:
                     - textList
                     - cardList
-                    - cardListSmallImage
-                    - cardListLargeImage
+                    - cardListSideImage
+                    - cardListTopImage
                 -
                   class: craft\fields\conditions\OptionsFieldConditionRule
                   fieldUid: 93013c2a-acd5-4b87-b999-b352741b10fd # Repeater Content
@@ -794,8 +843,8 @@ fieldLayouts:
                   values:
                     - textList
                     - cardList
-                    - cardListSmallImage
-                    - cardListLargeImage
+                    - cardListSideImage
+                    - cardListTopImage
                 -
                   class: craft\fields\conditions\OptionsFieldConditionRule
                   fieldUid: 93013c2a-acd5-4b87-b999-b352741b10fd # Repeater Content

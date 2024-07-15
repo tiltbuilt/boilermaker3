@@ -159,6 +159,12 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
+            heading: Repeaters
+            type: craft\fieldlayoutelements\Heading
+            uid: a29ded7c-dad8-4be8-975f-fea2f0307f94
+            userCondition: null
+          -
+            elementCondition: null
             heading: Thumbnails
             type: craft\fieldlayoutelements\Heading
             uid: 2a17fe55-1617-464b-83db-833b08180aed
@@ -208,6 +214,57 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 50
+          -
+            elementCondition: null
+            heading: 'Card Views'
+            type: craft\fieldlayoutelements\Heading
+            uid: f9915473-d9f2-4432-b301-d7924f3b88a5
+            userCondition: null
+          -
+            elementCondition: null
+            fieldUid: a7d4ee4f-543c-4209-b4fd-5df98550137d # Cards Per Row
+            handle: cprCard
+            includeInCards: false
+            instructions: 'This setting controls the number of cards shown per row by default in a non-image card repeater. The layout size is determined by the size of the device and also by the size of the container that the repeater is in.'
+            label: 'Card Per Row - Card View'
+            providesThumbs: false
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 84d748ba-3c77-41b1-92f5-7d8da3df9d59
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: a7d4ee4f-543c-4209-b4fd-5df98550137d # Cards Per Row
+            handle: cprCardSmImg
+            includeInCards: false
+            instructions: 'This setting controls the number of cards shown per row by default in a small image card repeater. The layout size is determined by the size of the device and also by the size of the container that the repeater is in.'
+            label: 'Cards Per Row - Side Image Cards'
+            providesThumbs: false
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 162b8a73-b104-4e75-bf83-5cf4a99e4551
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: a7d4ee4f-543c-4209-b4fd-5df98550137d # Cards Per Row
+            handle: cprCardLgImg
+            includeInCards: false
+            instructions: 'This setting controls the number of cards shown per row by default in a large image card repeater. The layout size is determined by the size of the device and also by the size of the container that the repeater is in.'
+            label: 'Cards Per Row - Top Image Cards'
+            providesThumbs: false
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: bd9e78b2-2615-46f9-bd18-53ba3300614f
+            userCondition: null
+            warning: null
+            width: 100
           -
             elementCondition: null
             heading: Sliders
