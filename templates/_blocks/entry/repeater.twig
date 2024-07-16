@@ -270,7 +270,7 @@
 					{% if entry.fullListingButton.url|length %}
 						<div class="full-listing-btn-wrapper {{entry.fullListingButton.btnAlignment}}">
 							<a {% if entry.fullListingButton.customId|length %}id="{{entry.fullListingButton.customId}}"{% endif %} href="{{entry.fullListingButton.url}}" class="btn btn-full-listings {{entry.fullListingButton.btnStyles}} {{entry.fullListingButton.btnSize}} {{colorScheme}} {{entry.fullListingButton.customClasses}}" {{ gMacros.attributesOut(entry.fullListingButton.customAttributes) -}}>
-								{{entry.fullListingButton.text|length ? entry.fullListingButton.text : 'View Full Listings'}}
+								{{entry.fullListingButton.linkText|length ? entry.fullListingButton.linkText : 'View Full Listings'}}
 							</a>
 						</div>
 					{% endif %}
