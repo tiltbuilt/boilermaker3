@@ -116,6 +116,13 @@
 	{% endswitch %}
 {% endif %}
 
+{# get card counts for layout sizes for multi card slider #}
+{% if entry.cardsPerSizeSlider|length %}
+	{% set cardSliderSizes = entry.cardsPerSizeSlider %}
+{% else %}
+	{% set cardSliderSizes = gSettings.cardsPerSizeSlider %}
+{% endif %}
+
 {# Set Aspect Setting for Images if Large Repeater is Display Type #}
 {% if displayType == 'largeSlider' %}
 	{% if entry.sliderSizeSm != '' %}
@@ -257,7 +264,7 @@
 				{% include ['_partials/repeaters/' ~ displayType] with {'listContent': listContent, 'headingLvl': entry.headingLevel, 'colorScheme': colorScheme, 'sliderButtons': entry.buttons, 'sliderDots': entry.dots, 'sliderTiming': entry.slideTransitionDelay, 'sliderEffect': entry.slideEffect, 'sliderAutoPlay': entry.autoplay, 'sliderSizeSm': entry.sliderSizeSm, 'sliderSizeLg':entry.sliderSizeLg, 'showDate': showDate, 'showExcerpt': entry.showExcerpt, 'blockId': blockId, 'slideImgAspectSm': slideImgAspectSm, 'slideImgAspectLg': slideImgAspectLg} %}
 				
 			{% case 'multiCardSlider' %}
-				{% include ['_partials/repeaters/' ~ displayType] with {'listContent': listContent, 'headingLvl': entry.headingLevel, 'colorScheme': colorScheme, 'sliderButtons': entry.buttons, 'sliderDots': entry.dots, 'sliderTiming': entry.slideTransitionDelay, 'sliderEffect': entry.slideEffect, 'sliderAutoPlay': entry.autoplay, 'showDate': showDate, 'showExcerpt': entry.showExcerpt, 'blockId': blockId} %}
+				{% include ['_partials/repeaters/' ~ displayType] with {'listContent': listContent, 'headingLvl': entry.headingLevel, 'colorScheme': colorScheme, 'sliderButtons': entry.buttons, 'sliderDots': entry.dots, 'sliderTiming': entry.slideTransitionDelay, 'sliderEffect': entry.slideEffect, 'sliderAutoPlay': entry.autoplay, 'showDate': showDate, 'showExcerpt': entry.showExcerpt, 'blockId': blockId, 'cardSliderSizes': cardSliderSizes} %}
 				
 		{% endswitch %}
 		

@@ -72,6 +72,7 @@ x-init="swiper = new Swiper($refs.container, {
 	slidesPerView: 1,
 	spaceBetween: 0,
 	centeredSlides: true,
+	noSwipingSelector: 'a',
 	{% if entry.autoplay %}
 		autoplay: {
 			delay: {{entry.slideTransitionDelay}},

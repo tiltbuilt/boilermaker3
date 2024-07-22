@@ -810,6 +810,33 @@ fieldLayouts:
                   fieldUid: 13b06d24-aa17-46e3-89b9-c895a68df851 # Repeater Display Type
                   layoutElementUid: 637190cd-073e-46d0-b3c6-7e32259ccefc
                   operator: in
+                  uid: ea719b0e-7502-4306-81b4-f24a2463a0ac
+                  values:
+                    - multiCardSlider
+              elementType: craft\elements\Entry
+              fieldContext: global
+            fieldUid: b422915f-1867-4c28-bb32-280178fab390 # Multi Card Slider Cards Per Layout Size
+            handle: null
+            includeInCards: false
+            instructions: 'This field overrides the global setting for cards per device size for this repeater'
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 09ba36ab-0c2b-449e-8b1b-9e6a1e01cd87
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition:
+              class: craft\elements\conditions\entries\EntryCondition
+              conditionRules:
+                -
+                  class: craft\fields\conditions\OptionsFieldConditionRule
+                  fieldUid: 13b06d24-aa17-46e3-89b9-c895a68df851 # Repeater Display Type
+                  layoutElementUid: 637190cd-073e-46d0-b3c6-7e32259ccefc
+                  operator: in
                   uid: c631ef54-b5be-4b78-90c6-c861ae0cd6a3
                   values:
                     - textList

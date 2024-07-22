@@ -19,14 +19,14 @@
 
 <div class="repeater-list-card-wrapper">	
 	{% for listItem in listContent %}	
-		   {% if listItem.url != null and listItem.url|length %}
+		{% if listItem.url != null and listItem.url|length %}
 		   {% set outerTag = 'a' %}
 		{% else %}
 			{% set outerTag = 'div' %}
 		{% endif %}
 		
-		<{{outerTag}} {% if listItem.url|length %}<a href="{{ listItem.url }}" {% if listItem.newTab %}target="_blank"{% endif %} {% endif %} class="{{ cardClasses|join(' ') }}">			
-			<div class="repeater-card-inner">			
+		<div class="{{ cardClasses|join(' ') }}">			
+			<{{outerTag}} {% if listItem.url|length %}href="{{ listItem.url }}" {% if listItem.newTab %}target="_blank"{% endif %} {% endif %} class="repeater-card-inner">			
 				<div class="repeater-card-sm-img w-full">					
 					{% set image = listItem.image[0] %}
 					{% set mobileXForm = 'image-' ~ gSettings.thumbAspectSm %}
@@ -74,7 +74,7 @@
 						<div>{{ listItem.excerpt }}</div>	  				 
 					{% endif %}	
 				</div>				
-			</div>			        
-		</{{outerTag}}>	
+			</{{outerTag}}>			        
+		</div>	
 	{% endfor %}
 </div>

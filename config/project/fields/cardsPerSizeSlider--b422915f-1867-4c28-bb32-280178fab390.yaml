@@ -1,10 +1,10 @@
 columnSuffix: null
-handle: cardsPerRow
-instructions: null
-name: 'Cards Per Row'
+handle: cardsPerSizeSlider
+instructions: 'Sets the default number of cards to display in the multi card slider per layout size.'
+name: 'Multi Card Slider Cards Per Layout Size'
 searchable: false
 settings:
-  addRowLabel: 'Set Row Size'
+  addRowLabel: 'Add a row'
   columns:
     __assoc__:
       -
@@ -30,21 +30,10 @@ settings:
                   __assoc__:
                     -
                       - label
-                      - 'Extra Small (Phone Vertical)'
-                    -
-                      - value
-                      - '@xs'
-                    -
-                      - default
-                      - true
-                -
-                  __assoc__:
-                    -
-                      - label
                       - 'Small (Phone Horizontal)'
                     -
                       - value
-                      - '@sm'
+                      - '600'
                     -
                       - default
                       - false
@@ -55,7 +44,7 @@ settings:
                       - 'Medium (Tablet)'
                     -
                       - value
-                      - '@md'
+                      - '750'
                     -
                       - default
                       - false
@@ -66,7 +55,7 @@ settings:
                       - 'Large (Laptop+)'
                     -
                       - value
-                      - '@lg'
+                      - '1000'
                     -
                       - default
                       - false
@@ -77,7 +66,7 @@ settings:
                       - X-Large(Desktop+)
                     -
                       - value
-                      - '@xl'
+                      - '1200'
                     -
                       - default
                       - false
@@ -156,7 +145,7 @@ settings:
                       - default
                       - false
   defaults: null
-  maxRows: 6
+  maxRows: null
   minRows: null
   staticRows: false
 translationKeyFormat: null

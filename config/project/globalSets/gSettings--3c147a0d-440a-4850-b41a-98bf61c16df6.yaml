@@ -301,6 +301,21 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
+          -
+            elementCondition: null
+            fieldUid: b422915f-1867-4c28-bb32-280178fab390 # Multi Card Slider Cards Per Layout Size
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 12d3564f-a303-4193-83bc-e27c721e114e
+            userCondition: null
+            warning: null
+            width: 100
         name: 'Repeaters and Sliders'
         uid: 47943d2f-b3df-4a27-bffd-fe75141c8cfc
         userCondition: null

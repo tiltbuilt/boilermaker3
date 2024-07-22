@@ -16,7 +16,7 @@ module.exports = {
 	  center: true,
 	},
 	containers: {
-		'xs': '30rem',
+		'xs': '0rem',
 		'sm': '60rem',
 		'md': '75rem',
 		'lg': '100rem',
@@ -116,63 +116,67 @@ module.exports = {
 	  },
 	  {
 		pattern: /(p|m)(t|b|l|r)-(none|quarter|half|base|2x|3x|4x|normal|extra|neg-quarter|neg-half|neg-base|neg-2x|neg-3x|neg-4x|neg-normal|neg-extra)/, //adjust sizes to match list available in spacing def
-		variants: ['sm', 'md', 'lg', 'xl', '2xl', '@xs', '@sm', '@md', '@lg', '@xl'],
+		variants: ['sm', 'md', 'lg', 'xl', '2xl', '@xs', '@sm', '@md', '@lg', '@xl', '@xs/list', '@sm/list', '@md/list', '@lg/list', '@xl/list', '@xs/card', '@sm/card', '@md/card', '@lg/card', '@xl/card', '@xs/component', '@sm/component', '@md/component', '@lg/component', '@xl/component'],
 	  },
 	  {
 		pattern: /text-(scaling-)?(xs|sm|base|lg|xl|2xl|3xl|4xl|5xl|6xl|7xl|8xl|left|center|right|justify)/, //adjust sizes to match list available in text size def and alignment settings
-		variants: ['sm', 'md', 'lg', 'xl', '2xl'],
+		variants: ['sm', 'md', 'lg', 'xl', '2xl', '@xs', '@sm', '@md', '@lg', '@xl', '@xs/list', '@sm/list', '@md/list', '@lg/list', '@xl/list', '@xs/card', '@sm/card', '@md/card', '@lg/card', '@xl/card', '@xs/component', '@sm/component', '@md/component', '@lg/component', '@xl/component'],
 	  },
 	  {
 		pattern: /(not-)?italic/, 
-		variants: ['sm', 'md', 'lg', 'xl', '2xl'],
+		variants: ['sm', 'md', 'lg', 'xl', '2xl', '@xs', '@sm', '@md', '@lg', '@xl', '@xs/list', '@sm/list', '@md/list', '@lg/list', '@xl/list', '@xs/card', '@sm/card', '@md/card', '@lg/card', '@xl/card', '@xs/component', '@sm/component', '@md/component', '@lg/component', '@xl/component'],
 	  },
 	  {
 		pattern: /tracking-(tighter|tight|normal|wide|wider|widest)/, 
-		variants: ['sm', 'md', 'lg', 'xl', '2xl'],
+		variants: ['sm', 'md', 'lg', 'xl', '2xl', '@xs', '@sm', '@md', '@lg', '@xl', '@xs/list', '@sm/list', '@md/list', '@lg/list', '@xl/list', '@xs/card', '@sm/card', '@md/card', '@lg/card', '@xl/card', '@xs/component', '@sm/component', '@md/component', '@lg/component', '@xl/component'],
 	  },
 	  {
 		pattern: /(normal-case|capitalize|uppercase|lowercase)/, 
-		variants: ['sm', 'md', 'lg', 'xl', '2xl'],
+		variants: ['sm', 'md', 'lg', 'xl', '2xl', '@xs', '@sm', '@md', '@lg', '@xl', '@xs/list', '@sm/list', '@md/list', '@lg/list', '@xl/list', '@xs/card', '@sm/card', '@md/card', '@lg/card', '@xl/card', '@xs/component', '@sm/component', '@md/component', '@lg/component', '@xl/component'],
 	  },
 	  {
 		pattern: /w-(full|1\/5|1\/4|1\/3|2\/5|1\/2|3\/5|2\/3|3\/4|4\/5)/, 
-		variants: ['sm', 'md', 'lg', 'xl', '2xl', '@xs', '@sm', '@md', '@lg', '@xl', '@xs/list', '@sm/list', '@md/list', '@lg/list', '@xl/list', '@xs/card', '@sm/card', '@md/card', '@lg/card', '@xl/card'],
+		variants: ['sm', 'md', 'lg', 'xl', '2xl', '@xs', '@sm', '@md', '@lg', '@xl', '@xs/list', '@sm/list', '@md/list', '@lg/list', '@xl/list', '@xs/card', '@sm/card', '@md/card', '@lg/card', '@xl/card', '@xs/component', '@sm/component', '@md/component', '@lg/component', '@xl/component'],
 	  },
 	  {
 		pattern: /order-(first|last|1|2|3|4|5)/, 
-		variants: ['sm', 'md', 'lg', 'xl', '2xl'],
+		variants: ['sm', 'md', 'lg', 'xl', '2xl', '@xs', '@sm', '@md', '@lg', '@xl', '@xs/list', '@sm/list', '@md/list', '@lg/list', '@xl/list', '@xs/card', '@sm/card', '@md/card', '@lg/card', '@xl/card', '@xs/component', '@sm/component', '@md/component', '@lg/component', '@xl/component'],
 	  },
 	  {
 		pattern: /(items|self)-(stretch|start|center|end)/, 
-		variants: ['sm', 'md', 'lg', 'xl', '2xl', '@xs', '@sm', '@md', '@lg', '@xl', '@xs/list', '@sm/list', '@md/list', '@lg/list', '@xl/list', '@xs/card', '@sm/card', '@md/card', '@lg/card', '@xl/card'],
+		variants: ['sm', 'md', 'lg', 'xl', '2xl', '@xs', '@sm', '@md', '@lg', '@xl', '@xs/list', '@sm/list', '@md/list', '@lg/list', '@xl/list', '@xs/card', '@sm/card', '@md/card', '@lg/card', '@xl/card', '@xs/component', '@sm/component', '@md/component', '@lg/component', '@xl/component'],
 	  },
 	  {
 		pattern: /justify-(start|center|end|between|evenly)/, 
-		variants: ['sm', 'md', 'lg', 'xl', '2xl', '@xs', '@sm', '@md', '@lg', '@xl', '@xs/list', '@sm/list', '@md/list', '@lg/list', '@xl/list', '@xs/card', '@sm/card', '@md/card', '@lg/card', '@xl/card'],
+		variants: ['sm', 'md', 'lg', 'xl', '2xl', '@xs', '@sm', '@md', '@lg', '@xl', '@xs/list', '@sm/list', '@md/list', '@lg/list', '@xl/list', '@xs/card', '@sm/card', '@md/card', '@lg/card', '@xl/card', '@xs/component', '@sm/component', '@md/component', '@lg/component', '@xl/component'],
 	  },
 	  {
 		pattern: /btn-(standard|text|text-arrow|sm|md|lg)/, 
-		variants: ['sm', 'md', 'lg', 'xl', '2xl'],
+		variants: ['sm', 'md', 'lg', 'xl', '2xl', '@xs', '@sm', '@md', '@lg', '@xl', '@xs/list', '@sm/list', '@md/list', '@lg/list', '@xl/list', '@xs/card', '@sm/card', '@md/card', '@lg/card', '@xl/card', '@xs/component', '@sm/component', '@md/component', '@lg/component', '@xl/component'],
+	  },
+	  {
+		pattern: /icon-(small|medium|large)/, 
+		variants: ['sm', 'md', 'lg', 'xl', '2xl', '@xs', '@sm', '@md', '@lg', '@xl', '@xs/list', '@sm/list', '@md/list', '@lg/list', '@xl/list', '@xs/card', '@sm/card', '@md/card', '@lg/card', '@xl/card', '@xs/component', '@sm/component', '@md/component', '@lg/component', '@xl/component'],
 	  },
 	  {
 		pattern: /aspect-(auto|square|video|4\/3|3\/2|3\/1|2\/1|4\/1)/, 
-		variants: ['sm', 'md', 'lg', 'xl', '2xl', '@xs', '@sm', '@md', '@lg', '@xl'],
+		variants: ['sm', 'md', 'lg', 'xl', '2xl', '@xs', '@sm', '@md', '@lg', '@xl', '@xs/list', '@sm/list', '@md/list', '@lg/list', '@xl/list', '@xs/card', '@sm/card', '@md/card', '@lg/card', '@xl/card', '@xs/component', '@sm/component', '@md/component', '@lg/component', '@xl/component'],
 	  },
 	  {
 		pattern: /(block|hidden|inline|inline-block|flex)/, 
-		variants: ['sm', 'md', 'lg', 'xl', '2xl', '@xs', '@sm', '@md', '@lg', '@xl'],
+		variants: ['sm', 'md', 'lg', 'xl', '2xl', '@xs', '@sm', '@md', '@lg', '@xl', '@xs/list', '@sm/list', '@md/list', '@lg/list', '@xl/list', '@xs/card', '@sm/card', '@md/card', '@lg/card', '@xl/card', '@xs/component', '@sm/component', '@md/component', '@lg/component', '@xl/component'],
 	  },
 	  {
 		pattern: /bg-opacity-(\d+)/, 
-		variants: ['sm', 'md', 'lg', 'xl', '2xl', '@xs', '@sm', '@md', '@lg', '@xl'],
+		variants: ['sm', 'md', 'lg', 'xl', '2xl', '@xs', '@sm', '@md', '@lg', '@xl', '@xs/list', '@sm/list', '@md/list', '@lg/list', '@xl/list', '@xs/card', '@sm/card', '@md/card', '@lg/card', '@xl/card', '@xs/component', '@sm/component', '@md/component', '@lg/component', '@xl/component'],
 	  },	  
 	  {
-	  	pattern: /(text-wrap-left|text-wrap-right|text-wrap-none|hidden|not-hidden|block)/, 
-		variants: ['sm', 'md', 'lg', 'xl', '2xl', '@xs', '@sm', '@md', '@lg', '@xl', '@xs/list', '@sm/list', '@md/list', '@lg/list', '@xl/list', '@xs/card', '@sm/card', '@md/card', '@lg/card', '@xl/card'],
+	  	pattern: /(text-wrap-left|text-wrap-right|text-wrap-none|hidden|not-hidden|block|flex-wrap|flex-nowrap)/, 
+		variants: ['sm', 'md', 'lg', 'xl', '2xl', '@xs', '@sm', '@md', '@lg', '@xl', '@xs/list', '@sm/list', '@md/list', '@lg/list', '@xl/list', '@xs/card', '@sm/card', '@md/card', '@lg/card', '@xl/card', '@xs/component', '@sm/component', '@md/component', '@lg/component', '@xl/component'],
 	  },
 	  {
 	    pattern: /columns-(\d)/, 
-		variants: ['sm', 'md', 'lg', 'xl', '2xl', '@xs', '@sm', '@md', '@lg', '@xl', '@xs/list', '@sm/list', '@md/list', '@lg/list', '@xl/list'],
+		variants: ['sm', 'md', 'lg', 'xl', '2xl', '@xs', '@sm', '@md', '@lg', '@xl', '@xs/list', '@sm/list', '@md/list', '@lg/list', '@xl/list', '@xs/component', '@sm/component', '@md/component', '@lg/component', '@xl/component'],
 	  },	  	  	  	    
   ],
 };

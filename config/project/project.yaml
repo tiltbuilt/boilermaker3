@@ -1,4 +1,4 @@
-dateModified: 1721071739
+dateModified: 1721602997
 elementSources:
   craft\elements\Entry:
     -
@@ -118,6 +118,7 @@ meta:
     57eb287d-cdc2-4fba-8588-5dc66ff28c86: 'Line Height' # Line Height
     62bb1cf0-026e-410e-a685-701783c6ae9e: 'Header Style Adjustments' # Header Style Adjustments
     65c293ae-ed92-4c10-b2d3-1251a63c1402: Modal # Modal
+    66d93990-df90-491e-9f27-29da78847eb3: 'Icon Size' # Icon Size
     67dbaf8c-d352-485f-a230-5ba94ad31c07: 'Column Layout' # Column Layout
     69b9aab4-6d39-462c-b88a-8d4971791897: Simple # Simple
     71ab40f6-9c7f-41cc-9887-255aa3c9603a: 'Style Adjustment - Tab Panel' # Style Adjustment - Tab Panel
@@ -193,8 +194,10 @@ meta:
     b81cc92d-9e5b-440d-8461-cdf9ab64807e: Opacity # Opacity
     b352c451-ed85-4679-8a36-8e473facf8a0: 'Style Adjustment - Button Group' # Style Adjustment - Button Group
     b644bda8-1050-46f5-9453-0b3d19812289: Documents # Documents
+    b688f2ad-48f2-460c-ad2c-ad3dc97599ca: 'Layout Size' # Layout Size
     b696e4a1-c7cf-4e07-a0be-b9f4f18a2f53: Home # Home
     b6075a2a-820f-44f0-857b-358c60cb2bcb: 'Layout Column' # Layout Column
+    b422915f-1867-4c28-bb32-280178fab390: 'Multi Card Slider Cards Per Layout Size' # Multi Card Slider Cards Per Layout Size
     b7035329-8f0c-4f1c-985b-104b44d6b235: 'CTA Type' # CTA Type
     ba9877c7-223a-4c59-b461-4cf1a5068a34: 'Font Size' # Font Size
     bae3f95d-8506-49cb-891a-048c975b11d4: 'Heading Level' # Heading Level
@@ -223,6 +226,7 @@ meta:
     dd25301d-9012-41dd-aa43-19f023540545: 'Button Group Style Adjustment' # Button Group Style Adjustment
     ddb8108e-63a9-4567-80ba-7ab621baad89: 'Style Adjustment - Quote' # Style Adjustment - Quote
     de6881eb-f48b-4119-889c-95d3bf6692e5: 'Style Adjustment - Tab Set' # Style Adjustment - Tab Set
+    df144842-8cb5-4008-8427-22974b6fe49c: 'Icon Vertical Alignment' # Icon Vertical Alignment
     e2f8e7ee-d666-4bd1-bfe9-ece40a043b3e: Repeater # Repeater
     e3f9e59c-e941-404e-8bc8-b4c57ff28d5c: 'YesNo - Yes' # YesNo - Yes
     e5bff211-8719-442c-8ca7-caf236c14273: 'Subhead Style' # Subhead Style

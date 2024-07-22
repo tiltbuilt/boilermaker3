@@ -65,7 +65,22 @@ fieldLayouts:
             userCondition: null
           -
             elementCondition: null
-            fieldUid: 0a94a9c4-7b94-408c-919b-9c4a6c070e37 # Header Block
+            fieldUid: 37ce7ac2-f596-4d6f-9181-3f4d9fa4d692 # Block Layout
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 77ee2ca9-9e33-49b8-9c7b-250dc06e82da
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 0f72b724-e0a8-4044-a3aa-12255ade6ea1 # Basic Text with Search
             handle: headline
             includeInCards: false
             instructions: null
@@ -74,7 +89,22 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 7ac9924a-fde4-41bb-b991-2b2fa9e6a8fa
+            uid: 2ec9bea9-7239-4775-99cb-431ef2c978ed
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: bae3f95d-8506-49cb-891a-048c975b11d4 # Heading Level
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: aecd069b-c456-4728-a0b1-9692fe7139c0
             userCondition: null
             warning: null
             width: 100
@@ -125,13 +155,64 @@ fieldLayouts:
             fieldUid: 487ec441-2218-43e8-8a96-652a0649e437 # Color Picker
             handle: iconColor
             includeInCards: false
-            instructions: null
+            instructions: 'This field overrides the default icon color for this color scheme'
             label: 'Icon Color'
             providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: f9984952-d83d-465e-8274-f3112f688236
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 66d93990-df90-491e-9f27-29da78847eb3 # Icon Size
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 74843fe1-a73b-4ddc-a396-0618fbc7c07a
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            heading: Headline
+            type: craft\fieldlayoutelements\Heading
+            uid: a4e2b1f1-208b-4421-9d74-c1c566cccbac
+            userCondition: null
+          -
+            elementCondition: null
+            fieldUid: aeeead9c-f591-4d95-a990-f8bea54fb0ef # Heading Style
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a80b79ee-0a12-42e0-8a3f-9bfa5c3a68e2
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 487ec441-2218-43e8-8a96-652a0649e437 # Color Picker
+            handle: headlineColor
+            includeInCards: false
+            instructions: 'This field overrides the default headline color for this color scheme'
+            label: 'Headline Color'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ef8085e4-8ee8-4a9d-83bd-b634f8f9e216
             userCondition: null
             warning: null
             width: 100
@@ -191,7 +272,7 @@ fieldLayouts:
             fieldUid: 487ec441-2218-43e8-8a96-652a0649e437 # Color Picker
             handle: btnColor
             includeInCards: false
-            instructions: null
+            instructions: 'This field overrides the default button color for this color scheme'
             label: 'Button Color'
             providesThumbs: false
             required: false
