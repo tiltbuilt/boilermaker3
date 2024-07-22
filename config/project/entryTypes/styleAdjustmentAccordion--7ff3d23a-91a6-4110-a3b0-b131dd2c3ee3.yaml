@@ -36,8 +36,8 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: 7f182d27-ea6e-4a71-a3f8-5c9d0f147eed # Device Size
-            handle: null
+            fieldUid: b688f2ad-48f2-460c-ad2c-ad3dc97599ca # Layout Size
+            handle: deviceSize
             includeInCards: false
             instructions: null
             label: null
@@ -45,7 +45,7 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 33639eba-7305-42c6-a28a-2f60d80960a3
+            uid: 127e46c4-1794-4780-854e-08ce550b1677
             userCondition: null
             warning: null
             width: 100

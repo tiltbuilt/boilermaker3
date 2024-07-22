@@ -21,6 +21,7 @@ module.exports = {
 		'md': '75rem',
 		'lg': '100rem',
 		'xl': '120rem',
+		'2xl': '150rem',
 	},	
 	extend: {
 	  minHeight: {
@@ -107,11 +108,11 @@ module.exports = {
   },
   safelist: [	  
 	  {
-		pattern: /(text|bg|btn)-(white|black|transparent|red)/, //adjust colors to match list available in color def
+		pattern: /(text|bg|btn|icon)-(white|black|transparent|red)/, //adjust colors to match list available in color def
 		variants: ['hover', 'focus'],
 	  },
 	  {
-		pattern: /(text|bg)-gray-(100|200|300|400|500|600|700|800|900)/, //adjust colors to match list available in color def
+		pattern: /(text|bg|btn|icon)-gray-(100|200|300|400|500|600|700|800|900)/, //adjust colors to match list available in color def
 		variants: ['hover', 'focus'],
 	  },
 	  {

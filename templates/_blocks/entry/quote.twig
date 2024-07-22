@@ -36,7 +36,7 @@
 			{% set classList = classList|merge([devSize ~ adjSet.creditLineHeight]) %}
 		{% endif %}
 		{% if adjSet.creditItalic|length %}
-			{% set classList = classList|merge([devSize ~ adjSet.creditLineHeight]) %}
+			{% set classList = classList|merge([devSize ~ adjSet.creditItalic]) %}
 		{% endif %}
 		{% if adjSet.creditTextCase|length %}
 			{% set classList = classList|merge([devSize ~ adjSet.creditTextCase]) %}
@@ -65,13 +65,13 @@
 {% endif %}
 
 {# Set color class #}
-{% if entry.quoteColor|length %}
+{% if entry.quoteColor != '' %}
 	{% set colorClass = 'text-' ~ entry.quoteColor %}
 {% else %}
 	{% set colorClass = colorScheme %}
 {% endif %}
 
-{% if entry.creditColor|length %}
+{% if entry.creditColor != '' %}
 	{% set creditColorClass = entry.creditColor %}
 {% else %}
 	{% set creditColorClass = colorScheme %}

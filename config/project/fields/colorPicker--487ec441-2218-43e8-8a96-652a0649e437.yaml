@@ -68,7 +68,7 @@ settings:
           - Red
         -
           - value
-          - red
+          - red-500
         -
           - cssColour
           - FF0000
