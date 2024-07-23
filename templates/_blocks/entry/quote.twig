@@ -35,6 +35,9 @@
 		{% if adjSet.creditLineHeight|length %}
 			{% set classList = classList|merge([devSize ~ adjSet.creditLineHeight]) %}
 		{% endif %}
+		{% if adjSet.creditFontWeight|length %}
+			{% set classList = classList|merge([devSize ~ adjSet.creditFontWeight]) %}
+		{% endif %}
 		{% if adjSet.creditItalic|length %}
 			{% set classList = classList|merge([devSize ~ adjSet.creditItalic]) %}
 		{% endif %}

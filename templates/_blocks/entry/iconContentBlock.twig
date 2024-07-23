@@ -45,8 +45,11 @@
 		{% if adjSet.headlineLineHeight|length %}
 			{% set classList = classList|merge([devSize ~ adjSet.headlineLineHeight]) %}
 		{% endif %}
+		{% if adjSet.headlineFontWeight|length %}
+			{% set classList = classList|merge([devSize ~ adjSet.headlineFontWeight]) %}
+		{% endif %}
 		{% if adjSet.headlineItalic|length %}
-			{% set classList = classList|merge([devSize ~ adjSet.headlineLineHeight]) %}
+			{% set classList = classList|merge([devSize ~ adjSet.headlineItalic]) %}
 		{% endif %}
 		{% if adjSet.headlineTextCase|length %}
 			{% set classList = classList|merge([devSize ~ adjSet.headlineTextCase]) %}

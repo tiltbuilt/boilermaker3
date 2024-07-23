@@ -210,7 +210,7 @@ settings:
           - sources
           -
             - 'volume:b644bda8-1050-46f5-9453-0b3d19812289' # Documents
-            - 'volume:7c366b82-7c53-4dd2-a425-1c416a3e1464' # Embeds
+            - 'volume:7c366b82-7c53-4dd2-a425-1c416a3e1464' # Content Videos
     -
       __assoc__:
         -

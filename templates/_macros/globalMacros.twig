@@ -141,19 +141,25 @@
   -----
   Output a background node based on an element's Background Imagery field.
 #}
-{%- macro buildElementBackground(adjustments, sizesAtr, aspect, loadType) -%}
+{%- macro buildElementBackgroundOLD(adjustments, sizesAtr, loadType) -%}
+	
+{%- endmacro buildElementBackground -%}
+
+{%- macro buildElementBackgroundOLD(adjustments, sizesAtr, aspect, loadType) -%}
+	
+	
 	{% set bgSizes = [] %}
 	{% for adjSet in adjustments %}
 		{% if adjSet.bgImg|length %}
 			{% set bgSizes = bgSizes|merge([adjSet.deviceSize]) %}
 		{% endif %}
 	{% endfor %}
-	{% if aspect|length %}		
-		{% set tfSize = 'sizedImage-' ~ aspect|replace({'/': '-'}) %}
-		{% set tfSizeWebp = 'sizedImageWebp-' ~ aspect|replace({'/': '-'}) %}
+	{% if aspect|length and aspect != 'auto' %}		
+		{% set tfSize = 'image-' ~ aspect %}
+		{% set tfSizeWebp = 'image-' ~ aspect ~ '-webp' %}
 	{% else %}
 		{% set tfSize = 'contentImage' %}
-		{% set tfSizeWebp = 'contentImageWebp' %}
+		{% set tfSizeWebp = 'contentImage-webp' %}
 	{% endif %}
 	{% for adjSet in adjustments %}
 		{% set bgAsset = adjSet.bgImg.one() %}
@@ -166,51 +172,51 @@
 			
 			{# add classes to hide background div on appropriate device sites by checking to see what other sizes are prsent above this one #}
 			{% switch adjSet.deviceSize %}
-				{% case 'sm' %}
-					{% if 'md' in bgSizes %}
-						{% set bgOuterClasses = bgOuterClasses|merge(['md:hidden']) %}
-					{% elseif 'lg' in bgSizes %}
-						{% set bgOuterClasses = bgOuterClasses|merge(['lg:hidden']) %}
-					{% elseif 'xl' in bgSizes %}
-						{% set bgOuterClasses = bgOuterClasses|merge(['xl:hidden']) %}
-					{% elseif '2xl' in bgSizes %}
-						{% set bgOuterClasses = bgOuterClasses|merge(['2xl:hidden']) %}
+				{% case '@sm' %}
+					{% if '@md' in bgSizes %}
+						{% set bgOuterClasses = bgOuterClasses|merge(['@md:hidden']) %}
+					{% elseif '@lg' in bgSizes %}
+						{% set bgOuterClasses = bgOuterClasses|merge(['@lg:hidden']) %}
+					{% elseif '@xl' in bgSizes %}
+						{% set bgOuterClasses = bgOuterClasses|merge(['@xl:hidden']) %}
+					{% elseif '@2xl' in bgSizes %}
+						{% set bgOuterClasses = bgOuterClasses|merge(['@2xl:hidden']) %}
 					{% endif %}
 					
-				{% case 'md' %}			
-					{% if 'lg' in bgSizes %}
-						{% set bgOuterClasses = bgOuterClasses|merge(['lg:hidden']) %}
-					{% elseif 'xl' in bgSizes %}
-						{% set bgOuterClasses = bgOuterClasses|merge(['xl:hidden']) %}
-					{% elseif '2xl' in bgSizes %}
-						{% set bgOuterClasses = bgOuterClasses|merge(['2xl:hidden']) %}
+				{% case '@md' %}			
+					{% if '@lg' in bgSizes %}
+						{% set bgOuterClasses = bgOuterClasses|merge(['@lg:hidden']) %}
+					{% elseif '@xl' in bgSizes %}
+						{% set bgOuterClasses = bgOuterClasses|merge(['@xl:hidden']) %}
+					{% elseif '@2xl' in bgSizes %}
+						{% set bgOuterClasses = bgOuterClasses|merge(['@2xl:hidden']) %}
 					{% endif %}
 					
-				{% case 'lg' %}			
-					{% if 'xl' in bgSizes %}
-						{% set bgOuterClasses = bgOuterClasses|merge(['xl:hidden']) %}
-					{% elseif '2xl' in bgSizes %}
-						{% set bgOuterClasses = bgOuterClasses|merge(['2xl:hidden']) %}
+				{% case '@lg' %}			
+					{% if '@xl' in bgSizes %}
+						{% set bgOuterClasses = bgOuterClasses|merge(['@xl:hidden']) %}
+					{% elseif '@2xl' in bgSizes %}
+						{% set bgOuterClasses = bgOuterClasses|merge(['@2xl:hidden']) %}
 					{% endif %}
 				
-				{% case 'xl' %}			
-					{% if '2xl' in bgSizes %}
-						{% set bgOuterClasses = bgOuterClasses|merge(['2xl:hidden']) %}
+				{% case '@xl' %}			
+					{% if '@2xl' in bgSizes %}
+						{% set bgOuterClasses = bgOuterClasses|merge(['@2xl:hidden']) %}
 					{% endif %}
 					
-				{% case '2xl:' %}
+				{% case '@2xl:' %}
 					
 				{% default %}
-					{% if 'sm' in bgSizes %}
-						{% set bgOuterClasses = bgOuterClasses|merge(['sm:hidden']) %}
-					{% elseif 'md' in bgSizes %}
-						{% set bgOuterClasses = bgOuterClasses|merge(['md:hidden']) %}
-					{% elseif 'lg' in bgSizes %}
-						{% set bgOuterClasses = bgOuterClasses|merge(['lg:hidden']) %}
-					{% elseif 'xl' in bgSizes %}
-						{% set bgOuterClasses = bgOuterClasses|merge(['xl:hidden']) %}
-					{% elseif '2xl' in bgSizes %}
-						{% set bgOuterClasses = bgOuterClasses|merge(['2xl:hidden']) %}
+					{% if '@sm' in bgSizes %}
+						{% set bgOuterClasses = bgOuterClasses|merge(['@sm:hidden']) %}
+					{% elseif '@md' in bgSizes %}
+						{% set bgOuterClasses = bgOuterClasses|merge(['@md:hidden']) %}
+					{% elseif '@lg' in bgSizes %}
+						{% set bgOuterClasses = bgOuterClasses|merge(['@lg:hidden']) %}
+					{% elseif '@xl' in bgSizes %}
+						{% set bgOuterClasses = bgOuterClasses|merge(['@xl:hidden']) %}
+					{% elseif '@2xl' in bgSizes %}
+						{% set bgOuterClasses = bgOuterClasses|merge(['@2xl:hidden']) %}
 					{% endif %}
 					
 			{% endswitch %}
@@ -293,5 +299,5 @@
 			
 		{% endif %}
 	{% endfor %} 
-{%- endmacro buildElementBackground -%}
+{%- endmacro buildElementBackgroundOLD -%}
 

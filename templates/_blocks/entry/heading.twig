@@ -38,8 +38,11 @@
 		{% if adjSet.subheadLineHeight|length %}
 			{% set classList = classList|merge([devSize ~ adjSet.subheadLineHeight]) %}
 		{% endif %}
+		{% if adjSet.subheadFontWeight|length %}
+			{% set classList = classList|merge([devSize ~ adjSet.subheadFontWeight]) %}
+		{% endif %}
 		{% if adjSet.subheadItalic|length %}
-			{% set classList = classList|merge([devSize ~ adjSet.subheadLineHeight]) %}
+			{% set classList = classList|merge([devSize ~ adjSet.subheadItalic]) %}
 		{% endif %}
 		{% if adjSet.subheadTextCase|length %}
 			{% set classList = classList|merge([devSize ~ adjSet.subheadTextCase]) %}

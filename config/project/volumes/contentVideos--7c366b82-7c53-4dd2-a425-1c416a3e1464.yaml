@@ -1,7 +1,7 @@
 altTranslationKeyFormat: null
 altTranslationMethod: none
 fieldLayouts:
-  6c7033dc-e6e0-4038-8122-b895f8174fa7:
+  591914db-0320-44b3-a9a0-93e9bcf625fc:
     tabs:
       -
         elementCondition: null
@@ -31,17 +31,17 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\assets\AssetTitleField
-            uid: ee3f60bf-0e5b-49b7-acb3-201a6c8f501f
+            uid: af3bc33b-4d2b-40b7-a045-886ad6784711
             userCondition: null
             warning: null
             width: 100
         name: Content
-        uid: 2e687427-c0b4-48d6-8474-b81904db643b
+        uid: 736faa6d-3585-457e-a390-4e43f19b6820
         userCondition: null
-fs: mediaUploads
-handle: media
-name: Media
-sortOrder: 1
+fs: contentVideos
+handle: contentVideos
+name: 'Content Videos'
+sortOrder: 3
 subpath: ''
 titleTranslationKeyFormat: null
 titleTranslationMethod: site

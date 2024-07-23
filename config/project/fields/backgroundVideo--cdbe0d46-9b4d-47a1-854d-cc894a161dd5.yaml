@@ -1,26 +1,26 @@
 columnSuffix: null
-handle: imageAsset
+handle: backgroundVideo
 instructions: null
-name: 'Image Asset'
+name: 'Background Video'
 searchable: false
 settings:
   allowSelfRelations: false
   allowSubfolders: false
   allowUploads: true
   allowedKinds:
-    - image
+    - video
   branchLimit: null
   defaultUploadLocationSource: 'volume:fa819c1c-abac-42ac-b1e5-3de37862ccf3' # Images
   defaultUploadLocationSubpath: null
   localizeRelations: false
   maintainHierarchy: false
-  maxRelations: null
+  maxRelations: 1
   minRelations: null
   previewMode: full
   restrictFiles: true
   restrictLocation: true
   restrictedDefaultUploadSubpath: null
-  restrictedLocationSource: 'volume:fa819c1c-abac-42ac-b1e5-3de37862ccf3' # Images
+  restrictedLocationSource: 'volume:dbe6c627-9b3d-4c00-9b60-25f1964d8a29' # Background Videos
   restrictedLocationSubpath: null
   selectionLabel: null
   showCardsInGrid: false

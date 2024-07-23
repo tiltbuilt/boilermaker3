@@ -36,16 +36,16 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: 7f182d27-ea6e-4a71-a3f8-5c9d0f147eed # Device Size
-            handle: null
+            fieldUid: b688f2ad-48f2-460c-ad2c-ad3dc97599ca # Layout Size
+            handle: deviceSize
             includeInCards: false
-            instructions: 'Select the device size(s) that these adjustments apply to.'
+            instructions: null
             label: null
             providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: fa2c8df5-6168-41d8-87e3-45114927a940
+            uid: e5096e52-83c0-4468-bd98-cec3f2d48689
             userCondition: null
             warning: null
             width: 100
@@ -97,6 +97,21 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 5fdede46-d869-4541-b376-ed2433c6e36f
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: a387115c-e26a-48c1-88b4-11f64ea1772d # Font Weight
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d0c1ce32-bc80-43d7-954a-82402b340b0d
             userCondition: null
             warning: null
             width: 50
@@ -312,7 +327,34 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
-            fieldUid: 3218b554-b14a-4cc0-8b53-3f4b5b1bcd4c # Background Image/Video
+            fieldUid: 72b1f013-8778-4308-a355-29b6088c7162 # Background Type
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: cb447d21-1129-4c18-9720-dbdf099b1d5c
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition:
+              class: craft\elements\conditions\entries\EntryCondition
+              conditionRules:
+                -
+                  class: craft\fields\conditions\OptionsFieldConditionRule
+                  fieldUid: 72b1f013-8778-4308-a355-29b6088c7162 # Background Type
+                  layoutElementUid: cb447d21-1129-4c18-9720-dbdf099b1d5c
+                  operator: in
+                  uid: 1cb76d8a-9352-4122-9c43-de3f5dbe5376
+                  values:
+                    - image
+              elementType: craft\elements\Entry
+              fieldContext: global
+            fieldUid: 3218b554-b14a-4cc0-8b53-3f4b5b1bcd4c # Background Image
             handle: null
             includeInCards: false
             instructions: null
@@ -326,7 +368,47 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            elementCondition: null
+            elementCondition:
+              class: craft\elements\conditions\entries\EntryCondition
+              conditionRules:
+                -
+                  class: craft\fields\conditions\OptionsFieldConditionRule
+                  fieldUid: 72b1f013-8778-4308-a355-29b6088c7162 # Background Type
+                  layoutElementUid: cb447d21-1129-4c18-9720-dbdf099b1d5c
+                  operator: in
+                  uid: bcaf5a73-7df3-46a8-a757-bb502f60a9a5
+                  values:
+                    - video
+              elementType: craft\elements\Entry
+              fieldContext: global
+            fieldUid: cdbe0d46-9b4d-47a1-854d-cc894a161dd5 # Background Video
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d8e2bf13-647e-4ed0-b9c9-2a26aea10a50
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition:
+              class: craft\elements\conditions\entries\EntryCondition
+              conditionRules:
+                -
+                  class: craft\fields\conditions\OptionsFieldConditionRule
+                  fieldUid: 72b1f013-8778-4308-a355-29b6088c7162 # Background Type
+                  layoutElementUid: cb447d21-1129-4c18-9720-dbdf099b1d5c
+                  operator: in
+                  uid: 41fb76ec-80dc-4fad-908e-3844473fa5cb
+                  values:
+                    - image
+                    - video
+              elementType: craft\elements\Entry
+              fieldContext: global
             fieldUid: f4d725e6-48b8-4083-a921-ecc0925a0bff # Background Size
             handle: null
             includeInCards: false
@@ -346,12 +428,47 @@ fieldLayouts:
               conditionRules:
                 -
                   class: craft\fields\conditions\OptionsFieldConditionRule
+                  fieldUid: 72b1f013-8778-4308-a355-29b6088c7162 # Background Type
+                  layoutElementUid: cb447d21-1129-4c18-9720-dbdf099b1d5c
+                  operator: in
+                  uid: fa5ffb0c-692a-41e6-a966-27d48e2e247c
+                  values:
+                    - image
+              elementType: craft\elements\Entry
+              fieldContext: global
+            fieldUid: bb89e543-0de1-4a53-9480-2e7c0e8a69a5 # Aspect Ratio
+            handle: null
+            includeInCards: false
+            instructions: 'Use this field to change the aspect ratio of the image being loaded as a background to a size closer to the size/shape of the block it is in. Helps with fixing cropping issues.'
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5b62cefd-0522-4913-b210-c053bf6511f5
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition:
+              class: craft\elements\conditions\entries\EntryCondition
+              conditionRules:
+                -
+                  class: craft\fields\conditions\OptionsFieldConditionRule
                   fieldUid: f4d725e6-48b8-4083-a921-ecc0925a0bff # Background Size
                   layoutElementUid: 2d7a8320-da54-4376-9e73-94c88aa4b365
                   operator: in
                   uid: 168e5406-0835-487c-b7a9-cfadf7ff8ac6
                   values:
                     - auto
+                -
+                  class: craft\fields\conditions\OptionsFieldConditionRule
+                  fieldUid: 72b1f013-8778-4308-a355-29b6088c7162 # Background Type
+                  layoutElementUid: cb447d21-1129-4c18-9720-dbdf099b1d5c
+                  operator: in
+                  uid: 8b03df7f-e573-4844-9c59-0b900df7f801
+                  values:
+                    - image
               elementType: craft\elements\Entry
               fieldContext: global
             fieldUid: 3710a5c7-fa54-4a2c-a07b-4f7a31f5bd25 # Background Repeat
@@ -373,12 +490,13 @@ fieldLayouts:
               conditionRules:
                 -
                   class: craft\fields\conditions\OptionsFieldConditionRule
-                  fieldUid: f4d725e6-48b8-4083-a921-ecc0925a0bff # Background Size
-                  layoutElementUid: 2d7a8320-da54-4376-9e73-94c88aa4b365
+                  fieldUid: 72b1f013-8778-4308-a355-29b6088c7162 # Background Type
+                  layoutElementUid: cb447d21-1129-4c18-9720-dbdf099b1d5c
                   operator: in
                   uid: 702b2e55-3898-4edb-bbdb-f9fc4f175470
                   values:
-                    - auto
+                    - image
+                    - video
               elementType: craft\elements\Entry
               fieldContext: global
             fieldUid: 0fe2ca3f-eb30-4294-96a2-1154bd95e41e # Background Position
@@ -395,7 +513,20 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            elementCondition: null
+            elementCondition:
+              class: craft\elements\conditions\entries\EntryCondition
+              conditionRules:
+                -
+                  class: craft\fields\conditions\OptionsFieldConditionRule
+                  fieldUid: 72b1f013-8778-4308-a355-29b6088c7162 # Background Type
+                  layoutElementUid: cb447d21-1129-4c18-9720-dbdf099b1d5c
+                  operator: in
+                  uid: b8a27a0f-4d29-4245-bdb4-f318f73f8b13
+                  values:
+                    - image
+                    - video
+              elementType: craft\elements\Entry
+              fieldContext: global
             fieldUid: b81cc92d-9e5b-440d-8461-cdf9ab64807e # Opacity
             handle: null
             includeInCards: false

@@ -128,6 +128,10 @@ module.exports = {
 		variants: ['sm', 'md', 'lg', 'xl', '2xl', '@xs', '@sm', '@md', '@lg', '@xl', '@xs/list', '@sm/list', '@md/list', '@lg/list', '@xl/list', '@xs/card', '@sm/card', '@md/card', '@lg/card', '@xl/card', '@xs/component', '@sm/component', '@md/component', '@lg/component', '@xl/component'],
 	  },
 	  {
+		  pattern: /font-(normal|bold)/, 
+		  variants: ['sm', 'md', 'lg', 'xl', '2xl', '@xs', '@sm', '@md', '@lg', '@xl', '@xs/list', '@sm/list', '@md/list', '@lg/list', '@xl/list', '@xs/card', '@sm/card', '@md/card', '@lg/card', '@xl/card', '@xs/component', '@sm/component', '@md/component', '@lg/component', '@xl/component'],
+		},
+	  {
 		pattern: /tracking-(tighter|tight|normal|wide|wider|widest)/, 
 		variants: ['sm', 'md', 'lg', 'xl', '2xl', '@xs', '@sm', '@md', '@lg', '@xl', '@xs/list', '@sm/list', '@md/list', '@lg/list', '@xl/list', '@xs/card', '@sm/card', '@md/card', '@lg/card', '@xl/card', '@xs/component', '@sm/component', '@md/component', '@lg/component', '@xl/component'],
 	  },

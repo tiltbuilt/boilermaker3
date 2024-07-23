@@ -95,6 +95,21 @@ fieldLayouts:
             width: 50
           -
             elementCondition: null
+            fieldUid: a387115c-e26a-48c1-88b4-11f64ea1772d # Font Weight
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 61f97db1-ef32-431e-b0d0-261a917565c5
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
             fieldUid: 57eb287d-cdc2-4fba-8588-5dc66ff28c86 # Line Height
             handle: null
             includeInCards: false

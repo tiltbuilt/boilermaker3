@@ -9,7 +9,7 @@ settings:
   allowUploads: false
   allowedKinds: null
   branchLimit: null
-  defaultUploadLocationSource: 'volume:7c366b82-7c53-4dd2-a425-1c416a3e1464' # Embeds
+  defaultUploadLocationSource: 'volume:7c366b82-7c53-4dd2-a425-1c416a3e1464' # Content Videos
   defaultUploadLocationSubpath: null
   localizeRelations: false
   maintainHierarchy: false
@@ -19,7 +19,7 @@ settings:
   restrictFiles: false
   restrictLocation: true
   restrictedDefaultUploadSubpath: null
-  restrictedLocationSource: 'volume:7c366b82-7c53-4dd2-a425-1c416a3e1464' # Embeds
+  restrictedLocationSource: 'volume:7c366b82-7c53-4dd2-a425-1c416a3e1464' # Content Videos
   restrictedLocationSubpath: null
   selectionLabel: null
   showCardsInGrid: false
@@ -27,7 +27,7 @@ settings:
   showUnpermittedFiles: false
   showUnpermittedVolumes: false
   sources:
-    - 'volume:7c366b82-7c53-4dd2-a425-1c416a3e1464' # Embeds
+    - 'volume:7c366b82-7c53-4dd2-a425-1c416a3e1464' # Content Videos
   targetSiteId: null
   validateRelatedElements: false
   viewMode: large

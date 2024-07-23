@@ -102,6 +102,21 @@ fieldLayouts:
             width: 50
           -
             elementCondition: null
+            fieldUid: a387115c-e26a-48c1-88b4-11f64ea1772d # Font Weight
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 399a733a-85a1-420d-b29a-656a050594f7
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
             fieldUid: 37a64193-e3ef-4a2d-aa91-555b436b1d7d # Italic?
             handle: italic
             includeInCards: false
@@ -193,6 +208,21 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: c5b8d255-c9b7-4e79-8e7d-0f6474934c72
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: a387115c-e26a-48c1-88b4-11f64ea1772d # Font Weight
+            handle: creditFontWeight
+            includeInCards: false
+            instructions: null
+            label: 'Credit Font Weight'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5a561679-2ea5-4bdb-a173-3aa454db4182
             userCondition: null
             warning: null
             width: 50

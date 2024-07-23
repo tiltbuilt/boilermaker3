@@ -196,7 +196,7 @@
 					attributes: {
 						class: [
 							'form-row',
-							"{{ not craft.formie.getVisibleFields(row) ? 'hidden' }}",
+							"{{ not row.getIsHidden() ? 'hidden' }}",
 						],
 					},
 				},

@@ -1,7 +1,7 @@
 columnSuffix: null
-handle: bgSmall
+handle: bgImgSmall
 instructions: null
-name: 'Background Image/Video Small'
+name: 'Background Image Small'
 searchable: false
 settings:
   allowSelfRelations: false
@@ -9,9 +9,8 @@ settings:
   allowUploads: true
   allowedKinds:
     - image
-    - video
   branchLimit: null
-  defaultUploadLocationSource: 'volume:fa819c1c-abac-42ac-b1e5-3de37862ccf3' # Media
+  defaultUploadLocationSource: 'volume:fa819c1c-abac-42ac-b1e5-3de37862ccf3' # Images
   defaultUploadLocationSubpath: null
   localizeRelations: false
   maintainHierarchy: false
@@ -21,7 +20,7 @@ settings:
   restrictFiles: true
   restrictLocation: true
   restrictedDefaultUploadSubpath: null
-  restrictedLocationSource: 'volume:fa819c1c-abac-42ac-b1e5-3de37862ccf3' # Media
+  restrictedLocationSource: 'volume:fa819c1c-abac-42ac-b1e5-3de37862ccf3' # Images
   restrictedLocationSubpath: null
   selectionLabel: null
   showCardsInGrid: false

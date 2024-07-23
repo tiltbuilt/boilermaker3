@@ -76,7 +76,7 @@ fieldLayouts:
             handle: headlineFontSize
             includeInCards: false
             instructions: null
-            label: null
+            label: 'Headline Font Size'
             providesThumbs: false
             required: false
             tip: null
@@ -97,6 +97,21 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: f13edf0a-5cf7-4df6-9c01-4a31e1ebab94
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: a387115c-e26a-48c1-88b4-11f64ea1772d # Font Weight
+            handle: headlineFontWeight
+            includeInCards: false
+            instructions: null
+            label: 'Headline Font Weight'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b0664d86-874e-4dc5-b567-c1f46f061715
             userCondition: null
             warning: null
             width: 50
@@ -214,6 +229,21 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: f2c7cb97-ce4c-4865-8715-06d12761b4bd
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: a387115c-e26a-48c1-88b4-11f64ea1772d # Font Weight
+            handle: subheadFontWeight
+            includeInCards: false
+            instructions: null
+            label: 'Subhead Font Weight'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 4def65c4-2fda-4f32-a0e6-fad9ee8cd746
             userCondition: null
             warning: null
             width: 50
