@@ -194,10 +194,10 @@
 							{% elseif accIcon.type == 'css' %}
 								<i class="{{ accIcon.value }}"></i>								
 							{% else %}
-								<svg><use xlink:href="#{{ accIcon.value }}"></use></svg>
+								<svg><use xlink:href="/sprites.svg#{{ accIcon.value }}"></use></svg>
 							{% endif %}
 						{% else %}
-							<svg><use xlink:href="#icon-caret-right"></use></svg>
+							<svg><use xlink:href="/sprites.svg#icon-caret-right"></use></svg>
 						{% endif %}
 					</div>					
 				</button>

@@ -124,7 +124,7 @@
 			{% elseif tab.icon.type == 'css' %}
 				<i class="{{ tab.icon.value }}"></i>								
 			{% else %}
-				<svg><use xlink:href="#{{ tab.icon.value }}"></use></svg>
+				<svg><use xlink:href="/sprites.svg#{{ tab.icon.value }}"></use></svg>
 			{% endif %}
 			</div>
 		{% endif %}

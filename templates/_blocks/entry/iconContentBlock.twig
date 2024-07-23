@@ -174,7 +174,7 @@
 			{% elseif entry.icon.type == 'css' %}
 				<i class="{{ entry.icon }}"></i>								
 			{% else %}
-				<svg><use xlink:href="#{{ entry.icon.value }}"></use></svg>
+				<svg><use xlink:href="/sprites.svg#{{ entry.icon.value }}"></use></svg>
 			{% endif %}
 		</div>	
 		{% if entry.headline|length or entry.simpleText|length or entry.buttons|length %}
