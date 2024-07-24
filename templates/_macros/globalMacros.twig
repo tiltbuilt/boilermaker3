@@ -138,22 +138,160 @@
 
 
 {# Background Rendering
-  -----
-  Output a background node based on an element's Background Imagery field.
+  -----  
 #}
-{%- macro buildElementBackgroundOLD(adjustments, sizesAtr, loadType) -%}
-	
+
+{# Sets Up Background Output By Setting Up BG Data Object in order by size and passes them to output macros #}
+{%- macro buildElementBackground(adjustments, sizesAtr, aspect) -%}	
+	{% import '_macros/globalMacros' as gMacros %}
+	{# Create an array with a slot for each possible layout size and then write in an object with the info for each background. Slots are named to match layuot sizes with @df for default phone vert size, write each object to its appropriate slot based on device size setting. That way the bgs are always written in the correct order #}
+	{% set bgOrder = ['@df', '@sm', '@md', '@lg', '@xl', '@2xl'] %}
+	{% set bgSet = {
+		'@df': null,
+		'@sm': null,
+		'@md': null,
+		'@lg': null,
+		'@xl': null,
+		'@2xl': null,
+	} %}	
+	{# set null variable outside of loop to store the bg asset so that if there is a change in aspect or position settings etc. but not the asset it can still set the asset without it having to be uploaded to the field in each case #}
+	{% set bgCurrent = null %}
+		
+	{% for adjSet in adjustments %}
+		{# determine which size setting we are dealing with and set the slot name for the bgSet object #}
+		{% if adjSet.deviceSize == '' %}
+			{% set bgObj = '@df' %}
+		{% else %}
+			{% set bgObj = adjSet.deviceSize.value %}
+		{% endif %}		
+		{# check bg Type on adjustment set. If set to no change, set the bgSet object to null otherwise, it sets a value #}
+		{% switch adjSet.bgType %}
+			{% case 'image' %}
+				{% set bgSet = bgSet|merge({(bgObj):{
+					'layoutSize': bgObj,
+					'type': 'image',
+					'aspect': adjSet.aspectRatio.value,
+					'asset': adjSet.bgImg[0],
+					'bgSize': adjSet.backgroundSize.value,
+					'repeat': adjSet.backgroundRepeat.value,
+					'position': adjSet.backgroundPosition.value,
+					'opacity': adjSet.opacity.value,
+				}}) %}
+			{% case 'video' %}
+				{% set bgSet = bgSet|merge({(bgObj):{
+					'layoutSize': bgObj,
+					'type': 'video',
+					'asset': adjSet.bgVideo[0],
+					'position': adjSet.backgroundPosition.value,
+					'opacity': adjSet.opacity.value,
+				}}) %}
+			{% case 'none' %}
+				{% set bgSet = bgSet|merge({(bgObj):{
+					'layoutSize': bgObj,
+					'type': 'none',
+				}}) %}
+			{% default %}
+				{% set bgSet = bgSet|merge({(bgObj): null }) %}
+		{% endswitch %}				
+	{% endfor %}
+	{% set prevBgSetting = null %}	
+	{% for i in bgOrder %}
+		{% if bgSet[(i)] != null %}
+			{# Build class list for each background div #}	
+			{% set divClasses = ['background'] %}			
+			{% if bgSet[(i)].layoutSize != '@df' %}
+				{% set divClasses = divClasses|merge(['hidden', bgSet[(i)].layoutSize ~ ':block']) %}
+			{% endif %}
+			
+			{# add classes to hide background div on appropriate device sites by checking to see what other sizes are prsent above this one #}
+			{% switch bgSet[(i)].layoutSize %}
+				{% case '@sm' %}
+					{% if bgSet['@md'] != null %}
+						{% set divClasses = divClasses|merge(['@md:hidden']) %}
+					{% elseif bgSet['@lg'] != null %}
+						{% set divClasses = divClasses|merge(['@lg:hidden']) %}
+					{% elseif bgSet['@xl'] != null %}
+						{% set divClasses = divClasses|merge(['@xl:hidden']) %}
+					{% elseif bgSet['@2xl'] != null %}
+						{% set divClasses = divClasses|merge(['@2xl:hidden']) %}
+					{% endif %}
+					
+				{% case '@md' %}			
+					{% if bgSet['@lg'] != null %}
+						{% set divClasses = divClasses|merge(['@lg:hidden']) %}
+					{% elseif bgSet['@xl'] != null %}
+						{% set divClasses = divClasses|merge(['@xl:hidden']) %}
+					{% elseif bgSet['@2xl'] != null %}
+						{% set divClasses = divClasses|merge(['@2xl:hidden']) %}
+					{% endif %}
+					
+				{% case '@lg' %}			
+					{% if bgSet['@xl'] != null %}
+						{% set divClasses = divClasses|merge(['@xl:hidden']) %}
+					{% elseif bgSet['@2xl'] != null %}
+						{% set divClasses = divClasses|merge(['@2xl:hidden']) %}
+					{% endif %}
+				
+				{% case '@xl' %}			
+					{% if bgSet['@xl'] != null %}
+						{% set divClasses = divClasses|merge(['@2xl:hidden']) %}
+					{% endif %}
+					
+				{% case '@2xl:' %}
+					
+				{% default %}
+					{% if bgSet['@sm'] != null %}
+						{% set divClasses = divClasses|merge(['@sm:hidden']) %}
+					{% elseif bgSet['@md'] != null %}
+						{% set divClasses = divClasses|merge(['@md:hidden']) %}
+					{% elseif bgSet['@lg'] != null %}
+						{% set divClasses = divClasses|merge(['@lg:hidden']) %}
+					{% elseif bgSet['@xl'] != null %}
+						{% set divClasses = divClasses|merge(['@xl:hidden']) %}
+					{% elseif bgSet['@2xl'] != null %}
+						{% set divClasses = divClasses|merge(['@2xl:hidden']) %}
+					{% endif %}					
+			{% endswitch %}
+			{% if bgSet[(i)].type == 'image' %}
+				{{ gMacros.backgroundImage(bgSet[(i)], prevBgSetting, bgAssetCurrent, divClasses, sizesAtr, aspect) }}
+				{% if bgSet[(i)].asset != null %}
+					{% set bgAssetCurrent = bgSet[(i)].asset %}
+				{% endif %}				
+			{% elseif bgSet[(i)].type == 'video' %}
+				{{ gMacros.backgroundVideo(bgSet[(i)], prevBgSetting, bgAssetCurrent, divClasses, sizesAtr, aspect) }}
+				{% if bgSet[(i)].asset != null %}
+					{% set bgAssetCurrent = bgSet[(i)].asset %}
+				{% endif %}
+			{% endif %}
+			{% set prevBgSetting = bgSet[(i)] %}			
+		{% endif %}
+	{% endfor %}	
 {%- endmacro buildElementBackground -%}
+
+{# Output for Image Background #}
+{%- macro backgroundImage(bgSetting, prevBgSetting, bgAssetCurrent, divClasses, sizesAtr, aspect) -%}
+	{# set classes for the background div #}
+	{% if bgSetting.repeat != 'bg-no-repeat' or (bgSetting.repeat == '' and prevBgSetting) %}
+	{# OUTPUT #}
+	<div class="{{- divClasses|join(' ') -}}">
+	</div>
+			
+{%- endmacro backgroundImage -%}
+
+
+{# Output for Video Background #}
+{%- macro backgroundVideo(bgSetting, prevBgSetting, bgAssetCurrent, divClasses, sizesAtr, aspect) -%}
+	{{bgSetting.layoutSize}}: {{bgSetting.type}}
+{%- endmacro backgroundVideo -%}
+
+
+
 
 {%- macro buildElementBackgroundOLD(adjustments, sizesAtr, aspect, loadType) -%}
 	
 	
 	{% set bgSizes = [] %}
-	{% for adjSet in adjustments %}
-		{% if adjSet.bgImg|length %}
-			{% set bgSizes = bgSizes|merge([adjSet.deviceSize]) %}
-		{% endif %}
-	{% endfor %}
+	
 	{% if aspect|length and aspect != 'auto' %}		
 		{% set tfSize = 'image-' ~ aspect %}
 		{% set tfSizeWebp = 'image-' ~ aspect ~ '-webp' %}
@@ -165,63 +303,63 @@
 		{% set bgAsset = adjSet.bgImg.one() %}
 		{% if bgAsset|length %}
 			{# Build class list for each background div #}	
-			{% set bgOuterClasses = ['background'] %}			
+			{% set divClasses = ['background'] %}			
 			{% if adjSet.deviceSize != '' %}
-				{% set bgOuterClasses = bgOuterClasses|merge(['hidden', adjSet.deviceSize ~ ':block']) %}
+				{% set divClasses = divClasses|merge(['hidden', adjSet.deviceSize ~ ':block']) %}
 			{% endif %}
 			
 			{# add classes to hide background div on appropriate device sites by checking to see what other sizes are prsent above this one #}
 			{% switch adjSet.deviceSize %}
 				{% case '@sm' %}
 					{% if '@md' in bgSizes %}
-						{% set bgOuterClasses = bgOuterClasses|merge(['@md:hidden']) %}
+						{% set divClasses = divClasses|merge(['@md:hidden']) %}
 					{% elseif '@lg' in bgSizes %}
-						{% set bgOuterClasses = bgOuterClasses|merge(['@lg:hidden']) %}
+						{% set divClasses = divClasses|merge(['@lg:hidden']) %}
 					{% elseif '@xl' in bgSizes %}
-						{% set bgOuterClasses = bgOuterClasses|merge(['@xl:hidden']) %}
+						{% set divClasses = divClasses|merge(['@xl:hidden']) %}
 					{% elseif '@2xl' in bgSizes %}
-						{% set bgOuterClasses = bgOuterClasses|merge(['@2xl:hidden']) %}
+						{% set divClasses = divClasses|merge(['@2xl:hidden']) %}
 					{% endif %}
 					
 				{% case '@md' %}			
 					{% if '@lg' in bgSizes %}
-						{% set bgOuterClasses = bgOuterClasses|merge(['@lg:hidden']) %}
+						{% set divClasses = divClasses|merge(['@lg:hidden']) %}
 					{% elseif '@xl' in bgSizes %}
-						{% set bgOuterClasses = bgOuterClasses|merge(['@xl:hidden']) %}
+						{% set divClasses = divClasses|merge(['@xl:hidden']) %}
 					{% elseif '@2xl' in bgSizes %}
-						{% set bgOuterClasses = bgOuterClasses|merge(['@2xl:hidden']) %}
+						{% set divClasses = divClasses|merge(['@2xl:hidden']) %}
 					{% endif %}
 					
 				{% case '@lg' %}			
 					{% if '@xl' in bgSizes %}
-						{% set bgOuterClasses = bgOuterClasses|merge(['@xl:hidden']) %}
+						{% set divClasses = divClasses|merge(['@xl:hidden']) %}
 					{% elseif '@2xl' in bgSizes %}
-						{% set bgOuterClasses = bgOuterClasses|merge(['@2xl:hidden']) %}
+						{% set divClasses = divClasses|merge(['@2xl:hidden']) %}
 					{% endif %}
 				
 				{% case '@xl' %}			
 					{% if '@2xl' in bgSizes %}
-						{% set bgOuterClasses = bgOuterClasses|merge(['@2xl:hidden']) %}
+						{% set divClasses = divClasses|merge(['@2xl:hidden']) %}
 					{% endif %}
 					
 				{% case '@2xl:' %}
 					
 				{% default %}
 					{% if '@sm' in bgSizes %}
-						{% set bgOuterClasses = bgOuterClasses|merge(['@sm:hidden']) %}
+						{% set divClasses = divClasses|merge(['@sm:hidden']) %}
 					{% elseif '@md' in bgSizes %}
-						{% set bgOuterClasses = bgOuterClasses|merge(['@md:hidden']) %}
+						{% set divClasses = divClasses|merge(['@md:hidden']) %}
 					{% elseif '@lg' in bgSizes %}
-						{% set bgOuterClasses = bgOuterClasses|merge(['@lg:hidden']) %}
+						{% set divClasses = divClasses|merge(['@lg:hidden']) %}
 					{% elseif '@xl' in bgSizes %}
-						{% set bgOuterClasses = bgOuterClasses|merge(['@xl:hidden']) %}
+						{% set divClasses = divClasses|merge(['@xl:hidden']) %}
 					{% elseif '@2xl' in bgSizes %}
-						{% set bgOuterClasses = bgOuterClasses|merge(['@2xl:hidden']) %}
+						{% set divClasses = divClasses|merge(['@2xl:hidden']) %}
 					{% endif %}
 					
 			{% endswitch %}
 			
-			<div class="{{- bgOuterClasses|join(' ') }}">				
+			<div class="{{- divClasses|join(' ') }}">				
 				{% set loadClass = null %}
 				{# check loadType, if it is set and value is 1 use owl carousel load class, otherwise use lazyload #}
 				{% if loadType is defined and loadType != null and loadType != 0 %}

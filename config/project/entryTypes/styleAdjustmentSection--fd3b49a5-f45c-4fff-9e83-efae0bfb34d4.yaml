@@ -328,7 +328,7 @@ fieldLayouts:
           -
             elementCondition: null
             fieldUid: 72b1f013-8778-4308-a355-29b6088c7162 # Background Type
-            handle: null
+            handle: bgType
             includeInCards: false
             instructions: null
             label: null
@@ -382,7 +382,7 @@ fieldLayouts:
               elementType: craft\elements\Entry
               fieldContext: global
             fieldUid: cdbe0d46-9b4d-47a1-854d-cc894a161dd5 # Background Video
-            handle: null
+            handle: bgVideo
             includeInCards: false
             instructions: null
             label: null
@@ -406,7 +406,6 @@ fieldLayouts:
                   uid: 41fb76ec-80dc-4fad-908e-3844473fa5cb
                   values:
                     - image
-                    - video
               elementType: craft\elements\Entry
               fieldContext: global
             fieldUid: f4d725e6-48b8-4083-a921-ecc0925a0bff # Background Size
@@ -434,6 +433,14 @@ fieldLayouts:
                   uid: fa5ffb0c-692a-41e6-a966-27d48e2e247c
                   values:
                     - image
+                -
+                  class: craft\fields\conditions\OptionsFieldConditionRule
+                  fieldUid: 3710a5c7-fa54-4a2c-a07b-4f7a31f5bd25 # Background Repeat
+                  layoutElementUid: e4d59460-2b8f-410a-a986-211ce135d6c7
+                  operator: ni
+                  uid: c337c9ff-eea3-457d-ba4a-d109439bc31a
+                  values:
+                    - bg-no-repeat
               elementType: craft\elements\Entry
               fieldContext: global
             fieldUid: bb89e543-0de1-4a53-9480-2e7c0e8a69a5 # Aspect Ratio

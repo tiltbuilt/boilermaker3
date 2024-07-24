@@ -47,7 +47,7 @@
 {% set sectionClassList = sectionClassList|merge(colorClasses) %}
 
 {# Retrieve styling adjustments #}
-{% set adjustments = entry.sectionStyleAdjustments.eagerly().with('bgImg').all() %}
+{% set adjustments = entry.sectionStyleAdjustments.eagerly().with('bgImg', 'bg.Video').all() %}
 
 <section id="{{blockId}}" class="{{- blockClass }} @container {{- gMacros.classesOut(adjustments, 'Display') -}} {{- gMacros.classesOut(adjustments, 'Margins', true) -}} {{- sectionClassList|join(' ') }} {{ entry.customClasses }}" {{- gMacros.attributesOut(entry.customAttributes) -}}>
 	<div class="container {{- entry.fullscreen ? 'container-fullscreen' -}}">

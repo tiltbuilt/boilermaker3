@@ -9,6 +9,17 @@ settings:
       __assoc__:
         -
           - label
+          - 'Default (No Change)'
+        -
+          - value
+          - ''
+        -
+          - default
+          - '1'
+    -
+      __assoc__:
+        -
+          - label
           - Auto
         -
           - value
@@ -26,7 +37,7 @@ settings:
           - cover
         -
           - default
-          - '1'
+          - ''
     -
       __assoc__:
         -

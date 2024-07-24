@@ -1,5 +1,5 @@
 columnSuffix: null
-handle: backgroundVideo
+handle: bgVideo
 instructions: null
 name: 'Background Video'
 searchable: false
@@ -24,7 +24,7 @@ settings:
   restrictedLocationSubpath: null
   selectionLabel: null
   showCardsInGrid: false
-  showSiteMenu: false
+  showSiteMenu: true
   showUnpermittedFiles: false
   showUnpermittedVolumes: false
   sources: '*'

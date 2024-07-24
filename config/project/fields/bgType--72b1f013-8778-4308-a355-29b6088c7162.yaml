@@ -1,5 +1,5 @@
 columnSuffix: null
-handle: backgroundType
+handle: bgType
 instructions: null
 name: 'Background Type'
 searchable: false

@@ -9,6 +9,17 @@ settings:
       __assoc__:
         -
           - label
+          - 'Default (No Change)'
+        -
+          - value
+          - ''
+        -
+          - default
+          - '1'
+    -
+      __assoc__:
+        -
+          - label
           - 'Top Left'
         -
           - value
@@ -59,7 +70,7 @@ settings:
           - center
         -
           - default
-          - '1'
+          - ''
     -
       __assoc__:
         -
