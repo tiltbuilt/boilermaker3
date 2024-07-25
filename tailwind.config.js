@@ -170,10 +170,6 @@ module.exports = {
 	  {
 		pattern: /(block|hidden|inline|inline-block|flex)/, 
 		variants: ['sm', 'md', 'lg', 'xl', '2xl', '@xs', '@sm', '@md', '@lg', '@xl', '@xs/list', '@sm/list', '@md/list', '@lg/list', '@xl/list', '@xs/card', '@sm/card', '@md/card', '@lg/card', '@xl/card', '@xs/component', '@sm/component', '@md/component', '@lg/component', '@xl/component'],
-	  },
-	  {
-		pattern: /bg-opacity-(\d+)/, 
-		variants: ['sm', 'md', 'lg', 'xl', '2xl', '@xs', '@sm', '@md', '@lg', '@xl', '@xs/list', '@sm/list', '@md/list', '@lg/list', '@xl/list', '@xs/card', '@sm/card', '@md/card', '@lg/card', '@xl/card', '@xs/component', '@sm/component', '@md/component', '@lg/component', '@xl/component'],
 	  },	  
 	  {
 	  	pattern: /(text-wrap-left|text-wrap-right|text-wrap-none|hidden|not-hidden|block|flex-wrap|flex-nowrap)/, 
@@ -181,6 +177,14 @@ module.exports = {
 	  },
 	  {
 	    pattern: /columns-(\d)/, 
+		variants: ['sm', 'md', 'lg', 'xl', '2xl', '@xs', '@sm', '@md', '@lg', '@xl', '@xs/list', '@sm/list', '@md/list', '@lg/list', '@xl/list', '@xs/component', '@sm/component', '@md/component', '@lg/component', '@xl/component'],
+	  },
+	  {
+		pattern: /(bg|object)-(repeat|repeat-x|repeat-y|no-repeat|auto|contain|cover|center|left-top|top|right-top|left|right|left-bottom|bottom|right-bottom)/, 
+		variants: ['sm', 'md', 'lg', 'xl', '2xl', '@xs', '@sm', '@md', '@lg', '@xl', '@xs/list', '@sm/list', '@md/list', '@lg/list', '@xl/list', '@xs/component', '@sm/component', '@md/component', '@lg/component', '@xl/component'],
+	  },
+	  {
+		pattern: /opacity-(0|10|20|30|40|50|60|70|80|90|100)/, 
 		variants: ['sm', 'md', 'lg', 'xl', '2xl', '@xs', '@sm', '@md', '@lg', '@xl', '@xs/list', '@sm/list', '@md/list', '@lg/list', '@xl/list', '@xs/component', '@sm/component', '@md/component', '@lg/component', '@xl/component'],
 	  },	  	  	  	    
   ],

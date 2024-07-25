@@ -163,25 +163,39 @@
 			{% set bgObj = '@df' %}
 		{% else %}
 			{% set bgObj = adjSet.deviceSize.value %}
-		{% endif %}		
+		{% endif %}
+			
 		{# check bg Type on adjustment set. If set to no change, set the bgSet object to null otherwise, it sets a value #}
 		{% switch adjSet.bgType %}
 			{% case 'image' %}
+				{# check to see if bg asset is set on adjustment set. If it is then pass in the id of the asset. If not, set to "" #}
+				{% if adjSet.bgImg|length %}
+					{% set assetId = adjSet.bgImg[0].id %}					
+				{% else %}
+					{% set assetId = '' %}
+				{% endif %}	
 				{% set bgSet = bgSet|merge({(bgObj):{
 					'layoutSize': bgObj,
 					'type': 'image',
 					'aspect': adjSet.aspectRatio.value,
-					'asset': adjSet.bgImg[0],
+					'asset': assetId,
 					'bgSize': adjSet.backgroundSize.value,
 					'repeat': adjSet.backgroundRepeat.value,
 					'position': adjSet.backgroundPosition.value,
 					'opacity': adjSet.opacity.value,
 				}}) %}
 			{% case 'video' %}
+				{# check to see if bg asset is set on adjustment set. If it is then pass in the id of the asset. If not, set to "" #}
+				{% if adjSet.bgVideo|length %}
+					{% set assetId = adjSet.bgVideo[0].id %}					
+				{% else %}
+					{% set assetId = '' %}
+				{% endif %}	
 				{% set bgSet = bgSet|merge({(bgObj):{
 					'layoutSize': bgObj,
 					'type': 'video',
-					'asset': adjSet.bgVideo[0],
+					'asset': assetId,
+					'aspect': 'video',
 					'bgSize': 'cover',
 					'repeat': 'bg-no-repeat',
 					'position': adjSet.backgroundPosition.value,
@@ -191,6 +205,12 @@
 				{% set bgSet = bgSet|merge({(bgObj):{
 					'layoutSize': bgObj,
 					'type': 'none',
+					'asset': null,
+					'aspect': null,
+					'bgSize': null,
+					'repeat': null,
+					'position': null,
+					'opacity': null,
 				}}) %}
 			{% default %}
 				{% set bgSet = bgSet|merge({(bgObj): null }) %}
@@ -200,6 +220,7 @@
 	{# iterate through bgSet in order setting up data variables to pass for output #}	
 	{% for i in bgOrder %}	
 		{% if bgSet[(i)] != null %}
+			
 			{# Build class list for each background div #}	
 			{% set divClasses = ['background'] %}			
 			{% if bgSet[(i)].layoutSize != '@df' %}
@@ -217,39 +238,75 @@
 				{% endif %}
 			{% endfor %}
 			
-			{#set current here #}
-			
-						
-			{% if bgSet[(i)].type == 'image' %}
-				{{ gMacros.backgroundImage(bgSet[(i)], bgCurrent, divClasses, sizesAtr, aspect) }}
-				{% if bgSet[(i)].asset != null %}
-					{% set bgAssetCurrent = bgSet[(i)].asset %}
-				{% endif %}				
-			{% elseif bgSet[(i)].type == 'video' %}
-				{{ gMacros.backgroundVideo(bgSet[(i)], bgCurrent, divClasses, sizesAtr, aspect) }}
-				{% if bgSet[(i)].asset != null %}
-					{% set bgAssetCurrent = bgSet[(i)].asset %}
+			{# check bgCurrent status, if null, means there is no background on the element at any of the smaller sizes or the current yet, so apply the new one as the current #}
+			{% if bgCurrent == null %}
+				{% set bgCurrent = bgSet[(i)] %}
+			{% else %}
+				{# check bgCurrent status, if not null, means there is a background on the element so we update the current state tracker to reflect the new background settings. #}
+				
+				{% if bgSet[(i)].type != null %}					
+					{% if bgSet[(i)].type == 'none' %}
+						{% set bgCurrent = bgCurrent|merge({'type': 'none'}) %}					
+					{% else %}
+						{% for key, value in bgSet[(i)] %}
+							{% if bgCurrent[(key)] != bgSet[(i)][(key)] and bgSet[(i)][(key)] != '' %}
+								{% set bgCurrent = bgCurrent|merge({(key): bgSet[(i)][(key)]}) %}
+							{% endif %}
+						{% endfor %}
+					{% endif %}
 				{% endif %}
 			{% endif %}
+						
+			{# OUTPUT #}			
+			{% if bgCurrent.type == 'image' %}
+				{{ gMacros.backgroundImage(bgCurrent, divClasses, sizesAtr, aspect) }}							
+			{% elseif bgCurrent.type == 'video' %}
+				{{ gMacros.backgroundVideo(bgCurrent, divClasses, sizesAtr, aspect) }}				
+			{% endif %}
 			
-				
-			{{bgSet[(i)].layoutSize}}: {{- divClasses|join(' ') }}<br>		
 		{% endif %}
 	{% endfor %}	
 {%- endmacro buildElementBackground -%}
 
 {# Output for Image Background #}
-{%- macro backgroundImage(bgSetting, prevBgSetting, bgAssetCurrent, divClasses, sizesAtr, aspect) -%}
-	{# set classes for the background div #}
+{%- macro backgroundImage(bgCurrent, divClasses, sizesAtr, aspect) -%}
+	{#}
+	'layoutSize': bgObj,
+	'type': 'none',
+	'asset': null,
+	'bgSize': adjSet.backgroundSize.value,
+	'repeat': adjSet.backgroundRepeat.value,
+	'position': adjSet.backgroundPosition.value,
+	'opacity': adjSet.opacity.value,
 	
-	{# OUTPUT #}
+	{# set classes for the background div #}
+	{% if bgCurrent.bgSize != 'contain' and bgCurrent.bgSize != 'cover' %}
+		{# output for tiling repeating image background #}
+		{% set divClasses = divClasses|merge([bgCurrent.repeat, 'bg-' ~ bgCurrent.position, 'bg-auto', bgCurrent.opacity]) %}
+		{% set bgAsset = craft.assets().id(bgCurrent.asset).one() %}
+		{% if bgAsset != null %}			
+			{% if bgCurrent.aspect == '' or bgCurrent.aspect == 'auto' or bgCurrent.aspect == null %}
+				{%- set xForm = 'contentImage' %}								
+			{% else %}
+				{%- set xForm = 'image-' ~ bgCurrent.aspect %}
+			{% endif %}
+			{% if craft.imager.serverSupportsWebp() %}
+				{%- set xForm = xForm ~ '-webp' %}
+			{% endif %}				
+			{% set bgImage = craft.imagerx.transformImage(bgAsset, xForm) %}
+			<div class="{{- divClasses|join(' ') }}" style="background-image:url('{{bgImage[0].url}}')"></div>
+		{% endif %}
+	{% else %}
+		{# output for non-tiling cover and contain images #}
+	{% endif %}
+	
 	
 			
 {%- endmacro backgroundImage -%}
 
 
 {# Output for Video Background #}
-{%- macro backgroundVideo(bgSetting, prevBgSetting, bgAssetCurrent, divClasses, sizesAtr, aspect) -%}
+{%- macro backgroundVideo(bgCurrent, divClasses, sizesAtr, aspect) -%}
 	
 {%- endmacro backgroundVideo -%}
 

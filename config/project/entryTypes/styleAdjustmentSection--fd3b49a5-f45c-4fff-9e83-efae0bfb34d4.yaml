@@ -433,14 +433,6 @@ fieldLayouts:
                   uid: fa5ffb0c-692a-41e6-a966-27d48e2e247c
                   values:
                     - image
-                -
-                  class: craft\fields\conditions\OptionsFieldConditionRule
-                  fieldUid: 3710a5c7-fa54-4a2c-a07b-4f7a31f5bd25 # Background Repeat
-                  layoutElementUid: e4d59460-2b8f-410a-a986-211ce135d6c7
-                  operator: ni
-                  uid: c337c9ff-eea3-457d-ba4a-d109439bc31a
-                  values:
-                    - bg-no-repeat
               elementType: craft\elements\Entry
               fieldContext: global
             fieldUid: bb89e543-0de1-4a53-9480-2e7c0e8a69a5 # Aspect Ratio

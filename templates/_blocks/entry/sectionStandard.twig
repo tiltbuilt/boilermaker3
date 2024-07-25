@@ -51,7 +51,7 @@
 
 <section id="{{blockId}}" class="{{- blockClass }} @container {{- gMacros.classesOut(adjustments, 'Display') -}} {{- gMacros.classesOut(adjustments, 'Margins', true) -}} {{- sectionClassList|join(' ') }} {{ entry.customClasses }}" {{- gMacros.attributesOut(entry.customAttributes) -}}>
 	<div class="container {{- entry.fullscreen ? 'container-fullscreen' -}}">
-		{#<div class="inner container-inner {{- gMacros.classesOut(adjustments, 'Type') -}} {{- gMacros.classesOut(adjustments, 'Padding', true) -}}">			
+		<div class="inner container-inner {{- gMacros.classesOut(adjustments, 'Type') -}} {{- gMacros.classesOut(adjustments, 'Padding', true) -}}">			
 			{% for chunk in entry.elementContent %}
 				{% if chunk.type == 'markup' %}
 					{% if animClass %}
@@ -65,9 +65,9 @@
 						'colorScheme': colorScheme
 					}) }}
 				{% endif %}
-			{% endfor %}								
-		</div>#}
-		<div class="background">
+			{% endfor %}							
+		</div>
+		<div class="">
 			{{ gMacros.buildElementBackground(adjustments, {'default': '100vw'}) }}
 		</div>
 	</div>	
