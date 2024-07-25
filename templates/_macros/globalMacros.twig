@@ -182,6 +182,8 @@
 					'layoutSize': bgObj,
 					'type': 'video',
 					'asset': adjSet.bgVideo[0],
+					'bgSize': 'cover',
+					'repeat': 'bg-no-repeat',
 					'position': adjSet.backgroundPosition.value,
 					'opacity': adjSet.opacity.value,
 				}}) %}
@@ -194,76 +196,44 @@
 				{% set bgSet = bgSet|merge({(bgObj): null }) %}
 		{% endswitch %}				
 	{% endfor %}
-	{% set prevBgSetting = null %}	
-	{% for i in bgOrder %}
+	
+	{# iterate through bgSet in order setting up data variables to pass for output #}	
+	{% for i in bgOrder %}	
 		{% if bgSet[(i)] != null %}
 			{# Build class list for each background div #}	
 			{% set divClasses = ['background'] %}			
 			{% if bgSet[(i)].layoutSize != '@df' %}
 				{% set divClasses = divClasses|merge(['hidden', bgSet[(i)].layoutSize ~ ':block']) %}
-			{% endif %}
+			{% endif %}			
+			{# add classes to hide background div on appropriate device sites by checking to see what other sizes are present above this one - look forward to turn off divs that should not be showing at sizes larger then their layout size #}
+			{% set searchStart = loop.index %}
+			{% set searchFlag = false %}
+			{% for j in bgOrder|slice(searchStart, 5) %}
+				{% if searchFlag == false %}
+					{% if bgSet[(j)] != null %}
+						{% set divClasses= divClasses|merge([bgSet[(j)].layoutSize ~ ':hidden']) %}
+						{% set searchFlag = true %}
+					{% endif %}
+				{% endif %}
+			{% endfor %}
 			
-			{# add classes to hide background div on appropriate device sites by checking to see what other sizes are prsent above this one #}
-			{% switch bgSet[(i)].layoutSize %}
-				{% case '@sm' %}
-					{% if bgSet['@md'] != null %}
-						{% set divClasses = divClasses|merge(['@md:hidden']) %}
-					{% elseif bgSet['@lg'] != null %}
-						{% set divClasses = divClasses|merge(['@lg:hidden']) %}
-					{% elseif bgSet['@xl'] != null %}
-						{% set divClasses = divClasses|merge(['@xl:hidden']) %}
-					{% elseif bgSet['@2xl'] != null %}
-						{% set divClasses = divClasses|merge(['@2xl:hidden']) %}
-					{% endif %}
-					
-				{% case '@md' %}			
-					{% if bgSet['@lg'] != null %}
-						{% set divClasses = divClasses|merge(['@lg:hidden']) %}
-					{% elseif bgSet['@xl'] != null %}
-						{% set divClasses = divClasses|merge(['@xl:hidden']) %}
-					{% elseif bgSet['@2xl'] != null %}
-						{% set divClasses = divClasses|merge(['@2xl:hidden']) %}
-					{% endif %}
-					
-				{% case '@lg' %}			
-					{% if bgSet['@xl'] != null %}
-						{% set divClasses = divClasses|merge(['@xl:hidden']) %}
-					{% elseif bgSet['@2xl'] != null %}
-						{% set divClasses = divClasses|merge(['@2xl:hidden']) %}
-					{% endif %}
-				
-				{% case '@xl' %}			
-					{% if bgSet['@xl'] != null %}
-						{% set divClasses = divClasses|merge(['@2xl:hidden']) %}
-					{% endif %}
-					
-				{% case '@2xl:' %}
-					
-				{% default %}
-					{% if bgSet['@sm'] != null %}
-						{% set divClasses = divClasses|merge(['@sm:hidden']) %}
-					{% elseif bgSet['@md'] != null %}
-						{% set divClasses = divClasses|merge(['@md:hidden']) %}
-					{% elseif bgSet['@lg'] != null %}
-						{% set divClasses = divClasses|merge(['@lg:hidden']) %}
-					{% elseif bgSet['@xl'] != null %}
-						{% set divClasses = divClasses|merge(['@xl:hidden']) %}
-					{% elseif bgSet['@2xl'] != null %}
-						{% set divClasses = divClasses|merge(['@2xl:hidden']) %}
-					{% endif %}					
-			{% endswitch %}
+			{#set current here #}
+			
+						
 			{% if bgSet[(i)].type == 'image' %}
-				{{ gMacros.backgroundImage(bgSet[(i)], prevBgSetting, bgAssetCurrent, divClasses, sizesAtr, aspect) }}
+				{{ gMacros.backgroundImage(bgSet[(i)], bgCurrent, divClasses, sizesAtr, aspect) }}
 				{% if bgSet[(i)].asset != null %}
 					{% set bgAssetCurrent = bgSet[(i)].asset %}
 				{% endif %}				
 			{% elseif bgSet[(i)].type == 'video' %}
-				{{ gMacros.backgroundVideo(bgSet[(i)], prevBgSetting, bgAssetCurrent, divClasses, sizesAtr, aspect) }}
+				{{ gMacros.backgroundVideo(bgSet[(i)], bgCurrent, divClasses, sizesAtr, aspect) }}
 				{% if bgSet[(i)].asset != null %}
 					{% set bgAssetCurrent = bgSet[(i)].asset %}
 				{% endif %}
 			{% endif %}
-			{% set prevBgSetting = bgSet[(i)] %}			
+			
+				
+			{{bgSet[(i)].layoutSize}}: {{- divClasses|join(' ') }}<br>		
 		{% endif %}
 	{% endfor %}	
 {%- endmacro buildElementBackground -%}
@@ -271,17 +241,16 @@
 {# Output for Image Background #}
 {%- macro backgroundImage(bgSetting, prevBgSetting, bgAssetCurrent, divClasses, sizesAtr, aspect) -%}
 	{# set classes for the background div #}
-	{% if bgSetting.repeat != 'bg-no-repeat' or (bgSetting.repeat == '' and prevBgSetting) %}
+	
 	{# OUTPUT #}
-	<div class="{{- divClasses|join(' ') -}}">
-	</div>
+	
 			
 {%- endmacro backgroundImage -%}
 
 
 {# Output for Video Background #}
 {%- macro backgroundVideo(bgSetting, prevBgSetting, bgAssetCurrent, divClasses, sizesAtr, aspect) -%}
-	{{bgSetting.layoutSize}}: {{bgSetting.type}}
+	
 {%- endmacro backgroundVideo -%}
 
 

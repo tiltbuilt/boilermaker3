@@ -60,6 +60,17 @@ settings:
         -
           - default
           - ''
+    -
+      __assoc__:
+        -
+          - label
+          - '2XL (Hi-Res Display)'
+        -
+          - value
+          - '@2xl'
+        -
+          - default
+          - ''
 translationKeyFormat: null
 translationMethod: none
 type: craft\fields\Dropdown

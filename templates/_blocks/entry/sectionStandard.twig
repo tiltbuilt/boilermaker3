@@ -47,11 +47,11 @@
 {% set sectionClassList = sectionClassList|merge(colorClasses) %}
 
 {# Retrieve styling adjustments #}
-{% set adjustments = entry.sectionStyleAdjustments.eagerly().with('bgImg', 'bg.Video').all() %}
+{% set adjustments = entry.sectionStyleAdjustments.eagerly().with('bgImg', 'bgVideo').all() %}
 
 <section id="{{blockId}}" class="{{- blockClass }} @container {{- gMacros.classesOut(adjustments, 'Display') -}} {{- gMacros.classesOut(adjustments, 'Margins', true) -}} {{- sectionClassList|join(' ') }} {{ entry.customClasses }}" {{- gMacros.attributesOut(entry.customAttributes) -}}>
 	<div class="container {{- entry.fullscreen ? 'container-fullscreen' -}}">
-		<div class="inner container-inner {{- gMacros.classesOut(adjustments, 'Type') -}} {{- gMacros.classesOut(adjustments, 'Padding', true) -}}">			
+		{#<div class="inner container-inner {{- gMacros.classesOut(adjustments, 'Type') -}} {{- gMacros.classesOut(adjustments, 'Padding', true) -}}">			
 			{% for chunk in entry.elementContent %}
 				{% if chunk.type == 'markup' %}
 					{% if animClass %}
@@ -66,7 +66,7 @@
 					}) }}
 				{% endif %}
 			{% endfor %}								
-		</div>
+		</div>#}
 		<div class="background">
 			{{ gMacros.buildElementBackground(adjustments, {'default': '100vw'}) }}
 		</div>
