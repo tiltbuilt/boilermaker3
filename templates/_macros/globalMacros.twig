@@ -142,7 +142,7 @@
 #}
 
 {# Sets Up Background Output By Setting Up BG Data Object in order by size and passes them to output macros #}
-{%- macro buildElementBackground(adjustments, sizesAtr, aspect) -%}	
+{%- macro buildElementBackground(adjustments, aspect) -%}	
 	{% import '_macros/globalMacros' as gMacros %}
 	{# Create an array with a slot for each possible layout size and then write in an object with the info for each background. Slots are named to match layuot sizes with @df for default phone vert size, write each object to its appropriate slot based on device size setting. That way the bgs are always written in the correct order #}
 	{% set bgOrder = ['@df', '@sm', '@md', '@lg', '@xl', '@2xl'] %}
@@ -156,13 +156,19 @@
 	} %}	
 	{# set null variable outside of loop to store the bg asset so that if there is a change in aspect or position settings etc. but not the asset it can still set the asset without it having to be uploaded to the field in each case #}
 	{% set bgCurrent = null %}
-		
+				
 	{% for adjSet in adjustments %}
 		{# determine which size setting we are dealing with and set the slot name for the bgSet object #}
 		{% if adjSet.deviceSize == '' %}
 			{% set bgObj = '@df' %}
 		{% else %}
 			{% set bgObj = adjSet.deviceSize.value %}
+		{% endif %}
+		
+		{% if aspect != null %}
+			{% set aspectSetting = aspect %}
+		{% else %}
+			{% set aspectSetting = adjSet.aspectRatio.value %}
 		{% endif %}
 			
 		{# check bg Type on adjustment set. If set to no change, set the bgSet object to null otherwise, it sets a value #}
@@ -177,7 +183,7 @@
 				{% set bgSet = bgSet|merge({(bgObj):{
 					'layoutSize': bgObj,
 					'type': 'image',
-					'aspect': adjSet.aspectRatio.value,
+					'aspect': aspectSetting,
 					'asset': assetId,
 					'bgSize': adjSet.backgroundSize.value,
 					'repeat': adjSet.backgroundRepeat.value,
@@ -259,9 +265,9 @@
 						
 			{# OUTPUT #}			
 			{% if bgCurrent.type == 'image' %}
-				{{ gMacros.backgroundImage(bgCurrent, divClasses, sizesAtr, aspect) }}							
+				{{ gMacros.backgroundImage(bgCurrent, divClasses) }}							
 			{% elseif bgCurrent.type == 'video' %}
-				{{ gMacros.backgroundVideo(bgCurrent, divClasses, sizesAtr, aspect) }}				
+				{{ gMacros.backgroundVideo(bgCurrent, divClasses) }}				
 			{% endif %}
 			
 		{% endif %}
@@ -269,15 +275,8 @@
 {%- endmacro buildElementBackground -%}
 
 {# Output for Image Background #}
-{%- macro backgroundImage(bgCurrent, divClasses, sizesAtr, aspect) -%}
-	{#}
-	'layoutSize': bgObj,
-	'type': 'none',
-	'asset': null,
-	'bgSize': adjSet.backgroundSize.value,
-	'repeat': adjSet.backgroundRepeat.value,
-	'position': adjSet.backgroundPosition.value,
-	'opacity': adjSet.opacity.value,
+{%- macro backgroundImage(bgCurrent, divClasses) -%}
+	
 	
 	{# set classes for the background div #}
 	{% if bgCurrent.bgSize != 'contain' and bgCurrent.bgSize != 'cover' %}
@@ -297,28 +296,38 @@
 			<div class="{{- divClasses|join(' ') }}" style="background-image:url('{{bgImage[0].url}}')"></div>
 		{% endif %}
 	{% else %}
+		{% set divClasses = divClasses|merge([bgCurrent.opacity]) %}
+		{% set objClasses = ['background'] %}
+		{% if bgCurrent.bgSize == 'auto' %}
+			{% set objClasses = objClasses|merge() %}
+		{% else %}
+			{% if bgCurrent.bgSize == 'auto' or bgCurrent.bgSize == '' %}
+				{% set objClasses = objClasses|merge(['object-scale-down']) %}
+			{% else %}
+				{% set objClasses = objClasses|merge(['object-' ~ bgCurrent.bgSize])%}
+			{% endif %}
+			{% set objClasses = objClasses|merge(['object-' ~ bgCurrent.position])%}	
+		{% endif %}
 		{% set bgAsset = craft.assets().id(bgCurrent.asset).one() %}
-		{% if bgAsset != null %}
-			{% set minSizes = {
-				'@df': 0,
-				'@sm': 600,
-				'@md': 750,
-				'@lg': 1000,
-				'@xl': 1200,
-				'@2xl': 1500,
-			} %}
+		{% if bgAsset != null %}			
 			{% if bgCurrent.aspect == '' or bgCurrent.aspect == 'auto' or bgCurrent.aspect == null %}
 				{%- set xForm = 'contentImage' %}								
 			{% else %}
 				{%- set xForm = 'image-' ~ bgCurrent.aspect %}
 			{% endif %}
-			
+			{% set bgImage = craft.imagerx.transformImage(bgAsset, xForm) %}
+						
 			<div class="{{- divClasses|join(' ') }}">
-				<picture class="background">
-					{%- set transformedImages = craft.imagerx.transformImage(bgAsset, xForm) %}
-					{% set minSizeNum = minSizes}
-					<source data-sizes="auto" {% if aspectData|length > 1 %}media="{% if key == 'df' %}(max-width: {{dfMaxSize}}px){% else %}(min-width: {{value}}px){% endif %}"{% endif %} data-srcset="{{ craft.imager.srcset(transformedImages) }}" {% if craft.imager.serverSupportsWebp() %}type="image/webp"{% endif %}>
-				</picture>
+				<img src="{{ craft.imager.placeholder({width: bgImage[0].width, height: bgImage[0].height}) }}"
+				  width="{{bgImage[0].width}}"
+				  height="{{bgImage[0].height}}"
+				  sizes="auto"
+				  src="{{ bgImage[0].url }}"
+				  srcset="{{ craft.imager.srcset(bgImage) }}"
+				  alt=""
+				  class="{{- objClasses|join(' ') }} lazyload"
+				  loading="lazy"
+				>		
 			</div>
 		{% endif %}	
 	{% endif %}			
@@ -326,162 +335,24 @@
 
 
 {# Output for Video Background #}
-{%- macro backgroundVideo(bgCurrent, divClasses, sizesAtr, aspect) -%}
-	
-{%- endmacro backgroundVideo -%}
-
-
-
-
-{%- macro buildElementBackgroundOLD(adjustments, sizesAtr, aspect, loadType) -%}
-	
-	
-	{% set bgSizes = [] %}
-	
-	{% if aspect|length and aspect != 'auto' %}		
-		{% set tfSize = 'image-' ~ aspect %}
-		{% set tfSizeWebp = 'image-' ~ aspect ~ '-webp' %}
-	{% else %}
-		{% set tfSize = 'contentImage' %}
-		{% set tfSizeWebp = 'contentImage-webp' %}
+{%- macro backgroundVideo(bgCurrent, divClasses) -%}
+	{% set divClasses = divClasses|merge([bgCurrent.opacity]) %}
+	{% set objClasses = ['background', 'object-' ~ bgCurrent.bgSize, 'object-' ~ bgCurrent.position, 'lazyload'] %}
+		
+	{% set bgAsset = craft.assets().id(bgCurrent.asset).one() %}
+	{% if bgAsset != null %}							
+		<div class="{{- divClasses|join(' ') }}">
+			<video          
+			  class="{{- objClasses|join(' ') }}"
+			  aria-hidden="true"
+			  role="presentation"
+			  preload=""
+			  autoplay playsinline muted loop
+			  data-src="{{ bgAsset.url }}"
+			  type="{{ bgAsset.mimeType }}"
+			  loading="lazy"			  
+			></video>		
+		</div>
 	{% endif %}
-	{% for adjSet in adjustments %}
-		{% set bgAsset = adjSet.bgImg.one() %}
-		{% if bgAsset|length %}
-			{# Build class list for each background div #}	
-			{% set divClasses = ['background'] %}			
-			{% if adjSet.deviceSize != '' %}
-				{% set divClasses = divClasses|merge(['hidden', adjSet.deviceSize ~ ':block']) %}
-			{% endif %}
-			
-			{# add classes to hide background div on appropriate device sites by checking to see what other sizes are prsent above this one #}
-			{% switch adjSet.deviceSize %}
-				{% case '@sm' %}
-					{% if '@md' in bgSizes %}
-						{% set divClasses = divClasses|merge(['@md:hidden']) %}
-					{% elseif '@lg' in bgSizes %}
-						{% set divClasses = divClasses|merge(['@lg:hidden']) %}
-					{% elseif '@xl' in bgSizes %}
-						{% set divClasses = divClasses|merge(['@xl:hidden']) %}
-					{% elseif '@2xl' in bgSizes %}
-						{% set divClasses = divClasses|merge(['@2xl:hidden']) %}
-					{% endif %}
-					
-				{% case '@md' %}			
-					{% if '@lg' in bgSizes %}
-						{% set divClasses = divClasses|merge(['@lg:hidden']) %}
-					{% elseif '@xl' in bgSizes %}
-						{% set divClasses = divClasses|merge(['@xl:hidden']) %}
-					{% elseif '@2xl' in bgSizes %}
-						{% set divClasses = divClasses|merge(['@2xl:hidden']) %}
-					{% endif %}
-					
-				{% case '@lg' %}			
-					{% if '@xl' in bgSizes %}
-						{% set divClasses = divClasses|merge(['@xl:hidden']) %}
-					{% elseif '@2xl' in bgSizes %}
-						{% set divClasses = divClasses|merge(['@2xl:hidden']) %}
-					{% endif %}
-				
-				{% case '@xl' %}			
-					{% if '@2xl' in bgSizes %}
-						{% set divClasses = divClasses|merge(['@2xl:hidden']) %}
-					{% endif %}
-					
-				{% case '@2xl:' %}
-					
-				{% default %}
-					{% if '@sm' in bgSizes %}
-						{% set divClasses = divClasses|merge(['@sm:hidden']) %}
-					{% elseif '@md' in bgSizes %}
-						{% set divClasses = divClasses|merge(['@md:hidden']) %}
-					{% elseif '@lg' in bgSizes %}
-						{% set divClasses = divClasses|merge(['@lg:hidden']) %}
-					{% elseif '@xl' in bgSizes %}
-						{% set divClasses = divClasses|merge(['@xl:hidden']) %}
-					{% elseif '@2xl' in bgSizes %}
-						{% set divClasses = divClasses|merge(['@2xl:hidden']) %}
-					{% endif %}
-					
-			{% endswitch %}
-			
-			<div class="{{- divClasses|join(' ') }}">				
-				{% set loadClass = null %}
-				{# check loadType, if it is set and value is 1 use owl carousel load class, otherwise use lazyload #}
-				{% if loadType is defined and loadType != null and loadType != 0 %}
-					{% set loadClass = 'swiper-lazy' %}
-				{% else %}
-					{% set loadClass = 'lazyload' %}
-				{% endif %}			
-				{% set bgInnerClasses = ['background', adjSet.opacity] %}
-				{% set bgElemClasses = ['background', loadClass] %}
-				
-				{# Check if BG Asset is image or video #}
-				{% if bgAsset.kind == 'image' %}
-					{% if adjSet.backgroundRepeat == 'bg-no-repeat' or adjSet.backgroundRepeat == '' %}
-						<div class="{{- bgInnerClasses|join(' ') }}">	
-							{% if adjSet.backgroundSize == 'auto' or adjSet.backgroundSize == '' %}
-								{% set bgElemClasses = bgElemClasses|merge(['object-scale-down']) %}
-							{% else %}
-								{% set  bgElemClasses = bgElemClasses|merge(['object-' ~ adjSet.backgroundSize])%}
-							{% endif %}
-							{% if adjSet.backgroundPosition != '' %}
-								{% set bgElemClasses = bgElemClasses|merge(['object-' ~ adjSet.backgroundPosition]) %}
-							{% endif %}
-							
-							{# set image to bgAsset for transformations #}
-							{% set image = bgAsset %}					
-							{%- set transformedImages = craft.imagerx.transformImage(image, tfSize)	%}					
-							{% if craft.imager.serverSupportsWebp() %}
-							  {% set transformedImagesWebp = craft.imagerx.transformImage(image, tfSizeWebp) %}
-							  
-							  <picture class="background">		  
-										
-								{% if craft.imager.serverSupportsWebp() %}
-								  <source data-sizes="auto" data-srcset="{{ craft.imager.srcset(transformedImagesWebp) }}" type="image/webp">
-								{% endif %}
-							  
-								  <img src="{{ craft.imager.placeholder({width: image.width, height: image.height}) }}"
-								  width="{{image.width}}"
-								  height="{{image.height}}"
-								  data-sizes="auto"
-								  data-src="{{ transformedImages[0] }}"
-								  data-srcset="{{ craft.imager.srcset(transformedImages) }}"
-								  alt="background" 
-								  class="{{- bgElemClasses|join(' ') }}"
-								  >
-							  </picture>
-							{% endif %}
-						</div>
-					{% else %}
-						{% set bgInnerClasses = bgInnerClasses|merge([adjSet.backgroundRepeat, 'bg-auto', 'bg-' ~ adjSet.backgroundPosition]) %}
-						<div class="{{- bgInnerClasses|join(' ') }}" style="background-image:url('{{ bgAsset.url }}');"></div>
-					{% endif %}
-				{% elseif bgAsset.kind == 'video' %}
-					{% if adjSet.backgroundSize == 'auto' or adjSet.backgroundSize == '' %}
-						{% set bgElemClasses = bgElemClasses|merge(['object-scale-down']) %}
-					{% else %}
-						{% set  bgElemClasses = bgElemClasses|merge(['object-' ~ adjSet.backgroundSize])%}
-					{% endif %}
-					{% if adjSet.backgroundPosition != '' %}
-						{% set bgElemClasses = bgElemClasses|merge(['object-' ~ adjSet.backgroundPosition]) %}
-					{% endif %}
-					
-					<div class="{{- bgInnerClasses|join(' ') }}">
-						<video          
-						  class="{{- bgElemClasses|join(' ') }}"
-						  aria-hidden="true"
-						  role="presentation"
-						  preload=""
-						  autoplay playsinline muted loop
-						  data-src="{{ bgAsset.url }}"
-						  type="{{ bgAsset.mimeType }}"
-						></video>
-					</div>
-				{% endif %}	
-			</div>	
-			
-		{% endif %}
-	{% endfor %} 
-{%- endmacro buildElementBackgroundOLD -%}
+{%- endmacro backgroundVideo -%}
 
