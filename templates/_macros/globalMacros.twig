@@ -297,11 +297,31 @@
 			<div class="{{- divClasses|join(' ') }}" style="background-image:url('{{bgImage[0].url}}')"></div>
 		{% endif %}
 	{% else %}
-		{# output for non-tiling cover and contain images #}
-	{% endif %}
-	
-	
+		{% set bgAsset = craft.assets().id(bgCurrent.asset).one() %}
+		{% if bgAsset != null %}
+			{% set minSizes = {
+				'@df': 0,
+				'@sm': 600,
+				'@md': 750,
+				'@lg': 1000,
+				'@xl': 1200,
+				'@2xl': 1500,
+			} %}
+			{% if bgCurrent.aspect == '' or bgCurrent.aspect == 'auto' or bgCurrent.aspect == null %}
+				{%- set xForm = 'contentImage' %}								
+			{% else %}
+				{%- set xForm = 'image-' ~ bgCurrent.aspect %}
+			{% endif %}
 			
+			<div class="{{- divClasses|join(' ') }}">
+				<picture class="background">
+					{%- set transformedImages = craft.imagerx.transformImage(bgAsset, xForm) %}
+					{% set minSizeNum = minSizes}
+					<source data-sizes="auto" {% if aspectData|length > 1 %}media="{% if key == 'df' %}(max-width: {{dfMaxSize}}px){% else %}(min-width: {{value}}px){% endif %}"{% endif %} data-srcset="{{ craft.imager.srcset(transformedImages) }}" {% if craft.imager.serverSupportsWebp() %}type="image/webp"{% endif %}>
+				</picture>
+			</div>
+		{% endif %}	
+	{% endif %}			
 {%- endmacro backgroundImage -%}
 
 
