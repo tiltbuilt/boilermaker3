@@ -15,25 +15,12 @@
 
 .icon-content-wrapper {
 	margin-top: theme('spacing.normal');
-}
-
-.icon-text-wrapper, .icon-button-group {
-	margin-top: theme('spacing.base');
 	
-	&:first-child {
-		margin-top: 0px;
-	}
-}
-
-.icon-heading {
 	/* class specific to icon block headline, adjust accordingly */
 	text-align: center;
 }
 
-.icon-button-group {
-	/* class specific to icon block button group, adjust accordingly */
-	text-align: center;
-}
+
 
 /* Layout for this block type is based upon layout size, the following styles */
 
@@ -60,20 +47,14 @@
 		}
 	}
 	
-	.icon-heading { 
-		@apply @md/component:text-left;		
-	}
-	
-	
+		
 	.icon-content-wrapper {
 		@apply @md/component:pl-base @md/component:block @md/component:mt-none @md/component:text-left;
 		
 		
 	}
 	
-	.icon-button-group {
-		@apply @md/component:text-left;
-	}
+	
 }
 
 /* calculations are needed to determine the size of the content wrapper div to prevent it from wrapping to a new line undesirably */

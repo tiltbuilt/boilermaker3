@@ -13,59 +13,11 @@
 {# Load in global macros for use across all Twig templates #}
 {% import '_macros/globalMacros' as gMacros %}
 
-{# Non-modal button code macro #}
-{% macro linkCode (button, btnClasses) %}
-	<a {% if button.customId|length %}id="{{button.customId}}"{% endif %} href="{{ button.url }}" {{- button.target|length ? ' target="_blank"' : '' }} class="{{- btnClasses|join(' ') }} {{ button.customClasses }}" {% if button.ariaLabel|length %}aria-label="{{button.ariaLabel}}"{% endif %}  {{- gMacros.attributesOut(button.customAttributes) -}}>
-		<span>{{ (button.text|length) ? button.text : 'Learn More' }}</span>
-	</a>
-{% endmacro linkCode %}
-
-{# Headline styling macro #}
-{% macro headlineClasses(adjustments,  headlineStyle,  headlineColor) %}
-	{% set classList = [] %}
-	{% if  headlineStyle|length %}
-		{% set classList = classList|merge([ headlineStyle]) %}
-	{% endif %}
-	{% if  headlineColor|length %}
-		{% set classList = classList|merge([headlineColor]) %}
-	{% endif %}
-	{% for adjSet in adjustments %}
-		{# Get Device Size for Adjustments #}
-		{% set devSize = adjSet.deviceSize %}
-		{% if devSize|length %}
-			{% set devSize = devSize ~ ':' %}	
-		{% endif %}
-		{# Get adjustments for type at each device size #}
-		{% if adjSet.headlineFont|length %}
-			{% set classList = classList|merge([devSize ~ 'font-' ~ adjSet.headlineFont]) %}
-		{% endif %}
-		{% if adjSet.headlineFontSize|length %}
-			{% set classList = classList|merge([devSize ~ adjSet.headlineFontSize]) %}
-		{% endif %}
-		{% if adjSet.headlineLineHeight|length %}
-			{% set classList = classList|merge([devSize ~ adjSet.headlineLineHeight]) %}
-		{% endif %}
-		{% if adjSet.headlineFontWeight|length %}
-			{% set classList = classList|merge([devSize ~ adjSet.headlineFontWeight]) %}
-		{% endif %}
-		{% if adjSet.headlineItalic|length %}
-			{% set classList = classList|merge([devSize ~ adjSet.headlineItalic]) %}
-		{% endif %}
-		{% if adjSet.headlineTextCase|length %}
-			{% set classList = classList|merge([devSize ~ adjSet.headlineTextCase]) %}
-		{% endif %}
-		{% if adjSet.headlineLetterSpacing|length %}
-			{% set classList = classList|merge([devSize ~ adjSet.headlineLetterSpacing]) %}
-		{% endif %}			
-	{% endfor %}
-	{{ classList|join(' ') }}	
-{% endmacro headlineClasses %}
-
 {# Set block id attribute value #}
 {% if entry.customId is defined and entry.customId != '' %}
 	{% set blockId = entry.customId|replace({' ': '-'})|trim %}
 {% else %}
-	{% set blockId = 'iconblock-' ~ entry.id %}
+	{% set blockId = 'icon-block-' ~ entry.id %}
 {% endif %}
 
 {# Set block type handle as class name for styling #}
@@ -124,50 +76,6 @@
 	{% endif %}	
 {% endfor %}
 
-{# set classes for header #}
-{% set headerClasses = ['heading', 'icon-heading'] %}
-{% set textClasses = ['icon-text-wrapper'] %}
-{% if entry.headlineColor != '' %}
-	{% set headerColor = 'text-' ~ entry.headlineColor %}
-{% else %}
-	{% set headerColor = colorScheme %}
-{% endif %}
-{% for adjSet in adjustments %}
-	{# Get Device Size for Adjustments #}
-	{% set devSize = adjSet.deviceSize %}
-	{% if devSize|length %}
-		{% set devSize = devSize ~ '/component:' %}	
-	{% endif %}
-	{% if adjSet.headlineMt != '' %}
-		{% set textClasses = textClasses|merge([devSize ~ 'mt-' ~ adjSet.headlineMt]) %}
-	{% endif %}	
-{% endfor %}
-
-{# set classes for button #}
-{% set btnGroupClasses = ['icon-button-group'] %}
-{% if entry.btnColor != '' %}
-	{% set btnColor = 'text-' ~ entry.btnColor %}
-{% else %}
-	{% set btnColor = colorScheme %}
-{% endif %}
-{% for adjSet in adjustments %}
-	{# Get Device Size for Adjustments #}
-	{% set devSize = adjSet.deviceSize %}
-	{% if devSize|length %}
-		{% set devSize = devSize ~ '/component:' %}	
-	{% endif %}
-	{% if adjSet.btnMt != '' %}
-		{% set btnGroupClasses = btnGroupClasses|merge([devSize ~ 'mt-' ~ adjSet.btnMt]) %}
-	{% endif %}	
-{% endfor %}
-{# create object with btn set preset styles to grab from as needed if buttons do not have custom styles different from the set #}
-{% set btnSetStyles = {
-	'size': entry.btnSize,
-	'style': entry.btnStyles,
-	'fullWidthSmall': entry.fullWidthSmall,
-	'color': btnColor,
-}
-%}
 
 <div id="{{blockId}}" class="{{ blockClass }} @container/component {{ colorScheme }} {{animClass}} {{- gMacros.classesOut(adjustments, 'Display') -}} {{- gMacros.classesOut(adjustments, 'Margins', true) -}} {{ entry.customClasses }}" {{- gMacros.attributesOut(entry.customAttributes) -}}>
 	<div class="{{layoutClass}}">
@@ -180,76 +88,20 @@
 				<svg><use xlink:href="/sprites.svg#{{ entry.icon.value }}"></use></svg>
 			{% endif %}
 		</div>	
-		{% if entry.headline|length or entry.simpleText|length or entry.buttons|length %}
+		{% if entry.blockContent|length %}
 			<div class="{{- contentClasses|join(' ') }} {{ gMacros.classesOut(adjustments, 'Text') -}} ">
-				{% if entry.headline|length %}
-					<{{entry.headingLevel}} class="{{- headerClasses|join(' ') }} {{ _self.headlineClasses(adjustments, entry.headingStyle, headerColor )-}}">
-						<span class="header-main-text">{{entry.headline}}</span>
-					</{{entry.headingLevel}}>
-				{% endif %}
-				{% if entry.simpleText|length %}
-					<div class="{{- textClasses|join(' ') }}">
-						{{entry.simpleText}}
-					</div> 
-				{% endif %}
-				{% if entry.buttons|length %}
-					<div class="{{- btnGroupClasses|join(' ') }}">
-						{% set buttons = entry.buttons %}
-						{% for button in buttons %}
-							{# get styles for button or if not set, use styles from the set #}
-							{% set btnClasses = ['btn'] %}
-							{% if button.btnStyles|length %}
-								{% set btnClasses = btnClasses|merge([button.btnStyles]) %}
-							{% else %}
-								{% set btnClasses = btnClasses|merge([btnSetStyles.style]) %}
-							{% endif %}
-							{% if button.btnSize|length %}
-								{% set btnClasses = btnClasses|merge([button.btnSize]) %}
-							{% else %}
-								{% set btnClasses = btnClasses|merge([btnSetStyles.size]) %}
-							{% endif %}
-							{% if button.btnColor|length %}
-								{% set btnClasses = btnClasses|merge([button.btnColor]) %}
-							{% else %}
-								{% set btnClasses = btnClasses|merge([btnSetStyles.color]) %}
-							{% endif %}
-							{% if btnSetStyles.fullWidthSmall %}
-								{% set btnClasses = btnClasses|merge(['w-full mt-half @md:w-auto @md:mt-none']) %}
-							{% endif %}
-							
-							{# if button is a modal button do one thing, if not do the other #}		
-							{% if button.getLinkType().label == 'Modal' %}
-								{# modal #}
-								{% set modalUrl = '/resources/entrymodal?entryid=' ~ button.linkValue %}
-								{% set modalEntry = craft.entries().id(button.linkValue).one() %}
-								{% if not craft.app.request.isAjax() %}
-									<button {% if button.customId|length %}id="{{button.customId}}" x-ref="{{button.customId}}"{% else %}id="{{blockId}}-button{{loop.index}}" x-ref="{{blockId}}-button{{loop.index}}"{% endif %} type="button" class="{{- btnClasses|join(' ') }} {{ button.customClasses }}" {% if button.ariaLabel|length %}aria-label="{{button.ariaLabel}}"{% endif %} {{- gMacros.attributesOut(button.customAttributes) -}}
-									x-on:click="modalHtml='loading...'; showLoading = true; modalOpen = !modalOpen; modalTitle='{{modalEntry.title}}'; focusEl='{% if button.customId|length %}{{button.customId}}{% else %}{{blockId}}-button{{loop.index}}{% endif %}';
-									fetch('{{ modalUrl }}', {
-										method: 'GET',
-										headers: {
-											'X-Requested-With': 'XMLHttpRequest',
-										},
-									})
-									.then(response => response.text())
-									.then(text => {
-										modalHtml = text
-										showLoading = false;			   
-									});"			 
-									>
-										<span>{{ (button.text|length) ? button.text : 'Learn More' }}</span>
-									</button>
-								{% elseif modalEntry.section.handle == "pages" %}
-									{{- _self.linkCode(button, btnClasses) -}}
-								{% endif %}			
-							{% else %}
-								{# everything else #}
-								{{- _self.linkCode(button, btnClasses) -}}
-							{% endif %}
-							
-						{% endfor %}
-					</div>
-				{% endif %}
+				
+				{% for chunk in entry.blockContent %}
+					{% if chunk.type == 'markup' %}
+						{{chunk|raw}}					
+					{% else %}
+						{{ chunk.entry.render({
+							'animSetting': null,
+							'colorScheme': colorScheme,							
+						}) }}
+					{% endif %}
+				{% endfor %}
+				
 			</div>
 		{% endif %}
 	</div>

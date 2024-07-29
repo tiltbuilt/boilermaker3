@@ -36,46 +36,16 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: 0a94a9c4-7b94-408c-919b-9c4a6c070e37 # Header Block
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: null
-            providesThumbs: false
-            required: true
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: a46f1c86-b1a6-4a31-9381-0e72710c43af
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            elementCondition: null
-            fieldUid: 3fa40ffc-bcf8-4f2f-9462-19c808265175 # Multiline Text With Search
+            fieldUid: d897b42d-3d26-4db5-b105-29c871b31ffb # Limited Content
             handle: ctaContent
             includeInCards: false
             instructions: null
             label: 'CTA Content'
             providesThumbs: false
-            required: false
+            required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: f2162813-6aad-460e-bbde-9d05b28fc2dd
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            elementCondition: null
-            fieldUid: c025e168-6f53-4831-9433-670f03c62851 # Buttons
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: null
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 99334b9b-7297-4151-83f3-b79b81a133e5
+            uid: 892f5b7d-18ce-4136-b8de-3b1a8f266a55
             userCondition: null
             warning: null
             width: 100
@@ -107,7 +77,7 @@ fieldLayouts:
               elementType: craft\elements\Entry
               fieldContext: global
             fieldUid: f1b466ce-fb41-471a-90d4-5d0fd23f346d # Image Asset
-            handle: null
+            handle: ctaImg
             includeInCards: false
             instructions: null
             label: 'CTA Image'
@@ -127,20 +97,120 @@ fieldLayouts:
                   class: craft\fields\conditions\LightswitchFieldConditionRule
                   fieldUid: b7035329-8f0c-4f1c-985b-104b44d6b235 # CTA Type
                   layoutElementUid: d57f29aa-7964-4b1c-b52d-63ffda582a5e
+                  uid: 8da6a59a-4193-4220-8d90-15f5e2073487
+                  value: true
+              elementType: craft\elements\Entry
+              fieldContext: global
+            fieldUid: bb89e543-0de1-4a53-9480-2e7c0e8a69a5 # Aspect Ratio
+            handle: ctaImgAspect
+            includeInCards: false
+            instructions: 'Sets the aspect ratio to be used for the image in the CTA content'
+            label: 'CTA Image Aspect Ratio'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d5751701-1992-4b68-b08b-4fa6952d54ee
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition:
+              class: craft\elements\conditions\entries\EntryCondition
+              conditionRules:
+                -
+                  class: craft\fields\conditions\LightswitchFieldConditionRule
+                  fieldUid: b7035329-8f0c-4f1c-985b-104b44d6b235 # CTA Type
+                  layoutElementUid: d57f29aa-7964-4b1c-b52d-63ffda582a5e
+                  uid: a1ae26ae-0204-48fd-8f70-a2b865529f23
+                  value: true
+              elementType: craft\elements\Entry
+              fieldContext: global
+            fieldUid: eb38218b-e090-4cec-807f-ab70934109ba # First Last
+            handle: contentPositionSmall
+            includeInCards: false
+            instructions: null
+            label: 'Content Position - Small Layouts'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 6d05e74a-be8c-420e-816d-b0bd79c0fd50
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition:
+              class: craft\elements\conditions\entries\EntryCondition
+              conditionRules:
+                -
+                  class: craft\fields\conditions\LightswitchFieldConditionRule
+                  fieldUid: b7035329-8f0c-4f1c-985b-104b44d6b235 # CTA Type
+                  layoutElementUid: d57f29aa-7964-4b1c-b52d-63ffda582a5e
                   uid: cd39096b-e59a-4e58-b1bc-162e294a65bd
                   value: true
               elementType: craft\elements\Entry
               fieldContext: global
             fieldUid: 732c729f-8dbb-4f01-a463-c163ddc13eab # Left Right
-            handle: null
+            handle: contentPositionLarge
             includeInCards: false
             instructions: null
-            label: null
+            label: 'Content Position - Large Layouts'
             providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 953a92f0-1b68-483f-af55-3dfacce04e67
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition:
+              class: craft\elements\conditions\entries\EntryCondition
+              conditionRules:
+                -
+                  class: craft\fields\conditions\LightswitchFieldConditionRule
+                  fieldUid: b7035329-8f0c-4f1c-985b-104b44d6b235 # CTA Type
+                  layoutElementUid: d57f29aa-7964-4b1c-b52d-63ffda582a5e
+                  uid: 58599678-dd21-476e-8cfa-49edbdce6b47
+                  value: true
+              elementType: craft\elements\Entry
+              fieldContext: global
+            fieldUid: 049ec87b-57e9-4b3e-8d53-44cb8874474b # Width
+            handle: contentWidthLarge
+            includeInCards: false
+            instructions: 'Set the width of the CTA Content column when in large (side by side with image) layouts'
+            label: 'Content Width - Large Layouts'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c3a89327-4c2b-4106-ba64-c2da57b378a2
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition:
+              class: craft\elements\conditions\entries\EntryCondition
+              conditionRules:
+                -
+                  class: craft\fields\conditions\LightswitchFieldConditionRule
+                  fieldUid: b7035329-8f0c-4f1c-985b-104b44d6b235 # CTA Type
+                  layoutElementUid: d57f29aa-7964-4b1c-b52d-63ffda582a5e
+                  uid: 1836d284-afff-4ab3-93c2-e5c5a08fff05
+                  value: true
+              elementType: craft\elements\Entry
+              fieldContext: global
+            fieldUid: df144842-8cb5-4008-8427-22974b6fe49c # Icon Vertical Alignment
+            handle: contentVerticalAlignment
+            includeInCards: false
+            instructions: ' This field sets the vertical alignment of the content relative to its image when the CTA Type is in large CTA mode.'
+            label: 'Content Vertical Alignment'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d8a66fc1-e15a-4c96-8b30-82c8d264ce07
             userCondition: null
             warning: null
             width: 100

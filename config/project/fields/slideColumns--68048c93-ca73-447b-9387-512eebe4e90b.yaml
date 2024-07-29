@@ -5,8 +5,6 @@ name: 'Slide Columns'
 searchable: false
 settings:
   createButtonLabel: 'Add Column'
-  entryTypes:
-    - 263e5dea-ef08-42a5-8e17-6418ad4de62b
   includeTableView: false
   maxEntries: 5
   minEntries: null

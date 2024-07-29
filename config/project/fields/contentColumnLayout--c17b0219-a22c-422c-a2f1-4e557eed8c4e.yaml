@@ -1,7 +1,7 @@
 columnSuffix: null
-handle: columnLayout
-instructions: 'Set the size and layout properties of this column for various device sizes here. Columns default to taking up the full width of their container until set to do otherwise.'
-name: 'Column Layout'
+handle: contentColumnLayout
+instructions: null
+name: 'Content Column Layout'
 searchable: false
 settings:
   addRowLabel: 'Add a row'
@@ -16,7 +16,7 @@ settings:
               - 'Layout Size'
             -
               - handle
-              - deviceSize
+              - layoutSize
             -
               - width
               - ''
@@ -26,28 +26,6 @@ settings:
             -
               - options
               -
-                -
-                  __assoc__:
-                    -
-                      - label
-                      - All
-                    -
-                      - value
-                      - ''
-                    -
-                      - default
-                      - true
-                -
-                  __assoc__:
-                    -
-                      - label
-                      - 'Small (Phone Horizontal and Above)'
-                    -
-                      - value
-                      - '@sm'
-                    -
-                      - default
-                      - false
                 -
                   __assoc__:
                     -
@@ -93,7 +71,7 @@ settings:
                       - default
                       - false
       -
-        - col2
+        - col4
         -
           __assoc__:
             -
@@ -233,15 +211,15 @@ settings:
                       - default
                       - false
       -
-        - col3
+        - col2
         -
           __assoc__:
             -
               - heading
-              - Display
+              - 'Column Position'
             -
               - handle
-              - display
+              - columnPosition
             -
               - width
               - ''
@@ -266,59 +244,7 @@ settings:
                   __assoc__:
                     -
                       - label
-                      - Hidden
-                    -
-                      - value
-                      - hidden
-                    -
-                      - default
-                      - false
-                -
-                  __assoc__:
-                    -
-                      - label
-                      - 'Not Hidden'
-                    -
-                      - value
-                      - not-hidden
-                    -
-                      - default
-                      - false
-      -
-        - col4
-        -
-          __assoc__:
-            -
-              - heading
-              - 'Column Order'
-            -
-              - handle
-              - columnOrder
-            -
-              - width
-              - ''
-            -
-              - type
-              - select
-            -
-              - options
-              -
-                -
-                  __assoc__:
-                    -
-                      - label
-                      - 'Default (No Change)'
-                    -
-                      - value
-                      - ''
-                    -
-                      - default
-                      - true
-                -
-                  __assoc__:
-                    -
-                      - label
-                      - First
+                      - Left
                     -
                       - value
                       - order-first
@@ -329,62 +255,7 @@ settings:
                   __assoc__:
                     -
                       - label
-                      - '1'
-                    -
-                      - value
-                      - order-1
-                    -
-                      - default
-                      - false
-                -
-                  __assoc__:
-                    -
-                      - label
-                      - '2'
-                    -
-                      - value
-                      - order-2
-                    -
-                      - default
-                      - false
-                -
-                  __assoc__:
-                    -
-                      - label
-                      - '3'
-                    -
-                      - value
-                      - order-3
-                    -
-                      - default
-                      - false
-                -
-                  __assoc__:
-                    -
-                      - label
-                      - '4'
-                    -
-                      - value
-                      - order-4
-                    -
-                      - default
-                      - false
-                -
-                  __assoc__:
-                    -
-                      - label
-                      - '5'
-                    -
-                      - value
-                      - order-5
-                    -
-                      - default
-                      - false
-                -
-                  __assoc__:
-                    -
-                      - label
-                      - Last
+                      - Right
                     -
                       - value
                       - order-last
@@ -392,7 +263,7 @@ settings:
                       - default
                       - false
       -
-        - col5
+        - col3
         -
           __assoc__:
             -
@@ -425,21 +296,10 @@ settings:
                   __assoc__:
                     -
                       - label
-                      - 'Match Heights'
-                    -
-                      - value
-                      - self-stretch
-                    -
-                      - default
-                      - false
-                -
-                  __assoc__:
-                    -
-                      - label
                       - Top
                     -
                       - value
-                      - self-start
+                      - items-start
                     -
                       - default
                       - false
@@ -450,7 +310,7 @@ settings:
                       - Middle
                     -
                       - value
-                      - self-center
+                      - items-center
                     -
                       - default
                       - false
@@ -461,7 +321,7 @@ settings:
                       - Bottom
                     -
                       - value
-                      - self-end
+                      - items-end
                     -
                       - default
                       - false

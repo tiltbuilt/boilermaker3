@@ -5,8 +5,6 @@ name: 'Page Header Background'
 searchable: false
 settings:
   createButtonLabel: null
-  entryTypes:
-    - d50bf5e2-cf37-49d5-99dc-0f5fe25e5121
   includeTableView: false
   maxEntries: 6
   minEntries: null

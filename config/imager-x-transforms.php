@@ -103,6 +103,32 @@ return [
 			'format' => 'webp',
 		]
 	],
+	'image-2/1' => [
+		'transforms' => [
+			['width' => 320],
+			['width' => 640],
+			['width' => 768],
+			['width' => 1024],
+			['width' => 1280],
+			['width' => 1600],
+		],
+		'defaults' => [
+			'webpQuality' => 70,
+			'jpegQuality' => 70,
+			'ratio' => 3/1,
+			'format' => 'jpg'
+		],
+		'configOverrides' => [
+			'fillTransforms' => true,
+			'fillInterval' => 200,
+		]
+	],
+	'image-2/1-webp' => [
+		'transforms' => 'image-3/1',
+		'defaults' => [
+			'format' => 'webp',
+		]
+	],
 	'image-3/1' => [
 		'transforms' => [
 			['width' => 320],

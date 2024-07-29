@@ -207,6 +207,14 @@
 	}
 	
 	
+	/* CTAs */
+	
+	&.cta {
+		background-color: var(--bgSecondary);
+		color: var(--textColor);
+	}
+	
+	
 	/* TEXT COLOR OVERRIDES */
 	/* Make a style rule for every color available in the text color picker in the CP. These need to be at the end of a color scheme definition */
 	
@@ -251,9 +259,9 @@
 	--linkColor: theme('colors.red.500');
 	--linkHover: theme('colors.red.300');
 	--bgPrimary: theme('colors.black');
-	--bgSecondary: theme('colors.gray.300');
-	--btnColor: theme('colors.gray.700');
-	--btnTextColor: theme('colors.white');
+	--bgSecondary: theme('colors.gray.700');
+	--btnColor: theme('colors.white');
+	--btnTextColor: theme('colors.gray.700');
 	--btnHoverColor: theme('colors.gray.400');
 	--iconColor: theme('colors.white');
 	
@@ -265,7 +273,7 @@
 		}
 	}
 	
-	&.section-standard {
+	&.section-standard, &.section-side-photo {
 		color: var(--textColor);
 		background-color: var(--bgPrimary);
 	}
@@ -447,6 +455,15 @@
 	&.icon-wrapper {
 		color: var(--iconColor);
 	}
+	
+	
+	/* CTAs */
+	
+	&.cta {
+		background-color: var(--bgSecondary);
+		color: var(--textColor);
+	}
+	
 	
 	/* TEXT COLOR OVERRIDES */
 	/* Make a style rule for every color available in the text color picker in the CP. These need to be at the end of a color scheme definition */

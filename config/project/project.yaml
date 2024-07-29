@@ -1,4 +1,4 @@
-dateModified: 1722032651
+dateModified: 1722225641
 elementSources:
   craft\elements\Entry:
     -
@@ -86,12 +86,14 @@ meta:
     2ac55b2e-329b-4793-af25-3d158c1a4682: 'Accordion Style Adjustments' # Accordion Style Adjustments
     2bf5d5a7-249a-42a4-ae56-79ea7f679bcc: 'Modal to Display' # Modal to Display
     2dc9eeb7-914f-40a8-a177-d21efc54153e: 'Link Settings' # Link Settings
+    2e638127-2263-4e53-b71d-89eadcf405b0: 'Main Menu' # Main Menu
     3aa14a6e-dabc-42ae-8954-e10f19c53441: Accordions # Accordions
     3bcfa1bb-bcae-4957-b813-c81aa2061bfd: 'Text List Style' # Text List Style
     3c147a0d-440a-4850-b41a-98bf61c16df6: Globals # Globals
     3f041b04-6fce-4165-ab3a-d234dabaa7bd: 'Embed Code' # Embed Code
     3fa40ffc-bcf8-4f2f-9462-19c808265175: 'Multiline Text With Search' # Multiline Text With Search
     4a803a3b-ac9b-4ecc-b439-0815fb18e053: 'Tab Set' # Tab Set
+    4b3b9d20-aab3-4438-b3cd-970c301db971: 'Public Schema' # Public Schema
     4c3b1224-ae0a-41b2-b608-0ad42c53ffb5: 'Slider Set' # Slider Set
     4ccd8d3b-ddf4-4ac6-89c4-8d344eb6a427: 'Row Style Adjustments' # Row Style Adjustments
     4e9bbb37-55ed-437d-bdbd-9a1dcbc20d73: 'Button Color' # Button Color
@@ -130,7 +132,7 @@ meta:
     69b9aab4-6d39-462c-b88a-8d4971791897: Simple # Simple
     71ab40f6-9c7f-41cc-9887-255aa3c9603a: 'Style Adjustment - Tab Panel' # Style Adjustment - Tab Panel
     72b1f013-8778-4308-a355-29b6088c7162: 'Background Type' # Background Type
-    073c9d03-dcc0-4435-99fe-2df91703e911: Slide # Slide
+    073c9d03-dcc0-4435-99fe-2df91703e911: Limited # Limited
     79d28a86-5f89-45cb-99a4-a97fa0992c73: 'Video Asset' # Video Asset
     79fb09c5-0e2c-49d7-bfe6-a9b38820b56a: 'Social Link' # Social Link
     82c290d4-2826-4d74-bcc2-8f94ddc4b0b0: 'Accordion Set' # Accordion Set
@@ -180,7 +182,6 @@ meta:
     31960640-d715-4966-93ba-b66e61df5207: 'Style Adjustment - Accordion Set' # Style Adjustment - Accordion Set
     53829185-3375-470c-80cf-a50b1733a8c4: 'Slide Effect' # Slide Effect
     54321551-57ae-4812-8a1d-c491760d59ad: 'Multi-Column Settings' # Multi-Column Settings
-    55191189-1795-4029-a1e2-066de5a7c6c6: 'Test nav' # Test nav
     67336236-2b0e-4d01-bb98-029a923a6932: 'Tab Set Style Adjustments' # Tab Set Style Adjustments
     77532772-badf-4ce5-a93b-6752273d81bb: 'Subhead Position' # Subhead Position
     86544431-ce27-4263-b49f-b814ff50fcfb: 'Date Format' # Date Format
@@ -218,6 +219,7 @@ meta:
     c025e168-6f53-4831-9433-670f03c62851: Buttons # Buttons
     c3d75796-b930-48a0-b387-b5469be4094b: 'Full Listing Button' # Full Listing Button
     c9cf2b48-b578-41dd-ae7f-82d0ce5a4241: 'Image Style Adjustments' # Image Style Adjustments
+    c17b0219-a22c-422c-a2f1-4e557eed8c4e: 'Content Column Layout' # Content Column Layout
     c22c74d6-c1ba-4d51-af9b-d38a798a1e30: 'Text Wrap' # Text Wrap
     c43e08b0-14a5-4aee-adb4-4e78e9c3d9fe: 'Main Content' # Main Content
     c43e9602-b393-4012-b9c3-c4b391c74cd6: Video # Video
@@ -229,7 +231,7 @@ meta:
     d12df536-921c-4ee2-b0bc-84a97d7c9e95: 'Column Background Color' # Column Background Color
     d85e2e7b-6380-4c46-8ebd-36ad0a2eee46: 'Tab Panel' # Tab Panel
     d136f8d9-17af-4766-82b7-9c58403b6446: ui-svg-sprites # ui-svg-sprites
-    d897b42d-3d26-4db5-b105-29c871b31ffb: 'Slide Content' # Slide Content
+    d897b42d-3d26-4db5-b105-29c871b31ffb: 'Limited Content' # Limited Content
     d81788e7-2fa5-4804-876d-57de4924e46f: 'Style Adjustment - Icon' # Style Adjustment - Icon
     d91935cd-7812-422b-9f9f-0317ed62a03b: 'Style Adjustment - Video' # Style Adjustment - Video
     dbe6c627-9b3d-4c00-9b60-25f1964d8a29: 'Background Videos' # Background Videos
@@ -247,6 +249,7 @@ meta:
     e15525d6-6952-4e06-992e-6cf63f053365: Tabs # Tabs
     e5542413-6c20-435f-8598-e457fb2d1a50: 'Page Header Background' # Page Header Background
     ea38d6d4-055b-43b8-b876-2bcab46e11c8: 'Company Info' # Company Info
+    eb38218b-e090-4cec-807f-ab70934109ba: 'First Last' # First Last
     ecb5f699-34c7-440c-bb60-a045e0e28b18: 'Slide Style Adjustments' # Slide Style Adjustments
     ee6d1ced-9ba0-4c31-9f10-d3e6057ae634: 'Style Adjustment - Column' # Style Adjustment - Column
     ee64f702-a8f1-46ee-8dea-79f8ad82e25b: 'Custom Attributes' # Custom Attributes

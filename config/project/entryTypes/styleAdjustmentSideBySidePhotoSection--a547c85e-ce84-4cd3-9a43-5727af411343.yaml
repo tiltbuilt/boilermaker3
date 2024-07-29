@@ -36,8 +36,8 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: 7f182d27-ea6e-4a71-a3f8-5c9d0f147eed # Device Size
-            handle: null
+            fieldUid: b688f2ad-48f2-460c-ad2c-ad3dc97599ca # Layout Size
+            handle: deviceSize
             includeInCards: false
             instructions: null
             label: null
@@ -45,7 +45,7 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 27619374-df1c-4be9-a287-c41df5c4242c
+            uid: 4d3538cc-f49f-4b66-8a6b-9affbc67db15
             userCondition: null
             warning: null
             width: 100
@@ -198,42 +198,6 @@ fieldLayouts:
             width: 100
         name: Type
         uid: b7fee2ec-36e9-4940-af88-e23197c4c01e
-        userCondition: null
-      -
-        elementCondition: null
-        elements:
-          -
-            elementCondition: null
-            fieldUid: 049ec87b-57e9-4b3e-8d53-44cb8874474b # Width
-            handle: photoWidth
-            includeInCards: false
-            instructions: null
-            label: 'Photo Width'
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: d0704ce0-e739-4894-b9ca-a623deee404e
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            elementCondition: null
-            fieldUid: 049ec87b-57e9-4b3e-8d53-44cb8874474b # Width
-            handle: contentWidth
-            includeInCards: false
-            instructions: null
-            label: 'Content Width'
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: d68ada1e-e127-4926-ab3d-4dec5e4230f2
-            userCondition: null
-            warning: null
-            width: 100
-        name: Layout
-        uid: 3b2352ad-190a-4b5a-95ba-61fa0efcc6eb
         userCondition: null
       -
         elementCondition: null

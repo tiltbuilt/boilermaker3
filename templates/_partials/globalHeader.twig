@@ -5,14 +5,14 @@
   <div id="main_menu" class="main_menu">
 	<ul>	  
 	  {% set mainMenuNodes = craft.navigation.nodes().handle('mainMenu').level(1).all() %}
-	  {% include '_boilerplate/_partials/menus/standard' with { 'menuNodes': mainMenuNodes, 'headerLevel': 'div', 'baseClassName': 'main-menu', 'hasDrop': true } %}
+	  {% include '_partials/menus/standard' with { 'menuNodes': mainMenuNodes, 'headerLevel': 'div', 'baseClassName': 'main-menu', 'hasDrop': true } %}
 	</ul>
   </div>
  
   <div id="secondary_menu" class="secondary_menu">
 	<ul>	  
 	  {% set secondaryMenuNodes = craft.navigation.nodes().handle('secondaryMenu').level(1).all() %}
-	  {% include '_boilerplate/_partials/menus/standard' with { 'menuNodes': secondaryMenuNodes, 'headerLevel': 'div', 'baseClassName': 'secondary-menu', 'hasDrop': false } %}
+	  {% include '_partials/menus/standard' with { 'menuNodes': secondaryMenuNodes, 'headerLevel': 'div', 'baseClassName': 'secondary-menu', 'hasDrop': false } %}
 	</ul>
   </div>
   <div class="mm_wrapper__bg"></div>

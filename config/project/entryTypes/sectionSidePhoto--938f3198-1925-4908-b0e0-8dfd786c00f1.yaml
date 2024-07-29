@@ -42,25 +42,70 @@ fieldLayouts:
             instructions: null
             label: 'Main Photo'
             providesThumbs: false
-            required: false
+            required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: f656522e-23f6-47f9-aab5-15280eeb92ed
             userCondition: null
             warning: null
-            width: 100
+            width: 50
           -
             elementCondition: null
-            fieldUid: 732c729f-8dbb-4f01-a463-c163ddc13eab # Left Right
-            handle: photoPosition
+            fieldUid: bb89e543-0de1-4a53-9480-2e7c0e8a69a5 # Aspect Ratio
+            handle: null
             includeInCards: false
-            instructions: null
-            label: 'Photo Position'
+            instructions: 'Sets the aspect ratio of the photo to be used. Select a size close to what the dimensions are in the layout to reduce cropping.'
+            label: null
             providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 9b1d1bae-0023-48e8-8f9c-eddf42589f68
+            uid: ff551936-da17-48b8-b0da-ca1cd8659145
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: 8cc5dd8d-bd39-47c6-8ccd-8e3f4a743300 # Background Image Small
+            handle: photoSm
+            includeInCards: false
+            instructions: 'Select an image to use in smaller layout scenarios if the main photo is not cropping well. You should use an image as close to the dimensions of the space in the layout as possible.'
+            label: 'Photo - Small Layouts'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e41438ce-228b-4d65-a1ce-eadff2cf210a
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: bb89e543-0de1-4a53-9480-2e7c0e8a69a5 # Aspect Ratio
+            handle: aspectRatioSm
+            includeInCards: false
+            instructions: 'Sets the aspect ratio of the photo to be used in small layouts. Select a size close to what the dimensions are in the layout to reduce cropping.'
+            label: 'Aspect Ratio - Small Layouts'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 246ea23e-8d6f-4d0b-82aa-aaa9650b2266
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: 0f72b724-e0a8-4044-a3aa-12255ade6ea1 # Basic Text with Search
+            handle: mainPhotoAlt
+            includeInCards: false
+            instructions: null
+            label: 'Main Photo Alt Text'
+            providesThumbs: false
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 28452f1d-0612-42df-af7c-9707a309091d
             userCondition: null
             warning: null
             width: 100
@@ -100,6 +145,57 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
+          -
+            elementCondition: null
+            fieldUid: eb38218b-e090-4cec-807f-ab70934109ba # First Last
+            handle: contentPositionSmall
+            includeInCards: false
+            instructions: null
+            label: 'Content Position - Small Devices'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c925ca02-b02f-480b-8f3c-f42db0c308ca
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: c17b0219-a22c-422c-a2f1-4e557eed8c4e # Content Column Layout
+            handle: null
+            includeInCards: false
+            instructions: 'By Default the content column and photo column are full width on mobile devices. On tablet and above they default to being half the screenwidth unless you change it here.'
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 0984adaf-97d2-430c-96d1-5c191d74ed0f
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 0fe2ca3f-eb30-4294-96a2-1154bd95e41e # Background Position
+            handle: imgPosition
+            includeInCards: false
+            instructions: 'Positions the focal point of the image to help control cropping more effectively'
+            label: 'Image Position'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 95693e69-f708-4888-83f1-6923c0330e54
+            userCondition: null
+            warning: null
+            width: 100
+        name: Layout
+        uid: 374dc81b-1af9-449d-a6dc-97eeac784474
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
           -
             elementCondition: null
             heading: Color

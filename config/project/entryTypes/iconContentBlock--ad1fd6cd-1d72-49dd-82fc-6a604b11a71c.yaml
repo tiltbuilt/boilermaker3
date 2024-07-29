@@ -80,61 +80,16 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: 0f72b724-e0a8-4044-a3aa-12255ade6ea1 # Basic Text with Search
-            handle: headline
+            fieldUid: d897b42d-3d26-4db5-b105-29c871b31ffb # Limited Content
+            handle: blockContent
             includeInCards: false
             instructions: null
-            label: Headline
+            label: 'Block Content'
             providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 2ec9bea9-7239-4775-99cb-431ef2c978ed
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            elementCondition: null
-            fieldUid: bae3f95d-8506-49cb-891a-048c975b11d4 # Heading Level
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: null
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: aecd069b-c456-4728-a0b1-9692fe7139c0
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            elementCondition: null
-            fieldUid: 0f72b724-e0a8-4044-a3aa-12255ade6ea1 # Basic Text with Search
-            handle: simpleText
-            includeInCards: false
-            instructions: null
-            label: Text
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 48589f4d-af97-41ba-849d-37f63d8bf021
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            elementCondition: null
-            fieldUid: c025e168-6f53-4831-9433-670f03c62851 # Buttons
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: null
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 14123b15-dbc9-479a-9e37-4c70138e383e
+            uid: a4c38ed2-2ce4-4b20-ac43-e238cd4d5c6c
             userCondition: null
             warning: null
             width: 100
@@ -177,108 +132,6 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 74843fe1-a73b-4ddc-a396-0618fbc7c07a
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            elementCondition: null
-            heading: Headline
-            type: craft\fieldlayoutelements\Heading
-            uid: a4e2b1f1-208b-4421-9d74-c1c566cccbac
-            userCondition: null
-          -
-            elementCondition: null
-            fieldUid: aeeead9c-f591-4d95-a990-f8bea54fb0ef # Heading Style
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: null
-            providesThumbs: false
-            required: true
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: a80b79ee-0a12-42e0-8a3f-9bfa5c3a68e2
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            elementCondition: null
-            fieldUid: 487ec441-2218-43e8-8a96-652a0649e437 # Color Picker
-            handle: headlineColor
-            includeInCards: false
-            instructions: 'This field overrides the default headline color for this color scheme'
-            label: 'Headline Color'
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: ef8085e4-8ee8-4a9d-83bd-b634f8f9e216
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            elementCondition: null
-            heading: Buttons
-            type: craft\fieldlayoutelements\Heading
-            uid: 7e161cea-53ed-46a4-b6fb-6bac229049cc
-            userCondition: null
-          -
-            elementCondition: null
-            fieldUid: 47acc143-9347-4976-bd50-02778ffeabf1 # Button Styles
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: null
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 2a8bc3bf-1c48-4ea5-bcda-bfec9fc080b1
-            userCondition: null
-            warning: null
-            width: 50
-          -
-            elementCondition: null
-            fieldUid: adca13f3-4ae5-49c5-83c4-cab3dd9f5ece # Button Size
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: null
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 82deed9d-feda-4404-9a19-95e4ae294849
-            userCondition: null
-            warning: null
-            width: 50
-          -
-            elementCondition: null
-            fieldUid: a2da31ae-7341-4dd1-b245-5ee55d44cbc2 # Yes No
-            handle: fullWidthPhone
-            includeInCards: false
-            instructions: null
-            label: 'Full Width on Phone'
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 49de5aa3-6d46-438d-b238-6ece23a4a282
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            elementCondition: null
-            fieldUid: 487ec441-2218-43e8-8a96-652a0649e437 # Color Picker
-            handle: btnColor
-            includeInCards: false
-            instructions: 'This field overrides the default button color for this color scheme'
-            label: 'Button Color'
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 7d0a40eb-584c-403e-a173-9108d4791f14
             userCondition: null
             warning: null
             width: 100

@@ -53,12 +53,11 @@
   {%- endif -%}
   
   
-
   <li{% if nodeClasses|length %} class="{{ nodeClasses|join(' ') }}"{% endif %}>	
 	{% if node.level == 1 and headingLevel != null %}
 		<{{- headingLevel -}}>
 	{% endif %}
-	<a href="{{ node.url }}" title="{{ node.title }}"{% if node.newWindow %} target="_blank"{% endif %}>
+	<a href="{{ node.url }}" title="{{ node.title }}"{% if node.newWindow %} target="_blank"{% endif %} {% for attribute in node.customAttributes %}{{ attribute.attribute }}="{{ attribute.value }}"{% endfor %}>
 	  <span>{{ node.title }}</span>
 	</a>
 	{% if node.level == 1 and headingLevel != null %}
