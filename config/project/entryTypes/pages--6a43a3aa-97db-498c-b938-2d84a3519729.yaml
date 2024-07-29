@@ -348,7 +348,22 @@ fieldLayouts:
             uid: c8ce72f5-e48a-4cd6-87c6-ab4799a76e6b
             userCondition: null
             warning: null
-            width: 100
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: bb89e543-0de1-4a53-9480-2e7c0e8a69a5 # Aspect Ratio
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: 'Header Image Aspect Ratio'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 640aeb6e-5b60-4b15-b418-734f037a6447
+            userCondition: null
+            warning: null
+            width: 50
           -
             elementCondition: null
             fieldUid: 8cc5dd8d-bd39-47c6-8ccd-8e3f4a743300 # Background Image Small
@@ -361,6 +376,36 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 176b6dfd-a39a-4151-9b41-2be4bfc04539
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: bb89e543-0de1-4a53-9480-2e7c0e8a69a5 # Aspect Ratio
+            handle: aspectRatioSm
+            includeInCards: false
+            instructions: null
+            label: 'Header Image Aspect Ratio -Small Layouts'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 8d3f1c24-3f0f-440e-af92-26c372f55ca7
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: 0fe2ca3f-eb30-4294-96a2-1154bd95e41e # Background Position
+            handle: imgPosition
+            includeInCards: false
+            instructions: 'Use this field to adjust the placement of the header image within the header space'
+            label: 'Header Image Position'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a07d1411-b1de-4f62-b067-54f11452d89c
             userCondition: null
             warning: null
             width: 100
@@ -534,6 +579,6 @@ showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
-titleFormat: null
+titleFormat: ''
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
