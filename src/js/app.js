@@ -68,8 +68,7 @@ document.addEventListener('alpine:init', () => {
             gsap.from(animItem, { 			
               duration: duration * 1.5,
               y: 50,			
-              opacity: 0,
-              force3D: true,			
+              opacity: 0,              			
               // Note: Easing Pack required for easing
               ease: "expo.out",
               onComplete: this.postRevealFunction,              	
@@ -84,8 +83,7 @@ document.addEventListener('alpine:init', () => {
         const animElem = this.$refs.animate;     
         gsap.from(animElem, {
           duration: duration * 1.5,
-          y: 50,
-          force3D: true,
+          y: 50,          
           opacity: 0,			
           // Note: Easing Pack required for easing
           ease: "expo.out",
@@ -130,8 +128,7 @@ document.addEventListener('alpine:init', () => {
           animCast.forEach(animItem => {              
             gsap.from(animItem, { 			
               duration: duration * 1.5,              			
-              opacity: 0,
-              force3D: true,			
+              opacity: 0,              			
               // Note: Easing Pack required for easing
               ease: "expo.out",
               onComplete: this.postRevealFunction,              	
