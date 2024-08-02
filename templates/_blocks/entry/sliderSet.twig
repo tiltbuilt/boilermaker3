@@ -27,15 +27,12 @@
 {% set blockClass = entry.type.handle|kebab %}
 
 {# Get classes for element animation settings #}
-{# animation classes #}
-{% set animClass = '' %}
-{% if animSetting and 'section' in entry.owner.type.handle %}
-	{% set animClass = animSetting %}
-	{% set sliderSetClassList = sliderSetClassList|merge([animClass]) %}
+{% if animSetting.animate and animSetting.animateContent and animSetting.animateLevel %}
+	{% set animate = true %}	
 {% else %}
-	{% set animClass = null %}		
+	{% set animate = false %}		
 {% endif %}
-	
+
 {# Set color classes #}
 {% set colorClasses = [] %}
 {% if entry.colorScheme != null %}
@@ -63,7 +60,7 @@
 {# retrieve slide content #}
 {% set slides = entry.slides.eagerly().all() %}
 
-<div id="{{blockId}}" class="@container {{blockClass}} {{ gMacros.classesOut(adjustments, 'Display') -}} {{- gMacros.classesOut(adjustments, 'Margins', true) -}} {{- sliderSetClassList|join(' ') }} {{ entry.customClasses }}" {{- gMacros.attributesOut(entry.customAttributes) -}} 
+<div id="{{blockId}}" class="@container {% if animate %}animate{% endif %} {{blockClass}} {{ gMacros.classesOut(adjustments, 'Display') -}} {{- gMacros.classesOut(adjustments, 'Margins', true) -}} {{- sliderSetClassList|join(' ') }} {{ entry.customClasses }}" {{- gMacros.attributesOut(entry.customAttributes) }} 
 
 {% if entry.slides|length > 1 %}
 x-data="{swiper: null}"
@@ -99,8 +96,7 @@ x-init="swiper = new Swiper($refs.container, {
 		}
 	{% endif %}  
 	});"
-{% endif %}
->
+{% endif %}>
 
 	<div class="swiper-container" {% if entry.slides|length > 1 %}x-ref="container"{% endif %} id="{{ blockId  ~ '-swiper'}}">
 		<div class="swiper-wrapper">			

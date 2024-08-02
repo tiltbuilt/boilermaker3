@@ -25,7 +25,7 @@
 			{% set outerTag = 'div' %}
 		{% endif %}
 		
-		<{{outerTag}} {% if listItem.url|length %}<a href="{{ listItem.url }}" {% if listItem.newTab %}target="_blank"{% endif %} {% endif %} class="{{ cardClasses|join(' ') }}">			
+		<{{outerTag}} {% if listItem.url != null and listItem.url|length %}href="{{ listItem.url }}" {% if listItem.newTab %}target="_blank"{% endif %} {% endif %} class="{{ cardClasses|join(' ') }}">			
 			<div class="repeater-card-inner">
 				<div class="repeater-card-content">
 					<{{ headingLvl}} class="repeater-list-card-header">					

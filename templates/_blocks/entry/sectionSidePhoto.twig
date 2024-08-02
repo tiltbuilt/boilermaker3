@@ -106,17 +106,6 @@
 {# Set block type handle as class name for styling #}
 {% set blockClass = entry.type.handle|kebab %}
 
-{# Get classes for element animation settings #}
-{% set animClass = null %}
-{% if entry.revealAnimation|length %}
-	{% if entry.animateContent %}		
-		{% set animClass = entry.revealAnimation.value %}		
-	{% else %}		
-		{% set animClass = null %}
-		{% set sectionClassList = sectionClassList|merge([entry.revealAnimation]) %}		
-	{% endif %}	
-{% endif %}
-
 {# Set color classes #}
 {% set colorClasses = [] %}
 {% set colorScheme = entry.colorScheme.class %}
@@ -159,21 +148,26 @@
 	{% set classSettings = classSettings|merge({(key): (newSettings)}) %}
 {% endfor %}
 
-<section id="{{blockId}}" class="{{- blockClass }} @container {{ gMacros.classesOut(adjustments, 'Display') -}} {{- gMacros.classesOut(adjustments, 'Margins', true) -}} {{- sectionClassList|join(' ') }} {{ entry.customClasses }}" {{- gMacros.attributesOut(entry.customAttributes) -}}>
+<section id="{{blockId}}" class="{{- blockClass }} @container {{ gMacros.classesOut(adjustments, 'Display') -}} {{- gMacros.classesOut(adjustments, 'Margins', true) -}} {{- sectionClassList|join(' ') }} {{ entry.customClasses }}" {{- gMacros.attributesOut(entry.customAttributes) }}
+{% if entry.animate %}
+	x-data="{{entry.type.handle}}({{entry.animateContent ? 'true': 'false'}},{{entry.staggerAnimations ? 'true': 'false'}})"	
+	x-ref="{% if entry.animateContent %}animparent{% else %}animate{% endif %}"
+{% endif %}
+>
 	<div class="side-section-layout {{ entry.fullscreen ? 'fullscreen' -}}">
 		
 		<div class="side-photo-content {{ _self.contentClasses(classSettings) -}}">
 			<div class="side-photo-content-wrapper {#{% if entry.fullscreen %}w-full{% else %}{{ _self.wrapperClasses(classSettings) }}{% endif %} #} {{ gMacros.classesOut(adjustments, 'Type') }} {{ gMacros.classesOut(adjustments, 'Padding', true) -}}">
 				{% for chunk in entry.elementContent %}
 					{% if chunk.type == 'markup' %}
-						{% if animClass %}
-							{{chunk|raw|retconAttr(['body > p', 'body > ol', 'body > ul'], { 'class' : animClass }, false)}}
+						{% if entry.animate and entry.animateContent %}
+							{{chunk|raw|retconAttr(['body > p', 'body > ol', 'body > ul'], { 'class' : 'animate' }, false)}}
 						{% else %}
 							{{chunk|raw}}
 						{% endif %}
 					{% else %}
 						{{ chunk.entry.render({
-							'animSetting': animClass,
+							'animSetting': {'animate': entry.animate, 'animateContent': entry.animateContent, 'animLevel': true},
 							'colorScheme': colorScheme
 						}) }}
 					{% endif %}
@@ -181,14 +175,22 @@
 			</div>
 		</div>
 		
-		<div class="side-photo-img {{ _self.imgClasses(classSettings) -}}">
+		<div class="side-photo-img {% if entry.animate and entry.animateContent %}animate{% endif %} {{ _self.imgClasses(classSettings) -}}">
 			{% set mainPhoto = entry.mainPhoto.eagerly().one() %}
 			{% set smPhoto = entry.photoSm.eagerly().one() %}
 			{% if smPhoto == null %}			
 				{% set smPhoto = mainPhoto %}
 			{% endif %}
-			{% set smXForm = 'image-' ~ entry.aspectRatioSm %}
-			{% set xForm = 'image-' ~  entry.aspectRatio %}
+			{% if entry.aspectRatioSm  != '' and entry.aspectRatioSm != 'auto' %} 
+				{%- set smXForm = 'image-' ~ entry.aspectRatioSm	%}
+			{% else %}
+				{%- set smXForm = 'contentImage' %}
+			{% endif %}
+			{% if entry.aspectRatio  != '' and entry.aspectRatio != 'auto' %} 
+				{%- set xForm = 'image-' ~ entry.aspectRatio	%}
+			{% else %}
+				{%- set xForm = 'contentImage' %}
+			{% endif %}			
 			{% if craft.imager.serverSupportsWebp() %}
 				{%- set smXForm = smXForm ~ '-webp' %}
 				{%- set xForm = xForm ~ '-webp' %}

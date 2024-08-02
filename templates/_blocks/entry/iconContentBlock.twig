@@ -23,10 +23,11 @@
 {# Set block type handle as class name for styling #}
 {% set blockClass = 'icon-block' %}
 
-{# animation classes #}
-{% set animClass = '' %}
-{% if animSetting and 'section' in entry.owner.type.handle %}
-	{% set animClass = animSetting %}
+{# Get classes for element animation settings #}
+{% if animSetting.animate and animSetting.animateContent and animSetting.animLevel %}
+	{% set animate = true %}	
+{% else %}
+	{% set animate = false %}		
 {% endif %}
 
 {# Retrieve styling adjustments #}
@@ -77,7 +78,7 @@
 {% endfor %}
 
 
-<div id="{{blockId}}" class="{{ blockClass }} @container/component {{ colorScheme }} {{animClass}} {{- gMacros.classesOut(adjustments, 'Display') -}} {{- gMacros.classesOut(adjustments, 'Margins', true) -}} {{ entry.customClasses }}" {{- gMacros.attributesOut(entry.customAttributes) -}}>
+<div id="{{blockId}}" class="{{ blockClass }} @container/component {{ colorScheme }} {% if animate %}animate{% endif %} {{ gMacros.classesOut(adjustments, 'Display') -}} {{- gMacros.classesOut(adjustments, 'Margins', true) -}} {{ entry.customClasses }}" {{- gMacros.attributesOut(entry.customAttributes) }} >
 	<div class="{{layoutClass}}">
 		<div class="{{- iconClasses|join(' ') }}">
 			{% if  entry.icon.type == 'svg' %}
@@ -96,7 +97,7 @@
 						{{chunk|raw}}					
 					{% else %}
 						{{ chunk.entry.render({
-							'animSetting': null,
+							'animSetting': animSetting,
 							'colorScheme': colorScheme,							
 						}) }}
 					{% endif %}

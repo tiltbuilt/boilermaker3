@@ -28,14 +28,12 @@
 {% set blockClass = "form-block" %}
 
 {# Get classes for element animation settings #}
-{# animation classes #}
-{% set animClass = '' %}
-{% if animSetting and 'section' in entry.owner.type.handle %}
-	{% set animClass = animSetting %}
-	{% set formClassList =formClassList|merge([animClass]) %}
+{% if animSetting.animate and animSetting.animateContent and animSetting.animLevel %}
+	{% set animate = true %}	
 {% else %}
-	{% set animClass = null %}		
+	{% set animate = false %}		
 {% endif %}
+
 	
 {# Set color classes #}
 {% set colorClasses = [] %}
@@ -58,7 +56,7 @@
 {# Retrieve styling adjustments #}
 {% set adjustments = entry.formStyleAdjustments.eagerly().all() %}
 
-<div id="{{blockId}}" class="{{- blockClass -}} {{- gMacros.classesOut(adjustments, 'Display') -}} {{- gMacros.classesOut(adjustments, 'Margins', true) -}} {{- formClassList|join(' ') }} {{ entry.customClasses }}" {{- gMacros.attributesOut(entry.customAttributes) -}}>
+<div id="{{blockId}}" class="{{- blockClass }} {% if animate %}animate{% endif %} {{ gMacros.classesOut(adjustments, 'Display') -}} {{- gMacros.classesOut(adjustments, 'Margins', true) -}} {{- formClassList|join(' ') }} {{ entry.customClasses }}" {{- gMacros.attributesOut(entry.customAttributes) }}>
 	{% set form = entry.formToDisplay.eagerly().one() %}	
 	{{ craft.formie.renderForm(form, {
 		themeConfig: {

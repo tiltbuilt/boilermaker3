@@ -26,7 +26,7 @@
 		{% endif %}
 		
 		<div class="{{ cardClasses|join(' ') }}">			
-			<{{outerTag}} {% if listItem.url|length %}href="{{ listItem.url }}" {% if listItem.newTab %}target="_blank"{% endif %} {% endif %} class="repeater-card-inner">			
+			<{{outerTag}} {% if listItem.url != null and listItem.url|length %}href="{{ listItem.url }}" {% if listItem.newTab %}target="_blank"{% endif %} {% endif %} class="repeater-card-inner">			
 				<div class="repeater-card-sm-img w-full">					
 					{% set image = listItem.image[0] %}
 					{% set mobileXForm = 'image-' ~ gSettings.thumbAspectSm %}

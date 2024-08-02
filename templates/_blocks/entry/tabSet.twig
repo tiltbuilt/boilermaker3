@@ -27,13 +27,10 @@
 {% set blockClass = entry.type.handle|kebab %}
 
 {# Get classes for element animation settings #}
-{# animation classes #}
-{% set animClass = '' %}
-{% if animSetting and 'section' in entry.owner.type.handle %}
-	{% set animClass = animSetting %}
-	{% set tabSetClassList = tabSetClassList|merge([animClass]) %}	
+{% if animSetting.animate and animSetting.animateContent and animSetting.animLevel %}
+	{% set animate = true %}	
 {% else %}
-	{% set animClass = null %}		
+	{% set animate = false %}		
 {% endif %}
 
 {# Set color classes for set #}
@@ -69,8 +66,7 @@
   }"
   x-id="['tab']"
   id="{{blockId}}"
-  class="{{- blockClass -}} {{- gMacros.classesOut(adjustments, 'Display') -}} {{- gMacros.classesOut(adjustments, 'Margins', true) -}} {{- tabSetClassList|join(' ') }} {{ entry.customClasses }}" {{- gMacros.attributesOut(entry.customAttributes) -}}"
->
+  class="{{- blockClass }} {% if animate %}animate{% endif %} {{ gMacros.classesOut(adjustments, 'Display') -}} {{- gMacros.classesOut(adjustments, 'Margins', true) -}} {{- tabSetClassList|join(' ') }} {{ entry.customClasses }}" {{- gMacros.attributesOut(entry.customAttributes) }}" >
   <!-- Tab List -->
   <ul
 	x-ref="tablist"

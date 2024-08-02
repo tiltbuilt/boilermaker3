@@ -27,13 +27,10 @@
 {% set blockClass = entry.type.handle|kebab %}
 
 {# Get classes for element animation settings #}
-{# animation classes #}
-{% set animClass = '' %}
-{% if animSetting and 'section' in entry.owner.type.handle %}
-	{% set animClass = animSetting %}
-	{% set repeaterClassList = repeaterClassList|merge([animClass]) %}
+{% if animSetting.animate and animSetting.animateContent and animSetting.animLevel %}
+	{% set animate = true %}	
 {% else %}
-	{% set animClass = null %}		
+	{% set animate = false %}		
 {% endif %}
 	
 {# Set color classes #}
@@ -246,25 +243,25 @@
 		{% switch displayType %}								
 			
 			{% case 'textList' %}
-				{% include ['_partials/repeaters/' ~ displayType] with {'listContent': listContent, 'headingLvl': entry.headingLevel, 'colorScheme': colorScheme, 'listStyle': entry.textListStyle, 'multiColSettings': entry.multiColumnSettings, 'showDate': showDate, 'showExcerpt': entry.showExcerpt} %}
+				{% include ['_partials/repeaters/' ~ displayType] with {'listContent': listContent, 'headingLvl': entry.headingLevel, 'colorScheme': colorScheme, 'listStyle': entry.textListStyle, 'multiColSettings': entry.multiColumnSettings, 'showDate': showDate, 'showExcerpt': entry.showExcerpt, 'animate': animate} %}
 				
 			{% case 'buttonList' %}
-				{% include ['_partials/repeaters/' ~ displayType] with {'listContent': listContent, 'headingLvl': entry.headingLevel, 'colorScheme': colorScheme, 'btnStyles': entry.btnStyles, 'btnSize': entry.btnSize, 'fullWidthSmall': entry.fullWidthSmall} %}
+				{% include ['_partials/repeaters/' ~ displayType] with {'listContent': listContent, 'headingLvl': entry.headingLevel, 'colorScheme': colorScheme, 'btnStyles': entry.btnStyles, 'btnSize': entry.btnSize, 'fullWidthSmall': entry.fullWidthSmall, 'animate': animate} %}
 				
 			{% case 'cardList' %}
-				{% include ['_partials/repeaters/' ~ displayType] with {'listContent': listContent, 'headingLvl': entry.headingLevel, 'colorScheme': colorScheme, 'showDate': showDate, 'showExcerpt': entry.showExcerpt, 'cardRowSizes': cardRowSizes} %}
+				{% include ['_partials/repeaters/' ~ displayType] with {'listContent': listContent, 'headingLvl': entry.headingLevel, 'colorScheme': colorScheme, 'showDate': showDate, 'showExcerpt': entry.showExcerpt, 'cardRowSizes': cardRowSizes, 'animate': animate} %}
 				
 			{% case 'cardListSideImage' %}	
-				{% include ['_partials/repeaters/' ~ displayType] with {'listContent': listContent, 'headingLvl': entry.headingLevel, 'colorScheme': colorScheme, 'showDate': showDate, 'showExcerpt': entry.showExcerpt, 'cardRowSizes': cardRowSizes} %}
+				{% include ['_partials/repeaters/' ~ displayType] with {'listContent': listContent, 'headingLvl': entry.headingLevel, 'colorScheme': colorScheme, 'showDate': showDate, 'showExcerpt': entry.showExcerpt, 'cardRowSizes': cardRowSizes, 'animate': animate} %}
 				
 			{% case 'cardListTopImage' %}
-				{% include ['_partials/repeaters/' ~ displayType] with {'listContent': listContent, 'headingLvl': entry.headingLevel, 'colorScheme': colorScheme, 'showDate': showDate, 'showExcerpt': entry.showExcerpt, 'cardRowSizes': cardRowSizes} %}
+				{% include ['_partials/repeaters/' ~ displayType] with {'listContent': listContent, 'headingLvl': entry.headingLevel, 'colorScheme': colorScheme, 'showDate': showDate, 'showExcerpt': entry.showExcerpt, 'cardRowSizes': cardRowSizes, 'animate': animate} %}
 				
 			{% case 'largeSlider' %}
-				{% include ['_partials/repeaters/' ~ displayType] with {'listContent': listContent, 'headingLvl': entry.headingLevel, 'colorScheme': colorScheme, 'sliderButtons': entry.buttons, 'sliderDots': entry.dots, 'sliderTiming': entry.slideTransitionDelay, 'sliderEffect': entry.slideEffect, 'sliderAutoPlay': entry.autoplay, 'sliderSizeSm': entry.sliderSizeSm, 'sliderSizeLg':entry.sliderSizeLg, 'showDate': showDate, 'showExcerpt': entry.showExcerpt, 'blockId': blockId, 'slideImgAspectSm': slideImgAspectSm, 'slideImgAspectLg': slideImgAspectLg} %}
+				{% include ['_partials/repeaters/' ~ displayType] with {'listContent': listContent, 'headingLvl': entry.headingLevel, 'colorScheme': colorScheme, 'sliderButtons': entry.buttons, 'sliderDots': entry.dots, 'sliderTiming': entry.slideTransitionDelay, 'sliderEffect': entry.slideEffect, 'sliderAutoPlay': entry.autoplay, 'sliderSizeSm': entry.sliderSizeSm, 'sliderSizeLg':entry.sliderSizeLg, 'showDate': showDate, 'showExcerpt': entry.showExcerpt, 'blockId': blockId, 'slideImgAspectSm': slideImgAspectSm, 'slideImgAspectLg': slideImgAspectLg, 'animate': animate} %}
 				
 			{% case 'multiCardSlider' %}
-				{% include ['_partials/repeaters/' ~ displayType] with {'listContent': listContent, 'headingLvl': entry.headingLevel, 'colorScheme': colorScheme, 'sliderButtons': entry.buttons, 'sliderDots': entry.dots, 'sliderTiming': entry.slideTransitionDelay, 'sliderEffect': entry.slideEffect, 'sliderAutoPlay': entry.autoplay, 'showDate': showDate, 'showExcerpt': entry.showExcerpt, 'blockId': blockId, 'cardSliderSizes': cardSliderSizes} %}
+				{% include ['_partials/repeaters/' ~ displayType] with {'listContent': listContent, 'headingLvl': entry.headingLevel, 'colorScheme': colorScheme, 'sliderButtons': entry.buttons, 'sliderDots': entry.dots, 'sliderTiming': entry.slideTransitionDelay, 'sliderEffect': entry.slideEffect, 'sliderAutoPlay': entry.autoplay, 'showDate': showDate, 'showExcerpt': entry.showExcerpt, 'blockId': blockId, 'cardSliderSizes': cardSliderSizes, 'animate': animate} %}
 				
 		{% endswitch %}
 		

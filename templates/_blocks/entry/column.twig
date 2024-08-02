@@ -27,14 +27,11 @@
 {% set blockClass = entry.type.handle|kebab %}
 
 {# Get classes for element animation settings #}
-{# animation classes #}
-{% set animClass = '' %}
-{% if animSetting %}
-	{% set animClass = animSetting %}	
+{% if animSetting.animate and animSetting.animateContent and animSetting.animLevel %}
+	{% set animate = true %}	
 {% else %}
-	{% set animClass = null %}		
+	{% set animate = false %}		
 {% endif %}
-
 
 {# Set color classes #}
 {% set colorClasses = [] %}
@@ -74,14 +71,14 @@
 	<div class="inner column-inner {{- gMacros.classesOut(adjustments, 'Type') -}} {{- gMacros.classesOut(adjustments, 'Padding', true) -}}">
 		{% for chunk in entry.elementContent %}
 			{% if chunk.type == 'markup' %}
-				{% if animClass %}
-					{{chunk|raw|retconAttr(['body > p', 'body > ol', 'body > ul'], { 'class' : animClass }, false)}}
+				{% if animate %}
+					{{chunk|raw|retconAttr(['body > p', 'body > ol', 'body > ul'], { 'class' : 'animate' }, false)}}
 				{% else %}
 					{{chunk|raw}}
 				{% endif %}
 			{% else %}
 				{{ chunk.entry.render({
-					'animSetting': animClass,
+					'animSetting': animSetting,
 					'colorScheme': colorScheme
 				}) }}
 			{% endif %}

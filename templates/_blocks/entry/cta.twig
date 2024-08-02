@@ -27,13 +27,10 @@
 {% set blockClass = entry.type.handle|kebab %}
 
 {# Get classes for element animation settings #}
-{# animation classes #}
-{% set animClass = '' %}
-{% if animSetting and 'section' in entry.owner.type.handle %}
-	{% set animClass = animSetting %}
-	{% set ctaClassList = ctaClassList|merge([animClass]) %}
+{% if animSetting.animate and animSetting.animateContent and animSetting.animLevel %}
+	{% set animate = true %}	
 {% else %}
-	{% set animClass = null %}		
+	{% set animate = false %}		
 {% endif %}
 	
 {# Set color classes #}
@@ -106,7 +103,7 @@
 {# Retrieve styling adjustments #}
 {% set adjustments = entry.ctaStyleAdjustments.eagerly().with('bgImg').all() %}
 
-<div id="{{blockId}}" class="{{- blockClass }} @container/component {{ gMacros.classesOut(adjustments, 'Display') -}} {{- gMacros.classesOut(adjustments, 'Margins', true) -}} {{- ctaClassList|join(' ') }} {{ entry.customClasses }}" {{- gMacros.attributesOut(entry.customAttributes) -}}>
+<div id="{{blockId}}" class="{{- blockClass }} @container/component {% if animate %}animate{% endif %} {{ gMacros.classesOut(adjustments, 'Display') -}} {{- gMacros.classesOut(adjustments, 'Margins', true) -}} {{- ctaClassList|join(' ') }} {{ entry.customClasses }}" {{- gMacros.attributesOut(entry.customAttributes) }}>
 	<div class="inner cta-inner">
 		<div class="cta-content w-full {{ contentClasses|join(' ') }}  {{ gMacros.classesOut(adjustments, 'Type') }} {{ gMacros.classesOut(adjustments, 'Padding', true) -}}">
 			<div>
@@ -115,7 +112,7 @@
 						{{chunk|raw}}
 					{% else %}
 						{{ chunk.entry.render({
-							'animSetting': animClass,
+							'animSetting': {'animate': false, 'animateContent': false, 'animLevel': false},
 							'colorScheme': colorScheme
 						}) }}
 					{% endif %}

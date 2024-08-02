@@ -26,7 +26,7 @@
 		{% endif %}
 		
 		<div class="{{ cardClasses|join(' ') }}">			
-			<{{outerTag}} {% if listItem.url|length %}<a href="{{ listItem.url }}" {% if listItem.newTab %}target="_blank"{% endif %} {% endif %} class="repeater-card-inner">				
+			<{{outerTag}} {% if listItem.url != null and listItem.url|length %}href="{{ listItem.url }}" {% if listItem.newTab %}target="_blank"{% endif %} {% endif %} class="repeater-card-inner">				
 				<div class="w-full h-full @sm/list:flex @sm/list:flex-nowrap @sm/list:justify-center @sm/list:items-center">
 					<div class="repeater-card-sm-img w-full @sm/list:h-full relative @sm/list:w-1/3 @lg/list:w-1/4">
 						

@@ -61,10 +61,11 @@
 {# Set block type handle as class name for styling #}
 {% set blockClass = entry.type.handle|kebab %}
 
-{# animation classes #}
-{% set animClass = '' %}
-{% if animSetting and 'section' in entry.owner.type.handle %}
-	{% set animClass = animSetting %}
+{# Get classes for element animation settings #}
+{% if animSetting.animate and animSetting.animateContent and animSetting.animLevel %}
+	{% set animate = true %}	
+{% else %}
+	{% set animate = false %}		
 {% endif %}
 
 {# Set color class #}
@@ -84,7 +85,7 @@
 {# Retrieve styling adjustments #}
 {% set adjustments = entry.quoteStyleAdjustments.eagerly().all() %}
 
-<blockquote id="{{blockId}}" class="{{ blockClass }} {{ colorClass }} {{animClass}} {{- gMacros.classesOut(adjustments, 'Display') -}} {{- gMacros.classesOut(adjustments, 'Margins', true) -}} {{- gMacros.classesOut(adjustments, 'Type') -}} {{ entry.customClasses }}" {{- gMacros.attributesOut(entry.customAttributes) -}}>
+<blockquote id="{{blockId}}" class="{{ blockClass }} {% if animate %}animate{% endif %} {{ colorClass }} {{animClass}} {{- gMacros.classesOut(adjustments, 'Display') -}} {{- gMacros.classesOut(adjustments, 'Margins', true) -}} {{- gMacros.classesOut(adjustments, 'Type') -}} {{ entry.customClasses }}" {{- gMacros.attributesOut(entry.customAttributes) }} >
 	{{entry.quoteText}}
 	<span id="{{blockId}}-credit" class="{{- _self.creditClasses(adjustments, creditColorClass) -}}">
 		{{entry.quoteCredit}}
