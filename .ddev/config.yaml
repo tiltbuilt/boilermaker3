@@ -11,9 +11,9 @@ database:
     version: "8.0"
 hooks:
     post-start:
-        - exec: npm install
-        - exec: npm run build
         - exec: composer install
+        - exec: npm install
+        - exec: npm run build       
     pre-stop:
         - exec: php craft db/backup
 use_dns_when_possible: true
