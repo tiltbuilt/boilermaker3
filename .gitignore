@@ -34,7 +34,6 @@ prepros-6.config
 /node_modules/*
 /vendor
 /web/dist
-package-lock.json
 
 
 # local env files
@@ -49,3 +48,4 @@ yarn-error.log*
 
 # Other files
 .npmrc
+package-lock.json
