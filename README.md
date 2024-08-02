@@ -87,6 +87,11 @@ A Makefile has been included to provide a unified CLI for common development com
 - `make build` - Builds all front-end assets.
 - `make pull` - Pull remote db & assets (requires setting up [craft-scripts](https://github.com/nystudio107/craft-scripts/)
 
+## Craft Scripts
+
+
+
+
 ## Craft CMS Plugins
 
 1. [Blitz](https://plugins.craftcms.com/blitz)
