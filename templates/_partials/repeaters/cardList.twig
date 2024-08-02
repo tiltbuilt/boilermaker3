@@ -11,6 +11,10 @@
 
 {% set cardClasses = ['repeater-card', 'w-full'] %}
 
+{% if animate %}
+	{% set cardClasses = cardClasses|merge(["animate"]) %}
+{% endif %}
+
 {% if cardRowSizes != null and cardRowSizes|length %}
 	{% for rowSize in cardRowSizes %}
 		{% set cardClasses = cardClasses|merge([rowSize.layoutSize ~ '/list:w-1/' ~ rowSize.numberOfCards]) %}

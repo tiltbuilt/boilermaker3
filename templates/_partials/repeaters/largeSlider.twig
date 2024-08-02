@@ -13,7 +13,7 @@
 {# Load in global macros for use across all Twig templates #}
 {% import '_macros/globalMacros' as gMacros %}
 
-<div id="{{blockId}}" class="slider-set repeater-slider {{colorScheme}}"
+<div id="{{blockId}}" class="slider-set repeater-slider {{colorScheme}} {% if animate %}animate{% endif %}"
 {% if listContent|length > 1 %}
 x-data="{swiper: null}"
 x-init="swiper = new Swiper($refs.container, {
@@ -49,7 +49,6 @@ x-init="swiper = new Swiper($refs.container, {
 	{% endif %}  
 	});"
 {% endif %}
-{% if animate %}x-ref="animate"{% endif %}
 >
 	<div class="relative">
 	<div class="swiper-container" {% if listContent|length > 1 %}x-ref="container"{% endif %} id="{{ blockId  ~ '-swiper'}}">
