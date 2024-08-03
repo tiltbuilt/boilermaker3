@@ -1,4 +1,4 @@
-dateModified: 1722532847
+dateModified: 1722661381
 elementSources:
   craft\elements\Entry:
     -
@@ -44,9 +44,14 @@ elementSources:
       heading: ''
       type: heading
 email:
-  fromEmail: brian@tiltthis.com
-  fromName: 'Boilermaker 3'
-  transportType: craft\mail\transportadapters\Sendmail
+  fromEmail: $SITE_EMAIL
+  fromName: $SITE_NAME
+  replyToEmail: $SITE_EMAIL
+  template: ''
+  transportSettings:
+    messageStream: $PM_MESSAGE_STREAM
+    token: $PM_API_TOKEN
+  transportType: craftcms\postmark\Adapter
 fs:
   backgroundVideos:
     hasUrls: true
@@ -270,9 +275,94 @@ meta:
 plugins:
   blitz:
     edition: standard
-    enabled: true
-    licenseKey: 73LBUYCONIVXYRPN2X8H1T3P
+    enabled: true    
     schemaVersion: 5.5.0
+    settings:
+      apiKey: ''
+      cacheControlHeader: 'public, max-age=31536000'
+      cacheControlHeaderExpired: 'public, max-age=5'
+      cacheDuration: null
+      cacheGeneratorSettings:
+        __assoc__:
+          -
+            - concurrency
+            - '3'
+      cacheGeneratorType: putyourlightson\blitz\drivers\generators\LocalGenerator
+      cacheNonHtmlResponses: false
+      cachePurgerType: putyourlightson\blitz\drivers\purgers\DummyPurger
+      cacheStorageSettings:
+        __assoc__:
+          -
+            - folderPath
+            - '@webroot/cache/blitz'
+          -
+            - compressCachedValues
+            - '1'
+      cacheStorageType: putyourlightson\blitz\drivers\storage\FileStorage
+      cachingEnabled: false
+      debug: true
+      defaultCacheControlHeader: no-store
+      deployerType: putyourlightson\blitz\drivers\deployers\DummyDeployer
+      detectSsiEnabled: true
+      driverJobBatchSize: 100
+      driverJobPriority: 100
+      esiEnabled: false
+      excludedQueryStringParams:
+        -
+          __assoc__:
+            -
+              - queryStringParam
+              - gclid
+        -
+          __assoc__:
+            -
+              - queryStringParam
+              - fbclid
+      excludedUriPatterns:
+        -
+          __assoc__:
+            -
+              - uriPattern
+              - '/resources/*'
+      generatePagesWithQueryStringParams: true
+      hintsEnabled: true
+      includedQueryStringParams:
+        -
+          __assoc__:
+            -
+              - queryStringParam
+              - '.*'
+      includedUriPatterns:
+        -
+          __assoc__:
+            -
+              - uriPattern
+              - '.*'
+      injectScriptEvent: DOMContentLoaded
+      injectScriptPosition: 3
+      integrations:
+        - putyourlightson\blitz\drivers\integrations\CommerceIntegration
+        - putyourlightson\blitz\drivers\integrations\FeedMeIntegration
+        - putyourlightson\blitz\drivers\integrations\SeomaticIntegration
+      maxRetryAttempts: 10
+      maxUriLength: 255
+      mutexTimeout: 1
+      outputComments: true
+      purgeAssetImagesWhenChanged: true
+      queryStringCaching: 0
+      queueJobTtr: 300
+      refreshCacheAutomaticallyForGlobals: true
+      refreshCacheEnabled: true
+      refreshCacheJobPriority: 10
+      refreshCacheWhenElementMovedInStructure: true
+      refreshCacheWhenElementSavedNotLive: false
+      refreshCacheWhenElementSavedUnchanged: false
+      refreshMode: 3
+      sendPoweredByHeader: true
+      ssiEnabled: false
+      ssiTagFormat: '<!--#include virtual="{uri}" -->'
+      trackElementQueries: true
+      trackElements: true
   buttonbox:
     edition: standard
     enabled: true
@@ -315,18 +405,15 @@ plugins:
     schemaVersion: 1.0.0
   formie:
     edition: standard
-    enabled: true
-    licenseKey: ILVR9UKTOZXCUXJHV4EXLPO2
+    enabled: true    
     schemaVersion: 3.4.6
   hyper:
     edition: standard
-    enabled: true
-    licenseKey: VXB88FJEZGUC74KKXL84U3VP
+    enabled: true    
     schemaVersion: 1.0.0
   icon-picker:
     edition: standard
-    enabled: true
-    licenseKey: VD3VWGXDBO9AXH1TW54FHKP5
+    enabled: true    
     schemaVersion: 1.2.3
     settings:
       enableCache: false
@@ -339,8 +426,7 @@ plugins:
       redactorFieldHandle: icon
   imager-x:
     edition: pro
-    enabled: true
-    licenseKey: LHKRYAFYC2VCPJDFU9YPOEVG
+    enabled: true    
     schemaVersion: 4.0.0
   imager-x-power-pack:
     edition: standard
@@ -356,8 +442,7 @@ plugins:
     schemaVersion: 1.0.0
   navigation:
     edition: standard
-    enabled: true
-    licenseKey: 5V0RT59ZP1JCH3EMCX6R1WO6
+    enabled: true    
     schemaVersion: 2.1.0
   postmark:
     edition: standard
@@ -369,8 +454,7 @@ plugins:
     schemaVersion: 1.0.0
   retour:
     edition: standard
-    enabled: true
-    licenseKey: Q4LIRG983QL6LGEMLROAFWAM
+    enabled: true    
     schemaVersion: 3.0.12
   section-and-product-type:
     edition: standard
@@ -378,8 +462,7 @@ plugins:
     schemaVersion: 2.0.8
   seomatic:
     edition: standard
-    enabled: true
-    licenseKey: BM5AE9UW4EA5UOEPXXD7L8YI
+    enabled: true    
     schemaVersion: 3.0.12
   shortcodes:
     edition: standard

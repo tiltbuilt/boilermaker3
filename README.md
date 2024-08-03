@@ -87,9 +87,7 @@ A Makefile has been included to provide a unified CLI for common development com
 - `make build` - Builds all front-end assets.
 - `make pull` - Pull remote db & assets (requires setting up [craft-scripts](https://github.com/nystudio107/craft-scripts/)
 
-## Craft Scripts
-
-
+<span style="color:red">**IMPORTANT NOTE - Before you run the install process make sure to copy your .npmrc file into the project, otherwise the npm installstep will fail because it tries to installGSAP's paid suite and it requires authentication.**</span>
 
 
 ## Craft CMS Plugins
