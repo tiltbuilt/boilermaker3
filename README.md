@@ -134,4 +134,6 @@ A Makefile has been included to provide a unified CLI for common development com
 1. [AlpineJS](https://alpinejs.dev/)
 1. [Lazysizes](https://afarkas.github.io/lazysizes/)
 
+## Acknowledgments
 
+This project is based upon the work of a lot of people including the entire team at Craft CMS, Andrew Welch of NY Studio 107, Ryan Irelan of CraftQuest, the team at One Darnley Road and others. A big thank you to all of you for the work you have done and the fact that you are so willing to share it with the community. I could not have gotten this done without the insights and examples you have all provided. I also want to thank the team at TILT for their ongoing support and dedication to making great sites. My thanks to you all!
